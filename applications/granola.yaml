@@ -1,0 +1,64 @@
+name: granola
+category: application
+tagline: "AI meeting notes without a bot joining your calls"
+
+description: |
+  Granola is an AI notepad that transcribes meetings and enhances your notes.
+  Unlike Otter/Fireflies, it doesn't add a bot to your call - captures audio
+  directly from your device.
+  
+  Works with any platform: Zoom, Google Meet, Teams, phone calls. You can
+  take your own notes during meetings and Granola enhances them with context,
+  or let it handle everything automatically.
+  
+  Auto-extracts action items, key decisions, and highlights. Chat with your
+  notes after meetings to recall details.
+
+use_cases:
+  - Meeting transcription without awkward bot joins
+  - Capturing action items and decisions automatically
+  - Staying present in meetings instead of note-taking
+  - In-person meeting and phone call transcription
+  - Sharing polished meeting summaries with attendees
+
+prerequisites:
+  - macOS, Windows, or iOS
+  - Google or Microsoft calendar (for auto-sync)
+  - Microphone/system audio access
+
+install:
+  type: manual
+  command: |
+    # Download from website
+    open https://www.granola.ai
+    
+    # Or iOS App Store
+    # Search "Granola AI Meeting Notes"
+
+verification:
+  type: manual
+  test_command: "Start a test meeting, check transcription appears"
+  success_indicator: "Meeting notes with highlights and action items generated"
+
+resources:
+  - url: https://www.granola.ai
+    type: homepage
+  - url: https://apps.apple.com/in/app/granola-ai-meeting-notes/id6739429409
+    type: docs
+
+added_date: 2026-02-21
+source: manual
+
+ratings:
+  usefulness: 5
+  setup_difficulty: 1
+
+tags:
+  - meetings
+  - transcription
+  - notes
+  - productivity
+  - ai-assistant
+  - macos
+  - windows
+  - ios

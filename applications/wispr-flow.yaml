@@ -1,0 +1,59 @@
+name: wispr-flow
+category: application
+tagline: "AI voice-to-text that actually works - 4x faster than typing"
+
+description: |
+  Wispr Flow is an AI-powered dictation app for Mac and iOS. Press a key,
+  speak naturally, and it writes polished text. Works in any text field -
+  Slack, email, ChatGPT, docs, anywhere.
+  
+  Unlike Apple's built-in dictation, Wispr Flow filters filler words, fixes
+  grammar, and handles punctuation automatically. Learns your vocabulary
+  and acronyms over time.
+
+use_cases:
+  - Writing emails and messages hands-free
+  - Drafting long documents while walking/commuting
+  - Reducing typing fatigue (RSI prevention)
+  - Quick capture of ideas and notes
+  - Coding comments and documentation via voice
+
+prerequisites:
+  - macOS or iOS
+  - Microphone access
+
+install:
+  type: manual
+  command: |
+    # Mac: Download from website
+    open https://www.wispr.ai/
+    
+    # iOS: App Store
+    # Search "Wispr Flow" in App Store
+
+verification:
+  type: manual
+  test_command: "Open any text field, press function key, speak"
+  success_indicator: "Text appears with proper formatting and no filler words"
+
+resources:
+  - url: https://www.wispr.ai
+    type: homepage
+  - url: https://apps.apple.com/us/app/wispr-flow-ai-voice-keyboard/id6497229487
+    type: docs
+
+added_date: 2026-02-21
+source: manual
+
+ratings:
+  usefulness: 5
+  setup_difficulty: 1
+
+tags:
+  - voice
+  - dictation
+  - speech-to-text
+  - productivity
+  - accessibility
+  - macos
+  - ios
