@@ -342,26 +342,16 @@ def extract_youtube_video_id(url):
     return None
 
 
-def fetch_youtube_content(url):
-    """Fetch YouTube video transcript and metadata."""
+def fetch_youtube_content(url, exa_api_key=None):
+    """Fetch YouTube video content - tries transcript, falls back to Exa."""
     video_id = extract_youtube_video_id(url)
     if not video_id:
         print(f"Could not extract video ID from {url}")
         return None
 
-    # Try to get transcript
-    transcript_text = ""
-    if YOUTUBE_TRANSCRIPT_AVAILABLE:
-        try:
-            # youtube-transcript-api v1.0+ requires instantiation
-            ytt_api = YouTubeTranscriptApi()
-            transcript_list = ytt_api.fetch(video_id)
-            transcript_text = " ".join([entry["text"] for entry in transcript_list])
-            print(f"Fetched transcript: {len(transcript_text)} chars")
-        except Exception as e:
-            print(f"Could not fetch transcript: {e}")
-
     # Get video metadata via oembed (no API key needed)
+    title = "YouTube Video"
+    author = ""
     try:
         oembed_url = f"https://www.youtube.com/oembed?url=https://www.youtube.com/watch?v={video_id}&format=json"
         req = urllib.request.Request(oembed_url)
@@ -372,29 +362,67 @@ def fetch_youtube_content(url):
             author = metadata.get("author_name", "")
     except Exception as e:
         print(f"Could not fetch video metadata: {e}")
-        title = "YouTube Video"
-        author = ""
 
-    if not transcript_text:
-        # Fallback message if no transcript
-        transcript_text = "(Transcript not available for this video)"
+    # Try to get transcript via hosted API (avoids IP blocking)
+    transcript_text = ""
+    try:
+        transcript_api_url = (
+            "https://youtube-transcript-api-tau-one.vercel.app/transcript"
+        )
+        req_data = json.dumps(
+            {"video_url": f"https://www.youtube.com/watch?v={video_id}"}
+        ).encode()
+        req = urllib.request.Request(
+            transcript_api_url,
+            data=req_data,
+            headers={"Content-Type": "application/json"},
+            method="POST",
+        )
+        with urllib.request.urlopen(req, timeout=30) as resp:
+            result = json.loads(resp.read().decode())
+            if result.get("transcript"):
+                transcript_text = " ".join(
+                    [entry.get("text", "") for entry in result["transcript"]]
+                )
+                print(f"Fetched transcript via API: {len(transcript_text)} chars")
+    except Exception as e:
+        print(f"Hosted transcript API failed: {e}")
 
-    # Truncate transcript if too long (keep ~8000 chars for Claude context)
-    if len(transcript_text) > 8000:
-        transcript_text = transcript_text[:8000] + "\n... (transcript truncated)"
+    # Fallback to local library if hosted API fails
+    if not transcript_text and YOUTUBE_TRANSCRIPT_AVAILABLE:
+        try:
+            ytt_api = YouTubeTranscriptApi()
+            transcript_list = ytt_api.fetch(video_id)
+            transcript_text = " ".join([entry["text"] for entry in transcript_list])
+            print(f"Fetched transcript via local lib: {len(transcript_text)} chars")
+        except Exception as e:
+            print(f"Local transcript lib failed: {e}")
 
-    # Build content for Claude
-    content_text = f"Title: {title}\n"
-    if author:
-        content_text += f"Channel: {author}\n"
-    content_text += f"\nTranscript:\n{transcript_text}"
+    # If no transcript, use Exa to get video description/summary
+    exa_content = ""
+    if not transcript_text and exa_api_key:
+        print("Using Exa for video content...")
+        exa_result = fetch_with_exa(url, exa_api_key)
+        if exa_result:
+            exa_content = exa_result.get("text", "") or exa_result.get("summary", "")
+            print(f"Got Exa content: {len(exa_content)} chars")
 
-    # Display format for issue
-    preview = (
-        transcript_text[:300].replace("\n", " ") + "..."
-        if len(transcript_text) > 300
-        else transcript_text
-    )
+    # Build final content
+    if transcript_text:
+        # Truncate transcript if too long
+        if len(transcript_text) > 8000:
+            transcript_text = transcript_text[:8000] + "\n... (truncated)"
+        content_text = (
+            f"Title: {title}\nChannel: {author}\n\nTranscript:\n{transcript_text}"
+        )
+        preview = transcript_text[:300].replace("\n", " ") + "..."
+    elif exa_content:
+        content_text = f"Title: {title}\nChannel: {author}\n\nVideo Description/Summary:\n{exa_content[:4000]}"
+        preview = exa_content[:300].replace("\n", " ") + "..."
+    else:
+        content_text = f"Title: {title}\nChannel: {author}\n\n(No transcript or description available)"
+        preview = "(No content available)"
+
     display = f"**{title}**\n\nBy: {author}\n\n> {preview}"
 
     return {
@@ -402,7 +430,7 @@ def fetch_youtube_content(url):
         "text": content_text,
         "title": title,
         "author": author,
-        "transcript": transcript_text,
+        "has_transcript": bool(transcript_text),
         "display": display,
         "meta": f"📺 {author}",
     }
@@ -614,12 +642,8 @@ def main():
         print("Fetching tweet...")
         content = fetch_tweet_content(url, twitter_api_key)
     elif url_type == "youtube":
-        print("Fetching YouTube transcript...")
-        content = fetch_youtube_content(url)
-        # Fallback to Exa if transcript fails
-        if not content and exa_api_key:
-            print("Transcript failed, falling back to Exa...")
-            content = fetch_exa_content(url, exa_api_key, url_type)
+        print("Fetching YouTube content...")
+        content = fetch_youtube_content(url, exa_api_key)
     else:
         if not exa_api_key:
             print("Error: EXA_API_KEY required for non-tweet URLs")
