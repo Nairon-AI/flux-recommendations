@@ -131,30 +131,70 @@ jobs:
           echo "" >> /tmp/pr-body.md
           
           if [ -n "$PENDING_FILE" ] && [ -f "$PENDING_FILE" ]; then
-            echo "These tweets didn't match existing recommendations - review for new tools to add:" >> /tmp/pr-body.md
+            echo "Review these tweets for potential new recommendations:" >> /tmp/pr-body.md
             echo "" >> /tmp/pr-body.md
             
-            # Parse pending YAML and show tweets
+            # Parse pending YAML and show as table
             python3 - "$PENDING_FILE" >> /tmp/pr-body.md << 'PYTHONEOF'
           import yaml
           import sys
+          import re
+          
+          def extract_topic(text):
+              """Try to extract the main tool/topic from tweet text."""
+              # Common patterns
+              text_lower = text.lower()
+              
+              # Look for tool mentions
+              tools = re.findall(r'@(\w+)', text)
+              if tools and tools[0] not in ['', 'the', 'a']:
+                  return tools[0]
+              
+              # Look for quoted terms
+              quoted = re.findall(r'"([^"]+)"', text)
+              if quoted:
+                  return quoted[0][:30]
+              
+              # First few words as fallback
+              words = text.split()[:4]
+              return ' '.join(words)[:40]
+          
+          def usefulness_signal(likes):
+              """Rate usefulness based on engagement."""
+              if likes >= 500:
+                  return "🔥 High"
+              elif likes >= 100:
+                  return "⭐ Medium"
+              elif likes >= 20:
+                  return "👀 Low"
+              else:
+                  return "❓ Review"
           
           try:
               with open(sys.argv[1]) as f:
                   tweets = yaml.safe_load(f) or []
               
-              for t in tweets[:10]:  # Show max 10
+              # Sort by likes descending
+              tweets = sorted(tweets, key=lambda x: x.get('likes', 0), reverse=True)
+              
+              print("| Topic | Author | Signal | Add? | Why |")
+              print("|-------|--------|--------|------|-----|")
+              
+              for t in tweets[:15]:  # Show max 15
                   author = t.get('author', 'unknown')
-                  text = t.get('text', '')[:100].replace('\n', ' ')
+                  text = t.get('text', '').replace('\n', ' ').replace('|', '/')
                   url = t.get('url', '')
                   likes = t.get('likes', 0)
                   
-                  print(f"- **{author}** ({likes} likes): {text}...")
-                  print(f"  [View tweet]({url})")
-                  print()
+                  topic = extract_topic(text)
+                  signal = usefulness_signal(likes)
+                  summary = text[:60] + "..." if len(text) > 60 else text
+                  
+                  print(f"| [{topic}]({url}) | {author} | {signal} ({likes}) | [ ] | |")
               
-              if len(tweets) > 10:
-                  print(f"_...and {len(tweets) - 10} more in the file_")
+              print()
+              if len(tweets) > 15:
+                  print(f"_+{len(tweets) - 15} more in `{sys.argv[1]}`_")
           except Exception as e:
               print(f"_Error reading pending file: {e}_")
           PYTHONEOF
