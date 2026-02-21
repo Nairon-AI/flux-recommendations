@@ -1,78 +1,94 @@
 name: pencil
 category: mcp
-tagline: "AI-driven design canvas - design in your IDE with MCP tools"
+tagline: AI-driven design canvas - design in your IDE with MCP tools
+description: 'Pencil is an AI-first design tool that brings a full design canvas into
+  your
 
-description: |
-  Pencil is an AI-first design tool that brings a full design canvas into your
   coding environment. Design UIs with natural language prompts, edit with
+
   pixel-perfect precision, and convert directly to React/Tailwind code.
-  
+
+
   Uses JSON-based .pen files that live in your git repo - no design handoffs,
+
   full version control. Import from Figma, run parallel design agents, and
+
   generate production-ready code without leaving your IDE.
 
+  '
 use_cases:
-  - Designing UI directly in your IDE
-  - AI-driven UI generation from prompts
-  - Converting designs to React/Tailwind/Next.js code
-  - Importing Figma designs for code conversion
-  - Version-controlled design files in git
-  - Running parallel design agents for variations
-
+- Designing UI directly in your IDE
+- AI-driven UI generation from prompts
+- Converting designs to React/Tailwind/Next.js code
+- Importing Figma designs for code conversion
+- Version-controlled design files in git
+- Running parallel design agents for variations
 prerequisites:
-  - macOS, Linux, or Windows
-  - Claude Code CLI or Codex CLI installed
-  - Optional: VS Code/Cursor extension
-
+- macOS, Linux, or Windows
+- Claude Code CLI or Codex CLI installed
+- Optional: VS Code/Cursor extension
 install:
   type: mcp
-  command: |
-    # 1. Download Pencil from https://pencil.dev/download
+  command: '# 1. Download Pencil from https://pencil.dev/download
+
     # 2. Install the app (Mac/Linux) or VS Code extension
+
     # 3. Open a .pen file or create new design
+
     # 4. Pencil MCP server starts automatically when app is running
-    
+
+
     # MCP connects automatically when Pencil is running
+
     # No manual config needed - Pencil registers itself
-  config_snippet: |
-    # Pencil MCP auto-registers when the app is running
+
+    '
+  config_snippet: '# Pencil MCP auto-registers when the app is running
+
     # Check your ~/.mcp.json after launching Pencil
+
     # Or verify in Claude Code with: claude mcp list
 
+    '
 verification:
   type: manual
-  test_command: "Open Pencil, create a .pen file, ask Claude to 'add a login form'"
-  success_indicator: "Claude should create UI elements directly on the Pencil canvas"
-
+  test_command: Open Pencil, create a .pen file, ask Claude to 'add a login form'
+  success_indicator: Claude should create UI elements directly on the Pencil canvas
 resources:
-  - url: https://pencil.dev
-    type: homepage
-  - url: https://docs.pencil.dev/getting-started/ai-integration
-    type: docs
-  - url: https://www.youtube.com/watch?v=Fv6Pcv7UM1I
-    type: video
-
+- url: https://pencil.dev
+  type: homepage
+- url: https://docs.pencil.dev/getting-started/ai-integration
+  type: docs
+- url: https://www.youtube.com/watch?v=Fv6Pcv7UM1I
+  type: video
 added_date: 2026-02-21
 source: manual
-
 ratings:
   usefulness: 5
   setup_difficulty: 2
-
 tags:
-  - pencil
-  - design
-  - design-to-code
-  - ui
-  - canvas
-  - react
-  - tailwind
-  - figma-import
-  - ai-design
-
+- pencil
+- design
+- design-to-code
+- ui
+- canvas
+- react
+- tailwind
+- figma-import
+- ai-design
 sdlc_phase: requirements
-solves: "Design handoff friction - separate tools for design and code, context lost in translation"
-
+solves: Design handoff friction - separate tools for design and code, context lost
+  in translation
 pricing:
   model: freemium
-  details: "Free for personal use. Team plans coming"
+  details: Free for personal use. Team plans coming
+mentions:
+- url: https://x.com/ryancarson/status/2025252570197790739
+  author: '@ryancarson'
+  text: 'If you’re not frustrated when you’re working on your UI with your agent,
+    you don’t care enough about the details.
+
+
+    Good UI and UX is a long, painful grind. https://t.co/cQBUyt8ihA'
+  date: '2026-02-21'
+  likes: 115

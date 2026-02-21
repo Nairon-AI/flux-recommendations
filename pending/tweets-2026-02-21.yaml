@@ -153,3 +153,88 @@
   likes: 2
   text: does glycine send anyone else hurtling through dream space into eldritch worlds?
   url: https://x.com/parcadei/status/2025175935838753273
+- author: '@dani_avila7'
+  date: '2026-02-21'
+  likes: 108
+  text: 'Ghostty lets you control the opacity of unfocused splits.
+
+
+    Just add this to ~/.config/ghostty/config:
+
+    unfocused-split-opacity = 0.85
+
+
+    Super useful when working across multiple panes, you always know where your focus
+    is.
+
+
+    If the opacity doesn''t load on startup, hit cmd+shift+, to '
+  url: https://x.com/dani_avila7/status/2025280714606780749
+- author: '@justsisyphus'
+  date: '2026-02-21'
+  likes: 3
+  text: 'RT @Berezin12345: @justsisyphus @_can1357 oh-my-opencode is phenomenal and
+    once you try it there’s no skipping it
+
+
+    the fact that the llm yo…'
+  url: https://x.com/justsisyphus/status/2025288948881473846
+- author: '@justsisyphus'
+  date: '2026-02-21'
+  likes: 68
+  text: 'RT @thdxr: @tjalve @opencode OmO is a token burner - we heard anthropic cite
+    it as justification for blocking clients'
+  url: https://x.com/justsisyphus/status/2025283157118124112
+- author: '@mattpocockuk'
+  date: '2026-02-21'
+  likes: 144
+  text: Month later, still happy with @code
+  url: https://x.com/mattpocockuk/status/2025244952255758462
+- author: '@mattpocockuk'
+  date: '2026-02-21'
+  likes: 846
+  text: 'claude --worktree is so good I''m making it my new default.
+
+
+    Don''t know why you should care?
+
+
+    Couldn''t follow the Anthropic announcement? (way too technical IMO)
+
+
+    Here''s a demo: https://t.co/OyvAvFdC9C'
+  url: https://x.com/mattpocockuk/status/2025242370816487487
+- author: '@mattpocockuk'
+  date: '2026-02-21'
+  likes: 127
+  text: 'LOVE seeing this be built into CC itself
+
+
+    Especially parallelizing subagents makes spawning a bunch of agents to do a lot
+    of work a lot simpler.
+
+
+    Especially when merge conflicts are so cheap.'
+  url: https://x.com/mattpocockuk/status/2025225505843069086
+- author: '@ryancarson'
+  date: '2026-02-21'
+  likes: 34
+  text: What are you using as your daily driver now for swe?
+  url: https://x.com/ryancarson/status/2025247818244366493
+- author: '@ryancarson'
+  date: '2026-02-21'
+  likes: 18
+  text: Love the names Codex chooses for the subagents :) https://t.co/0S5RyvmKix
+  url: https://x.com/ryancarson/status/2025246984286720159
+- author: '@ryancarson'
+  date: '2026-02-21'
+  likes: 16
+  text: "Looking for maintainers on these projects. \n\nSubmit and issue with why\
+    \ it should be you.\n\nhttps://t.co/ipMHVjYvIG (10k stars)\n\nhttps://t.co/u6d1S50KoP\
+    \ (1.5k stars)"
+  url: https://x.com/ryancarson/status/2025243888647028936
+- author: '@ryancarson'
+  date: '2026-02-21'
+  likes: 11
+  text: Personality set to Friendly
+  url: https://x.com/ryancarson/status/2025242376885703009
