@@ -6,14 +6,41 @@ Used by [`/flux:improve`](https://github.com/Nairon-AI/flux) to recommend tools,
 
 ## Categories
 
-| Folder | Description |
-|--------|-------------|
-| `mcps/` | Model Context Protocol servers |
-| `plugins/` | Claude Code plugins |
-| `skills/` | Standalone skills |
-| `cli-tools/` | Command-line tools |
-| `applications/` | Desktop/native apps (voice, transcription, etc.) |
-| `workflow-patterns/` | Best practices (not tools) |
+| Folder | Subfolders | Description |
+|--------|------------|-------------|
+| `mcps/` | `design/`, `search/`, `productivity/`, `dev/` | Model Context Protocol servers |
+| `cli-tools/` | `linting/`, `git/`, `terminal/`, `tasks/` | Command-line tools |
+| `applications/` | `productivity/`, `browser/` | Desktop/native apps |
+| `skills/` | *(flat)* | Standalone skills |
+| `plugins/` | *(empty)* | Claude Code plugins |
+| `workflow-patterns/` | `git/`, `testing/`, `ai/` | Best practices (not tools) |
+
+### Structure
+
+```
+mcps/
+├── design/       # excalidraw, figma, pencil
+├── search/       # exa, context7
+├── productivity/ # linear, supermemory
+└── dev/          # github
+
+cli-tools/
+├── linting/      # oxlint, biome
+├── git/          # lefthook
+├── terminal/     # jq, fzf
+└── tasks/        # beads
+
+applications/
+├── productivity/ # wispr-flow, granola, raycast
+└── browser/      # dia
+
+skills/           # stagehand-e2e, remotion, repoprompt
+
+workflow-patterns/
+├── git/          # pre-commit-hooks, atomic-commits
+├── testing/      # test-first-debugging
+└── ai/           # agents-md-structure, context-management
+```
 
 ## Adding Recommendations
 
