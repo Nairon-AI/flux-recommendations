@@ -1,69 +1,101 @@
 name: dia
 category: application
-tagline: "AI-native browser - chat with your tabs, context-aware assistance"
+tagline: AI-native browser - chat with your tabs, context-aware assistance
+description: 'Dia is an AI-first browser from The Browser Company. Unlike browsers
+  with
 
-description: |
-  Dia is an AI-first browser from The Browser Company. Unlike browsers with
   AI bolted on, Dia embeds AI into every aspect of browsing. Chat with all
+
   your open tabs simultaneously, get writing help in any text box.
-  
+
+
   Learns your work patterns over time. Memory persists across sessions.
+
   Skills provide shortcuts (/cite, /fact-check, /flashcards). After a week,
-  you won't want to go back.
 
+  you won''t want to go back.
+
+  '
 use_cases:
-  - Research across multiple tabs with AI synthesis
-  - Writing assistance directly in any text field
-  - Summarizing and fact-checking content
-  - Context-aware help that knows your projects
-  - Students: flashcards, citations, study guides
-
+- Research across multiple tabs with AI synthesis
+- Writing assistance directly in any text field
+- Summarizing and fact-checking content
+- Context-aware help that knows your projects
+- Students: flashcards, citations, study guides
 prerequisites:
-  - macOS or Windows
-  - Free account (Pro $20/month for more)
-
+- macOS or Windows
+- Free account (Pro $20/month for more)
 install:
   type: manual
-  command: |
-    # Download from website
+  command: '# Download from website
+
     open https://www.diabrowser.com
-    
+
+
     # Set up:
+
     # 1. Sign in and grant permissions
+
     # 2. Learn Cmd+E to open Chat
+
     # 3. Try @mentioning tabs in queries
+
     # 4. Explore Skills (/cite, /fact-check, etc.)
 
+    '
 verification:
   type: manual
-  test_command: "Press Cmd+E to open Chat, ask about open tabs"
-  success_indicator: "Dia responds with context from your tabs"
-
+  test_command: Press Cmd+E to open Chat, ask about open tabs
+  success_indicator: Dia responds with context from your tabs
 resources:
-  - url: https://www.diabrowser.com
-    type: homepage
-  - url: https://www.diabrowser.com/getting-started
-    type: docs
-
+- url: https://www.diabrowser.com
+  type: homepage
+- url: https://www.diabrowser.com/getting-started
+  type: docs
 added_date: 2026-02-21
 source: manual
-
 ratings:
   usefulness: 5
   setup_difficulty: 1
-
 tags:
-  - browser
-  - ai-native
-  - productivity
-  - research
-  - writing
-  - macos
-  - windows
-
+- browser
+- ai-native
+- productivity
+- research
+- writing
+- macos
+- windows
 sdlc_phase: implementation
-solves: "Browser context switching - losing focus jumping between tabs and searching"
-
+solves: Browser context switching - losing focus jumping between tabs and searching
 pricing:
   model: freemium
-  details: "Free tier available. Pro: $20/mo for more AI usage"
+  details: 'Free tier available. Pro: $20/mo for more AI usage'
+mentions:
+- url: https://x.com/dani_avila7/status/2024676383394250823
+  author: '@dani_avila7'
+  text: 'I didn’t expect my job to evolve this fast.
+
+
+    - 15 years writing code
+
+    - 2 years writing prompts
+
+    - 2 months reading agent plans https://t.co/um6YIiVAjf'
+  date: '2026-02-21'
+  likes: 56
+- url: https://x.com/kevinkern/status/2024614006070059483
+  author: '@kevinkern'
+  text: 'shipped a new codex-1up v0.3.22 release 🍄
+
+
+    - personality support (friendly / pragmatic)
+
+    - exp: multi-agents, macos prevent idle sleep
+
+    - safe profile uses "untrusted"
+
+    - model_reasoning_summary = "none" for codex spark
+
+    - codex 0.104 support https://t.co/Pt7gLmwVXa'
+  date: '2026-02-21'
+  likes: 21

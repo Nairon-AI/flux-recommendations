@@ -1,63 +1,83 @@
 name: beads
 category: cli-tool
-tagline: "Distributed, git-backed graph issue tracker for AI agents"
+tagline: Distributed, git-backed graph issue tracker for AI agents
+description: 'Beads (bd) provides persistent, structured memory for coding agents.
 
-description: |
-  Beads (bd) provides persistent, structured memory for coding agents.
   Replaces messy markdown plans with a dependency-aware graph, allowing
+
   agents to handle long-horizon tasks without losing context.
-  
+
+
   Install once, use everywhere. No need to clone the repo into your project.
 
+  '
 use_cases:
-  - Tracking tasks across multiple Claude sessions
-  - Managing dependencies between work items
-  - Long-horizon tasks that span multiple sessions
-  - Replacing TodoWrite with persistent storage
-
+- Tracking tasks across multiple Claude sessions
+- Managing dependencies between work items
+- Long-horizon tasks that span multiple sessions
+- Replacing TodoWrite with persistent storage
 prerequisites:
-  - macOS, Linux, Windows, or FreeBSD
-  - curl (for installation)
-
+- macOS, Linux, Windows, or FreeBSD
+- curl (for installation)
 install:
   type: manual
-  command: |
-    # Install beads CLI (system-wide)
-    curl -fsSL https://raw.githubusercontent.com/steveyegge/beads/main/scripts/install.sh | bash
-    
-    # Initialize in your project
-    cd your-project
-    bd init
-    
-    # Tell your agent
-    echo "Use 'bd' for task tracking" >> AGENTS.md
+  command: '# Install beads CLI (system-wide)
 
+    curl -fsSL https://raw.githubusercontent.com/steveyegge/beads/main/scripts/install.sh
+    | bash
+
+
+    # Initialize in your project
+
+    cd your-project
+
+    bd init
+
+
+    # Tell your agent
+
+    echo "Use ''bd'' for task tracking" >> AGENTS.md
+
+    '
 verification:
   type: command_exists
-  test_command: "bd --version"
-  success_indicator: "Should show beads version (v0.55.4+)"
-
+  test_command: bd --version
+  success_indicator: Should show beads version (v0.55.4+)
 resources:
-  - url: https://github.com/steveyegge/beads
-    type: github
-
+- url: https://github.com/steveyegge/beads
+  type: github
 added_date: 2026-02-21
 source: manual
-
 ratings:
   usefulness: 5
   setup_difficulty: 1
-
 tags:
-  - task-tracking
-  - persistence
-  - workflow
-  - git-backed
-  - dependency-graph
-
+- task-tracking
+- persistence
+- workflow
+- git-backed
+- dependency-graph
 sdlc_phase: planning
-solves: "AI forgets task progress between sessions - starts over or loses track of dependencies"
-
+solves: AI forgets task progress between sessions - starts over or loses track of
+  dependencies
 pricing:
   model: open-source
-  details: "Free and open-source (MIT)"
+  details: Free and open-source (MIT)
+mentions:
+- url: https://x.com/mattpocockuk/status/2024874219662905676
+  author: '@mattpocockuk'
+  text: 'Here''s my AI coding workflow and all the skills I''m using:
+
+
+    Idea -&gt; /write-a-prd -&gt; PRD
+
+    PRD -&gt; /prd-to-issues -&gt; Kanban Board
+
+    Kanban -&gt; ralph​.sh -&gt; Ralph Loop
+
+    Ralph Loop -&gt; Manual QA
+
+
+    Links below to skills https://t.co/rxWFFRUH83'
+  date: '2026-02-21'
+  likes: 2503

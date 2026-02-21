@@ -153,3 +153,296 @@
   likes: 2
   text: does glycine send anyone else hurtling through dream space into eldritch worlds?
   url: https://x.com/parcadei/status/2025175935838753273
+- author: '@dani_avila7'
+  date: '2026-02-21'
+  likes: 426
+  text: 'Ghostty lets you control the opacity of unfocused splits.
+
+
+    Just add this to ~/.config/ghostty/config:
+
+    unfocused-split-opacity = 0.85
+
+
+    Super useful when working across multiple panes, you always know where your focus
+    is.
+
+
+    If the opacity doesn''t load on startup, hit cmd+shift+, to '
+  url: https://x.com/dani_avila7/status/2025280714606780749
+- author: '@dani_avila7'
+  date: '2026-02-21'
+  likes: 49
+  text: 'New version of Claude Code 2.1.49 just dropped... and it fixes a bug that
+    hit me a couple of times.
+
+
+    - Fixed Ctrl+C and ESC being silently ignored when background agents are running
+    and the main thread is idle. Pressing twice within 3 seconds now kills all background
+    agents.
+
+
+    It '
+  url: https://x.com/dani_avila7/status/2024642138835702156
+- author: '@pvncher'
+  date: '2026-02-21'
+  likes: 14
+  text: 'Mcp is important to extend the core toolset of an agent.
+
+
+    The problem is that people give their agents mcp tools that are not necessary
+    more than 5% of the time, and those tool should be clis.'
+  url: https://x.com/pvncher/status/2024704248202621309
+- author: '@pvncher'
+  date: '2026-02-21'
+  likes: 45
+  text: 'It’s obvious that the future of swe is going to involve running agentic software
+    experiments.
+
+
+    You can’t implement every possible idea with a limited compute budget. Picking
+    which ideas are worth pursuing and executing them sustainably and efficiently…
+    that takes work!'
+  url: https://x.com/pvncher/status/2024672035385864342
+- author: '@nummanali'
+  date: '2026-02-21'
+  likes: 10
+  text: "Tessl raised $125M in November 2024 \n\nI’m still a bit confused as to what\
+    \ their value add is and how they raised that much (probably due to Guys track\
+    \ record)\n\nThey have an npm registry of curated skills and specs for agents\
+    \ \n\nIt has security scanning and versioning but beyond th"
+  url: https://x.com/nummanali/status/2024788151558963368
+- author: '@justinsunyt'
+  date: '2026-02-21'
+  likes: 45
+  text: "overheard in sf: \n\n\"yeah but unlike you i swap between abm and abg daily\"\
+    \n\n\"what's abm\"\n\n\"always be merging\""
+  url: https://x.com/justinsunyt/status/2024661283640136131
+- author: '@realmcore_'
+  date: '2026-02-21'
+  likes: 20
+  text: 'Lots of simple, grindy dev tasks that used to be considered low ROI and now
+    dramatically higher leverage:
+
+
+    - Complete test coverage
+
+    - A good devops config
+
+    - Good CICD
+
+    - Managing envs for dev, staging, and prod
+
+
+    All this to say, process engineering is extremely high leverage now'
+  url: https://x.com/realmcore_/status/2025313600253125109
+- author: '@realmcore_'
+  date: '2026-02-21'
+  likes: 10
+  text: 'The last 10% of that vibe coded project you''re working on will cost you
+    as much as the first 90%
+
+
+    Most of the effort comes in the form of doing something that you thought was easy
+    and in fact, was not, easy.'
+  url: https://x.com/realmcore_/status/2025295968888127950
+- author: '@realmcore_'
+  date: '2026-02-21'
+  likes: 1
+  text: 'Alright twitter
+
+
+    How many of you using agents are focused on automating your work vs getting the
+    job done?'
+  url: https://x.com/realmcore_/status/2024900160002949465
+- author: '@realmcore_'
+  date: '2026-02-21'
+  likes: 3
+  text: Your FDE's are overworked.
+  url: https://x.com/realmcore_/status/2024685802794664433
+- author: '@tokengobbler'
+  date: '2026-02-21'
+  likes: 4
+  text: 'hard lessons learned: if you''re using electricsql, make sure you add a REST
+    backup'
+  url: https://x.com/tokengobbler/status/2024869444481093769
+- author: '@tokengobbler'
+  date: '2026-02-21'
+  likes: 0
+  text: 𝙲𝚊𝚗 𝚠𝚎 𝚊𝚕𝚕 𝚊𝚐𝚛𝚎𝚎 𝚝𝚘 𝚜𝚝𝚘𝚙 𝚞𝚜𝚒𝚗𝚐 𝚝𝚑𝚎𝚜𝚎 𝚞𝚗𝚒𝚌𝚘𝚍𝚎 𝚌𝚑𝚊𝚛𝚊𝚌𝚝𝚎𝚛𝚜 𝚏𝚘𝚛 𝚌𝚘𝚍𝚎． 𝙸𝚝'𝚜 𝚕𝚒𝚝𝚎𝚛𝚊𝚕𝚕𝚢
+    𝚒𝚖𝚙𝚘𝚜𝚜𝚒𝚋𝚕𝚎 𝚝𝚘 𝚙𝚊𝚜𝚝𝚎 𝚒𝚗𝚝𝚘 𝚊 𝚝𝚎𝚛𝚖𝚒𝚗𝚊𝚕
+  url: https://x.com/tokengobbler/status/2024790792829620571
+- author: '@EastlondonDev'
+  date: '2026-02-21'
+  likes: 4
+  text: Ragebait hat acquired https://t.co/MbpWuTsNhd
+  url: https://x.com/EastlondonDev/status/2025297828130816301
+- author: '@EastlondonDev'
+  date: '2026-02-21'
+  likes: 3897
+  text: 'RT @mattzcarey: Code Mode is all you need, very excited about this direction
+    for MCP
+
+
+    https://t.co/a5E5Xqrvrt https://t.co/gkmcRrRl1I'
+  url: https://x.com/EastlondonDev/status/2024866008557621356
+- author: '@EastlondonDev'
+  date: '2026-02-21'
+  likes: 3
+  text: This is another great tailscale feature! Already started using it
+  url: https://x.com/EastlondonDev/status/2024747286060831063
+- author: '@__morse'
+  date: '2026-02-21'
+  likes: 467
+  text: "this is a TUI. \n\njust added a new \U0001D677\U0001D68E\U0001D68A\U0001D69D\
+    \U0001D696\U0001D68A\U0001D699 component to https://t.co/vctFwAFbvp https://t.co/zaVhCHhSon"
+  url: https://x.com/__morse/status/2024884571628515416
+- author: '@__morse'
+  date: '2026-02-21'
+  likes: 323
+  text: gemini models is what happens when you spend 99% in pre training and 1% in
+    fine tuning. doesn't event use the right tools to read and write files.
+  url: https://x.com/__morse/status/2024750473022939570
+- author: '@justsisyphus'
+  date: '2026-02-21'
+  likes: 4
+  text: 'RT @Berezin12345: @justsisyphus @_can1357 oh-my-opencode is phenomenal and
+    once you try it there’s no skipping it
+
+
+    the fact that the llm yo…'
+  url: https://x.com/justsisyphus/status/2025288948881473846
+- author: '@justsisyphus'
+  date: '2026-02-21'
+  likes: 71
+  text: 'RT @thdxr: @tjalve @opencode OmO is a token burner - we heard anthropic cite
+    it as justification for blocking clients'
+  url: https://x.com/justsisyphus/status/2025283157118124112
+- author: '@justsisyphus'
+  date: '2026-02-21'
+  likes: 3
+  text: 'RT @TomasBelada: When you ulw a bit too much with @justsisyphus https://t.co/xT4MqlMQoy'
+  url: https://x.com/justsisyphus/status/2024846893613039675
+- author: '@parcadei'
+  date: '2026-02-21'
+  likes: 7
+  text: HOPE + JEPA + RLM = ASI?
+  url: https://x.com/parcadei/status/2024851656517558604
+- author: '@parcadei'
+  date: '2026-02-21'
+  likes: 5
+  text: the cybernetics bender is all consuming
+  url: https://x.com/parcadei/status/2024833755261624762
+- author: '@mattpocockuk'
+  date: '2026-02-21'
+  likes: 199
+  text: Month later, still happy with @code
+  url: https://x.com/mattpocockuk/status/2025244952255758462
+- author: '@mattpocockuk'
+  date: '2026-02-21'
+  likes: 1073
+  text: 'claude --worktree is so good I''m making it my new default.
+
+
+    Don''t know why you should care?
+
+
+    Couldn''t follow the Anthropic announcement? (way too technical IMO)
+
+
+    Here''s a demo: https://t.co/OyvAvFdC9C'
+  url: https://x.com/mattpocockuk/status/2025242370816487487
+- author: '@mattpocockuk'
+  date: '2026-02-21'
+  likes: 138
+  text: 'LOVE seeing this be built into CC itself
+
+
+    Especially parallelizing subagents makes spawning a bunch of agents to do a lot
+    of work a lot simpler.
+
+
+    Especially when merge conflicts are so cheap.'
+  url: https://x.com/mattpocockuk/status/2025225505843069086
+- author: '@mattpocockuk'
+  date: '2026-02-21'
+  likes: 680
+  text: 'Oh btw, I haven''t announced it yet but I''m making a Claude Code course
+
+
+    It''ll teach all this stuff from first principles, with the help of 30-year old
+    software fundamentals'
+  url: https://x.com/mattpocockuk/status/2024876519814799851
+- author: '@ryancarson'
+  date: '2026-02-21'
+  likes: 90
+  text: Let’s go :) https://t.co/motI9iN9zy
+  url: https://x.com/ryancarson/status/2025315961750896744
+- author: '@ryancarson'
+  date: '2026-02-21'
+  likes: 38
+  text: What are you using as your daily driver now for swe?
+  url: https://x.com/ryancarson/status/2025247818244366493
+- author: '@ryancarson'
+  date: '2026-02-21'
+  likes: 30
+  text: Love the names Codex chooses for the subagents :) https://t.co/0S5RyvmKix
+  url: https://x.com/ryancarson/status/2025246984286720159
+- author: '@ryancarson'
+  date: '2026-02-21'
+  likes: 23
+  text: "Looking for maintainers on these projects. \n\nSubmit and issue with why\
+    \ it should be you.\n\nhttps://t.co/ipMHVjYvIG (10k stars)\n\nhttps://t.co/u6d1S50KoP\
+    \ (1.5k stars)"
+  url: https://x.com/ryancarson/status/2025243888647028936
+- author: '@ryancarson'
+  date: '2026-02-21'
+  likes: 11
+  text: Personality set to Friendly
+  url: https://x.com/ryancarson/status/2025242376885703009
+- author: '@ryancarson'
+  date: '2026-02-21'
+  likes: 43
+  text: 'Getting accounting setup for my startup.
+
+
+    I use @mercury for banking so thinking about using their integration with @QuickBooks.
+
+
+    Suggestions?'
+  url: https://x.com/ryancarson/status/2024926521442419189
+- author: '@ryancarson'
+  date: '2026-02-21'
+  likes: 86
+  text: 'Starting to aggressively block llm accounts in replies to my tweets.
+
+
+    Hoping this dings them on the algo.'
+  url: https://x.com/ryancarson/status/2024877302048264573
+- author: '@ryancarson'
+  date: '2026-02-21'
+  likes: 424
+  text: "I'm seeing a massive speed up of Codex 5.3 right now on the CLI. \n\nHas\
+    \ anyone else seen that? \n\nIt almost feels like Spark."
+  url: https://x.com/ryancarson/status/2024867147650908444
+- author: '@ryancarson'
+  date: '2026-02-21'
+  likes: 22
+  text: 'Going to this. Going to be so much fun!
+
+
+    hmu if you''re attending.'
+  url: https://x.com/ryancarson/status/2024828908953034778
+- author: '@ryancarson'
+  date: '2026-02-21'
+  likes: 350
+  text: 'Anthropic could do one simple thing to start winning back the hearts of devs
+
+
+    https://t.co/S2nQuRldhV -&gt; https://t.co/fUVcZhLzwv https://t.co/cAUAzQYi7L'
+  url: https://x.com/ryancarson/status/2024811837401813083
+- author: '@ryancarson'
+  date: '2026-02-21'
+  likes: 163
+  text: This
+  url: https://x.com/ryancarson/status/2024810807788290150

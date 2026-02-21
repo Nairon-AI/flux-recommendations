@@ -105,3 +105,20 @@ mentions:
     real inspiration '
   date: '2026-02-21'
   likes: 11
+- url: https://x.com/pvncher/status/2024830512922308651
+  author: '@pvncher'
+  text: 'Actually really interesting latency for real time game ai
+
+
+    At 76ms, you’re now able to generate full responses every 2-3 frames, which means
+    you can use a model like this to plan actions in realtime. Wild to consider, even
+    if the model is “dumb”'
+  date: '2026-02-21'
+  likes: 626
+- url: https://x.com/nummanali/status/2024793098073579585
+  author: '@nummanali'
+  text: "Amazing must read article for anyone building/working with AI\n\nTLDR:\n\n\
+    Don’t confuse taste with patronage \n\nFocus on who you’re creating for rather\
+    \ than your own internal compass of what good means"
+  date: '2026-02-21'
+  likes: 24

@@ -1,68 +1,84 @@
 name: stagehand-e2e
 category: skill
-tagline: "AI-powered browser automation - self-healing tests with Playwright"
+tagline: AI-powered browser automation - self-healing tests with Playwright
+description: 'Stagehand adds AI primitives to Playwright: act(), extract(), observe().
 
-description: |
-  Stagehand adds AI primitives to Playwright: act(), extract(), observe().
   Write tests in natural language, let AI handle selectors. Tests self-heal
+
   when UI changes - no more brittle CSS selectors breaking overnight.
-  
+
+
   Hybrid approach: mix deterministic Playwright commands with AI-powered
+
   Stagehand methods in the same script. Best of both worlds.
 
+  '
 use_cases:
-  - E2E tests that don't break on UI changes
-  - Scraping dynamic/complex websites
-  - Automating workflows across web apps
-  - Extracting structured data from pages
-  - Testing AI-generated UIs
-
+- E2E tests that don't break on UI changes
+- Scraping dynamic/complex websites
+- Automating workflows across web apps
+- Extracting structured data from pages
+- Testing AI-generated UIs
 prerequisites:
-  - Node.js 18+
-  - OpenAI or Anthropic API key
-  - Playwright installed
-
+- Node.js 18+
+- OpenAI or Anthropic API key
+- Playwright installed
 install:
   type: skill
-  command: |
-    # Install from skills.sh (if available)
+  command: '# Install from skills.sh (if available)
+
     # Or manually:
-    
+
+
     # Install stagehand
+
     npm install @browserbasehq/stagehand
-    
+
+
     # Install the Claude Code skill
+
     # Download from skills.sh or copy SKILL.md to ~/.claude/skills/
 
+    '
 verification:
   type: manual
-  test_command: "Run a simple stagehand test with act() and extract()"
-  success_indicator: "AI successfully interacts with page elements"
-
+  test_command: Run a simple stagehand test with act() and extract()
+  success_indicator: AI successfully interacts with page elements
 resources:
-  - url: https://github.com/browserbase/stagehand
-    type: github
-  - url: https://docs.stagehand.dev
-    type: docs
-
+- url: https://github.com/browserbase/stagehand
+  type: github
+- url: https://docs.stagehand.dev
+  type: docs
 added_date: 2026-02-21
 source: manual
-
 ratings:
   usefulness: 5
   setup_difficulty: 3
-
 tags:
-  - testing
-  - e2e
-  - browser-automation
-  - playwright
-  - ai-powered
-  - self-healing
-
+- testing
+- e2e
+- browser-automation
+- playwright
+- ai-powered
+- self-healing
 sdlc_phase: testing
-solves: "Brittle E2E tests that break when UI changes - constant selector maintenance"
-
+solves: Brittle E2E tests that break when UI changes - constant selector maintenance
 pricing:
   model: freemium
-  details: "Open-source SDK. Browserbase hosting: free tier, then usage-based"
+  details: 'Open-source SDK. Browserbase hosting: free tier, then usage-based'
+mentions:
+- url: https://x.com/ryancarson/status/2024827509947117884
+  author: '@ryancarson'
+  text: 'I''m going to work today at optimizing my Code Factory to be great at front-end
+    UI work with my agent (Codex CLI).
+
+
+    It''s working, but it still feels like the feedback loop is too slow and kludgy.
+
+
+    I''m currently using agent-browser, but the feedback loops are still too slow.
+
+
+    I''m t'
+  date: '2026-02-21'
+  likes: 171

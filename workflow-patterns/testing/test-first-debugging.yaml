@@ -1,70 +1,92 @@
 name: test-first-debugging
 category: workflow-pattern
-tagline: "Write failing test first, then fix the bug"
+tagline: Write failing test first, then fix the bug
+description: 'Before fixing a bug, write a test that reproduces it. The test should
+  fail.
 
-description: |
-  Before fixing a bug, write a test that reproduces it. The test should fail.
   Then fix the bug. The test should pass. Now you have regression protection.
-  
+
+
   This prevents "fix one thing, break another" cycles. Also forces you to
+
   understand the bug before diving into code. Claude works better with this
+
   pattern - clear success criteria.
 
+  '
 use_cases:
-  - Bug fixes that keep regressing
-  - Complex bugs with unclear repro steps
-  - Working with Claude on debugging
-  - Building regression test suite
-
+- Bug fixes that keep regressing
+- Complex bugs with unclear repro steps
+- Working with Claude on debugging
+- Building regression test suite
 prerequisites:
-  - Test framework configured
-  - Reproducible bug
-
+- Test framework configured
+- Reproducible bug
 install:
   type: manual
-  command: |
-    # Workflow:
-    
+  command: '# Workflow:
+
+
     # 1. Reproduce the bug manually
+
     # 2. Write a test that triggers the bug
+
     #    - Test should FAIL initially
+
     # 3. Run the test, confirm it fails
+
     # 4. Fix the bug
+
     # 5. Run the test, confirm it passes
+
     # 6. Commit both test and fix together
-    
+
+
     # For UI bugs:
+
     # 1. Write markdown test plan with steps
+
     # 2. Follow steps in browser
+
     # 3. Write E2E test that automates steps
+
     # 4. Fix and verify
 
+    '
 verification:
   type: manual
-  test_command: "Write a failing test for a known bug"
-  success_indicator: "Test fails before fix, passes after"
-
+  test_command: Write a failing test for a known bug
+  success_indicator: Test fails before fix, passes after
 resources:
-  - url: https://martinfowler.com/bliki/TestDrivenDevelopment.html
-    type: docs
-
+- url: https://martinfowler.com/bliki/TestDrivenDevelopment.html
+  type: docs
 added_date: 2026-02-21
 source: manual
-
 ratings:
   usefulness: 5
   setup_difficulty: 1
-
 tags:
-  - testing
-  - debugging
-  - tdd
-  - workflow
-  - regression
-
+- testing
+- debugging
+- tdd
+- workflow
+- regression
 sdlc_phase: testing
-solves: "Bug fixes that regress - no test to catch if bug returns"
-
+solves: Bug fixes that regress - no test to catch if bug returns
 pricing:
   model: free
-  details: "Free pattern - just a workflow discipline"
+  details: Free pattern - just a workflow discipline
+mentions:
+- url: https://x.com/EastlondonDev/status/2024749245757071785
+  author: '@EastlondonDev'
+  text: 'Replit is the best platform for building software with AI.
+
+
+    Replit’s AI agents are some of the most sophisticated and highly skilled. The
+    platform is battle tested.
+
+
+    Replit supports the most diverse range of software modes of any platform - web
+    apps, data intensive applications, '
+  date: '2026-02-21'
+  likes: 4
