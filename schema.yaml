@@ -18,7 +18,7 @@ properties:
 
   category:
     type: string
-    enum: [mcp, plugin, skill, cli-tool, vscode-extension, workflow-pattern]
+    enum: [mcp, plugin, skill, cli-tool, workflow-pattern]
 
   tagline:
     type: string

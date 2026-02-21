@@ -12,7 +12,6 @@ Used by [`/flux:improve`](https://github.com/Nairon-AI/flux) to recommend tools,
 | `plugins/` | Claude Code plugins |
 | `skills/` | Standalone skills |
 | `cli-tools/` | Command-line tools |
-| `vscode-extensions/` | VS Code extensions |
 | `workflow-patterns/` | Best practices (not tools) |
 
 ## Adding Recommendations
