@@ -36,6 +36,7 @@ EXA_API_BASE = "https://api.exa.ai/contents"
 TYPE_PREFIXES = {
     "tweet": "Tweet",
     "video": "Video",
+    "podcast": "Podcast",
     "tool": "Tool",
     "mcp": "MCP",
     "plugin": "Plugin",
@@ -56,7 +57,7 @@ IMPORTANT: First check if this tool/technique/pattern already exists in:
 
 Return ONLY valid JSON:
 {{
-  "type": "tweet" | "video" | "tool" | "mcp" | "plugin" | "skill" | "pattern" | "article" | "repo",
+  "type": "tweet" | "video" | "podcast" | "tool" | "mcp" | "plugin" | "skill" | "pattern" | "article" | "repo",
   "title": "5-8 word title (without type prefix)",
   "tldr": "1 sentence summary",
   "verdict": "Yes" | "No" | "Maybe" | "Duplicate",
@@ -68,13 +69,15 @@ Return ONLY valid JSON:
   "integration": "Specific steps to integrate with Flux/Claude Code workflows",
   "action_items": ["Concrete action 1", "Concrete action 2", "..."],
   "flux_impact": "How this improves our Agentic SDLC approach (or null if not relevant)",
+  "key_takeaways": ["Takeaway 1", "Takeaway 2", "..."] | null,
   "duplicate_of": null | "path/to/existing.yaml or 'flux-plugin'",
   "duplicate_reason": null | "explanation of overlap"
 }}
 
 Type guide:
 - tweet: Social media discussion/tip
-- video: YouTube video, tutorial, demo, podcast discussion
+- video: YouTube video, tutorial, demo (short-form, focused content)
+- podcast: Long-form discussion, interview, conversation (use key_takeaways!)
 - tool: CLI tool, standalone utility
 - mcp: Model Context Protocol server
 - plugin: Editor extension (VSCode, Neovim, etc.)
@@ -83,7 +86,8 @@ Type guide:
 - article: Blog post, documentation, guide
 - repo: GitHub repository, library, framework
 
-For videos/podcasts: Extract ALL mentioned tools, techniques, and workflow tips.
+For videos: Extract mentioned tools, techniques, and workflow tips.
+For podcasts: MUST include key_takeaways summarizing the main memorable points.
 Focus on actionable items we can implement in Flux.
 
 If duplicate_of is set, verdict MUST be "Duplicate".
@@ -597,6 +601,17 @@ def create_issue_body(url, content, analysis):
     else:
         flux_section = ""
 
+    # Key takeaways (for podcasts)
+    key_takeaways = analysis.get("key_takeaways", [])
+    if key_takeaways:
+        takeaways_list = "\n".join([f"- {item}" for item in key_takeaways])
+        takeaways_section = f"""
+### Key Takeaways
+{takeaways_list}
+"""
+    else:
+        takeaways_section = ""
+
     return f"""[→ View Source]({url}) · {meta}
 
 {content_display}
@@ -612,7 +627,7 @@ def create_issue_body(url, content, analysis):
 | **Relevance** | {stars_display} — {analysis.get("stars_reason", "")} |
 | **Category** | `{analysis.get("category", "unknown/")}` |
 | **SDLC** | {phases_display} |
-{action_section}{flux_section}
+{action_section}{flux_section}{takeaways_section}
 ---
 
 <details>
