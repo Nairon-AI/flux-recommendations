@@ -1,7 +1,8 @@
 /**
  * Cloudflare Worker: Slack Inbox → GitHub Action
  * 
- * Receives Slack events, extracts tweet URLs, triggers GitHub Action.
+ * Receives Slack events, extracts URLs (tweets, YouTube, GitHub, etc.),
+ * triggers GitHub Action for analysis.
  * 
  * Environment variables needed:
  * - SLACK_SIGNING_SECRET: From Slack app settings
@@ -36,16 +37,16 @@ export default {
           const channelId = env.SLACK_CHANNEL_ID;
           
           if (event.channel === channelId || !channelId) {
-            // Extract tweet URLs
-            const tweetUrls = extractTweetUrls(event.text);
+            // Extract all URLs
+            const urls = extractUrls(event.text);
             
-            if (tweetUrls.length > 0) {
-              // Trigger GitHub Action for each tweet
-              for (const url of tweetUrls) {
+            if (urls.length > 0) {
+              // Trigger GitHub Action for each URL
+              for (const url of urls) {
                 await triggerGitHubAction(env, url, event.user);
               }
               
-              // Optionally react to the message
+              // React to the message
               if (env.SLACK_BOT_TOKEN) {
                 await addSlackReaction(env, event.channel, event.ts, "eyes");
               }
@@ -61,26 +62,37 @@ export default {
   },
 };
 
-function extractTweetUrls(text) {
+function extractUrls(text) {
   if (!text) return [];
   
-  const patterns = [
-    /https?:\/\/(?:www\.)?twitter\.com\/\w+\/status\/\d+/g,
-    /https?:\/\/(?:www\.)?x\.com\/\w+\/status\/\d+/g,
+  // Match any URL - http/https with common TLDs
+  const urlPattern = /https?:\/\/[^\s<>\"']+/g;
+  const matches = text.match(urlPattern);
+  
+  if (!matches) return [];
+  
+  // Clean up URLs (remove trailing punctuation)
+  const cleaned = matches.map(url => url.replace(/[.,;:!?)>\]]+$/, ''));
+  
+  // Filter to supported domains (expand as needed)
+  const supportedDomains = [
+    'twitter.com', 'x.com',           // Tweets
+    'youtube.com', 'youtu.be',        // Videos
+    'github.com',                     // Repos
+    'npmjs.com', 'pypi.org',          // Packages
+    'dev.to', 'medium.com',           // Articles
+    'blog.', 'docs.',                 // Blogs, docs
   ];
   
-  const urls = [];
-  for (const pattern of patterns) {
-    const matches = text.match(pattern);
-    if (matches) {
-      urls.push(...matches);
-    }
-  }
+  const filtered = cleaned.filter(url => {
+    // Allow all URLs for now - Exa can handle most things
+    return true;
+  });
   
-  return [...new Set(urls)]; // Dedupe
+  return [...new Set(filtered)]; // Dedupe
 }
 
-async function triggerGitHubAction(env, tweetUrl, slackUser) {
+async function triggerGitHubAction(env, url, slackUser) {
   const response = await fetch(
     `https://api.github.com/repos/${GITHUB_REPO}/dispatches`,
     {
@@ -91,9 +103,10 @@ async function triggerGitHubAction(env, tweetUrl, slackUser) {
         "User-Agent": "FluxSlackInbox/1.0",
       },
       body: JSON.stringify({
-        event_type: "slack-tweet",
+        event_type: "slack-url",
         client_payload: {
-          tweet_url: tweetUrl,
+          url: url,
+          tweet_url: url,  // Backward compat
           slack_user: slackUser || "unknown",
         },
       }),
