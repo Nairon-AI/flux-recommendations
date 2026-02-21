@@ -1,0 +1,73 @@
+name: excalidraw
+category: mcp
+tagline: "AI-controlled diagramming - visualize systems and architectures"
+
+description: |
+  Excalidraw MCP gives Claude full control over an Excalidraw canvas. 26 tools
+  for creating, updating, and arranging diagram elements. AI can see what it
+  drew and iteratively refine.
+  
+  Perfect for system architecture diagrams, flowcharts, ERDs. Supports Mermaid
+  conversion, shareable URLs, and a built-in design guide for better output.
+  1.1k+ stars, actively maintained.
+
+use_cases:
+  - Visualizing system architectures from code/docs
+  - Creating flowcharts and sequence diagrams
+  - Generating ERDs from database schemas
+  - Iterative diagram refinement with AI feedback
+  - Converting Mermaid diagrams to hand-drawn style
+
+prerequisites:
+  - Node.js 18+
+  - Docker (optional, for easier setup)
+
+install:
+  type: mcp
+  command: |
+    # Option 1: Docker (recommended)
+    docker run -d -p 3000:3000 --name mcp-excalidraw-canvas \
+      ghcr.io/yctimlin/mcp_excalidraw-canvas:latest
+    
+    # Option 2: Local
+    git clone https://github.com/yctimlin/mcp_excalidraw.git
+    cd mcp_excalidraw && npm ci && npm run build
+    HOST=0.0.0.0 PORT=3000 npm run canvas
+  config_snippet: |
+    {
+      "mcpServers": {
+        "excalidraw": {
+          "command": "docker",
+          "args": [
+            "run", "-i", "--rm",
+            "-e", "EXPRESS_SERVER_URL=http://host.docker.internal:3000",
+            "-e", "ENABLE_CANVAS_SYNC=true",
+            "ghcr.io/yctimlin/mcp_excalidraw:latest"
+          ]
+        }
+      }
+    }
+
+verification:
+  type: mcp_connect
+  test_command: "Draw a simple architecture diagram with three boxes"
+  success_indicator: "Diagram appears on canvas at localhost:3000"
+
+resources:
+  - url: https://github.com/yctimlin/mcp_excalidraw
+    type: github
+
+added_date: 2026-02-21
+source: manual
+
+ratings:
+  usefulness: 5
+  setup_difficulty: 2
+
+tags:
+  - diagrams
+  - visualization
+  - architecture
+  - excalidraw
+  - flowcharts
+  - system-design
