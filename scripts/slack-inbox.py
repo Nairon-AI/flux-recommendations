@@ -132,12 +132,14 @@ def load_existing_recommendations(recommendations_path):
 def load_flux_plugin_context(flux_path):
     """Load key files from flux plugin to understand built-in features."""
     context_parts = []
+
+    # Key command files
     key_files = [
         "README.md",
         "commands/flux/improve.md",
         "commands/flux/plan.md",
         "commands/flux/work.md",
-        "commands/flux/setup.md",
+        "hooks/hooks.json",
     ]
 
     for filename in key_files:
@@ -151,6 +153,50 @@ def load_flux_plugin_context(flux_path):
                     context_parts.append(f"### {filename}\n{content}")
             except Exception:
                 continue
+
+    # Scan agents folder for capabilities
+    agents_path = os.path.join(flux_path, "agents")
+    if os.path.isdir(agents_path):
+        agent_summaries = ["### Built-in Agents (sub-agents that run automatically)"]
+        for agent_file in sorted(glob.glob(f"{agents_path}/*.md")):
+            try:
+                with open(agent_file, "r") as f:
+                    content = f.read()
+                    name_match = re.search(r"name:\s*(.+)", content)
+                    desc_match = re.search(r"description:\s*(.+)", content)
+                    name = (
+                        name_match.group(1).strip()
+                        if name_match
+                        else os.path.basename(agent_file)
+                    )
+                    desc = desc_match.group(1).strip() if desc_match else ""
+                    agent_summaries.append(f"- **{name}**: {desc}")
+            except Exception:
+                continue
+        if len(agent_summaries) > 1:
+            context_parts.append("\n".join(agent_summaries))
+
+    # Scan commands folder for all available commands
+    commands_path = os.path.join(flux_path, "commands/flux")
+    if os.path.isdir(commands_path):
+        cmd_summaries = ["### Available Commands"]
+        for cmd_file in sorted(glob.glob(f"{commands_path}/*.md")):
+            try:
+                with open(cmd_file, "r") as f:
+                    content = f.read()
+                    name_match = re.search(r"name:\s*(.+)", content)
+                    desc_match = re.search(r"description:\s*(.+)", content)
+                    name = (
+                        name_match.group(1).strip()
+                        if name_match
+                        else os.path.basename(cmd_file)
+                    )
+                    desc = desc_match.group(1).strip() if desc_match else ""
+                    cmd_summaries.append(f"- **{name}**: {desc}")
+            except Exception:
+                continue
+        if len(cmd_summaries) > 1:
+            context_parts.append("\n".join(cmd_summaries))
 
     return (
         "\n\n".join(context_parts) if context_parts else "(flux plugin not available)"
