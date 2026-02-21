@@ -20,9 +20,10 @@ jobs:
         with:
           python-version: '3.11'
       
-      - name: Create issue from tweet
+      - name: Analyze tweet and create issue
         env:
           TWITTER_API_KEY: ${{ secrets.TWITTER_API_KEY }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
           GH_TOKEN: ${{ secrets.PAT_TOKEN }}
           TWEET_URL: ${{ github.event.client_payload.tweet_url }}
         run: python scripts/slack-inbox.py
