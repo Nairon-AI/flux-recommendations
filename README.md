@@ -30,6 +30,10 @@ Each recommendation is a YAML file following [schema.yaml](schema.yaml).
 5. User selects which to install
 6. Flux installs and verifies
 
+## Community
+
+Join our Discord to suggest tools, share discoveries, and discuss workflows: [discord.gg/nairon](https://discord.gg/nairon) *(coming soon)*
+
 ## License
 
 MIT
