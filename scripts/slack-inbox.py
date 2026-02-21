@@ -353,7 +353,9 @@ def fetch_youtube_content(url):
     transcript_text = ""
     if YOUTUBE_TRANSCRIPT_AVAILABLE:
         try:
-            transcript_list = YouTubeTranscriptApi.get_transcript(video_id)
+            # youtube-transcript-api v1.0+ requires instantiation
+            ytt_api = YouTubeTranscriptApi()
+            transcript_list = ytt_api.fetch(video_id)
             transcript_text = " ".join([entry["text"] for entry in transcript_list])
             print(f"Fetched transcript: {len(transcript_text)} chars")
         except Exception as e:
