@@ -116,6 +116,16 @@ def fetch_tweet(tweet_id, api_key):
         return None
 
 
+def fetch_thread_context(tweet, api_key):
+    """Fetch parent tweet if this is a reply."""
+    parent_id = tweet.get("inReplyToId") or tweet.get("in_reply_to_status_id")
+    if not parent_id:
+        return None
+
+    parent = fetch_tweet(parent_id, api_key)
+    return parent
+
+
 def analyze_with_claude(prompt, api_key):
     """Call Claude API to analyze the tweet."""
     headers = {
@@ -181,9 +191,24 @@ def main():
     likes = tweet.get("likeCount", 0)
     retweets = tweet.get("retweetCount", 0)
 
+    # Check if reply and fetch parent for context
+    parent = fetch_thread_context(tweet, twitter_api_key)
+
+    if parent:
+        parent_text = parent.get("text", "")
+        parent_author = parent.get("author", {}).get("userName", "unknown")
+        context_text = f"""[Replying to @{parent_author}]:
+{parent_text}
+
+[Reply by @{author}]:
+{text}"""
+        print(f"Fetched parent tweet from @{parent_author}")
+    else:
+        context_text = text
+
     # Analyze with Claude
     prompt = ANALYSIS_PROMPT.format(
-        tweet_text=text,
+        tweet_text=context_text,
         author=author,
         author_name=author_name,
         likes=likes,
