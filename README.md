@@ -44,9 +44,79 @@ workflow-patterns/
 
 ## Adding Recommendations
 
+### Via Slack (Recommended)
+
+Drop any URL into the `#flux-inbox` channel. That's it.
+
+**Supported URLs:**
+- Tweets/X posts → discussions, tips, tool mentions
+- YouTube videos → tutorials, demos, walkthroughs  
+- GitHub repos → tools, MCPs, libraries
+- Blog posts, docs, product pages → anything useful
+
+The system automatically:
+1. Fetches and analyzes the content
+2. Checks for duplicates against existing recommendations
+3. Creates a GitHub Issue with structured analysis
+4. Labels by type (tweet, video, tool, mcp, plugin, etc.)
+
+### Manual
+
 See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
 
 Each recommendation is a YAML file following [schema.yaml](schema.yaml).
+
+---
+
+## Architecture
+
+```
+┌─────────────┐     ┌─────────────────────┐     ┌─────────────────┐
+│   Slack     │────▶│ Cloudflare Worker   │────▶│ GitHub Action   │
+│ #flux-inbox │     │ (extracts URLs)     │     │ (analyzes)      │
+└─────────────┘     └─────────────────────┘     └─────────────────┘
+                                                        │
+                    ┌───────────────────────────────────┘
+                    ▼
+            ┌───────────────┐     ┌─────────────┐
+            │  Twitter API  │     │   Exa AI    │
+            │  (tweets)     │     │ (everything │
+            └───────────────┘     │    else)    │
+                    │             └─────────────┘
+                    └───────┬───────────┘
+                            ▼
+                    ┌───────────────┐
+                    │    Claude     │
+                    │  (analysis)   │
+                    └───────────────┘
+                            │
+                            ▼
+                    ┌───────────────┐
+                    │ GitHub Issue  │
+                    │ (for review)  │
+                    └───────────────┘
+```
+
+### Components
+
+| Component | Purpose |
+|-----------|---------|
+| **Slack `#flux-inbox`** | Drop zone for URLs - just paste and go |
+| **Cloudflare Worker** | Receives Slack events, extracts URLs, triggers GitHub |
+| **GitHub Action** | Orchestrates fetching and analysis |
+| **Twitter API** | Fetches tweet content + thread context |
+| **Exa AI** | Fetches and summarizes any other URL |
+| **Claude** | Analyzes relevance, categorizes, checks for duplicates |
+
+### Issue Format
+
+Issues are created with:
+- **Type prefix**: `Tweet:`, `Video:`, `Tool:`, `MCP:`, `Plugin:`, etc.
+- **Verdict**: ✅ Yes / ❌ No / 🤔 Maybe / 🔄 Duplicate
+- **Metadata**: Relevance stars, category, SDLC phases
+- **Duplicate check**: Against existing recommendations + flux plugin built-ins
+
+---
 
 ## How It Works
 
