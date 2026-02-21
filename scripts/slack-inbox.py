@@ -363,30 +363,27 @@ def fetch_youtube_content(url, exa_api_key=None):
     except Exception as e:
         print(f"Could not fetch video metadata: {e}")
 
-    # Try to get transcript via hosted API (avoids IP blocking)
+    # Try multiple transcript sources
     transcript_text = ""
-    try:
-        transcript_api_url = (
-            "https://youtube-transcript-api-tau-one.vercel.app/transcript"
-        )
-        req_data = json.dumps(
-            {"video_url": f"https://www.youtube.com/watch?v={video_id}"}
-        ).encode()
-        req = urllib.request.Request(
-            transcript_api_url,
-            data=req_data,
-            headers={"Content-Type": "application/json"},
-            method="POST",
-        )
-        with urllib.request.urlopen(req, timeout=30) as resp:
-            result = json.loads(resp.read().decode())
-            if result.get("transcript"):
-                transcript_text = " ".join(
-                    [entry.get("text", "") for entry in result["transcript"]]
-                )
-                print(f"Fetched transcript via API: {len(transcript_text)} chars")
-    except Exception as e:
-        print(f"Hosted transcript API failed: {e}")
+
+    # Method 1: Supadata API (if key available)
+    supadata_key = os.environ.get("SUPADATA_API_KEY")
+    if not transcript_text and supadata_key:
+        try:
+            supadata_url = (
+                f"https://api.supadata.ai/v1/youtube/transcript?videoId={video_id}"
+            )
+            req = urllib.request.Request(supadata_url)
+            req.add_header("x-api-key", supadata_key)
+            with urllib.request.urlopen(req, timeout=30) as resp:
+                result = json.loads(resp.read().decode())
+                if result.get("content"):
+                    transcript_text = result["content"]
+                    print(
+                        f"Fetched transcript via Supadata: {len(transcript_text)} chars"
+                    )
+        except Exception as e:
+            print(f"Supadata API failed: {e}")
 
     # Fallback to local library if hosted API fails
     if not transcript_text and YOUTUBE_TRANSCRIPT_AVAILABLE:
