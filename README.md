@@ -10,7 +10,7 @@ Used by [`/flux:improve`](https://github.com/Nairon-AI/flux) to recommend tools,
 |--------|------------|-------------|
 | `mcps/` | `design/`, `search/`, `productivity/`, `dev/` | Model Context Protocol servers |
 | `cli-tools/` | `linting/`, `git/`, `terminal/`, `tasks/` | Command-line tools |
-| `applications/` | `productivity/`, `browser/` | Desktop/native apps |
+| `applications/` | `individual/`, `collaboration/` | Desktop/native apps |
 | `skills/` | *(flat)* | Standalone skills |
 | `plugins/` | *(empty)* | Claude Code plugins |
 | `workflow-patterns/` | `git/`, `testing/`, `ai/` | Best practices (not tools) |
@@ -31,8 +31,8 @@ cli-tools/
 └── tasks/        # beads
 
 applications/
-├── productivity/ # wispr-flow, granola, raycast
-└── browser/      # dia
+├── individual/    # wispr-flow, raycast, dia (personal productivity)
+└── collaboration/ # granola (team/stakeholder communication)
 
 skills/           # stagehand-e2e, remotion, repoprompt
 

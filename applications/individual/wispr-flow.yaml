@@ -58,8 +58,8 @@ tags:
   - macos
   - ios
 
-sdlc_phase: requirements
-solves: "Slow documentation of requirements and ideas - typing bottleneck during discovery"
+sdlc_phase: implementation
+solves: "Typing bottleneck - slower than thinking, causes RSI over time"
 
 pricing:
   model: freemium

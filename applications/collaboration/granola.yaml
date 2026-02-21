@@ -64,7 +64,7 @@ tags:
   - ios
 
 sdlc_phase: requirements
-solves: "Losing context from stakeholder meetings - action items fall through cracks, decisions forgotten"
+solves: "Stakeholder meeting context lost - action items and decisions fall through cracks"
 
 pricing:
   model: freemium
