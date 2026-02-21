@@ -18,12 +18,29 @@ ANTHROPIC_API_BASE = "https://api.anthropic.com/v1/messages"
 
 ANALYSIS_PROMPT = """You are analyzing a tweet to determine if it should become a recommendation in Flux - an AI-augmented SDLC workflow system.
 
-FIRST, output a concise title (5-8 words max) that captures the core concept/tool being discussed. Format as:
-**Title:** [your title here]
+Output your analysis in this EXACT format:
 
-Then provide the analysis.
+**Title:** [5-8 word title capturing the core concept]
 
-Flux helps developers optimize their workflows with:
+**TLDR:** [1-2 sentence plain English summary for non-technical readers]
+
+**Relevance:** [1-5 stars] - [one line reason]
+
+**Category:** `[specific category path]`
+
+**What:** [2-3 sentences max explaining the tool/technique]
+
+**SDLC Fit:** [comma-separated phases]
+
+**Integration:** [1-2 sentences on how to integrate with AI workflows]
+
+**Verdict:** [Yes/No/Maybe] - [one line recommendation]
+
+Be extremely concise. No fluff.
+
+---
+
+Context - Flux helps developers optimize their workflows with:
 - MCPs (Model Context Protocol servers)
 - CLI tools
 - Editor plugins
@@ -184,34 +201,19 @@ def main():
         # Fallback to first ~40 chars of tweet
         title = text.replace("\n", " ")[:40] + "..."
 
-    # Format tweet text as blockquote
-    quoted_text = "\n".join(f"> {line}" for line in text.split("\n"))
-
-    # Create issue body
-    body = f"""## Tweet
-
-{quoted_text}
-
-**Author:** [@{author}](https://x.com/{author}) ({author_name})
-**Engagement:** {likes} likes, {retweets} retweets
-**Link:** {tweet_url}
+    # Create issue body - concise format
+    body = f"""[@{author}]({tweet_url}) · {likes} likes
 
 ---
-
-## AI Analysis
 
 {analysis}
 
 ---
 
-## Actions
+- [ ] Create recommendation
+- [ ] Close
 
-- [ ] Review AI analysis
-- [ ] Create recommendation if approved
-- [ ] Close issue when done
-
----
-*Analyzed by Claude · From Slack inbox*
+*via Slack inbox*
 """
 
     # Write body to file
