@@ -137,3 +137,25 @@ properties:
       details:
         type: string
         description: Pricing details (e.g., "Free tier 1000 req/day. Pro $20/mo")
+
+  mentions:
+    type: array
+    description: Social proof - tweets from the community praising this tool
+    items:
+      type: object
+      properties:
+        url:
+          type: string
+          description: Link to the tweet
+        author:
+          type: string
+          description: Twitter handle (e.g., "@username")
+        text:
+          type: string
+          description: Tweet content (truncated if long)
+        date:
+          type: string
+          format: date
+        likes:
+          type: integer
+          description: Like count at time of capture
