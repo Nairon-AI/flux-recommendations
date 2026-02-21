@@ -32,7 +32,9 @@ Each recommendation is a YAML file following [schema.yaml](schema.yaml).
 
 ## Community
 
-Join our Discord to suggest tools, share discoveries, and discuss workflows: [discord.gg/nairon](https://discord.gg/nairon) *(coming soon)*
+Join the most AI-native developer community on the planet. No hype. No AI slop. Just practical discussions on becoming the strongest developers alive.
+
+[discord.gg/nairon](https://discord.gg/nairon) *(coming soon)*
 
 ## License
 
