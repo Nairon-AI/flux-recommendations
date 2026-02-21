@@ -1,71 +1,68 @@
 name: exa
 category: mcp
-tagline: "AI-powered web search with clean, structured results"
+tagline: AI-powered web search with clean, structured results
+description: 'Exa MCP provides intelligent web search that returns clean, LLM-ready
+  content.
 
-description: |
-  Exa MCP provides intelligent web search that returns clean, LLM-ready content.
   Better than raw Google results - filters noise, extracts relevant content.
-  
+
+
   Great for research, finding current information, and fact-checking.
 
+  '
 use_cases:
-  - Researching current events or recent changes
-  - Finding tutorials and guides
-  - Fact-checking information
-  - Discovering new tools and libraries
-
+- Researching current events or recent changes
+- Finding tutorials and guides
+- Fact-checking information
+- Discovering new tools and libraries
 prerequisites:
-  - Exa API key (free tier available)
-  - Node.js 18+
-
+- Exa API key (free tier available)
+- Node.js 18+
 install:
   type: mcp
-  command: |
-    npx -y @anthropic-ai/create-mcp@latest add exa --config claude
-  config_snippet: |
-    {
-      "mcpServers": {
-        "exa": {
-          "command": "npx",
-          "args": ["-y", "@exa/mcp"],
-          "env": {
-            "EXA_API_KEY": "your-api-key"
-          }
-        }
-      }
-    }
+  command: 'npx -y @anthropic-ai/create-mcp@latest add exa --config claude
 
+    '
+  config_snippet: "{\n  \"mcpServers\": {\n    \"exa\": {\n      \"command\": \"npx\"\
+    ,\n      \"args\": [\"-y\", \"@exa/mcp\"],\n      \"env\": {\n        \"EXA_API_KEY\"\
+    : \"your-api-key\"\n      }\n    }\n  }\n}\n"
 verification:
   type: mcp_connect
-  test_command: "Ask Claude to search for 'latest TypeScript features' using exa"
-  success_indicator: "Returns structured search results with relevant content"
-
+  test_command: Ask Claude to search for 'latest TypeScript features' using exa
+  success_indicator: Returns structured search results with relevant content
 related_tools:
-  - context7
-
+- context7
 resources:
-  - url: https://exa.ai
-    type: homepage
-  - url: https://docs.exa.ai
-    type: docs
-
+- url: https://exa.ai
+  type: homepage
+- url: https://docs.exa.ai
+  type: docs
 added_date: 2025-02-21
 source: manual
 source_url: null
-
 ratings:
   usefulness: 4
   setup_difficulty: 2
-
 tags:
-  - search
-  - web
-  - research
-  - current-events
-
+- search
+- web
+- research
+- current-events
 sdlc_phase: requirements
-solves: "AI can't access current information - stuck with training data cutoff"
-
+solves: AI can't access current information - stuck with training data cutoff
 pricing:
   model: freemium
-  details: "Free: 1000 searches/mo. Growth: $50/mo for 10k searches"
+  details: 'Free: 1000 searches/mo. Growth: $50/mo for 10k searches'
+mentions:
+- url: https://x.com/_catwu/status/2025024623432400970
+  author: '@_catwu'
+  text: The new fastest way to iterate on web apps!
+  date: '2026-02-21'
+  likes: 304
+- url: https://x.com/EastlondonDev/status/2025019629815640440
+  author: '@EastlondonDev'
+  text: Please @bcherny could we get working websockets in Claude code web? Any code
+    attempting to create a websocket is being blocked by the outbound http proxy on
+    the sandbox
+  date: '2026-02-21'
+  likes: 0

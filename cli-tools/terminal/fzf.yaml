@@ -1,65 +1,79 @@
 name: fzf
 category: cli-tool
-tagline: "Fuzzy finder - search anything from the terminal instantly"
+tagline: Fuzzy finder - search anything from the terminal instantly
+description: 'fzf is a general-purpose fuzzy finder. Search files, command history,
 
-description: |
-  fzf is a general-purpose fuzzy finder. Search files, command history,
   git branches, processes, anything. Type a few characters, get instant results.
-  
+
+
   Integrates with shell (Ctrl+R for history, Ctrl+T for files). Makes terminal
+
   workflows dramatically faster. Essential productivity tool.
 
+  '
 use_cases:
-  - Fuzzy search command history (Ctrl+R)
-  - Find files quickly (Ctrl+T)
-  - Switch git branches interactively
-  - Search and kill processes
-  - Preview files while searching
-
+- Fuzzy search command history (Ctrl+R)
+- Find files quickly (Ctrl+T)
+- Switch git branches interactively
+- Search and kill processes
+- Preview files while searching
 prerequisites:
-  - None (standalone binary)
-
+- None (standalone binary)
 install:
   type: brew
-  command: |
-    # macOS
+  command: '# macOS
+
     brew install fzf
-    
+
+
     # Install shell integrations
+
     $(brew --prefix)/opt/fzf/install
-    
+
+
     # Linux
+
     # git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
+
     # ~/.fzf/install
 
+    '
 verification:
   type: command_exists
-  test_command: "fzf --version"
-  success_indicator: "Shows fzf version"
-
+  test_command: fzf --version
+  success_indicator: Shows fzf version
 resources:
-  - url: https://github.com/junegunn/fzf
-    type: github
-  - url: https://junegunn.github.io/fzf/
-    type: docs
-
+- url: https://github.com/junegunn/fzf
+  type: github
+- url: https://junegunn.github.io/fzf/
+  type: docs
 added_date: 2026-02-21
 source: manual
-
 ratings:
   usefulness: 5
   setup_difficulty: 1
-
 tags:
-  - fuzzy-finder
-  - search
-  - terminal
-  - productivity
-  - essential
-
+- fuzzy-finder
+- search
+- terminal
+- productivity
+- essential
 sdlc_phase: implementation
-solves: "Slow file/command navigation - typing full paths instead of fuzzy search"
-
+solves: Slow file/command navigation - typing full paths instead of fuzzy search
 pricing:
   model: open-source
-  details: "Free and open-source (MIT)"
+  details: Free and open-source (MIT)
+mentions:
+- url: https://x.com/_catwu/status/2025026324759544149
+  author: '@_catwu'
+  text: Multi-clauding? Use /rename [label] to name each terminal session
+  date: '2026-02-21'
+  likes: 426
+- url: https://x.com/nummanali/status/2025015444789232089
+  author: '@nummanali'
+  text: "This could make me use Claude Code in the desktop app \n\nLittle optimisations\
+    \ to your dev process ie reducing the need to context switch between browser and\
+    \ terminal \n\nLead to better focus, faster iterations and basically higher quality\
+    \ outcomes \n\nNot joking lmao, it’s a big deal"
+  date: '2026-02-21'
+  likes: 36

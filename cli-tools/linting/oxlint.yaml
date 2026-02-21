@@ -1,71 +1,79 @@
 name: oxlint
 category: cli-tool
-tagline: "50-100x faster than ESLint - Rust-based linter"
+tagline: 50-100x faster than ESLint - Rust-based linter
+description: 'Oxlint is a JavaScript/TypeScript linter written in Rust. 50-100x faster
+  than ESLint.
 
-description: |
-  Oxlint is a JavaScript/TypeScript linter written in Rust. 50-100x faster than ESLint.
   Drop-in replacement for most ESLint rules. Great for large codebases.
-  
+
+
   Can run alongside ESLint (disable overlapping rules) or as full replacement.
 
+  '
 use_cases:
-  - Fast linting in CI/CD
-  - Pre-commit hooks that don't slow you down
-  - Large monorepo linting
-  - Instant feedback while coding
-
+- Fast linting in CI/CD
+- Pre-commit hooks that don't slow you down
+- Large monorepo linting
+- Instant feedback while coding
 prerequisites:
-  - Node.js 18+ or direct binary
-
+- Node.js 18+ or direct binary
 install:
   type: npm
-  command: |
-    # Via npm
-    npm install -D oxlint
-    
-    # Or standalone binary
-    curl -sSfL https://oxc.rs/install.sh | sh
-  config_snippet: |
-    // package.json scripts
-    {
-      "scripts": {
-        "lint": "oxlint ."
-      }
-    }
+  command: '# Via npm
 
+    npm install -D oxlint
+
+
+    # Or standalone binary
+
+    curl -sSfL https://oxc.rs/install.sh | sh
+
+    '
+  config_snippet: "// package.json scripts\n{\n  \"scripts\": {\n    \"lint\": \"\
+    oxlint .\"\n  }\n}\n"
 verification:
   type: command_exists
-  test_command: "npx oxlint --version"
-  success_indicator: "Outputs version number"
-
+  test_command: npx oxlint --version
+  success_indicator: Outputs version number
 related_tools:
-  - lefthook
-  - turbo
-
+- lefthook
+- turbo
 resources:
-  - url: https://oxc.rs
-    type: homepage
-  - url: https://github.com/oxc-project/oxc
-    type: github
-
+- url: https://oxc.rs
+  type: homepage
+- url: https://github.com/oxc-project/oxc
+  type: github
 added_date: 2025-02-21
 source: manual
 source_url: null
-
 ratings:
   usefulness: 4
   setup_difficulty: 1
-
 tags:
-  - linting
-  - javascript
-  - typescript
-  - rust
-  - performance
-
+- linting
+- javascript
+- typescript
+- rust
+- performance
 sdlc_phase: implementation
-solves: "Slow linting feedback loop - ESLint takes too long on large codebases"
-
+solves: Slow linting feedback loop - ESLint takes too long on large codebases
 pricing:
   model: open-source
-  details: "Free and open-source (MIT)"
+  details: Free and open-source (MIT)
+mentions:
+- url: https://x.com/justsisyphus/status/2025273197885882522
+  author: '@justsisyphus'
+  text: 'oh-my-opencode 3.8.0 just got released
+
+
+    - hashline editing from @_can1357''s oh-my-pi is now default. enjoy better model
+    performance!
+
+
+    - you can now set model for ultrawork mode. kimi as normal sisyphus, opus as ulw
+    sisyphus!
+
+
+    agents now catches your intent better, context optimiz'
+  date: '2026-02-21'
+  likes: 13

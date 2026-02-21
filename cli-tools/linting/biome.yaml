@@ -1,66 +1,78 @@
 name: biome
 category: cli-tool
-tagline: "One tool for formatting and linting - replaces Prettier + ESLint"
+tagline: One tool for formatting and linting - replaces Prettier + ESLint
+description: 'Biome is a fast formatter and linter for JavaScript, TypeScript, JSON,
+  and more.
 
-description: |
-  Biome is a fast formatter and linter for JavaScript, TypeScript, JSON, and more.
-  Written in Rust, it's 20-100x faster than Prettier + ESLint combined.
-  
+  Written in Rust, it''s 20-100x faster than Prettier + ESLint combined.
+
+
   Single tool, single config. No more managing two configs that fight each other.
+
   97% Prettier compatibility, built-in ESLint rules.
 
+  '
 use_cases:
-  - Replacing Prettier + ESLint with one tool
-  - Faster CI/CD linting and formatting
-  - Pre-commit hooks that don't slow you down
-  - Consistent code style across team
-
+- Replacing Prettier + ESLint with one tool
+- Faster CI/CD linting and formatting
+- Pre-commit hooks that don't slow you down
+- Consistent code style across team
 prerequisites:
-  - Node.js 18+ (or standalone binary)
-
+- Node.js 18+ (or standalone binary)
 install:
   type: npm
-  command: |
-    # Install
+  command: '# Install
+
     npm install -D @biomejs/biome
-    
+
+
     # Initialize config
+
     npx @biomejs/biome init
-    
+
+
     # Add scripts to package.json
+
     # "format": "biome format --write ."
+
     # "lint": "biome lint ."
+
     # "check": "biome check --write ."
 
+    '
 verification:
   type: command_exists
-  test_command: "npx @biomejs/biome --version"
-  success_indicator: "Shows biome version"
-
+  test_command: npx @biomejs/biome --version
+  success_indicator: Shows biome version
 resources:
-  - url: https://biomejs.dev
-    type: homepage
-  - url: https://github.com/biomejs/biome
-    type: github
-
+- url: https://biomejs.dev
+  type: homepage
+- url: https://github.com/biomejs/biome
+  type: github
 added_date: 2026-02-21
 source: manual
-
 ratings:
   usefulness: 5
   setup_difficulty: 1
-
 tags:
-  - formatter
-  - linter
-  - javascript
-  - typescript
-  - rust
-  - fast
-
+- formatter
+- linter
+- javascript
+- typescript
+- rust
+- fast
 sdlc_phase: implementation
-solves: "Managing two tools (Prettier+ESLint) with conflicting configs - complexity and slow CI"
-
+solves: Managing two tools (Prettier+ESLint) with conflicting configs - complexity
+  and slow CI
 pricing:
   model: open-source
-  details: "Free and open-source (MIT)"
+  details: Free and open-source (MIT)
+mentions:
+- url: https://x.com/EastlondonDev/status/2025063991798538680
+  author: '@EastlondonDev'
+  text: Hi @taalas_inc I’m sure you’re busy right now - I’m competing in a YC MCP
+    hackathon tomorrow and I’d love to show off your super fast api in my entry, could
+    you set me up with access? I was on the winning team of the London Grok hackathon
+    & I’ll give it my best shot here in SF to
+  date: '2026-02-21'
+  likes: 4

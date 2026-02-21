@@ -1,71 +1,90 @@
 name: supermemory
 category: mcp
-tagline: "Persistent memory across Claude sessions"
+tagline: Persistent memory across Claude sessions
+description: 'Supermemory MCP gives Claude persistent memory that survives session
+  restarts.
 
-description: |
-  Supermemory MCP gives Claude persistent memory that survives session restarts.
   Store project knowledge, user preferences, learned patterns, and context
+
   that carries forward to future sessions.
-  
+
+
   Essential for long-running projects where you want Claude to "remember" decisions.
 
+  '
 use_cases:
-  - Storing project-specific context
-  - Remembering user preferences
-  - Tracking decisions and rationale
-  - Building up knowledge over time
-
+- Storing project-specific context
+- Remembering user preferences
+- Tracking decisions and rationale
+- Building up knowledge over time
 prerequisites:
-  - Supermemory account
-  - API key
-
+- Supermemory account
+- API key
 install:
   type: mcp
-  command: |
-    npx -y @anthropic-ai/create-mcp@latest add supermemory --config claude
-  config_snippet: |
-    {
-      "mcpServers": {
-        "supermemory": {
-          "command": "npx",
-          "args": ["-y", "@supermemory/mcp"],
-          "env": {
-            "SUPERMEMORY_API_KEY": "your-api-key"
-          }
-        }
-      }
-    }
+  command: 'npx -y @anthropic-ai/create-mcp@latest add supermemory --config claude
 
+    '
+  config_snippet: "{\n  \"mcpServers\": {\n    \"supermemory\": {\n      \"command\"\
+    : \"npx\",\n      \"args\": [\"-y\", \"@supermemory/mcp\"],\n      \"env\": {\n\
+    \        \"SUPERMEMORY_API_KEY\": \"your-api-key\"\n      }\n    }\n  }\n}\n"
 verification:
   type: mcp_connect
-  test_command: "Ask Claude to store a memory and then retrieve it"
-  success_indicator: "Successfully stores and retrieves the memory"
-
+  test_command: Ask Claude to store a memory and then retrieve it
+  success_indicator: Successfully stores and retrieves the memory
 related_tools: []
-
 resources:
-  - url: https://supermemory.ai
-    type: homepage
-  - url: https://docs.supermemory.ai
-    type: docs
-
+- url: https://supermemory.ai
+  type: homepage
+- url: https://docs.supermemory.ai
+  type: docs
 added_date: 2025-02-21
 source: manual
 source_url: null
-
 ratings:
   usefulness: 5
   setup_difficulty: 2
-
 tags:
-  - memory
-  - persistence
-  - context
-  - knowledge-base
-
+- memory
+- persistence
+- context
+- knowledge-base
 sdlc_phase: documentation
-solves: "AI forgets project context between sessions - re-explaining the same things"
-
+solves: AI forgets project context between sessions - re-explaining the same things
 pricing:
   model: freemium
-  details: "Free tier available. Pro plans for teams"
+  details: Free tier available. Pro plans for teams
+mentions:
+- url: https://x.com/realmcore_/status/2025018787171631337
+  author: '@realmcore_'
+  text: 'Feels like the AGI primitives are:
+
+
+    - Payment rails
+
+    - Sandboxes
+
+    - Heartbeat event loop
+
+    - Agent to agent comms
+
+    - Swarm coordination
+
+    - Multi-provider
+
+    - Long Term Memory
+
+    - Really good memory
+
+    - Really really good memory
+
+    - Fully extensible agent
+
+    - Git
+
+    - Jira
+
+
+    In a box.'
+  date: '2026-02-21'
+  likes: 732
