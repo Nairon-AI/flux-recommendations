@@ -6,6 +6,7 @@ Usage:
     TWEET_URL=... TWITTER_API_KEY=... ANTHROPIC_API_KEY=... python scripts/slack-inbox.py
 """
 
+import glob
 import json
 import os
 import re
@@ -18,25 +19,104 @@ ANTHROPIC_API_BASE = "https://api.anthropic.com/v1/messages"
 
 ANALYSIS_PROMPT = """Analyze this tweet for Flux (AI-augmented dev workflow system).
 
-Return ONLY valid JSON with this exact structure:
+IMPORTANT: First check if this tool/technique/pattern already exists in:
+1. Existing recommendations (provided below)
+2. The Flux plugin codebase (already built-in)
+
+Return ONLY valid JSON:
 {{
   "title": "5-8 word title",
   "tldr": "1 sentence summary",
-  "verdict": "Yes" | "No" | "Maybe",
+  "verdict": "Yes" | "No" | "Maybe" | "Duplicate",
   "stars": 1-5,
   "stars_reason": "brief reason",
   "category": "category/path/",
   "sdlc_phases": ["phase1", "phase2"],
   "what": "2-3 sentences explaining the tool/technique",
-  "integration": "1-2 sentences on how to integrate"
+  "integration": "1-2 sentences on how to integrate",
+  "duplicate_of": null | "path/to/existing.yaml or 'flux-plugin'",
+  "duplicate_reason": null | "explanation of overlap"
 }}
+
+If duplicate_of is set, verdict MUST be "Duplicate".
 
 Categories: mcps/, cli-tools/, plugins/, skills/, applications/, workflow-patterns/
 SDLC phases: Planning, Implementation, Testing, Code Review, CI/CD, Debugging
 
+---
+
+EXISTING RECOMMENDATIONS:
+{existing_recommendations}
+
+---
+
+FLUX PLUGIN BUILT-IN FEATURES:
+{flux_plugin_context}
+
+---
+
 Tweet by @{author} ({author_name}) · {likes} likes, {retweets} RTs:
 {tweet_text}
 """
+
+
+def load_existing_recommendations(recommendations_path):
+    """Load all existing recommendation YAML files as context."""
+    recommendations = []
+    yaml_files = glob.glob(f"{recommendations_path}/**/*.yaml", recursive=True)
+    yaml_files += glob.glob(f"{recommendations_path}/**/*.yml", recursive=True)
+
+    for filepath in yaml_files:
+        # Skip schema and config files
+        if "schema" in filepath.lower() or "accounts" in filepath.lower():
+            continue
+        try:
+            with open(filepath, "r") as f:
+                content = f.read()
+                # Extract just the key info: name, description, tags
+                name_match = re.search(r"name:\s*(.+)", content)
+                desc_match = re.search(r"description:\s*(.+)", content)
+                rel_path = os.path.relpath(filepath, recommendations_path)
+
+                name = name_match.group(1).strip() if name_match else rel_path
+                desc = desc_match.group(1).strip() if desc_match else ""
+
+                recommendations.append(f"- {rel_path}: {name} - {desc[:100]}")
+        except Exception:
+            continue
+
+    return "\n".join(recommendations) if recommendations else "(none yet)"
+
+
+def load_flux_plugin_context(flux_path):
+    """Load key files from flux plugin to understand built-in features."""
+    context_parts = []
+
+    # Key files that describe flux capabilities
+    key_files = [
+        "README.md",
+        "commands/flux/improve.md",
+        "commands/flux/plan.md",
+        "commands/flux/work.md",
+        "commands/flux/setup.md",
+    ]
+
+    for filename in key_files:
+        filepath = os.path.join(flux_path, filename)
+        if os.path.exists(filepath):
+            try:
+                with open(filepath, "r") as f:
+                    content = f.read()
+                    # Truncate long files
+                    if len(content) > 2000:
+                        content = content[:2000] + "\n... (truncated)"
+                    context_parts.append(f"### {filename}\n{content}")
+            except Exception:
+                continue
+
+    return (
+        "\n\n".join(context_parts) if context_parts else "(flux plugin not available)"
+    )
 
 
 def extract_tweet_id(url):
@@ -108,6 +188,8 @@ def main():
     tweet_url = os.environ.get("TWEET_URL")
     twitter_api_key = os.environ.get("TWITTER_API_KEY")
     anthropic_api_key = os.environ.get("ANTHROPIC_API_KEY")
+    recommendations_path = os.environ.get("RECOMMENDATIONS_PATH", ".")
+    flux_plugin_path = os.environ.get("FLUX_PLUGIN_PATH", "")
 
     if not tweet_url:
         print("Error: TWEET_URL not set")
@@ -118,6 +200,20 @@ def main():
     if not anthropic_api_key:
         print("Error: ANTHROPIC_API_KEY not set")
         exit(1)
+
+    # Load existing context for deduplication
+    print("Loading existing recommendations...")
+    existing_recs = load_existing_recommendations(recommendations_path)
+    print(
+        f"Found {existing_recs.count(chr(10)) + 1 if existing_recs != '(none yet)' else 0} recommendations"
+    )
+
+    print("Loading flux plugin context...")
+    flux_context = (
+        load_flux_plugin_context(flux_plugin_path)
+        if flux_plugin_path
+        else "(not available)"
+    )
 
     # Fetch tweet
     tweet_id = extract_tweet_id(tweet_url)
@@ -159,6 +255,8 @@ def main():
         author_name=author_name,
         likes=likes,
         retweets=retweets,
+        existing_recommendations=existing_recs,
+        flux_plugin_context=flux_context,
     )
 
     print("Analyzing tweet with Claude...")
@@ -184,6 +282,8 @@ def main():
             "sdlc_phases": [],
             "what": analysis_raw[:500],
             "integration": "",
+            "duplicate_of": None,
+            "duplicate_reason": None,
         }
 
     title = analysis.get("title", text[:40] + "...")
@@ -206,11 +306,28 @@ def main():
 
     # Verdict emoji
     verdict = analysis.get("verdict", "Maybe")
-    verdict_emoji = {"Yes": "✅", "No": "❌", "Maybe": "🤔"}.get(verdict, "🤔")
+    verdict_emoji = {"Yes": "✅", "No": "❌", "Maybe": "🤔", "Duplicate": "🔄"}.get(
+        verdict, "🤔"
+    )
 
     # SDLC phases as tags
     phases = analysis.get("sdlc_phases", [])
     phases_display = " · ".join(phases) if phases else "—"
+
+    # Check for duplicate
+    duplicate_of = analysis.get("duplicate_of")
+    duplicate_reason = analysis.get("duplicate_reason")
+
+    # Build duplicate section if needed
+    if duplicate_of:
+        duplicate_section = f"""
+> **🔄 Already exists:** `{duplicate_of}`
+> 
+> {duplicate_reason or "This appears to already be covered."}
+
+"""
+    else:
+        duplicate_section = ""
 
     # Create issue body - visual hierarchy
     body = f"""[→ View Tweet]({tweet_url}) · {likes} ❤️ · @{author}
@@ -222,7 +339,7 @@ def main():
 ## {verdict_emoji} Verdict: {verdict}
 
 {analysis.get("tldr", "")}
-
+{duplicate_section}
 | | |
 |:--|:--|
 | **Relevance** | {stars_display} — {analysis.get("stars_reason", "")} |
@@ -251,21 +368,23 @@ def main():
         f.write(body)
 
     # Create issue using gh cli
-    result = subprocess.run(
-        [
-            "gh",
-            "issue",
-            "create",
-            "--title",
-            title,
-            "--body-file",
-            "/tmp/issue.md",
-            "--label",
-            "inbox",
-        ],
-        capture_output=True,
-        text=True,
-    )
+    labels = ["inbox"]
+    if duplicate_of:
+        labels.append("duplicate")
+
+    cmd = [
+        "gh",
+        "issue",
+        "create",
+        "--title",
+        title,
+        "--body-file",
+        "/tmp/issue.md",
+    ]
+    for label in labels:
+        cmd.extend(["--label", label])
+
+    result = subprocess.run(cmd, capture_output=True, text=True)
 
     if result.returncode != 0:
         print(f"Error creating issue: {result.stderr}")
