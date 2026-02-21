@@ -1,0 +1,9 @@
+name = "flux-slack-inbox"
+main = "slack-inbox.js"
+compatibility_date = "2024-01-01"
+
+# Set these via `wrangler secret put <NAME>`
+# - SLACK_SIGNING_SECRET
+# - GITHUB_TOKEN (your PAT)
+# - SLACK_BOT_TOKEN (optional, for reactions)
+# - SLACK_CHANNEL_ID (optional, to filter to one channel)

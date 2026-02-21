@@ -1,0 +1,94 @@
+name: Slack Inbox
+
+on:
+  repository_dispatch:
+    types: [slack-tweet]
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  process-tweet:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      
+      - name: Install dependencies
+        run: pip install pyyaml
+      
+      - name: Process tweet
+        id: process
+        env:
+          TWITTER_API_KEY: ${{ secrets.TWITTER_API_KEY }}
+          TWEET_URL: ${{ github.event.client_payload.tweet_url }}
+          SLACK_USER: ${{ github.event.client_payload.slack_user }}
+        run: |
+          python scripts/process-tweet.py "$TWEET_URL" | tee /tmp/result.json
+          
+          # Extract outputs
+          TITLE=$(jq -r '.title' /tmp/result.json)
+          CATEGORY=$(jq -r '.category' /tmp/result.json)
+          FILENAME=$(jq -r '.filename' /tmp/result.json)
+          
+          echo "title=$TITLE" >> $GITHUB_OUTPUT
+          echo "category=$CATEGORY" >> $GITHUB_OUTPUT
+          echo "filename=$FILENAME" >> $GITHUB_OUTPUT
+
+      - name: Create PR
+        env:
+          GH_TOKEN: ${{ secrets.PAT_TOKEN }}
+          TWEET_URL: ${{ github.event.client_payload.tweet_url }}
+        run: |
+          if [ ! -f /tmp/recommendation.yaml ]; then
+            echo "No recommendation generated"
+            exit 0
+          fi
+          
+          git config user.name "Flux Radar"
+          git config user.email "flux-radar@nairon.ai"
+          
+          BRANCH="inbox/$(date +%Y%m%d-%H%M%S)"
+          git checkout -b "$BRANCH"
+          
+          # Move generated file to correct location
+          CATEGORY="${{ steps.process.outputs.category }}"
+          FILENAME="${{ steps.process.outputs.filename }}"
+          mkdir -p "$CATEGORY"
+          mv /tmp/recommendation.yaml "$CATEGORY/$FILENAME"
+          
+          git add -A
+          git commit -m "feat: add ${{ steps.process.outputs.title }} recommendation"
+          git push -u origin "$BRANCH"
+          
+          # Create PR
+          cat > /tmp/pr-body.md << EOF
+          ## New Recommendation from Slack
+          
+          **Source:** $TWEET_URL
+          **Suggested by:** ${{ github.event.client_payload.slack_user }}
+          
+          ### Generated Recommendation
+          
+          - **Name:** ${{ steps.process.outputs.title }}
+          - **Category:** $CATEGORY
+          
+          ### Review
+          - [ ] Name and description are accurate
+          - [ ] Category is correct
+          - [ ] Tags are appropriate
+          - [ ] Install command works
+          
+          ---
+          *Generated from Slack inbox*
+          EOF
+          
+          gh pr create \
+            --title "Add: ${{ steps.process.outputs.title }}" \
+            --body-file /tmp/pr-body.md
