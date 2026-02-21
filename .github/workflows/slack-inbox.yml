@@ -27,6 +27,9 @@ jobs:
         with:
           python-version: '3.11'
       
+      - name: Install dependencies
+        run: pip install youtube-transcript-api
+      
       - name: Analyze URL and create issue
         env:
           TWITTER_API_KEY: ${{ secrets.TWITTER_API_KEY }}

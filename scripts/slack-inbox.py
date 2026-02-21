@@ -4,7 +4,7 @@ Process any URL from Slack inbox, analyze with Claude, and create a GitHub issue
 
 Supports:
 - Tweet URLs (twitter.com, x.com) → Twitter API
-- YouTube URLs → Exa AI
+- YouTube URLs → Transcript API (full transcript analysis)
 - GitHub URLs → Exa AI
 - Any other URL → Exa AI
 
@@ -20,6 +20,13 @@ import subprocess
 import urllib.error
 import urllib.parse
 import urllib.request
+
+try:
+    from youtube_transcript_api import YouTubeTranscriptApi
+
+    YOUTUBE_TRANSCRIPT_AVAILABLE = True
+except ImportError:
+    YOUTUBE_TRANSCRIPT_AVAILABLE = False
 
 TWITTER_API_BASE = "https://api.twitterapi.io"
 ANTHROPIC_API_BASE = "https://api.anthropic.com/v1/messages"
@@ -322,6 +329,83 @@ def fetch_with_exa(url, api_key):
         return None
 
 
+def extract_youtube_video_id(url):
+    """Extract video ID from various YouTube URL formats."""
+    patterns = [
+        r"(?:youtube\.com/watch\?v=|youtu\.be/|youtube\.com/embed/)([a-zA-Z0-9_-]{11})",
+        r"youtube\.com/shorts/([a-zA-Z0-9_-]{11})",
+    ]
+    for pattern in patterns:
+        match = re.search(pattern, url)
+        if match:
+            return match.group(1)
+    return None
+
+
+def fetch_youtube_content(url):
+    """Fetch YouTube video transcript and metadata."""
+    video_id = extract_youtube_video_id(url)
+    if not video_id:
+        print(f"Could not extract video ID from {url}")
+        return None
+
+    # Try to get transcript
+    transcript_text = ""
+    if YOUTUBE_TRANSCRIPT_AVAILABLE:
+        try:
+            transcript_list = YouTubeTranscriptApi.get_transcript(video_id)
+            transcript_text = " ".join([entry["text"] for entry in transcript_list])
+            print(f"Fetched transcript: {len(transcript_text)} chars")
+        except Exception as e:
+            print(f"Could not fetch transcript: {e}")
+
+    # Get video metadata via oembed (no API key needed)
+    try:
+        oembed_url = f"https://www.youtube.com/oembed?url=https://www.youtube.com/watch?v={video_id}&format=json"
+        req = urllib.request.Request(oembed_url)
+        req.add_header("User-Agent", "FluxInbox/1.0")
+        with urllib.request.urlopen(req, timeout=10) as resp:
+            metadata = json.loads(resp.read().decode())
+            title = metadata.get("title", "Unknown Video")
+            author = metadata.get("author_name", "")
+    except Exception as e:
+        print(f"Could not fetch video metadata: {e}")
+        title = "YouTube Video"
+        author = ""
+
+    if not transcript_text:
+        # Fallback message if no transcript
+        transcript_text = "(Transcript not available for this video)"
+
+    # Truncate transcript if too long (keep ~8000 chars for Claude context)
+    if len(transcript_text) > 8000:
+        transcript_text = transcript_text[:8000] + "\n... (transcript truncated)"
+
+    # Build content for Claude
+    content_text = f"Title: {title}\n"
+    if author:
+        content_text += f"Channel: {author}\n"
+    content_text += f"\nTranscript:\n{transcript_text}"
+
+    # Display format for issue
+    preview = (
+        transcript_text[:300].replace("\n", " ") + "..."
+        if len(transcript_text) > 300
+        else transcript_text
+    )
+    display = f"**{title}**\n\nBy: {author}\n\n> {preview}"
+
+    return {
+        "type": "youtube",
+        "text": content_text,
+        "title": title,
+        "author": author,
+        "transcript": transcript_text,
+        "display": display,
+        "meta": f"📺 {author}",
+    }
+
+
 def fetch_exa_content(url, api_key, url_type):
     """Fetch content via Exa and return structured content."""
     exa_result = fetch_with_exa(url, api_key)
@@ -342,10 +426,7 @@ def fetch_exa_content(url, api_key, url_type):
     content_text += f"\nContent:\n{text[:4000]}"
 
     # Display format varies by type
-    if url_type == "youtube":
-        meta = f"📺 {title}"
-        display = f"**{title}**\n\n{summary or text[:500]}"
-    elif url_type == "github":
+    if url_type == "github":
         meta = f"🔗 {title}"
         display = f"**{title}**\n\n{summary or text[:500]}"
     else:
@@ -530,6 +611,13 @@ def main():
             exit(1)
         print("Fetching tweet...")
         content = fetch_tweet_content(url, twitter_api_key)
+    elif url_type == "youtube":
+        print("Fetching YouTube transcript...")
+        content = fetch_youtube_content(url)
+        # Fallback to Exa if transcript fails
+        if not content and exa_api_key:
+            print("Transcript failed, falling back to Exa...")
+            content = fetch_exa_content(url, exa_api_key, url_type)
     else:
         if not exa_api_key:
             print("Error: EXA_API_KEY required for non-tweet URLs")
