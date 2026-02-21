@@ -16,80 +16,26 @@ import urllib.request
 TWITTER_API_BASE = "https://api.twitterapi.io"
 ANTHROPIC_API_BASE = "https://api.anthropic.com/v1/messages"
 
-ANALYSIS_PROMPT = """You are analyzing a tweet to determine if it should become a recommendation in Flux - an AI-augmented SDLC workflow system.
+ANALYSIS_PROMPT = """Analyze this tweet for Flux (AI-augmented dev workflow system).
 
-Output your analysis in this EXACT format:
+Return ONLY valid JSON with this exact structure:
+{{
+  "title": "5-8 word title",
+  "tldr": "1 sentence summary",
+  "verdict": "Yes" | "No" | "Maybe",
+  "stars": 1-5,
+  "stars_reason": "brief reason",
+  "category": "category/path/",
+  "sdlc_phases": ["phase1", "phase2"],
+  "what": "2-3 sentences explaining the tool/technique",
+  "integration": "1-2 sentences on how to integrate"
+}}
 
-**Title:** [5-8 word title capturing the core concept]
+Categories: mcps/, cli-tools/, plugins/, skills/, applications/, workflow-patterns/
+SDLC phases: Planning, Implementation, Testing, Code Review, CI/CD, Debugging
 
-**TLDR:** [1-2 sentence plain English summary for non-technical readers]
-
-**Relevance:** [1-5 stars] - [one line reason]
-
-**Category:** `[specific category path]`
-
-**What:** [2-3 sentences max explaining the tool/technique]
-
-**SDLC Fit:** [comma-separated phases]
-
-**Integration:** [1-2 sentences on how to integrate with AI workflows]
-
-**Verdict:** [Yes/No/Maybe] - [one line recommendation]
-
-Be extremely concise. No fluff.
-
----
-
-Context - Flux helps developers optimize their workflows with:
-- MCPs (Model Context Protocol servers)
-- CLI tools
-- Editor plugins
-- Skills (reusable prompts/workflows)
-- Workflow patterns (best practices)
-
-Categories in Flux:
-- mcps/ (search, productivity, dev-tools)
-- cli-tools/ (terminal, linting, git)
-- plugins/ (vscode, neovim)
-- skills/ (claude code skills)
-- applications/ (desktop apps)
-- workflow-patterns/ (ai, git, testing patterns)
-
-SDLC phases where recommendations can help:
-- Planning & Architecture
-- Implementation & Coding
-- Testing & QA
-- Code Review
-- Deployment & CI/CD
-- Debugging & Maintenance
-
----
-
-Analyze this tweet and provide:
-
-1. **Relevance Score** (1-5 stars): How relevant is this to AI-augmented development?
-
-2. **What It Is**: Brief explanation of the tool/technique/pattern being discussed
-
-3. **Category**: Which Flux category would this belong in? (be specific, e.g., `workflow-patterns/verification/`)
-
-4. **SDLC Fit**: Which phases of the SDLC does this help with?
-
-5. **Integration Ideas**: How could this be integrated into an AI-augmented workflow?
-
-6. **Recommendation**: Should we create a Flux recommendation for this? Why or why not?
-
-7. **Next Steps**: If yes, what specific actions should we take?
-
-Be concise but insightful. Focus on practical value for developers using AI coding assistants.
-
----
-
-Tweet:
+Tweet by @{author} ({author_name}) · {likes} likes, {retweets} RTs:
 {tweet_text}
-
-Author: @{author} ({author_name})
-Engagement: {likes} likes, {retweets} retweets
 """
 
 
@@ -216,41 +162,88 @@ def main():
     )
 
     print("Analyzing tweet with Claude...")
-    analysis = analyze_with_claude(prompt, anthropic_api_key)
+    analysis_raw = analyze_with_claude(prompt, anthropic_api_key)
 
-    # Extract title from Claude's analysis
-    title_match = re.search(r"\*\*Title:\*\*\s*(.+?)(?:\n|$)", analysis)
-    if title_match:
-        title = title_match.group(1).strip()
-    else:
-        # Fallback to first ~40 chars of tweet
-        title = text.replace("\n", " ")[:40] + "..."
+    # Parse JSON response
+    try:
+        # Extract JSON from response (handle markdown code blocks)
+        json_match = re.search(r"```(?:json)?\s*([\s\S]*?)```", analysis_raw)
+        if json_match:
+            analysis_raw = json_match.group(1)
+        analysis = json.loads(analysis_raw)
+    except json.JSONDecodeError:
+        print(f"Failed to parse Claude response as JSON: {analysis_raw[:200]}")
+        # Fallback to simple format
+        analysis = {
+            "title": text.replace("\n", " ")[:40] + "...",
+            "tldr": "Analysis failed - see raw response",
+            "verdict": "Maybe",
+            "stars": 3,
+            "stars_reason": "Could not analyze",
+            "category": "unknown/",
+            "sdlc_phases": [],
+            "what": analysis_raw[:500],
+            "integration": "",
+        }
 
-    # Format tweet content for context
+    title = analysis.get("title", text[:40] + "...")
+
+    # Format tweet content
     if parent:
         parent_text = parent.get("text", "")
         parent_author = parent.get("author", {}).get("userName", "unknown")
-        tweet_context = f"""> **@{parent_author}:** {parent_text}
->
-> ↳ **@{author}:** {text}"""
+        tweet_content = f"""**@{parent_author}:**
+> {parent_text}
+
+**↳ @{author} replied:**
+> {text}"""
     else:
-        tweet_context = f"> {text}"
+        tweet_content = f"> {text}"
 
-    # Create issue body - concise format
-    body = f"""[@{author}]({tweet_url}) · {likes} likes
+    # Build stars display
+    stars = analysis.get("stars", 3)
+    stars_display = "⭐" * stars + "☆" * (5 - stars)
 
-{tweet_context}
+    # Verdict emoji
+    verdict = analysis.get("verdict", "Maybe")
+    verdict_emoji = {"Yes": "✅", "No": "❌", "Maybe": "🤔"}.get(verdict, "🤔")
+
+    # SDLC phases as tags
+    phases = analysis.get("sdlc_phases", [])
+    phases_display = " · ".join(phases) if phases else "—"
+
+    # Create issue body - visual hierarchy
+    body = f"""[→ View Tweet]({tweet_url}) · {likes} ❤️ · @{author}
+
+{tweet_content}
 
 ---
 
-{analysis}
+## {verdict_emoji} Verdict: {verdict}
+
+{analysis.get("tldr", "")}
+
+| | |
+|:--|:--|
+| **Relevance** | {stars_display} — {analysis.get("stars_reason", "")} |
+| **Category** | `{analysis.get("category", "unknown/")}` |
+| **SDLC** | {phases_display} |
 
 ---
 
-- [ ] Create recommendation
-- [ ] Close
+<details>
+<summary><strong>📋 Details</strong></summary>
 
-*via Slack inbox*
+### What is this?
+{analysis.get("what", "")}
+
+### Integration
+{analysis.get("integration", "")}
+
+</details>
+
+---
+<sub>via Slack inbox</sub>
 """
 
     # Write body to file
