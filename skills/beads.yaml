@@ -23,7 +23,7 @@ install:
   type: skill
   command: |
     # Clone and set up beads
-    git clone https://github.com/Nairon-AI/beads.git ~/.beads
+    git clone https://github.com/steveyegge/beads.git ~/.beads
     
     # Add to PATH (bash/zsh)
     echo 'export PATH="$HOME/.beads/bin:$PATH"' >> ~/.zshrc
@@ -39,7 +39,7 @@ verification:
   success_indicator: "Should show beads version"
 
 resources:
-  - url: https://github.com/Nairon-AI/beads
+  - url: https://github.com/steveyegge/beads
     type: github
 
 added_date: 2026-02-21
