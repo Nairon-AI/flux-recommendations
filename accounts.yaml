@@ -27,6 +27,7 @@ monitored_accounts:
   # AI dev community
   - justsisyphus      # oh-my-opencode
   - parcadei          # Harness hacker, code jockey
+  - mattpocockuk      # TypeScript wizard, educator
 
 # Keywords that indicate a tool worth tracking
 keywords:
