@@ -1,0 +1,15 @@
+name: Flow
+description: 'TODO: Add description based on tweet from @gmickel'
+category: cli-tools
+tags: []
+install: 'TODO: Add install instructions'
+links:
+  homepage: TODO
+mentions:
+- url: https://x.com/gmickel/status/2025191727695319275
+  author: '@gmickel'
+  text: '@ryancarson Flow-Next (and the upcoming Swarm) use a sub agent that runs
+    after every task completion that checks for all forms of drift (and does another
+    pass or updates all future tasks and the spec if necessary) as well as another
+    epic completion drift checker.'
+  likes: 2
