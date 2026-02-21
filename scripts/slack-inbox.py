@@ -18,6 +18,11 @@ ANTHROPIC_API_BASE = "https://api.anthropic.com/v1/messages"
 
 ANALYSIS_PROMPT = """You are analyzing a tweet to determine if it should become a recommendation in Flux - an AI-augmented SDLC workflow system.
 
+FIRST, output a concise title (5-8 words max) that captures the core concept/tool being discussed. Format as:
+**Title:** [your title here]
+
+Then provide the analysis.
+
 Flux helps developers optimize their workflows with:
 - MCPs (Model Context Protocol servers)
 - CLI tools
@@ -171,9 +176,13 @@ def main():
     print("Analyzing tweet with Claude...")
     analysis = analyze_with_claude(prompt, anthropic_api_key)
 
-    # Create issue title (first ~50 chars of tweet)
-    title_text = text.replace("\n", " ")[:50]
-    title = f"Inbox: {title_text}..."
+    # Extract title from Claude's analysis
+    title_match = re.search(r"\*\*Title:\*\*\s*(.+?)(?:\n|$)", analysis)
+    if title_match:
+        title = title_match.group(1).strip()
+    else:
+        # Fallback to first ~40 chars of tweet
+        title = text.replace("\n", " ")[:40] + "..."
 
     # Format tweet text as blockquote
     quoted_text = "\n".join(f"> {line}" for line in text.split("\n"))
