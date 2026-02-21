@@ -47,6 +47,9 @@ TYPE_PREFIXES = {
 
 ANALYSIS_PROMPT = """Analyze this content for Flux (AI-augmented dev workflow system).
 
+Flux philosophy: "Agentic SDLC" - AI agents assist at every phase of software development.
+We want to find tools, patterns, and insights that make AI-augmented workflows more effective.
+
 IMPORTANT: First check if this tool/technique/pattern already exists in:
 1. Existing recommendations (provided below)
 2. The Flux plugin codebase (already built-in)
@@ -62,14 +65,16 @@ Return ONLY valid JSON:
   "category": "category/path/",
   "sdlc_phases": ["phase1", "phase2"],
   "what": "2-3 sentences explaining the tool/technique",
-  "integration": "1-2 sentences on how to integrate",
+  "integration": "Specific steps to integrate with Flux/Claude Code workflows",
+  "action_items": ["Concrete action 1", "Concrete action 2", "..."],
+  "flux_impact": "How this improves our Agentic SDLC approach (or null if not relevant)",
   "duplicate_of": null | "path/to/existing.yaml or 'flux-plugin'",
   "duplicate_reason": null | "explanation of overlap"
 }}
 
 Type guide:
 - tweet: Social media discussion/tip
-- video: YouTube video, tutorial, demo
+- video: YouTube video, tutorial, demo, podcast discussion
 - tool: CLI tool, standalone utility
 - mcp: Model Context Protocol server
 - plugin: Editor extension (VSCode, Neovim, etc.)
@@ -77,6 +82,9 @@ Type guide:
 - pattern: Workflow pattern, best practice, methodology
 - article: Blog post, documentation, guide
 - repo: GitHub repository, library, framework
+
+For videos/podcasts: Extract ALL mentioned tools, techniques, and workflow tips.
+Focus on actionable items we can implement in Flux.
 
 If duplicate_of is set, verdict MUST be "Duplicate".
 
@@ -528,6 +536,8 @@ def parse_analysis(analysis_raw, fallback_text):
             "sdlc_phases": [],
             "what": analysis_raw[:500],
             "integration": "",
+            "action_items": [],
+            "flux_impact": None,
             "duplicate_of": None,
             "duplicate_reason": None,
         }
@@ -566,6 +576,27 @@ def create_issue_body(url, content, analysis):
     content_display = content.get("display", "")
     meta = content.get("meta", "")
 
+    # Action items
+    action_items = analysis.get("action_items", [])
+    if action_items:
+        action_list = "\n".join([f"- [ ] {item}" for item in action_items])
+        action_section = f"""
+### Action Items
+{action_list}
+"""
+    else:
+        action_section = ""
+
+    # Flux impact
+    flux_impact = analysis.get("flux_impact")
+    if flux_impact:
+        flux_section = f"""
+### Flux Impact
+{flux_impact}
+"""
+    else:
+        flux_section = ""
+
     return f"""[→ View Source]({url}) · {meta}
 
 {content_display}
@@ -581,7 +612,7 @@ def create_issue_body(url, content, analysis):
 | **Relevance** | {stars_display} — {analysis.get("stars_reason", "")} |
 | **Category** | `{analysis.get("category", "unknown/")}` |
 | **SDLC** | {phases_display} |
-
+{action_section}{flux_section}
 ---
 
 <details>
