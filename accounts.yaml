@@ -1,33 +1,51 @@
-# X/Twitter accounts to monitor for tool discoveries
-# Bot checks these accounts daily for AI dev tool mentions
+# X/Twitter accounts to monitor for AI dev tool discoveries
+# Bot checks these accounts daily for workflow tips and tool mentions
+# 
+# Rate limit: 200 QPS (generous)
+# Cost: ~$0.15/1K tweets, ~14 calls/day = ~$0.002/day
 
-anthropic_team:
-  - alexalbert__
-  - anthropaborges
-  - AnthropicAI
+# Claude Code / AI coding tool builders and power users
+monitored_accounts:
+  # Cursor team
+  - alexeykozy        # Building @cursor_ai, ex Chrome DevTools, Netflix
+  - ajhofmann         # Eng @cursor_ai (acq supermavenai)
+  
+  # Claude Code ecosystem
+  - _catwu            # Claude code + cowork @anthropicai
+  - dani_avila7       # Head of AI, Building Claude Code SubAgents, Skills & Hooks
+  - pvncher           # Building @repoprompt
+  - nummanali         # Agentic Engineering, CTO
+  
+  # AI coding tool builders
+  - justinsunyt       # Cofounder @capydotai
+  - realmcore_        # Making autonomous swe @0xrandomlabs
+  - tokengobbler      # @vibekanban YC S21
+  - EastlondonDev     # Vibe Engineering, OSS: vibe-tools, mineflare
+  - __morse           # Building kimaki.xyz
+  - kevinkern         # Building AI apps
+  
+  # AI dev community
+  - justsisyphus      # oh-my-opencode
+  - parcadei          # Harness hacker, code jockey
 
-openai_team:
-  - sama
-  - gaborcselle
-  - OpenAI
-
-tool_authors:
-  - aiaborges      # Context7
-  - steventey      # Vercel tools
-  - chronark_      # Unkey, various tools
-  - t3dotgg        # Create T3 App
-  - shadaborges    # shadcn/ui
-
-ai_dev_community:
-  - karpathy
-  - swyx
-  - mcaborges
-  - jaredpalmer
-  - raaborges
-
+# Keywords that indicate a tool worth tracking
 keywords:
   - "MCP server"
+  - "MCP"
   - "claude code"
+  - "cursor"
   - "AI coding"
-  - "developer tools"
+  - "AI agent"
+  - "developer tool"
   - "dev productivity"
+  - "workflow"
+  - "just released"
+  - "just shipped"
+  - "now available"
+  - "open source"
+  - "CLI tool"
+  - "vibe coding"
+  - "agentic"
+  - "subagent"
+  - "skill"
+  - "hook"
