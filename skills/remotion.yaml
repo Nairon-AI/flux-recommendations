@@ -1,0 +1,62 @@
+name: remotion
+category: skill
+tagline: "Create videos programmatically in React"
+
+description: |
+  Remotion lets you create videos using React components. Write JSX,
+  render to MP4. Perfect for automated video generation, data visualizations,
+  social media content, and personalized videos at scale.
+  
+  The skill provides best practices for composition structure, performance
+  optimization, and Claude-assisted video creation workflows.
+
+use_cases:
+  - Programmatic video generation
+  - Data visualization videos
+  - Automated social media content
+  - Personalized video at scale
+  - Motion graphics with React
+
+prerequisites:
+  - Node.js 18+
+  - React knowledge
+  - FFmpeg (for rendering)
+
+install:
+  type: skill
+  command: |
+    # Create new Remotion project
+    npx create-video@latest
+    
+    # Or add to existing project
+    npm install remotion @remotion/cli @remotion/player
+    
+    # Install skill for best practices
+    # Download from skills.sh or copy SKILL.md to ~/.claude/skills/
+
+verification:
+  type: manual
+  test_command: "npx remotion preview"
+  success_indicator: "Remotion studio opens in browser"
+
+resources:
+  - url: https://remotion.dev
+    type: homepage
+  - url: https://github.com/remotion-dev/remotion
+    type: github
+  - url: https://remotion.dev/docs
+    type: docs
+
+added_date: 2026-02-21
+source: manual
+
+ratings:
+  usefulness: 4
+  setup_difficulty: 2
+
+tags:
+  - video
+  - react
+  - animation
+  - content-generation
+  - ffmpeg

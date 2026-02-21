@@ -1,0 +1,60 @@
+name: arc
+category: application
+tagline: "Browser reimagined - spaces, AI, and vertical tabs done right"
+
+description: |
+  Arc rethinks the browser from scratch. Spaces for context switching (work,
+  personal, projects). Vertical sidebar for tabs. Built-in AI for page
+  summaries and questions.
+  
+  Boosts reduce tab clutter - temporary tabs auto-close. Split view for
+  side-by-side browsing. Command bar for everything.
+
+use_cases:
+  - Managing many tabs across contexts
+  - Research with AI-powered summaries
+  - Side-by-side comparison browsing
+  - Reducing tab hoarding
+  - Context switching between projects
+
+prerequisites:
+  - macOS or Windows
+  - Arc account (free)
+
+install:
+  type: manual
+  command: |
+    # Download from website
+    open https://arc.net
+    
+    # Set up:
+    # 1. Create spaces for different contexts (Work, Personal, Project X)
+    # 2. Learn keyboard shortcuts (Cmd+T for new tab, Cmd+S for spaces)
+    # 3. Enable Boosts for temporary tabs
+    # 4. Try Arc Max AI features
+
+verification:
+  type: manual
+  test_command: "Open Arc, create a Space"
+  success_indicator: "Space created, tabs organized by context"
+
+resources:
+  - url: https://arc.net
+    type: homepage
+  - url: https://resources.arc.net
+    type: docs
+
+added_date: 2026-02-21
+source: manual
+
+ratings:
+  usefulness: 4
+  setup_difficulty: 1
+
+tags:
+  - browser
+  - productivity
+  - tabs
+  - ai
+  - macos
+  - windows

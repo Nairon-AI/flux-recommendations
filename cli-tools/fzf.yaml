@@ -1,0 +1,58 @@
+name: fzf
+category: cli-tool
+tagline: "Fuzzy finder - search anything from the terminal instantly"
+
+description: |
+  fzf is a general-purpose fuzzy finder. Search files, command history,
+  git branches, processes, anything. Type a few characters, get instant results.
+  
+  Integrates with shell (Ctrl+R for history, Ctrl+T for files). Makes terminal
+  workflows dramatically faster. Essential productivity tool.
+
+use_cases:
+  - Fuzzy search command history (Ctrl+R)
+  - Find files quickly (Ctrl+T)
+  - Switch git branches interactively
+  - Search and kill processes
+  - Preview files while searching
+
+prerequisites:
+  - None (standalone binary)
+
+install:
+  type: brew
+  command: |
+    # macOS
+    brew install fzf
+    
+    # Install shell integrations
+    $(brew --prefix)/opt/fzf/install
+    
+    # Linux
+    # git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
+    # ~/.fzf/install
+
+verification:
+  type: command_exists
+  test_command: "fzf --version"
+  success_indicator: "Shows fzf version"
+
+resources:
+  - url: https://github.com/junegunn/fzf
+    type: github
+  - url: https://junegunn.github.io/fzf/
+    type: docs
+
+added_date: 2026-02-21
+source: manual
+
+ratings:
+  usefulness: 5
+  setup_difficulty: 1
+
+tags:
+  - fuzzy-finder
+  - search
+  - terminal
+  - productivity
+  - essential

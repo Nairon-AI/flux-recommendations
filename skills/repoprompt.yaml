@@ -1,0 +1,55 @@
+name: repoprompt
+category: skill
+tagline: "Token-efficient codebase exploration for AI prompts"
+
+description: |
+  RepoPrompt CLI provides token-efficient ways to explore and export your
+  codebase for AI context. Get code signatures without full content, read
+  file slices, search with context lines.
+  
+  More efficient than raw file reads - structure command gives signatures
+  only, read supports line ranges, search returns relevant matches with context.
+
+use_cases:
+  - Building context for AI coding tasks
+  - Exploring large codebases efficiently
+  - Getting code signatures without full files
+  - Searching code with surrounding context
+  - Managing file selections for prompts
+
+prerequisites:
+  - RepoPrompt app installed
+  - CLI installed to PATH (Settings > MCP Server > Install CLI)
+
+install:
+  type: skill
+  command: |
+    # 1. Download RepoPrompt from https://repoprompt.com
+    # 2. Open Settings > MCP Server > Install CLI to PATH
+    # 3. Verify with: rp-cli --version
+    
+    # Install skill for Claude Code
+    # Download from skills.sh or copy SKILL.md to ~/.claude/skills/
+
+verification:
+  type: command_exists
+  test_command: "rp-cli --version"
+  success_indicator: "Shows RepoPrompt CLI version"
+
+resources:
+  - url: https://repoprompt.com
+    type: homepage
+
+added_date: 2026-02-21
+source: manual
+
+ratings:
+  usefulness: 5
+  setup_difficulty: 2
+
+tags:
+  - codebase
+  - context
+  - token-efficient
+  - exploration
+  - ai-prompts

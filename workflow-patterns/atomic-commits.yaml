@@ -1,0 +1,66 @@
+name: atomic-commits
+category: workflow-pattern
+tagline: "Small, focused commits that are easy to review and revert"
+
+description: |
+  Each commit does one thing. One feature, one fix, one refactor. Not all
+  three mixed together. Makes code review easier, reverts safer, and git
+  history actually useful.
+  
+  Commit message format: type(scope): description. Types: feat, fix, refactor,
+  test, docs, chore. Keep the "why" in the message, not just the "what".
+
+use_cases:
+  - Code reviews taking too long
+  - Hard to revert problematic changes
+  - Git history is useless noise
+  - Working with AI on multi-step changes
+
+prerequisites:
+  - Git
+
+install:
+  type: manual
+  command: |
+    # Guidelines:
+    
+    # 1. One logical change per commit
+    #    - Adding a feature? One commit
+    #    - Fixing a bug? One commit
+    #    - Refactoring? One commit
+    
+    # 2. Commit message format:
+    #    feat(auth): add OAuth login flow
+    #    fix(api): handle null response from server
+    #    refactor(ui): extract Button component
+    #    test(auth): add login flow tests
+    
+    # 3. Keep commits small
+    #    - If description needs "and", split it
+    #    - 50-200 lines is a good target
+    
+    # 4. Commit often
+    #    - Working code? Commit it
+    #    - Don't batch up a day's work
+
+verification:
+  type: manual
+  test_command: "git log --oneline -10"
+  success_indicator: "Each commit is one logical change with clear message"
+
+resources:
+  - url: https://www.conventionalcommits.org
+    type: docs
+
+added_date: 2026-02-21
+source: manual
+
+ratings:
+  usefulness: 5
+  setup_difficulty: 1
+
+tags:
+  - git
+  - commits
+  - code-review
+  - workflow

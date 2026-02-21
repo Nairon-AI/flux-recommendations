@@ -1,0 +1,59 @@
+name: jq
+category: cli-tool
+tagline: "Lightweight JSON processor - essential for command line workflows"
+
+description: |
+  jq is like sed for JSON. Parse, filter, transform, and format JSON from
+  the command line. Essential for working with APIs, configs, and any JSON data.
+  
+  Pipe curl output through jq, extract fields from package.json, transform
+  data structures. Once you learn it, you'll use it constantly.
+
+use_cases:
+  - Parsing API responses in scripts
+  - Extracting fields from JSON configs
+  - Transforming data structures
+  - Pretty-printing JSON output
+  - Filtering and querying JSON arrays
+
+prerequisites:
+  - None (standalone binary)
+
+install:
+  type: brew
+  command: |
+    # macOS
+    brew install jq
+    
+    # Linux (Debian/Ubuntu)
+    # sudo apt install jq
+    
+    # Windows
+    # choco install jq
+
+verification:
+  type: command_exists
+  test_command: "jq --version"
+  success_indicator: "Shows jq version (e.g., jq-1.7)"
+
+resources:
+  - url: https://jqlang.github.io/jq/
+    type: homepage
+  - url: https://github.com/jqlang/jq
+    type: github
+  - url: https://jqlang.github.io/jq/manual/
+    type: docs
+
+added_date: 2026-02-21
+source: manual
+
+ratings:
+  usefulness: 5
+  setup_difficulty: 1
+
+tags:
+  - json
+  - command-line
+  - data-processing
+  - scripting
+  - essential

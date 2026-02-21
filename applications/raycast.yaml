@@ -1,0 +1,61 @@
+name: raycast
+category: application
+tagline: "Launcher on steroids - AI, snippets, clipboard, window management"
+
+description: |
+  Raycast replaces Spotlight with a powerful launcher. Built-in AI assistant,
+  snippet expansion, clipboard history, window management, and thousands of
+  extensions.
+  
+  Developer-focused: GitHub, Linear, Jira integrations. Create custom scripts.
+  The command palette your Mac should have had.
+
+use_cases:
+  - Quick app/file launching
+  - AI assistant accessible via hotkey
+  - Snippet expansion for repetitive text
+  - Clipboard history search
+  - Window management without mouse
+
+prerequisites:
+  - macOS
+
+install:
+  type: manual
+  command: |
+    # Download from website
+    open https://raycast.com
+    
+    # Or via Homebrew
+    brew install --cask raycast
+    
+    # Set up:
+    # 1. Replace Spotlight: System Preferences > Keyboard > Shortcuts
+    # 2. Install extensions: Linear, GitHub, etc.
+    # 3. Configure snippets for common text
+
+verification:
+  type: manual
+  test_command: "Press Cmd+Space (or configured hotkey)"
+  success_indicator: "Raycast launcher appears"
+
+resources:
+  - url: https://raycast.com
+    type: homepage
+  - url: https://raycast.com/store
+    type: docs
+
+added_date: 2026-02-21
+source: manual
+
+ratings:
+  usefulness: 5
+  setup_difficulty: 1
+
+tags:
+  - launcher
+  - productivity
+  - macos
+  - ai
+  - clipboard
+  - snippets

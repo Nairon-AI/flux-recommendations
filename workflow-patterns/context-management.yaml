@@ -1,0 +1,72 @@
+name: context-management
+category: workflow-pattern
+tagline: "Keep AI context fresh across sessions - never start from scratch"
+
+description: |
+  AI sessions lose context. New session = Claude forgets everything. Fix this
+  with persistent context: AGENTS.md for conventions, task trackers (beads)
+  for state, memory MCPs for decisions.
+  
+  Start each session by loading context. End by saving state. Never rely on
+  Claude "remembering" from previous sessions.
+
+use_cases:
+  - Long-running projects across multiple sessions
+  - Picking up where you left off
+  - Team handoffs between developers
+  - Complex multi-day features
+
+prerequisites:
+  - AGENTS.md in project
+  - Task tracker (beads, Linear, etc.)
+  - Optional: memory MCP (supermemory)
+
+install:
+  type: manual
+  command: |
+    # Setup:
+    
+    # 1. AGENTS.md - project conventions
+    #    - Claude reads this automatically
+    #    - Keep updated as project evolves
+    
+    # 2. Task tracker - current state
+    #    - Use beads: `bd ready` to see what's next
+    #    - Or Linear/GitHub issues
+    
+    # 3. Session start ritual:
+    #    - "What's the current state of X?"
+    #    - "What did we decide about Y?"
+    #    - Check task tracker for context
+    
+    # 4. Session end ritual:
+    #    - Update task status
+    #    - Note any decisions made
+    #    - Commit work in progress
+    
+    # 5. Optional: supermemory MCP
+    #    - Persists decisions across sessions
+    #    - "Remember: we chose approach X because..."
+
+verification:
+  type: manual
+  test_command: "Start new session, check if context loads"
+  success_indicator: "Claude knows project state without re-explaining"
+
+resources:
+  - url: https://github.com/steveyegge/beads
+    type: github
+
+added_date: 2026-02-21
+source: manual
+
+ratings:
+  usefulness: 5
+  setup_difficulty: 2
+
+tags:
+  - context
+  - sessions
+  - persistence
+  - workflow
+  - memory

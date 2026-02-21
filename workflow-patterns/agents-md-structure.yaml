@@ -1,0 +1,65 @@
+name: agents-md-structure
+category: workflow-pattern
+tagline: "Write AGENTS.md that makes Claude 10x more effective"
+
+description: |
+  AGENTS.md tells Claude how to work in your codebase. Without it, Claude
+  guesses at conventions, test commands, and project structure. With a good
+  AGENTS.md, Claude follows your patterns from the first message.
+  
+  Key sections: project overview, directory structure, commands (test, lint,
+  build), conventions, and common pitfalls to avoid.
+
+use_cases:
+  - New projects where Claude keeps guessing wrong
+  - Teams with specific conventions
+  - Complex monorepos with multiple apps
+  - Projects with non-standard tooling
+
+prerequisites:
+  - None
+
+install:
+  type: manual
+  command: |
+    # Create AGENTS.md in your project root with these sections:
+    
+    # ## Project Overview
+    # One paragraph: what this is, main tech stack
+    
+    # ## Directory Structure  
+    # Brief explanation of key folders
+    
+    # ## Commands
+    # - Test: `npm test` or `bun test`
+    # - Lint: `npm run lint`
+    # - Build: `npm run build`
+    # - Dev: `npm run dev`
+    
+    # ## Conventions
+    # - File naming, component patterns, etc.
+    
+    # ## Pitfalls
+    # - Known gotchas Claude should avoid
+
+verification:
+  type: config_exists
+  test_command: "Check AGENTS.md exists in project root"
+  success_indicator: "File exists with key sections"
+
+resources:
+  - url: https://docs.anthropic.com/en/docs/claude-code
+    type: docs
+
+added_date: 2026-02-21
+source: manual
+
+ratings:
+  usefulness: 5
+  setup_difficulty: 1
+
+tags:
+  - documentation
+  - conventions
+  - context
+  - onboarding

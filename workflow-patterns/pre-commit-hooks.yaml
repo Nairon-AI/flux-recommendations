@@ -1,0 +1,66 @@
+name: pre-commit-hooks
+category: workflow-pattern
+tagline: "Catch lint/type errors in 5 seconds, not 5 minutes in CI"
+
+description: |
+  Pre-commit hooks run lint, typecheck, and tests on staged files before
+  each commit. Catch errors immediately instead of waiting for CI.
+  
+  Use lefthook or husky. Run only on staged files for speed. Block commits
+  that would fail CI. Saves time and keeps main branch green.
+
+use_cases:
+  - Teams with slow CI pipelines
+  - Projects where lint errors slip through
+  - Enforcing code quality at commit time
+  - Reducing CI failures and reruns
+
+prerequisites:
+  - Git repository
+  - lefthook or husky installed
+  - Linter/formatter configured
+
+install:
+  type: manual
+  command: |
+    # With lefthook (recommended - faster):
+    npm install -D lefthook
+    npx lefthook install
+    
+    # Create lefthook.yml:
+    # pre-commit:
+    #   parallel: true
+    #   commands:
+    #     lint:
+    #       glob: "*.{js,ts,tsx}"
+    #       run: npx oxlint {staged_files}
+    #     typecheck:
+    #       run: npx tsc --noEmit
+    
+    # With husky:
+    # npm install -D husky lint-staged
+    # npx husky init
+
+verification:
+  type: config_exists
+  test_command: "Check lefthook.yml or .husky/ exists"
+  success_indicator: "Pre-commit hook runs on git commit"
+
+resources:
+  - url: https://github.com/evilmartians/lefthook
+    type: github
+  - url: https://typicode.github.io/husky/
+    type: docs
+
+added_date: 2026-02-21
+source: manual
+
+ratings:
+  usefulness: 5
+  setup_difficulty: 2
+
+tags:
+  - git-hooks
+  - linting
+  - ci-cd
+  - quality

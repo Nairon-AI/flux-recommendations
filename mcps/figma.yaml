@@ -1,0 +1,68 @@
+name: figma
+category: mcp
+tagline: "Access Figma designs directly - read layers, components, and specs"
+
+description: |
+  Figma MCP server bridges your design files with Claude. Reference designs
+  in prompts, extract component hierarchies, read specs, and generate code
+  that matches your mockups.
+  
+  Supports "Code to Canvas" - capture AI-generated UIs back into Figma as
+  editable frames (not screenshots).
+
+use_cases:
+  - Converting Figma designs to code
+  - Extracting design tokens and specs
+  - Analyzing component hierarchies
+  - Comparing design variations
+  - Design-to-code workflow automation
+
+prerequisites:
+  - Figma account (Dev or Full seat)
+  - Figma desktop app (latest version)
+  - Dev Mode MCP Server enabled in Figma preferences
+
+install:
+  type: mcp
+  command: |
+    # 1. Open Figma desktop app
+    # 2. Go to Preferences > Enable "Dev Mode MCP Server"
+    # 3. Server runs at http://127.0.0.1:3845/sse
+    
+    # Add to Claude Code:
+    claude mcp add --transport sse figma-dev-mode-mcp-server http://127.0.0.1:3845/sse
+  config_snippet: |
+    {
+      "mcpServers": {
+        "figma": {
+          "transport": "sse",
+          "url": "http://127.0.0.1:3845/sse"
+        }
+      }
+    }
+
+verification:
+  type: manual
+  test_command: "Select a frame in Figma, ask Claude to describe it"
+  success_indicator: "Claude should read the design and describe layers/components"
+
+resources:
+  - url: https://www.figma.com
+    type: homepage
+  - url: https://www.builder.io/blog/claude-code-figma-mcp-server
+    type: docs
+
+added_date: 2026-02-21
+source: manual
+
+ratings:
+  usefulness: 5
+  setup_difficulty: 2
+
+tags:
+  - figma
+  - design
+  - design-to-code
+  - ui
+  - components
+  - design-tokens
