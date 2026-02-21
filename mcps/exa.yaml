@@ -1,0 +1,64 @@
+name: exa
+category: mcp
+tagline: "AI-powered web search with clean, structured results"
+
+description: |
+  Exa MCP provides intelligent web search that returns clean, LLM-ready content.
+  Better than raw Google results - filters noise, extracts relevant content.
+  
+  Great for research, finding current information, and fact-checking.
+
+use_cases:
+  - Researching current events or recent changes
+  - Finding tutorials and guides
+  - Fact-checking information
+  - Discovering new tools and libraries
+
+prerequisites:
+  - Exa API key (free tier available)
+  - Node.js 18+
+
+install:
+  type: mcp
+  command: |
+    npx -y @anthropic-ai/create-mcp@latest add exa --config claude
+  config_snippet: |
+    {
+      "mcpServers": {
+        "exa": {
+          "command": "npx",
+          "args": ["-y", "@exa/mcp"],
+          "env": {
+            "EXA_API_KEY": "your-api-key"
+          }
+        }
+      }
+    }
+
+verification:
+  type: mcp_connect
+  test_command: "Ask Claude to search for 'latest TypeScript features' using exa"
+  success_indicator: "Returns structured search results with relevant content"
+
+related_tools:
+  - context7
+
+resources:
+  - url: https://exa.ai
+    type: homepage
+  - url: https://docs.exa.ai
+    type: docs
+
+added_date: 2025-02-21
+source: manual
+source_url: null
+
+ratings:
+  usefulness: 4
+  setup_difficulty: 2
+
+tags:
+  - search
+  - web
+  - research
+  - current-events

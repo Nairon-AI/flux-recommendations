@@ -1,0 +1,64 @@
+name: oxlint
+category: cli-tool
+tagline: "50-100x faster than ESLint - Rust-based linter"
+
+description: |
+  Oxlint is a JavaScript/TypeScript linter written in Rust. 50-100x faster than ESLint.
+  Drop-in replacement for most ESLint rules. Great for large codebases.
+  
+  Can run alongside ESLint (disable overlapping rules) or as full replacement.
+
+use_cases:
+  - Fast linting in CI/CD
+  - Pre-commit hooks that don't slow you down
+  - Large monorepo linting
+  - Instant feedback while coding
+
+prerequisites:
+  - Node.js 18+ or direct binary
+
+install:
+  type: npm
+  command: |
+    # Via npm
+    npm install -D oxlint
+    
+    # Or standalone binary
+    curl -sSfL https://oxc.rs/install.sh | sh
+  config_snippet: |
+    // package.json scripts
+    {
+      "scripts": {
+        "lint": "oxlint ."
+      }
+    }
+
+verification:
+  type: command_exists
+  test_command: "npx oxlint --version"
+  success_indicator: "Outputs version number"
+
+related_tools:
+  - lefthook
+  - turbo
+
+resources:
+  - url: https://oxc.rs
+    type: homepage
+  - url: https://github.com/oxc-project/oxc
+    type: github
+
+added_date: 2025-02-21
+source: manual
+source_url: null
+
+ratings:
+  usefulness: 4
+  setup_difficulty: 1
+
+tags:
+  - linting
+  - javascript
+  - typescript
+  - rust
+  - performance

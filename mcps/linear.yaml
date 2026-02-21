@@ -1,0 +1,63 @@
+name: linear
+category: mcp
+tagline: "Issue tracking and project management directly in Claude"
+
+description: |
+  Linear MCP connects Claude to your Linear workspace. Create issues, update status,
+  query projects, and manage sprints without leaving your coding session.
+  
+  Perfect for teams using Linear for project management.
+
+use_cases:
+  - Creating issues from code context
+  - Updating issue status after completing work
+  - Querying project/sprint status
+  - Linking commits to issues
+
+prerequisites:
+  - Linear account
+  - Linear API key
+
+install:
+  type: mcp
+  command: |
+    npx -y @anthropic-ai/create-mcp@latest add linear --config claude
+  config_snippet: |
+    {
+      "mcpServers": {
+        "linear": {
+          "command": "npx",
+          "args": ["-y", "@linear/mcp"],
+          "env": {
+            "LINEAR_API_KEY": "your-api-key"
+          }
+        }
+      }
+    }
+
+verification:
+  type: mcp_connect
+  test_command: "Ask Claude to list your Linear issues"
+  success_indicator: "Returns list of issues from your Linear workspace"
+
+related_tools: []
+
+resources:
+  - url: https://linear.app
+    type: homepage
+  - url: https://linear.app/docs/api
+    type: docs
+
+added_date: 2025-02-21
+source: manual
+source_url: null
+
+ratings:
+  usefulness: 4
+  setup_difficulty: 2
+
+tags:
+  - project-management
+  - issues
+  - tracking
+  - teams

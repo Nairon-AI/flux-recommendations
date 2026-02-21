@@ -1,0 +1,118 @@
+# Flux Recommendations Schema
+# Each recommendation file should follow this structure
+
+type: object
+required:
+  - name
+  - category
+  - tagline
+  - description
+  - install
+  - verification
+
+properties:
+  name:
+    type: string
+    description: Unique identifier (lowercase, hyphens)
+    example: "context7"
+
+  category:
+    type: string
+    enum: [mcp, plugin, skill, cli-tool, vscode-extension, workflow-pattern]
+
+  tagline:
+    type: string
+    description: One-line description (max 80 chars)
+    example: "Up-to-date library documentation directly from source"
+
+  description:
+    type: string
+    description: Full description with use cases (markdown supported)
+
+  use_cases:
+    type: array
+    items:
+      type: string
+    description: When to use this tool
+
+  prerequisites:
+    type: array
+    items:
+      type: string
+    description: What's needed before installation
+
+  install:
+    type: object
+    required: [type, command]
+    properties:
+      type:
+        type: string
+        enum: [mcp, plugin, skill, npm, brew, manual]
+      command:
+        type: string
+        description: Installation command(s)
+      config_snippet:
+        type: string
+        description: Config to add (JSON/YAML)
+
+  verification:
+    type: object
+    required: [type]
+    properties:
+      type:
+        type: string
+        enum: [mcp_connect, command_exists, config_exists, manual]
+      test_command:
+        type: string
+      success_indicator:
+        type: string
+
+  related_tools:
+    type: array
+    items:
+      type: string
+    description: Other tools in this repo that complement this one
+
+  resources:
+    type: array
+    items:
+      type: object
+      properties:
+        url:
+          type: string
+        type:
+          type: string
+          enum: [homepage, github, docs, twitter, video]
+
+  added_date:
+    type: string
+    format: date
+    example: "2025-02-21"
+
+  source:
+    type: string
+    enum: [manual, x-discovery, community]
+    default: manual
+
+  source_url:
+    type: string
+    description: URL where this was discovered (X post, etc.)
+
+  ratings:
+    type: object
+    properties:
+      usefulness:
+        type: integer
+        minimum: 1
+        maximum: 5
+      setup_difficulty:
+        type: integer
+        minimum: 1
+        maximum: 5
+        description: "1 = easy, 5 = complex"
+
+  tags:
+    type: array
+    items:
+      type: string
+    description: Searchable tags for matching

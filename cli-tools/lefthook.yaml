@@ -1,0 +1,69 @@
+name: lefthook
+category: cli-tool
+tagline: "Fast git hooks manager - catches errors before CI"
+
+description: |
+  Lefthook is a fast, cross-platform git hooks manager. Runs typecheck + lint
+  on staged files in ~5 seconds, catching errors before they reach CI.
+  
+  Much faster than Husky. Great for Bun/Node projects.
+
+use_cases:
+  - Pre-commit linting and type checking
+  - Pre-push test running
+  - Commit message validation
+  - Faster feedback than waiting for CI
+
+prerequisites:
+  - Git repository
+  - Node.js/Bun project (for JS hooks)
+
+install:
+  type: npm
+  command: |
+    # Install
+    npm install -D lefthook
+    # or: bun add -D lefthook
+    
+    # Initialize
+    npx lefthook install
+  config_snippet: |
+    # lefthook.yml
+    pre-commit:
+      parallel: true
+      commands:
+        lint:
+          glob: "*.{js,ts,tsx}"
+          run: npx eslint {staged_files}
+        typecheck:
+          run: npx tsc --noEmit
+
+verification:
+  type: command_exists
+  test_command: "npx lefthook --version"
+  success_indicator: "Outputs version number"
+
+related_tools:
+  - oxlint
+  - turbo
+
+resources:
+  - url: https://github.com/evilmartians/lefthook
+    type: github
+  - url: https://evilmartians.com/opensource/lefthook
+    type: homepage
+
+added_date: 2025-02-21
+source: manual
+source_url: null
+
+ratings:
+  usefulness: 5
+  setup_difficulty: 2
+
+tags:
+  - git-hooks
+  - pre-commit
+  - linting
+  - typescript
+  - ci

@@ -1,0 +1,33 @@
+# X/Twitter accounts to monitor for tool discoveries
+# Bot checks these accounts daily for AI dev tool mentions
+
+anthropic_team:
+  - alexalbert__
+  - anthropaborges
+  - AnthropicAI
+
+openai_team:
+  - sama
+  - gaborcselle
+  - OpenAI
+
+tool_authors:
+  - aiaborges      # Context7
+  - steventey      # Vercel tools
+  - chronark_      # Unkey, various tools
+  - t3dotgg        # Create T3 App
+  - shadaborges    # shadcn/ui
+
+ai_dev_community:
+  - karpathy
+  - swyx
+  - mcaborges
+  - jaredpalmer
+  - raaborges
+
+keywords:
+  - "MCP server"
+  - "claude code"
+  - "AI coding"
+  - "developer tools"
+  - "dev productivity"

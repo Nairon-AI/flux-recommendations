@@ -1,0 +1,64 @@
+name: context7
+category: mcp
+tagline: "Up-to-date library documentation directly from source"
+
+description: |
+  Context7 MCP fetches current, version-specific documentation and code examples
+  directly from source. Eliminates hallucinated APIs and outdated patterns.
+  
+  Auto-invokes when you ask about library usage, APIs, setup, or best practices.
+
+use_cases:
+  - Working with libraries/frameworks
+  - Code generation with external packages
+  - Setup and configuration guidance
+  - Finding best practices for specific libraries
+
+prerequisites:
+  - Node.js 18+
+  - npx available
+
+install:
+  type: mcp
+  command: |
+    npx -y @anthropic-ai/create-mcp@latest add context7 --config claude
+  config_snippet: |
+    {
+      "mcpServers": {
+        "context7": {
+          "command": "npx",
+          "args": ["-y", "@context7/mcp"]
+        }
+      }
+    }
+
+verification:
+  type: mcp_connect
+  test_command: "Ask Claude to look up Next.js App Router docs using context7"
+  success_indicator: "Returns current Next.js documentation with code examples"
+
+related_tools:
+  - exa
+
+resources:
+  - url: https://context7.com
+    type: homepage
+  - url: https://github.com/context7/mcp
+    type: github
+
+added_date: 2025-02-21
+source: manual
+source_url: null
+
+ratings:
+  usefulness: 5
+  setup_difficulty: 1
+
+tags:
+  - documentation
+  - libraries
+  - frameworks
+  - api-lookup
+  - typescript
+  - javascript
+  - python
