@@ -44,9 +44,11 @@ workflow-patterns/
 
 ## Adding Recommendations
 
-### Via Slack (Recommended)
+> **Note:** Only the Nairon core team can add recommendations to prevent low-quality submissions.
 
-Drop any URL into the `#flux-inbox` channel. That's it.
+### Via Slack (Internal)
+
+Core team members drop URLs into the private `#flux-inbox` channel. That's it.
 
 **Supported URLs:**
 - Tweets/X posts → discussions, tips, tool mentions
