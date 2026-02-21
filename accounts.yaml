@@ -28,6 +28,7 @@ monitored_accounts:
   - justsisyphus      # oh-my-opencode
   - parcadei          # Harness hacker, code jockey
   - mattpocockuk      # TypeScript wizard, educator
+  - ryancarson        # Treehouse founder, AI dev
 
 # Keywords that indicate a tool worth tracking
 keywords:
