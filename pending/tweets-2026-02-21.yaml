@@ -153,3 +153,57 @@
   likes: 2
   text: does glycine send anyone else hurtling through dream space into eldritch worlds?
   url: https://x.com/parcadei/status/2025175935838753273
+- author: '@dani_avila7'
+  date: '2026-02-21'
+  likes: 9
+  text: 'Ghostty lets you control the opacity of unfocused splits.
+
+
+    Just add this to ~/.config/ghostty/config:
+
+    unfocused-split-opacity = 0.85
+
+
+    Super useful when working across multiple panes, you always know where your focus
+    is.
+
+
+    If the opacity doesn''t load on startup, hit cmd+shift+, to '
+  url: https://x.com/dani_avila7/status/2025280714606780749
+- author: '@justsisyphus'
+  date: '2026-02-21'
+  likes: 65
+  text: 'RT @thdxr: @tjalve @opencode OmO is a token burner - we heard anthropic cite
+    it as justification for blocking clients'
+  url: https://x.com/justsisyphus/status/2025283157118124112
+- author: '@mattpocockuk'
+  date: '2026-02-21'
+  likes: 135
+  text: Month later, still happy with @code
+  url: https://x.com/mattpocockuk/status/2025244952255758462
+- author: '@mattpocockuk'
+  date: '2026-02-21'
+  likes: 729
+  text: 'claude --worktree is so good I''m making it my new default.
+
+
+    Don''t know why you should care?
+
+
+    Couldn''t follow the Anthropic announcement? (way too technical IMO)
+
+
+    Here''s a demo: https://t.co/OyvAvFdC9C'
+  url: https://x.com/mattpocockuk/status/2025242370816487487
+- author: '@mattpocockuk'
+  date: '2026-02-21'
+  likes: 120
+  text: 'LOVE seeing this be built into CC itself
+
+
+    Especially parallelizing subagents makes spawning a bunch of agents to do a lot
+    of work a lot simpler.
+
+
+    Especially when merge conflicts are so cheap.'
+  url: https://x.com/mattpocockuk/status/2025225505843069086
