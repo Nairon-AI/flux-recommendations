@@ -64,3 +64,10 @@ tags:
   - commits
   - code-review
   - workflow
+
+sdlc_phase: review
+solves: "Messy git history - hard to review, revert, and understand changes"
+
+pricing:
+  model: free
+  details: "Free pattern - just a workflow discipline"

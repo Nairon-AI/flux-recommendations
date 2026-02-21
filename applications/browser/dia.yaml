@@ -60,3 +60,10 @@ tags:
   - writing
   - macos
   - windows
+
+sdlc_phase: requirements
+solves: "Research fragmentation - manually synthesizing info across many tabs and sources"
+
+pricing:
+  model: freemium
+  details: "Free tier available. Pro: $20/mo for more AI usage"

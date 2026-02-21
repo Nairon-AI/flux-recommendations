@@ -67,3 +67,10 @@ tags:
   - linting
   - typescript
   - ci
+
+sdlc_phase: review
+solves: "Errors caught in CI instead of locally - 5+ min feedback loop instead of 5 seconds"
+
+pricing:
+  model: open-source
+  details: "Free and open-source (MIT)"

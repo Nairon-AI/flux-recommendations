@@ -69,3 +69,10 @@ tags:
   - tailwind
   - figma-import
   - ai-design
+
+sdlc_phase: requirements
+solves: "Design handoff friction - separate tools for design and code, context lost in translation"
+
+pricing:
+  model: freemium
+  details: "Free for personal use. Team plans coming"

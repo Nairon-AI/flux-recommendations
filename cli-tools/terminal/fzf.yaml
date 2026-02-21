@@ -56,3 +56,10 @@ tags:
   - terminal
   - productivity
   - essential
+
+sdlc_phase: implementation
+solves: "Slow file/command navigation - typing full paths instead of fuzzy search"
+
+pricing:
+  model: open-source
+  details: "Free and open-source (MIT)"

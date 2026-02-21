@@ -60,3 +60,10 @@ tags:
   - animation
   - content-generation
   - ffmpeg
+
+sdlc_phase: implementation
+solves: "Manual video creation - can't programmatically generate videos from data"
+
+pricing:
+  model: freemium
+  details: "Free for personal. Company license required for commercial use"

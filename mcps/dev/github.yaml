@@ -69,3 +69,10 @@ tags:
   - pull-requests
   - ci-cd
   - code-review
+
+sdlc_phase: review
+solves: "Context switching between IDE and GitHub - breaking flow to manage PRs and issues"
+
+pricing:
+  model: free
+  details: "Free and open-source (official GitHub MCP)"

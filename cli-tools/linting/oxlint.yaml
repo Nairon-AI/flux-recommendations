@@ -62,3 +62,10 @@ tags:
   - typescript
   - rust
   - performance
+
+sdlc_phase: implementation
+solves: "Slow linting feedback loop - ESLint takes too long on large codebases"
+
+pricing:
+  model: open-source
+  details: "Free and open-source (MIT)"

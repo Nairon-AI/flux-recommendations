@@ -62,3 +62,10 @@ tags:
   - typescript
   - javascript
   - python
+
+sdlc_phase: implementation
+solves: "AI hallucinates outdated APIs and library patterns because training data is stale"
+
+pricing:
+  model: free
+  details: "Free and open-source"

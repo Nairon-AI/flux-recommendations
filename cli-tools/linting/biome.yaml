@@ -57,3 +57,10 @@ tags:
   - typescript
   - rust
   - fast
+
+sdlc_phase: implementation
+solves: "Managing two tools (Prettier+ESLint) with conflicting configs - complexity and slow CI"
+
+pricing:
+  model: open-source
+  details: "Free and open-source (MIT)"

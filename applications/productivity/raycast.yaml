@@ -59,3 +59,10 @@ tags:
   - ai
   - clipboard
   - snippets
+
+sdlc_phase: implementation
+solves: "Context switching overhead - jumping between apps, losing clipboard history"
+
+pricing:
+  model: freemium
+  details: "Free for most features. Pro: $10/mo for AI, sync, teams"

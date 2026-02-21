@@ -71,3 +71,10 @@ tags:
   - excalidraw
   - flowcharts
   - system-design
+
+sdlc_phase: planning
+solves: "Manual diagram creation - slow to visualize architectures and system designs"
+
+pricing:
+  model: open-source
+  details: "Free and open-source. Self-hosted or use Docker"

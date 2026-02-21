@@ -66,3 +66,10 @@ tags:
   - ui
   - components
   - design-tokens
+
+sdlc_phase: requirements
+solves: "Manual design-to-code translation - mismatched implementations from mockups"
+
+pricing:
+  model: freemium
+  details: "Figma Free tier available. Dev Mode requires paid seat ($15-75/mo)"

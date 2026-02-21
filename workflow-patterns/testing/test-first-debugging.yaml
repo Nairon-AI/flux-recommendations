@@ -61,3 +61,10 @@ tags:
   - tdd
   - workflow
   - regression
+
+sdlc_phase: testing
+solves: "Bug fixes that regress - no test to catch if bug returns"
+
+pricing:
+  model: free
+  details: "Free pattern - just a workflow discipline"

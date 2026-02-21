@@ -62,3 +62,10 @@ tags:
   - web
   - research
   - current-events
+
+sdlc_phase: requirements
+solves: "AI can't access current information - stuck with training data cutoff"
+
+pricing:
+  model: freemium
+  details: "Free: 1000 searches/mo. Growth: $50/mo for 10k searches"

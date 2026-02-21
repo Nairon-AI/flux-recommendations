@@ -61,3 +61,10 @@ tags:
   - issues
   - tracking
   - teams
+
+sdlc_phase: planning
+solves: "Context switching between coding and issue tracking - losing flow to update tickets"
+
+pricing:
+  model: freemium
+  details: "Free for small teams. Standard: $8/user/mo"

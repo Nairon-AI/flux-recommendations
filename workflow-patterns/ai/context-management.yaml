@@ -70,3 +70,10 @@ tags:
   - persistence
   - workflow
   - memory
+
+sdlc_phase: documentation
+solves: "AI forgets everything between sessions - re-explaining context every time"
+
+pricing:
+  model: free
+  details: "Free pattern - uses AGENTS.md and task trackers"

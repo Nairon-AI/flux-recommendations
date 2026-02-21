@@ -54,3 +54,10 @@ tags:
   - workflow
   - git-backed
   - dependency-graph
+
+sdlc_phase: planning
+solves: "AI forgets task progress between sessions - starts over or loses track of dependencies"
+
+pricing:
+  model: open-source
+  details: "Free and open-source (MIT)"

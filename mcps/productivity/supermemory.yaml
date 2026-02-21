@@ -62,3 +62,10 @@ tags:
   - persistence
   - context
   - knowledge-base
+
+sdlc_phase: documentation
+solves: "AI forgets project context between sessions - re-explaining the same things"
+
+pricing:
+  model: freemium
+  details: "Free tier available. Pro plans for teams"

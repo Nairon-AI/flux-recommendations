@@ -57,3 +57,10 @@ tags:
   - data-processing
   - scripting
   - essential
+
+sdlc_phase: implementation
+solves: "Manual JSON parsing in scripts - slow data extraction and transformation"
+
+pricing:
+  model: open-source
+  details: "Free and open-source (MIT)"

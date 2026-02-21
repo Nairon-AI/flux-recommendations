@@ -57,3 +57,10 @@ tags:
   - accessibility
   - macos
   - ios
+
+sdlc_phase: requirements
+solves: "Slow documentation of requirements and ideas - typing bottleneck during discovery"
+
+pricing:
+  model: freemium
+  details: "Free: limited daily usage. Pro: $10/mo unlimited"

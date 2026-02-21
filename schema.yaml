@@ -116,3 +116,24 @@ properties:
     items:
       type: string
     description: Searchable tags for matching
+
+  sdlc_phase:
+    type: string
+    enum: [requirements, planning, implementation, review, testing, documentation]
+    description: Which SDLC phase this primarily addresses
+
+  solves:
+    type: string
+    description: What specific workflow gap this solves (e.g., "No way to verify AI has correct library knowledge")
+
+  pricing:
+    type: object
+    description: Cost information
+    properties:
+      model:
+        type: string
+        enum: [free, freemium, paid, open-source]
+        description: "free=no cost, freemium=free tier+paid, paid=requires payment, open-source=free+self-host"
+      details:
+        type: string
+        description: Pricing details (e.g., "Free tier 1000 req/day. Pro $20/mo")

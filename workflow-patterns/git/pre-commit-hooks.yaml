@@ -64,3 +64,10 @@ tags:
   - linting
   - ci-cd
   - quality
+
+sdlc_phase: review
+solves: "Errors caught in CI instead of locally - 5+ min feedback loop wastes time"
+
+pricing:
+  model: free
+  details: "Free pattern - uses open-source tools (lefthook, husky)"

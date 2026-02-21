@@ -63,3 +63,10 @@ tags:
   - conventions
   - context
   - onboarding
+
+sdlc_phase: documentation
+solves: "AI guesses wrong about project conventions, commands, and structure - wastes time correcting"
+
+pricing:
+  model: free
+  details: "Free - just a file in your repo"

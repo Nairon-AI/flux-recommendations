@@ -59,3 +59,10 @@ tags:
   - playwright
   - ai-powered
   - self-healing
+
+sdlc_phase: testing
+solves: "Brittle E2E tests that break when UI changes - constant selector maintenance"
+
+pricing:
+  model: freemium
+  details: "Open-source SDK. Browserbase hosting: free tier, then usage-based"

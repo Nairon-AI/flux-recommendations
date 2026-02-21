@@ -62,3 +62,10 @@ tags:
   - macos
   - windows
   - ios
+
+sdlc_phase: requirements
+solves: "Losing context from stakeholder meetings - action items fall through cracks, decisions forgotten"
+
+pricing:
+  model: freemium
+  details: "Free: 25 meetings/mo. Pro: $10/mo unlimited"

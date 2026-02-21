@@ -53,3 +53,10 @@ tags:
   - token-efficient
   - exploration
   - ai-prompts
+
+sdlc_phase: review
+solves: "AI reviews lack full codebase context - misses cross-file dependencies and patterns"
+
+pricing:
+  model: paid
+  details: "$30 one-time purchase (macOS app)"
