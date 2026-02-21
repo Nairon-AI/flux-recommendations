@@ -370,18 +370,21 @@ def fetch_youtube_content(url, exa_api_key=None):
     supadata_key = os.environ.get("SUPADATA_API_KEY")
     if not transcript_text and supadata_key:
         try:
-            supadata_url = (
-                f"https://api.supadata.ai/v1/youtube/transcript?videoId={video_id}"
-            )
+            supadata_url = f"https://api.supadata.ai/v1/youtube/transcript?videoId={video_id}&text=true"
             req = urllib.request.Request(supadata_url)
             req.add_header("x-api-key", supadata_key)
+            req.add_header("User-Agent", "FluxInbox/1.0")
             with urllib.request.urlopen(req, timeout=30) as resp:
                 result = json.loads(resp.read().decode())
+                # text=true returns {"content": "transcript text"}
                 if result.get("content"):
                     transcript_text = result["content"]
                     print(
                         f"Fetched transcript via Supadata: {len(transcript_text)} chars"
                     )
+        except urllib.error.HTTPError as e:
+            error_body = e.read().decode() if e.fp else ""
+            print(f"Supadata API failed: {e.code} - {error_body[:200]}")
         except Exception as e:
             print(f"Supadata API failed: {e}")
 
