@@ -61,8 +61,8 @@ tags:
   - macos
   - windows
 
-sdlc_phase: requirements
-solves: "Research fragmentation - manually synthesizing info across many tabs and sources"
+sdlc_phase: implementation
+solves: "Browser context switching - losing focus jumping between tabs and searching"
 
 pricing:
   model: freemium
