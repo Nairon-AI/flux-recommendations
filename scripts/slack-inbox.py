@@ -226,8 +226,20 @@ def main():
         # Fallback to first ~40 chars of tweet
         title = text.replace("\n", " ")[:40] + "..."
 
+    # Format tweet content for context
+    if parent:
+        parent_text = parent.get("text", "")
+        parent_author = parent.get("author", {}).get("userName", "unknown")
+        tweet_context = f"""> **@{parent_author}:** {parent_text}
+>
+> ↳ **@{author}:** {text}"""
+    else:
+        tweet_context = f"> {text}"
+
     # Create issue body - concise format
     body = f"""[@{author}]({tweet_url}) · {likes} likes
+
+{tweet_context}
 
 ---
 
