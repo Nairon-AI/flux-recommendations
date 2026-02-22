@@ -1,0 +1,33 @@
+# =============================================================================
+# BEST MODELS PER USE CASE
+# =============================================================================
+# Update this file when model rankings change.
+# Last updated: 2026-02-22
+#
+# These recommendations are used by:
+# - flux:improve recommendations
+# - Model recommendation YAMLs
+# - Session analysis friction detection
+# =============================================================================
+
+frontend:
+  description: "UI components, CSS, styling, responsive design, animations"
+  best:
+    - name: "opus-4.5"
+      reason: "Excellent visual reasoning, CSS, layout"
+    - name: "opus-4.6"
+      reason: "Best component architecture"
+    - name: "gemini-3.1-pro"
+      reason: "Strong at animations, complex CSS"
+
+reasoning:
+  description: "Complex problems, architecture decisions, debugging, edge cases, deep analysis"
+  best:
+    - name: "gpt-5.3-codex"
+      reason: "Best for complex reasoning and multi-step problems"
+
+quick_tasks:
+  description: "Scout subagents, small quick changes, sessions without images"
+  best:
+    - name: "gpt-5.3-codex-spark"
+      reason: "Fast, efficient for simple tasks and parallel scouts"

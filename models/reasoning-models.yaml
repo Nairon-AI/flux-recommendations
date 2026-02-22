@@ -1,0 +1,71 @@
+name: reasoning-models
+category: model
+tagline: Models for complex reasoning and deep analysis
+
+# See constants/models.yaml for current rankings
+_references: constants/models.yaml#reasoning
+
+description: |
+  Some problems need deeper reasoning - architecture decisions, debugging
+  complex issues, or working through ambiguous requirements.
+  
+  Best reasoning model:
+  - gpt-5.3-codex: Best for complex reasoning and multi-step problems
+  
+  If the model keeps giving shallow answers or missing edge cases,
+  switch to gpt-5.3-codex.
+
+use_cases:
+  - Complex debugging
+  - Architecture decisions
+  - Ambiguous requirements
+  - Multi-step problem solving
+  - Edge case analysis
+
+friction_signals:
+  - "didn't think through"
+  - "missed the edge case"
+  - "shallow answer"
+  - "needs more analysis"
+  - "complex problem"
+  - "think harder"
+  - "step by step"
+
+prerequisites: []
+
+install:
+  type: config
+  config_snippet: |
+    # AGENTS.md addition:
+    ## Model Selection
+    - Use gpt-5.3-codex for complex reasoning problems
+    - Enable extended thinking for architecture decisions
+
+verification:
+  type: manual
+  test_command: Ask model to solve a complex multi-step problem
+  success_indicator: Model shows reasoning steps, considers edge cases
+
+related_tools: []
+
+resources: []
+
+added_date: "2026-02-22"
+source: manual
+
+ratings:
+  usefulness: 5
+  setup_difficulty: 1
+
+tags:
+  - model
+  - reasoning
+  - thinking
+  - complex
+  - architecture
+
+sdlc_phase: planning
+solves: Complex problems get shallow solutions - need deeper reasoning
+pricing:
+  model: usage-based
+  details: Codex models have competitive pricing

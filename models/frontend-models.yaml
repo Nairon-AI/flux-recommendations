@@ -1,0 +1,77 @@
+name: frontend-models
+category: model
+tagline: Better models for frontend/UI work
+
+# See constants/models.yaml for current rankings
+_references: constants/models.yaml#frontend
+
+description: |
+  Not all models are equal for frontend work. Some excel at visual reasoning,
+  component structure, and CSS/styling while others struggle.
+  
+  Best frontend models:
+  - opus-4.5: Excellent visual reasoning, CSS, layout
+  - opus-4.6: Best component architecture  
+  - gemini-3.1-pro: Strong at animations, complex CSS
+  
+  If you're struggling with UI code quality, try switching models before adding tools.
+
+use_cases:
+  - UI components coming out wrong
+  - CSS/styling issues
+  - Responsive design problems
+  - Component structure confusion
+  - Design-to-code translation
+
+friction_signals:
+  - "the styling is off"
+  - "doesn't look right"
+  - "CSS isn't working"
+  - "layout is broken"
+  - "responsive"
+  - "design doesn't match"
+  - "UI looks wrong"
+
+prerequisites: []
+
+install:
+  type: config
+  config_snippet: |
+    # AGENTS.md addition:
+    ## Model Selection
+    - Use opus-4.5 or opus-4.6 for frontend/UI work
+    - Use gemini-3.1-pro as alternative for CSS-heavy tasks
+
+verification:
+  type: manual
+  test_command: Ask model to create a responsive component
+  success_indicator: Clean, well-structured CSS and component code
+
+related_tools:
+  - figma
+  - pencil
+  - stagehand-e2e
+
+resources:
+  - url: https://docs.anthropic.com/models
+    type: docs
+
+added_date: "2026-02-22"
+source: manual
+
+ratings:
+  usefulness: 5
+  setup_difficulty: 1
+
+tags:
+  - model
+  - frontend
+  - ui
+  - css
+  - visual
+
+sdlc_phase: implementation
+solves: UI/frontend code quality issues - wrong model for visual tasks
+pricing:
+  model: usage-based
+  details: Opus models are premium tier
