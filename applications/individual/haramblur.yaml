@@ -1,0 +1,62 @@
+name: haramblur
+category: application
+tagline: "Browser extension for automatic NSFW and sensitive-content blurring"
+
+description: |
+  HaramBlur is a browser extension that detects and blurs NSFW/sensitive content
+  (including image/video flows) with user-configurable strictness and blur rules.
+
+  It is useful for developers who want safer browsing conditions while researching,
+  debugging user-facing content surfaces, or working in high-noise web contexts.
+
+use_cases:
+  - Reduce distracting or unwanted content during research sessions
+  - Apply stricter browsing filters in shared/team environments
+  - Configure safe-by-default web browsing for long engineering sessions
+
+prerequisites:
+  - Chrome/Chromium or Firefox
+
+install:
+  type: manual
+  command: |
+    # Option 1: Install from browser extension stores
+    # - Chrome Web Store
+    # - Firefox Add-ons
+
+    # Option 2: Build from source
+    git clone https://github.com/alganzory/HaramBlur.git
+    cd HaramBlur
+    # Follow README instructions for your target browser
+
+verification:
+  type: manual
+  test_command: "Enable extension on a media-heavy site and verify blur controls"
+  success_indicator: "Configured content classes are detected and blurred according to settings"
+
+resources:
+  - url: https://github.com/alganzory/HaramBlur
+    type: github
+  - url: https://haramblur.com
+    type: homepage
+
+added_date: 2026-02-23
+source: manual
+
+ratings:
+  usefulness: 3
+  setup_difficulty: 1
+
+tags:
+  - browser-extension
+  - privacy
+  - content-filtering
+  - productivity
+  - wellbeing
+
+sdlc_phase: implementation
+solves: "Distracting web content can break focus during long technical work sessions"
+
+pricing:
+  model: open-source
+  details: "Free and open-source"

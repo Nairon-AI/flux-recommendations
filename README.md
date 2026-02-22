@@ -14,6 +14,7 @@ Used by [`/flux:improve`](https://github.com/Nairon-AI/flux) to recommend tools,
 | `skills/` | `frontend/`, `research/`, `backend/`, `codebase-mapping/`, `marketplaces/`, `marketing/`, `writing/`, `meta-learning/`, `security/`, `specification/` | Standalone skills |
 | `plugins/` | *(empty)* | Claude Code plugins |
 | `workflow-patterns/` | `git/`, `testing/`, `ai/`, `review/` | Best practices (not tools) |
+| `models/` | *(flat)* | Model guidance and model hubs |
 
 ### Structure
 
@@ -55,6 +56,8 @@ workflow-patterns/
 ├── testing/      # test-first-debugging
 ├── ai/           # agents-md-structure, context-management
 └── review/       # anti-slop, vouch
+
+models/           # frontend-models, reasoning-models, huggingface
 ```
 
 ## Adding Recommendations
