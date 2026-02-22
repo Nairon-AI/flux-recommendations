@@ -1,0 +1,70 @@
+name: ui-skills
+category: skill
+tagline: Polish interfaces built by AI agents
+description: |
+  A growing set of skills to fix common UI issues in agent-generated interfaces.
+  Covers accessibility, metadata, motion performance, and baseline UI standards.
+  
+  Agents often miss subtle UI details - wrong focus states, missing alt text,
+  janky animations, bad meta tags. These skills catch and fix those issues
+  automatically during review.
+
+  Skills included:
+  - baseline-ui: Opinionated UI baseline and standards
+  - fixing-accessibility: Keyboard nav, labels, focus, semantics
+  - fixing-metadata: Correct titles, meta tags, social cards
+  - fixing-motion-performance: Safe, performance-first animations
+
+use_cases:
+  - Reviewing agent-generated UI for accessibility issues
+  - Fixing missing or incorrect meta tags and social cards
+  - Ensuring animations are performant and respect reduced-motion
+  - Establishing baseline UI standards across a codebase
+
+sdlc_phase: review
+solves: UI polish issues that agents commonly miss
+
+prerequisites:
+  - Claude Code or compatible agent
+  - Frontend project (React, Next.js, etc.)
+
+install:
+  type: skill
+  command: |
+    # Install all ui-skills
+    npx skills add ibelick/ui-skills
+    
+    # Or add specific skills
+    npx ui-skills add baseline-ui
+    npx ui-skills add fixing-accessibility
+    npx ui-skills add fixing-metadata
+    npx ui-skills add fixing-motion-performance
+
+verification:
+  type: command_exists
+  test_command: ls ~/.claude/skills/baseline-ui/SKILL.md
+  success_indicator: Skill files present in skills directory
+
+pricing:
+  model: free
+  details: MIT licensed, open source
+
+resources:
+  - url: https://www.ui-skills.com/
+    type: homepage
+  - url: https://github.com/ibelick/ui-skills
+    type: github
+
+added_date: 2026-02-22
+source: manual
+
+ratings:
+  usefulness: 5
+  setup_difficulty: 1
+
+tags:
+  - ui
+  - accessibility
+  - frontend
+  - review
+  - polish
