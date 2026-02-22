@@ -67,23 +67,4 @@ solves: Manual video creation - can't programmatically generate videos from data
 pricing:
   model: freemium
   details: Free for personal. Company license required for commercial use
-mentions:
-- url: https://x.com/dani_avila7/status/2025030088815738891
-  author: '@dani_avila7'
-  text: 'Claude Code Desktop now lets you enable Worktrees automatically for every
-    new session.
 
-
-    So each session runs in its own isolated Git worktree by default.
-
-
-    What does this mean?
-
-
-    - No branch switching back and forth
-
-    - Agents don’t overwrite each other’s work
-
-    - You can run multiple '
-  date: '2026-02-21'
-  likes: 169

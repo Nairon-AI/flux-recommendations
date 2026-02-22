@@ -152,7 +152,7 @@ Or use `.github/workflows/model-eval-radar.yml` for daily automation.
 
 Join the most AI-native developer community on the planet. No hype. No AI slop. Just practical discussions on becoming the strongest developers alive.
 
-[discord.gg/nairon](https://discord.gg/nairon) *(coming soon)*
+[discord.gg/CEQMd6fmXk](https://discord.gg/CEQMd6fmXk)
 
 ## License
 

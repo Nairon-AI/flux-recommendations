@@ -1,0 +1,67 @@
+name: ghostty
+category: application
+tagline: "Fast terminal emulator with split-pane workflows"
+
+description: |
+  Ghostty is a modern, GPU-accelerated terminal emulator focused on speed,
+  low input latency, and clean keyboard-driven workflows.
+
+  It is especially useful for AI-assisted development setups where you run
+  multiple parallel agent sessions in split panes and want clear visual focus.
+
+use_cases:
+  - Running multiple agent sessions side by side
+  - Keeping coding, tests, and logs visible at once
+  - Improving terminal responsiveness on large workloads
+  - Building keyboard-first development workflows
+
+prerequisites:
+  - macOS or Linux
+
+install:
+  type: manual
+  command: |
+    # Download or install from project docs
+    # https://ghostty.org
+
+    # Optional: Homebrew (macOS)
+    brew install --cask ghostty
+
+    # Optional focus config for split panes:
+    # ~/.config/ghostty/config
+    # unfocused-split-opacity = 0.85
+
+verification:
+  type: manual
+  test_command: "ghostty +show-config --default --docs"
+  success_indicator: "Ghostty opens and config docs are available"
+
+resources:
+  - url: https://ghostty.org
+    type: homepage
+  - url: https://ghostty.org/docs
+    type: docs
+  - url: https://github.com/ghostty-org/ghostty
+    type: github
+
+added_date: 2026-02-22
+source: x-discovery
+source_url: https://x.com/dani_avila7/status/2025280714606780749
+
+ratings:
+  usefulness: 4
+  setup_difficulty: 1
+
+tags:
+  - terminal
+  - productivity
+  - split-panes
+  - ai-workflow
+  - keyboard-driven
+
+sdlc_phase: implementation
+solves: "Terminal context switching friction when running multiple concurrent coding sessions"
+
+pricing:
+  model: open-source
+  details: "Free and open-source"

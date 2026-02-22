@@ -72,9 +72,4 @@ solves: Stakeholder meeting context lost - action items and decisions fall throu
 pricing:
   model: freemium
   details: 'Free: 25 meetings/mo. Pro: $10/mo unlimited'
-mentions:
-- url: https://x.com/_catwu/status/2025026545535082588
-  author: '@_catwu'
-  text: 'RT @amorriscode: Claude Code on desktop now supports Windows ARM64 🎉'
-  date: '2026-02-21'
-  likes: 109
+

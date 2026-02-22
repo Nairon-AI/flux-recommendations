@@ -1,0 +1,66 @@
+name: worktree-isolation
+category: workflow-pattern
+tagline: "Use git worktrees for parallel AI tasks without branch thrash"
+
+description: |
+  Use git worktrees to run parallel coding tasks in isolated directories while
+  sharing one repository history. This avoids stash/switch churn and reduces
+  context loss during AI-assisted development.
+
+  Pair each worktree with a focused agent/session (feature, bugfix, review),
+  then merge cleanly once each thread is complete.
+
+use_cases:
+  - Parallel feature + bugfix work
+  - Running multiple AI agents safely in one repo
+  - Avoiding stash/pop conflicts during interrupts
+  - Isolating risky refactors from mainline work
+
+prerequisites:
+  - Git 2.5+
+  - Repository with at least one commit
+
+install:
+  type: manual
+  command: |
+    # Create a worktree on a new branch
+    git worktree add ../repo-feature-x -b feature-x
+
+    # List active worktrees
+    git worktree list
+
+    # Remove finished worktree
+    git worktree remove ../repo-feature-x
+
+verification:
+  type: manual
+  test_command: "git worktree list"
+  success_indicator: "Multiple active worktrees are listed with separate paths"
+
+resources:
+  - url: https://git-scm.com/docs/git-worktree
+    type: docs
+  - url: https://x.com/mattpocockuk/status/2025242370816487487
+    type: twitter
+
+added_date: 2026-02-22
+source: x-discovery
+source_url: https://x.com/mattpocockuk/status/2025242370816487487
+
+ratings:
+  usefulness: 5
+  setup_difficulty: 2
+
+tags:
+  - git
+  - worktree
+  - parallel-development
+  - ai-agents
+  - context-switching
+
+sdlc_phase: implementation
+solves: "Branch-switching and stash churn break flow and AI context during multi-task work"
+
+pricing:
+  model: free
+  details: "Built into Git"

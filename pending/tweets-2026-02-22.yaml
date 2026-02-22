@@ -1,0 +1,207 @@
+- author: '@dani_avila7'
+  date: '2026-02-22'
+  likes: 89
+  text: 'Diagram about SAND to use Ghostty with Claude Code multiagents.
+
+
+    The first image was created by ChatGPT
+
+    The second one by Nano Banana
+
+
+    Which one do you prefer? https://t.co/yv6l3OxDyl'
+  url: https://x.com/dani_avila7/status/2025402765241909497
+- author: '@dani_avila7'
+  date: '2026-02-22'
+  likes: 56
+  text: "By default, Claude Code worktrees are created in .claude/worktrees inside\
+    \ your project.\n\nYou can change this location in Settings → Claude Code under\
+    \ the \"Worktree Location\" option.\n\nIt's good practice to keep your worktrees\
+    \ outside your project directory. \n\nThis section also let"
+  url: https://x.com/dani_avila7/status/2025336648913793506
+- author: '@dani_avila7'
+  date: '2026-02-22'
+  likes: 1193
+  text: 'Ghostty lets you control the opacity of unfocused splits.
+
+
+    Just add this to ~/.config/ghostty/config:
+
+    unfocused-split-opacity = 0.85
+
+
+    Super useful when working across multiple panes, you always know where your focus
+    is.
+
+
+    If the opacity doesn''t load on startup, hit cmd+shift+, to '
+  url: https://x.com/dani_avila7/status/2025280714606780749
+- author: '@pvncher'
+  date: '2026-02-22'
+  likes: 1310
+  text: 'RT @leerob: It’s easier than ever to write code…
+
+
+    And yet the hard parts of software engineering are still *very hard*
+
+
+    Don’t get discourag…'
+  url: https://x.com/pvncher/status/2025371218350629252
+- author: '@pvncher'
+  date: '2026-02-22'
+  likes: 46
+  text: If Saas is dead why are the big labs not rolling internal solutions?
+  url: https://x.com/pvncher/status/2025351468736254082
+- author: '@realmcore_'
+  date: '2026-02-22'
+  likes: 7
+  text: Codex 5.3 appears to be a developer's developer. A swe's swe. A model for
+    the people. Although incapable of talking to the people.
+  url: https://x.com/realmcore_/status/2025485999854489980
+- author: '@realmcore_'
+  date: '2026-02-22'
+  likes: 321
+  text: 'Lots of simple, grindy dev tasks that used to be considered low ROI and now
+    dramatically higher leverage:
+
+
+    - Complete test coverage
+
+    - A good devops config
+
+    - Good CICD
+
+    - Managing envs for dev, staging, and prod
+
+
+    All this to say, process engineering is extremely high leverage now'
+  url: https://x.com/realmcore_/status/2025313600253125109
+- author: '@realmcore_'
+  date: '2026-02-22'
+  likes: 22
+  text: 'The last 10% of that vibe coded project you''re working on will cost you
+    as much as the first 90%
+
+
+    Most of the effort comes in the form of doing something that you thought was easy
+    and in fact, was not, easy.'
+  url: https://x.com/realmcore_/status/2025295968888127950
+- author: '@EastlondonDev'
+  date: '2026-02-22'
+  likes: 2
+  text: What would you do if you could deploy scalable, hot swappable actors to BEAM
+    straight from chat GPT? https://t.co/CEbnCIrnlU
+  url: https://x.com/EastlondonDev/status/2025407997523247392
+- author: '@EastlondonDev'
+  date: '2026-02-22'
+  likes: 12
+  text: Ragebait hat acquired https://t.co/MbpWuTsNhd
+  url: https://x.com/EastlondonDev/status/2025297828130816301
+- author: '@justsisyphus'
+  date: '2026-02-22'
+  likes: 41
+  text: '"I spent way too long optimizing my @opencode  + omo model config in the
+    past days to find out IF I could do without Anthropic."
+
+
+    "Turns out I can! Codex, GLM & MiniMax are perfectly balanced now"
+
+
+    -------
+
+
+    yes it won''t be the same as opus + sisy, but better then pure claude code'
+  url: https://x.com/justsisyphus/status/2025455986623012923
+- author: '@justsisyphus'
+  date: '2026-02-22'
+  likes: 4
+  text: 'RT @PizzamanRe76387: @justsisyphus @AnthropicAI @opencode @Kimi_Moonshot
+    @OpenAI Been using non-Claude omo config for a week. It’s perfectl…'
+  url: https://x.com/justsisyphus/status/2025451820936786285
+- author: '@justsisyphus'
+  date: '2026-02-22'
+  likes: 3
+  text: 'RT @Marsmensch: All features work: ultrawork, background agents, Ralph loop,
+    todo enforcer, LSP, the whole stack.
+
+
+    Thanks to the whole @ope…'
+  url: https://x.com/justsisyphus/status/2025403857896177860
+- author: '@justsisyphus'
+  date: '2026-02-22'
+  likes: 6
+  text: 'RT @Berezin12345: @justsisyphus @_can1357 oh-my-opencode is phenomenal and
+    once you try it there’s no skipping it
+
+
+    the fact that the llm yo…'
+  url: https://x.com/justsisyphus/status/2025288948881473846
+- author: '@justsisyphus'
+  date: '2026-02-22'
+  likes: 78
+  text: 'RT @thdxr: @tjalve @opencode OmO is a token burner - we heard anthropic cite
+    it as justification for blocking clients'
+  url: https://x.com/justsisyphus/status/2025283157118124112
+- author: '@mattpocockuk'
+  date: '2026-02-22'
+  likes: 275
+  text: Month later, still happy with @code
+  url: https://x.com/mattpocockuk/status/2025244952255758462
+- author: '@mattpocockuk'
+  date: '2026-02-22'
+  likes: 1659
+  text: 'claude --worktree is so good I''m making it my new default.
+
+
+    Don''t know why you should care?
+
+
+    Couldn''t follow the Anthropic announcement? (way too technical IMO)
+
+
+    Here''s a demo: https://t.co/OyvAvFdC9C'
+  url: https://x.com/mattpocockuk/status/2025242370816487487
+- author: '@mattpocockuk'
+  date: '2026-02-22'
+  likes: 188
+  text: 'LOVE seeing this be built into CC itself
+
+
+    Especially parallelizing subagents makes spawning a bunch of agents to do a lot
+    of work a lot simpler.
+
+
+    Especially when merge conflicts are so cheap.'
+  url: https://x.com/mattpocockuk/status/2025225505843069086
+- author: '@ryancarson'
+  date: '2026-02-22'
+  likes: 4
+  text: Interesting to see the results so far
+  url: https://x.com/ryancarson/status/2025356316047204641
+- author: '@ryancarson'
+  date: '2026-02-22'
+  likes: 155
+  text: Let’s go :) https://t.co/motI9iN9zy
+  url: https://x.com/ryancarson/status/2025315961750896744
+- author: '@ryancarson'
+  date: '2026-02-22'
+  likes: 48
+  text: What are you using as your daily driver now for swe?
+  url: https://x.com/ryancarson/status/2025247818244366493
+- author: '@ryancarson'
+  date: '2026-02-22'
+  likes: 36
+  text: Love the names Codex chooses for the subagents :) https://t.co/0S5RyvmKix
+  url: https://x.com/ryancarson/status/2025246984286720159
+- author: '@ryancarson'
+  date: '2026-02-22'
+  likes: 36
+  text: "Looking for maintainers on these projects. \n\nSubmit and issue with why\
+    \ it should be you.\n\nhttps://t.co/ipMHVjYvIG (10k stars)\n\nhttps://t.co/u6d1S50KoP\
+    \ (1.5k stars)"
+  url: https://x.com/ryancarson/status/2025243888647028936
+- author: '@ryancarson'
+  date: '2026-02-22'
+  likes: 12
+  text: Personality set to Friendly
+  url: https://x.com/ryancarson/status/2025242376885703009

@@ -68,40 +68,4 @@ solves: Context switching overhead - jumping between apps, losing clipboard hist
 pricing:
   model: freemium
   details: 'Free for most features. Pro: $10/mo for AI, sync, teams'
-mentions:
-- url: https://x.com/dani_avila7/status/2025249171582701968
-  author: '@dani_avila7'
-  text: 'This shows two things:
 
-
-    1- Devs are living in an AI bubble between AI and X.
-
-    2- We’re still in a very early stage.
-
-
-    There’s still a lot of space and time to keep building 🚀'
-  date: '2026-02-21'
-  likes: 8
-- url: https://x.com/pvncher/status/2025218017727033508
-  author: '@pvncher'
-  text: 'Uncle bob nailed it
-
-
-    The ai cannot read your mind, so there isn’t a reliable way to convey your idea
-    for a product in a way that the ai perfectly delivers on it
-
-
-    There’s no way out of working iteratively with them'
-  date: '2026-02-21'
-  likes: 85
-- url: https://x.com/kevinkern/status/2024943802914668831
-  author: '@kevinkern'
-  text: 'those who combine their profession with AI coding are creating entirely new
-    opportunities for themselves.
-
-
-    It''s a great example of what happens when domain knowledge meets technology.
-    solving your own problems with AI coding and using it as a multiplier can be a
-    real inspiration '
-  date: '2026-02-21'
-  likes: 11
