@@ -2,7 +2,11 @@
 """
 Session Data Extractor for Flux Improve
 
-Extracts raw session data from OpenCode database for LLM analysis.
+Extracts raw session data from AI coding agents for LLM analysis.
+Supports:
+- OpenCode (SQLite database)
+- Claude Code (JSONL files)
+
 The intelligent analysis (frustration detection, pattern recognition)
 is done by the agent running /flux:improve, not this script.
 """
@@ -14,11 +18,39 @@ import sys
 from datetime import datetime
 from pathlib import Path
 
+# Session storage locations
 OPENCODE_DB = Path.home() / ".local/share/opencode/opencode.db"
+CLAUDE_CODE_DIR = Path.home() / ".claude/projects"
 
 
-def get_sessions(directory: str, limit: int = 20) -> list[dict]:
-    """Get recent sessions for a project directory."""
+def detect_agent() -> str:
+    """Detect which agent's session data is available."""
+    if OPENCODE_DB.exists():
+        return "opencode"
+    if CLAUDE_CODE_DIR.exists():
+        return "claude-code"
+    return "unknown"
+
+
+def get_claude_code_project_path(directory: str) -> Path | None:
+    """Get Claude Code project folder for a directory."""
+    # Claude Code encodes paths as -Users-obaid-Desktop-project-name
+    encoded = directory.replace("/", "-").lstrip("-")
+    project_dir = CLAUDE_CODE_DIR / f"-{encoded}"
+    if project_dir.exists():
+        return project_dir
+    # Try without leading dash
+    project_dir = CLAUDE_CODE_DIR / encoded
+    if project_dir.exists():
+        return project_dir
+    return None
+
+
+# ============== OpenCode Functions ==============
+
+
+def get_opencode_sessions(directory: str, limit: int = 20) -> list[dict]:
+    """Get sessions from OpenCode SQLite database."""
     if not OPENCODE_DB.exists():
         return []
 
@@ -65,18 +97,14 @@ def get_sessions(directory: str, limit: int = 20) -> list[dict]:
     return sessions
 
 
-def get_conversation_sample(directory: str, limit: int = 100) -> list[dict]:
-    """
-    Extract recent user prompts with context for LLM analysis.
-    Returns chronological conversation snippets.
-    """
+def get_opencode_conversation_sample(directory: str, limit: int = 100) -> list[dict]:
+    """Extract recent user prompts from OpenCode."""
     if not OPENCODE_DB.exists():
         return []
 
     conn = sqlite3.connect(OPENCODE_DB)
     cursor = conn.cursor()
 
-    # Get user messages with their session context
     cursor.execute(
         """
         SELECT 
@@ -101,7 +129,6 @@ def get_conversation_sample(directory: str, limit: int = 100) -> list[dict]:
     messages = []
     for row in cursor.fetchall():
         text = row[2]
-        # Skip system injections and very long context dumps
         if text and not text.startswith("<beads-") and not text.startswith("[MEMORY"):
             messages.append(
                 {
@@ -113,30 +140,23 @@ def get_conversation_sample(directory: str, limit: int = 100) -> list[dict]:
             )
 
     conn.close()
-    # Return in chronological order (oldest first)
     return list(reversed(messages))
 
 
-def get_error_retry_patterns(directory: str) -> list[dict]:
-    """
-    Find potential error/retry cycles by looking for:
-    - Multiple user messages in quick succession
-    - Messages containing error indicators
-    """
+def get_opencode_friction_signals(directory: str) -> list[dict]:
+    """Find frustration indicators in OpenCode sessions."""
     if not OPENCODE_DB.exists():
         return []
 
     conn = sqlite3.connect(OPENCODE_DB)
     cursor = conn.cursor()
 
-    # Find user messages that might indicate frustration/retry
     cursor.execute(
         """
         SELECT 
             s.title as session_title,
             json_extract(p.data, '$.text') as text,
-            datetime(m.time_created/1000, 'unixepoch', 'localtime') as timestamp,
-            m.time_created as ts_raw
+            datetime(m.time_created/1000, 'unixepoch', 'localtime') as timestamp
         FROM part p
         JOIN message m ON p.message_id = m.id
         JOIN session s ON m.session_id = s.id
@@ -151,17 +171,13 @@ def get_error_retry_patterns(directory: str) -> list[dict]:
                 OR lower(json_extract(p.data, '$.text')) LIKE '%fail%'
                 OR lower(json_extract(p.data, '$.text')) LIKE '%error%'
                 OR lower(json_extract(p.data, '$.text')) LIKE '%not work%'
-                OR lower(json_extract(p.data, '$.text')) LIKE '%doesn%t work%'
                 OR lower(json_extract(p.data, '$.text')) LIKE '%broken%'
                 OR lower(json_extract(p.data, '$.text')) LIKE '%wrong%'
                 OR lower(json_extract(p.data, '$.text')) LIKE '%rip%'
                 OR lower(json_extract(p.data, '$.text')) LIKE '%nani%'
-                OR lower(json_extract(p.data, '$.text')) LIKE '%what?%'
-                OR lower(json_extract(p.data, '$.text')) LIKE '%huh%'
                 OR lower(json_extract(p.data, '$.text')) LIKE '%confused%'
                 OR lower(json_extract(p.data, '$.text')) LIKE '%i thought%'
                 OR lower(json_extract(p.data, '$.text')) LIKE '%already%'
-                OR lower(json_extract(p.data, '$.text')) LIKE '%didn%t you%'
                 OR lower(json_extract(p.data, '$.text')) LIKE '%try again%'
             )
         ORDER BY m.time_created DESC
@@ -186,15 +202,14 @@ def get_error_retry_patterns(directory: str) -> list[dict]:
     return patterns
 
 
-def get_tool_usage(directory: str) -> dict:
-    """Get tool usage statistics from assistant messages."""
+def get_opencode_tool_usage(directory: str) -> dict:
+    """Get tool usage from OpenCode sessions."""
     if not OPENCODE_DB.exists():
         return {}
 
     conn = sqlite3.connect(OPENCODE_DB)
     cursor = conn.cursor()
 
-    # Count tool uses
     cursor.execute(
         """
         SELECT 
@@ -223,12 +238,194 @@ def get_tool_usage(directory: str) -> dict:
     return tools
 
 
+# ============== Claude Code Functions ==============
+
+
+def get_claude_code_sessions(directory: str, limit: int = 20) -> list[dict]:
+    """Get sessions from Claude Code JSONL files."""
+    project_dir = get_claude_code_project_path(directory)
+    if not project_dir:
+        return []
+
+    sessions_index = project_dir / "sessions-index.json"
+    if not sessions_index.exists():
+        return []
+
+    with open(sessions_index) as f:
+        index = json.load(f)
+
+    sessions = []
+    for entry in index.get("entries", [])[:limit]:
+        sessions.append(
+            {
+                "id": entry.get("sessionId", ""),
+                "title": entry.get("firstPrompt", "")[:100] + "..."
+                if len(entry.get("firstPrompt", "")) > 100
+                else entry.get("firstPrompt", ""),
+                "additions": 0,
+                "deletions": 0,
+                "files": 0,
+                "messages": entry.get("messageCount", 0),
+                "created": entry.get("created", ""),
+            }
+        )
+
+    return sessions
+
+
+def get_claude_code_conversation_sample(directory: str, limit: int = 100) -> list[dict]:
+    """Extract recent prompts from Claude Code JSONL files."""
+    project_dir = get_claude_code_project_path(directory)
+    if not project_dir:
+        return []
+
+    messages = []
+    for jsonl_file in sorted(
+        project_dir.glob("*.jsonl"), key=lambda f: f.stat().st_mtime, reverse=True
+    )[:5]:
+        try:
+            with open(jsonl_file) as f:
+                for line in f:
+                    try:
+                        msg = json.loads(line)
+                        role = msg.get("type", "")
+                        text = ""
+
+                        if role == "human":
+                            # Human messages have content array
+                            for block in msg.get("message", {}).get("content", []):
+                                if (
+                                    isinstance(block, dict)
+                                    and block.get("type") == "text"
+                                ):
+                                    text = block.get("text", "")
+                                    break
+                                elif isinstance(block, str):
+                                    text = block
+                                    break
+
+                        if text and len(text) > 10 and len(text) < 2000:
+                            if not text.startswith("<beads-") and not text.startswith(
+                                "[MEMORY"
+                            ):
+                                messages.append(
+                                    {
+                                        "session": jsonl_file.stem[:8],
+                                        "role": "user"
+                                        if role == "human"
+                                        else "assistant",
+                                        "text": text[:500] + "..."
+                                        if len(text) > 500
+                                        else text,
+                                        "time": msg.get("timestamp", ""),
+                                    }
+                                )
+                    except json.JSONDecodeError:
+                        continue
+        except Exception:
+            continue
+
+    return messages[:limit]
+
+
+def get_claude_code_friction_signals(directory: str) -> list[dict]:
+    """Find frustration indicators in Claude Code sessions."""
+    conversation = get_claude_code_conversation_sample(directory, limit=200)
+
+    friction_keywords = [
+        "again",
+        "still",
+        "bruh",
+        "why",
+        "fail",
+        "error",
+        "not work",
+        "broken",
+        "wrong",
+        "rip",
+        "nani",
+        "confused",
+        "i thought",
+        "already",
+        "try again",
+    ]
+
+    signals = []
+    for msg in conversation:
+        if msg["role"] == "user":
+            text_lower = msg["text"].lower()
+            if any(kw in text_lower for kw in friction_keywords):
+                signals.append(
+                    {
+                        "session": msg["session"],
+                        "prompt": msg["text"],
+                        "time": msg["time"],
+                    }
+                )
+
+    return signals[:30]
+
+
+def get_claude_code_tool_usage(directory: str) -> dict:
+    """Get tool usage from Claude Code sessions."""
+    project_dir = get_claude_code_project_path(directory)
+    if not project_dir:
+        return {}
+
+    tools = {}
+    for jsonl_file in project_dir.glob("*.jsonl"):
+        try:
+            with open(jsonl_file) as f:
+                for line in f:
+                    try:
+                        msg = json.loads(line)
+                        if msg.get("type") == "assistant":
+                            for block in msg.get("message", {}).get("content", []):
+                                if (
+                                    isinstance(block, dict)
+                                    and block.get("type") == "tool_use"
+                                ):
+                                    tool_name = block.get("name", "unknown")
+                                    tools[tool_name] = tools.get(tool_name, 0) + 1
+                    except json.JSONDecodeError:
+                        continue
+        except Exception:
+            continue
+
+    return dict(sorted(tools.items(), key=lambda x: x[1], reverse=True)[:20])
+
+
+# ============== Main Functions ==============
+
+
 def extract_all(directory: str) -> dict:
     """Extract all session data for LLM analysis."""
-    sessions = get_sessions(directory)
-    conversation = get_conversation_sample(directory, limit=80)
-    friction_signals = get_error_retry_patterns(directory)
-    tool_usage = get_tool_usage(directory)
+    agent = detect_agent()
+
+    if agent == "opencode":
+        sessions = get_opencode_sessions(directory)
+        conversation = get_opencode_conversation_sample(directory, limit=80)
+        friction_signals = get_opencode_friction_signals(directory)
+        tool_usage = get_opencode_tool_usage(directory)
+    elif agent == "claude-code":
+        sessions = get_claude_code_sessions(directory)
+        conversation = get_claude_code_conversation_sample(directory, limit=80)
+        friction_signals = get_claude_code_friction_signals(directory)
+        tool_usage = get_claude_code_tool_usage(directory)
+    else:
+        return {
+            "status": "no_agent",
+            "message": "No supported agent session data found (OpenCode or Claude Code)",
+            "directory": directory,
+        }
+
+    if not sessions:
+        return {
+            "status": "no_sessions",
+            "message": f"No sessions found for {directory}",
+            "agent": agent,
+            "directory": directory,
+        }
 
     # Basic stats
     total_messages = sum(s["messages"] for s in sessions)
@@ -237,6 +434,8 @@ def extract_all(directory: str) -> dict:
     total_files = sum(s["files"] for s in sessions)
 
     return {
+        "status": "success",
+        "agent": agent,
         "directory": directory,
         "extracted_at": datetime.now().isoformat(),
         "stats": {
@@ -265,8 +464,9 @@ if __name__ == "__main__":
     if output_format == "json":
         print(json.dumps(data, indent=2))
     else:
-        # Summary format for quick view
-        print(f"Sessions: {data['stats']['sessions']}")
-        print(f"Messages: {data['stats']['total_messages']}")
-        print(f"Friction signals: {len(data['friction_signals'])}")
-        print(f"Tools used: {len(data['tool_usage'])}")
+        # Summary format
+        print(f"Agent: {data.get('agent', 'unknown')}")
+        print(f"Sessions: {data.get('stats', {}).get('sessions', 0)}")
+        print(f"Messages: {data.get('stats', {}).get('total_messages', 0)}")
+        print(f"Friction signals: {len(data.get('friction_signals', []))}")
+        print(f"Tools used: {len(data.get('tool_usage', {}))}")

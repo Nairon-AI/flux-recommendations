@@ -1,8 +1,30 @@
 # Flux Recommendations
 
-Curated database of workflow optimizations for AI-augmented development.
+**Curated workflow optimizations that make AI agents actually work.**
 
-Used by [`/flux:improve`](https://github.com/Nairon-AI/flux) to recommend tools, plugins, and patterns.
+Used by `/flux:improve` to analyze your sessions, identify friction, and recommend the right tools.
+
+## Compatibility
+
+| Agent | Status | Session Analysis |
+|-------|--------|------------------|
+| **OpenCode** | Full support | SQLite database |
+| **Claude Code** | Full support | JSONL files |
+| **Cursor** | Planned | — |
+| **Codex** | Planned | — |
+
+Works with both global (`~/.config/opencode/`) and local (`.opencode/`, `.claude/`) configurations.
+
+## The Problem
+
+Process failures, not model failures:
+
+- **Repeating the same debugging cycle** — trying the same broken approach 5 times before pivoting
+- **Losing context mid-session** — agent forgets what was decided, you re-explain
+- **Drip-feeding requirements** — "also add X" after implementation, causing rework
+- **Missing obvious tools** — not using MCPs/skills that would save hours
+
+`/flux:improve` analyzes your actual sessions, finds these patterns, and recommends specific fixes from this database.
 
 ## Categories
 
@@ -120,14 +142,36 @@ Issues are created with:
 
 ---
 
-## How It Works
+## How `/flux:improve` Works
 
-1. User runs `/flux:improve`
-2. Flux analyzes their environment (repo, MCPs, sessions)
-3. Fetches recommendations from this repo
-4. Claude determines relevance for each recommendation
-5. User selects which to install
-6. Flux installs and verifies
+```
+Step 1: Extract session data
+✓ Found 20 sessions in /Users/you/project
+✓ Extracted 2,500 messages
+✓ Identified 15 friction signals
+
+Step 2: Analyze friction points
+| # | Friction | Evidence |
+|---|----------|----------|
+| 1 | API retry loop | "bruh" "again" "still failing" (6 attempts) |
+| 2 | Task confusion | "i thought we completed this?" |
+
+Step 3: Search recommendations database
+✓ Loaded 27 recommendations from ~/.flux/recommendations/
+  ├── 6 MCPs (context7, exa, figma...)
+  ├── 6 CLI tools (beads, jq, fzf...)
+  └── 7 Workflow patterns (test-first-debugging...)
+
+Step 4: Match friction → recommendations
+| Your Friction | Matched Tool | Why |
+|---------------|--------------|-----|
+| API retry loop | test-first-debugging | Write failing test first |
+| Task confusion | beads | Git-backed tracker AI can't forget |
+
+Step 5: Interactive apply
+→ Select which improvements to apply
+→ Agent implements: AGENTS.md rules, tool installs, hooks
+```
 
 ## Community
 
