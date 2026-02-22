@@ -1,0 +1,67 @@
+name: gh
+category: cli-tool
+tagline: "GitHub CLI for PRs, issues, and releases from terminal"
+
+description: |
+  GitHub CLI (`gh`) lets you manage pull requests, issues, releases, workflows,
+  and repo metadata without leaving the terminal.
+
+  Useful for agent workflows where context switches to browser tabs slow down
+  review and delivery.
+
+use_cases:
+  - Create and review pull requests from terminal
+  - Triage and update issues quickly
+  - Inspect GitHub Actions runs and logs
+  - Create releases and tags from CLI
+
+prerequisites:
+  - GitHub account
+  - Authenticated `gh auth login`
+
+install:
+  type: manual
+  command: |
+    # macOS
+    brew install gh
+
+    # Linux (Debian/Ubuntu)
+    sudo apt install gh
+
+    # Authenticate
+    gh auth login
+
+verification:
+  type: command_exists
+  test_command: "gh --version"
+  success_indicator: "Outputs GitHub CLI version"
+
+related_tools:
+  - github
+
+resources:
+  - url: https://cli.github.com
+    type: homepage
+  - url: https://github.com/cli/cli
+    type: github
+
+added_date: 2026-02-22
+source: manual
+
+ratings:
+  usefulness: 5
+  setup_difficulty: 1
+
+tags:
+  - github
+  - pull-requests
+  - issues
+  - review
+  - terminal
+
+sdlc_phase: review
+solves: "Browser-heavy GitHub workflows break coding flow during review and release work"
+
+pricing:
+  model: open-source
+  details: "Free and open-source (MIT)"
