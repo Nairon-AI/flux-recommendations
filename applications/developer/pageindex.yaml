@@ -1,0 +1,53 @@
+name: pageindex
+category: application
+tagline: "Vectorless reasoning-first document index for RAG"
+
+description: |
+  PageIndex is a document indexing and retrieval system optimized for reasoning-heavy, vectorless RAG workflows.
+
+use_cases:
+  - Build document-heavy assistant systems
+  - Run retrieval pipelines without vector DB lock-in
+  - Index large knowledge corpora
+
+prerequisites:
+  - Python/Node runtime as required by project
+
+install:
+  type: manual
+  command: |
+    git clone https://github.com/VectifyAI/PageIndex.git
+    cd PageIndex
+    # Follow README setup
+
+verification:
+  type: manual
+  test_command: "Index a sample document set"
+  success_indicator: "Queries return grounded document results"
+
+resources:
+  - url: https://github.com/VectifyAI/PageIndex
+    type: github
+  - url: https://pageindex.ai
+    type: homepage
+
+added_date: 2026-02-23
+source: manual
+
+ratings:
+  usefulness: 4
+  setup_difficulty: 3
+
+tags:
+  - rag
+  - indexing
+  - vectorless
+  - retrieval
+  - documents
+
+sdlc_phase: implementation
+solves: "Many RAG stacks are over-coupled to vector infrastructure"
+
+pricing:
+  model: open-source
+  details: "Free and open-source"

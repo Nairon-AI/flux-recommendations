@@ -1,0 +1,49 @@
+name: cartographer
+category: skill
+tagline: "Map and document large codebases with parallel subagents"
+
+description: |
+  cartographer is a Claude Code plugin that creates architecture-oriented maps of large repositories using parallel subagents and structured outputs.
+
+use_cases:
+  - Onboard quickly to unfamiliar codebases
+  - Generate architecture maps before implementation
+  - Parallelize repo exploration work
+
+prerequisites:
+  - Claude Code plugin support
+
+install:
+  type: skill
+  command: |
+    git clone https://github.com/kingbootoshi/cartographer.git ~/.claude/skills/cartographer
+
+verification:
+  type: manual
+  test_command: "Run cartographer against a medium-size repo"
+  success_indicator: "Architecture map and docs are generated"
+
+resources:
+  - url: https://github.com/kingbootoshi/cartographer
+    type: github
+
+added_date: 2026-02-23
+source: manual
+
+ratings:
+  usefulness: 5
+  setup_difficulty: 2
+
+tags:
+  - codebase-mapping
+  - parallel-development
+  - subagents
+  - architecture
+  - onboarding
+
+sdlc_phase: planning
+solves: "Large repos are slow to understand without structured mapping"
+
+pricing:
+  model: open-source
+  details: "Free and open-source"

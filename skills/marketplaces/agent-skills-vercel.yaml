@@ -1,0 +1,51 @@
+name: agent-skills-vercel
+category: skill
+tagline: "Official Vercel skill collection for coding agents"
+
+description: |
+  A curated repository of reusable agent skills maintained by Vercel Labs, covering common engineering workflows and stack-specific helpers.
+
+use_cases:
+  - Bootstrap skills for new teams
+  - Reuse tested workflows
+  - Standardize agent behavior across projects
+
+prerequisites:
+  - Skill-compatible coding agent
+
+install:
+  type: skill
+  command: |
+    git clone https://github.com/vercel-labs/agent-skills.git ~/.claude/skills/agent-skills-vercel
+
+verification:
+  type: manual
+  test_command: "Load one skill from the collection in your agent"
+  success_indicator: "Skill appears and can be invoked"
+
+resources:
+  - url: https://github.com/vercel-labs/agent-skills
+    type: github
+  - url: https://skills.sh/vercel-labs/agent-skills
+    type: homepage
+
+added_date: 2026-02-23
+source: manual
+
+ratings:
+  usefulness: 5
+  setup_difficulty: 1
+
+tags:
+  - skills
+  - vercel
+  - agent-workflow
+  - catalog
+  - best-practices
+
+sdlc_phase: implementation
+solves: "Teams lose time rewriting common agent workflows"
+
+pricing:
+  model: open-source
+  details: "Free and open-source"

@@ -1,0 +1,49 @@
+name: design-naironai
+category: application
+tagline: "Curated UI components and libraries reference hub"
+
+description: |
+  design.naironai.com is a curated collection of frontend UI components and libraries to speed up implementation and design exploration.
+
+use_cases:
+  - Find UI libraries quickly
+  - Explore modern component systems
+  - Reduce time spent searching for frontend building blocks
+
+prerequisites:
+  - Frontend development workflow
+
+install:
+  type: manual
+  command: |
+    Open https://design.naironai.com and pick libraries/components relevant to your stack.
+
+verification:
+  type: manual
+  test_command: "Select and integrate one listed component library"
+  success_indicator: "Chosen library is integrated into project workflow"
+
+resources:
+  - url: https://design.naironai.com
+    type: homepage
+
+added_date: 2026-02-23
+source: manual
+
+ratings:
+  usefulness: 4
+  setup_difficulty: 1
+
+tags:
+  - frontend
+  - design
+  - components
+  - libraries
+  - curation
+
+sdlc_phase: requirements
+solves: "Frontend teams lose time choosing component stacks from scratch"
+
+pricing:
+  model: free
+  details: "Free resource directory"

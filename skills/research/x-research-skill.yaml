@@ -1,0 +1,49 @@
+name: x-research-skill
+category: skill
+tagline: "Research X/Twitter threads and trends with agent workflows"
+
+description: |
+  x-research-skill adds structured social research workflows for finding, filtering, and summarizing X/Twitter discussions.
+
+use_cases:
+  - Track ecosystem changes from X
+  - Summarize long threads quickly
+  - Generate cited social research briefs
+
+prerequisites:
+  - Claude Code or compatible skill host
+
+install:
+  type: skill
+  command: |
+    git clone https://github.com/rohunvora/x-research-skill.git ~/.claude/skills/x-research-skill
+
+verification:
+  type: manual
+  test_command: "Invoke the skill on a known thread"
+  success_indicator: "Skill returns structured summary with sources"
+
+resources:
+  - url: https://github.com/rohunvora/x-research-skill
+    type: github
+
+added_date: 2026-02-23
+source: manual
+
+ratings:
+  usefulness: 4
+  setup_difficulty: 2
+
+tags:
+  - research
+  - x-twitter
+  - skill
+  - social-intel
+  - briefing
+
+sdlc_phase: requirements
+solves: "Signal gathering from social channels is slow and noisy"
+
+pricing:
+  model: open-source
+  details: "Free and open-source"

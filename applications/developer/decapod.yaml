@@ -1,0 +1,50 @@
+name: decapod
+category: application
+tagline: "Local-first control plane for multi-agent coding teams"
+
+description: |
+  Decapod is a local-first control plane focused on coordinating multiple coding agents with explicit proof and guardrails. It is useful when teams want stronger control over autonomous execution.
+
+use_cases:
+  - Coordinate multi-agent execution locally
+  - Track proofs before agent actions are accepted
+  - Manage higher-risk autonomous workflows
+
+prerequisites:
+  - Rust toolchain or prebuilt binaries
+
+install:
+  type: manual
+  command: |
+    cargo install decapod
+    decapod init
+
+verification:
+  type: command_exists
+  test_command: "decapod --help"
+  success_indicator: "CLI shows available commands"
+
+resources:
+  - url: https://github.com/DecapodLabs/decapod
+    type: github
+
+added_date: 2026-02-23
+source: manual
+
+ratings:
+  usefulness: 4
+  setup_difficulty: 3
+
+tags:
+  - multi-agent
+  - local-first
+  - control-plane
+  - orchestration
+  - parallel-development
+
+sdlc_phase: planning
+solves: "Unstructured multi-agent execution creates coordination risk"
+
+pricing:
+  model: open-source
+  details: "Free and open-source"

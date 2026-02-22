@@ -1,0 +1,51 @@
+name: nanobot
+category: application
+tagline: "Ultra-lightweight personal AI assistant framework"
+
+description: |
+  nanobot is a lightweight personal assistant framework inspired by OpenClaw with support for modular integrations and multi-channel interaction.
+
+use_cases:
+  - Prototype personal AI assistants
+  - Run lightweight local assistant workflows
+  - Experiment with modular assistant architectures
+
+prerequisites:
+  - Python environment
+
+install:
+  type: manual
+  command: |
+    git clone https://github.com/HKUDS/nanobot.git
+    cd nanobot
+    # Follow README setup
+
+verification:
+  type: manual
+  test_command: "Run the demo assistant from README"
+  success_indicator: "Assistant responds through configured channel"
+
+resources:
+  - url: https://github.com/HKUDS/nanobot
+    type: github
+
+added_date: 2026-02-23
+source: manual
+
+ratings:
+  usefulness: 4
+  setup_difficulty: 3
+
+tags:
+  - assistant
+  - openclaw
+  - lightweight
+  - framework
+  - automation
+
+sdlc_phase: implementation
+solves: "Many assistant frameworks are too heavy for quick experimentation"
+
+pricing:
+  model: open-source
+  details: "Free and open-source"

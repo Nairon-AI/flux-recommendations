@@ -1,0 +1,53 @@
+name: agent-browser
+category: cli-tool
+tagline: "Headless browser automation CLI for coding agents"
+
+description: |
+  agent-browser provides snapshot-based browser automation for agents, enabling reliable UI testing, extraction, and interaction workflows.
+
+use_cases:
+  - Automate browser QA from terminal
+  - Collect reproducible UI evidence
+  - Run agent-driven interaction tests
+
+prerequisites:
+  - Node.js environment
+
+install:
+  type: manual
+  command: |
+    git clone https://github.com/vercel-labs/agent-browser.git
+    cd agent-browser
+    # Follow README install
+
+verification:
+  type: command_exists
+  test_command: "agent-browser --help"
+  success_indicator: "CLI prints command reference"
+
+resources:
+  - url: https://github.com/vercel-labs/agent-browser
+    type: github
+  - url: https://agent-browser.dev
+    type: homepage
+
+added_date: 2026-02-23
+source: manual
+
+ratings:
+  usefulness: 5
+  setup_difficulty: 2
+
+tags:
+  - browser-automation
+  - testing
+  - cli
+  - playwright
+  - agent-workflow
+
+sdlc_phase: testing
+solves: "UI validation is hard to automate consistently in terminal-first workflows"
+
+pricing:
+  model: open-source
+  details: "Free and open-source"

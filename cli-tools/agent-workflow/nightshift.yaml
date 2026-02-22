@@ -1,0 +1,51 @@
+name: nightshift
+category: cli-tool
+tagline: "Use spare model budget for overnight maintenance PRs"
+
+description: |
+  Nightshift runs autonomous coding tasks while you are away and opens optional pull requests for review. It is designed for low-risk backlog cleanup and maintenance.
+
+use_cases:
+  - Overnight dependency cleanup
+  - Background refactors with review gate
+  - Parallel maintenance while daytime work continues
+
+prerequisites:
+  - Configured coding agent account
+
+install:
+  type: manual
+  command: |
+    git clone https://github.com/marcus/nightshift.git
+    cd nightshift
+    # Configure provider credentials per README
+
+verification:
+  type: manual
+  test_command: "Run a dry-run nightshift task"
+  success_indicator: "Nightshift can plan and queue work safely"
+
+resources:
+  - url: https://github.com/marcus/nightshift
+    type: github
+
+added_date: 2026-02-23
+source: manual
+
+ratings:
+  usefulness: 4
+  setup_difficulty: 3
+
+tags:
+  - automation
+  - overnight
+  - parallel-development
+  - productivity
+  - maintenance
+
+sdlc_phase: implementation
+solves: "Low-priority maintenance work competes with feature delivery"
+
+pricing:
+  model: open-source
+  details: "Free and open-source"

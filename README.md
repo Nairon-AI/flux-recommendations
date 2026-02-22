@@ -8,18 +8,19 @@ Used by [`/flux:improve`](https://github.com/Nairon-AI/flux) to recommend tools,
 
 | Folder | Subfolders | Description |
 |--------|------------|-------------|
-| `mcps/` | `design/`, `search/`, `productivity/`, `dev/` | Model Context Protocol servers |
-| `cli-tools/` | `linting/`, `git/`, `terminal/`, `tasks/` | Command-line tools |
-| `applications/` | `individual/`, `collaboration/` | Desktop/native apps |
-| `skills/` | *(flat)* | Standalone skills |
+| `mcps/` | `design/`, `search/`, `productivity/`, `dev/`, `browser/` | Model Context Protocol servers |
+| `cli-tools/` | `linting/`, `git/`, `terminal/`, `tasks/`, `agent-workflow/`, `communication/`, `frontend/`, `security/`, `testing/`, `review/`, `system/` | Command-line tools |
+| `applications/` | `individual/`, `collaboration/`, `developer/`, `frameworks/` | Desktop/native apps and app-building stacks |
+| `skills/` | `frontend/`, `research/`, `backend/`, `codebase-mapping/`, `marketplaces/`, `marketing/`, `writing/`, `meta-learning/`, `security/`, `specification/` | Standalone skills |
 | `plugins/` | *(empty)* | Claude Code plugins |
-| `workflow-patterns/` | `git/`, `testing/`, `ai/` | Best practices (not tools) |
+| `workflow-patterns/` | `git/`, `testing/`, `ai/`, `review/` | Best practices (not tools) |
 
 ### Structure
 
 ```
 mcps/
 ├── design/       # excalidraw, figma, pencil
+├── browser/      # playwriter
 ├── search/       # exa, context7
 ├── productivity/ # linear, supermemory
 └── dev/          # github
@@ -28,23 +29,39 @@ cli-tools/
 ├── linting/      # oxlint, biome
 ├── git/          # lefthook
 ├── terminal/     # jq, fzf
-└── tasks/        # beads
+├── tasks/        # beads
+├── agent-workflow/ # cli-continues, nightshift
+├── communication/  # zele, whatsapp-cli
+├── frontend/       # react-grab
+├── security/       # tirith
+├── testing/        # agent-browser, tuistory
+├── review/         # critique
+└── system/         # mole
 
 applications/
 ├── individual/    # wispr-flow, raycast, dia (personal productivity)
-└── collaboration/ # granola (team/stakeholder communication)
+├── collaboration/ # granola (team/stakeholder communication)
+├── developer/     # sandbox-agent, pageindex, nanobot
+└── frameworks/    # electrobun, launchpad
 
-skills/           # stagehand-e2e, remotion, repoprompt
+skills/
+├── frontend/        # taste-skill, ui-skills
+├── codebase-mapping/# cartographer, cartograph
+├── meta-learning/   # claudeception
+└── ...              # research, backend, security, writing
 
 workflow-patterns/
 ├── git/          # pre-commit-hooks, atomic-commits
 ├── testing/      # test-first-debugging
-└── ai/           # agents-md-structure, context-management
+├── ai/           # agents-md-structure, context-management
+└── review/       # anti-slop, vouch
 ```
 
 ## Adding Recommendations
 
 > **Note:** Only the Nairon core team can add recommendations to prevent low-quality submissions.
+
+AI-slop pull requests are automatically triaged and closed by the anti-slop workflow.
 
 ### Via Slack (Internal)
 
@@ -132,6 +149,8 @@ Issues are created with:
 ## Community
 
 Join the most AI-native developer community on the planet. No hype. No AI slop. Just practical discussions on becoming the strongest developers alive.
+
+AI-slop pull requests are automatically triaged and closed.
 
 [discord.gg/CEQMd6fmXk](https://discord.gg/CEQMd6fmXk)
 

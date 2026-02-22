@@ -1,0 +1,51 @@
+name: critique
+category: cli-tool
+tagline: "Rich terminal UI for reviewing git diffs quickly"
+
+description: |
+  critique provides a focused terminal review interface with syntax highlighting and structured diff navigation for faster PR prep.
+
+use_cases:
+  - Review local changes before commit
+  - Inspect large diffs with less noise
+  - Speed up review loops for agent output
+
+prerequisites:
+  - Git repository
+
+install:
+  type: manual
+  command: |
+    git clone https://github.com/remorses/critique.git
+    cd critique
+    # Follow README install
+
+verification:
+  type: manual
+  test_command: "Open critique on a repo with pending changes"
+  success_indicator: "Diff view opens and navigation works"
+
+resources:
+  - url: https://github.com/remorses/critique
+    type: github
+
+added_date: 2026-02-23
+source: manual
+
+ratings:
+  usefulness: 4
+  setup_difficulty: 2
+
+tags:
+  - git
+  - review
+  - terminal-ui
+  - diff
+  - productivity
+
+sdlc_phase: review
+solves: "Raw diff output slows down review quality and speed"
+
+pricing:
+  model: open-source
+  details: "Free and open-source"

@@ -1,0 +1,52 @@
+name: whatsapp-cli
+category: cli-tool
+tagline: "Expose WhatsApp to local CLIs and coding agents"
+
+description: |
+  whatsapp-cli provides command line access to WhatsApp with JSON-friendly output for automations and agent workflows. Useful when support or operations workflows depend on chat channels.
+
+use_cases:
+  - Send operational alerts to WhatsApp
+  - Let agents summarize inbound messages
+  - Automate customer communication tasks
+
+prerequisites:
+  - Node.js 18+
+  - WhatsApp account
+
+install:
+  type: manual
+  command: |
+    git clone https://github.com/vicentereig/whatsapp-cli.git
+    cd whatsapp-cli
+    # Follow README setup for authentication
+
+verification:
+  type: manual
+  test_command: "Run the CLI and list chats after authentication"
+  success_indicator: "Chats/messages can be read and sent from terminal"
+
+resources:
+  - url: https://github.com/vicentereig/whatsapp-cli
+    type: github
+
+added_date: 2026-02-23
+source: manual
+
+ratings:
+  usefulness: 4
+  setup_difficulty: 3
+
+tags:
+  - whatsapp
+  - communication
+  - automation
+  - json
+  - ops
+
+sdlc_phase: implementation
+solves: "Manual chat handling slows down support and ops workflows"
+
+pricing:
+  model: open-source
+  details: "Free and open-source"

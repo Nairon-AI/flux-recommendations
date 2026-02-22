@@ -1,0 +1,49 @@
+name: trailofbits-skills
+category: skill
+tagline: "Security-oriented skill marketplace for agent workflows"
+
+description: |
+  Trail of Bits skills repository provides security-focused workflows for auditing, vulnerability research, and safer AI-assisted engineering.
+
+use_cases:
+  - Security review workflows for AI agents
+  - Audit-ready coding practices
+  - Standardize secure engineering checks
+
+prerequisites:
+  - Skill-compatible coding agent
+
+install:
+  type: skill
+  command: |
+    git clone https://github.com/trailofbits/skills.git ~/.claude/skills/trailofbits-skills
+
+verification:
+  type: manual
+  test_command: "Run one security skill from the set"
+  success_indicator: "Skill produces actionable security-focused output"
+
+resources:
+  - url: https://github.com/trailofbits/skills
+    type: github
+
+added_date: 2026-02-23
+source: manual
+
+ratings:
+  usefulness: 5
+  setup_difficulty: 2
+
+tags:
+  - security
+  - audit
+  - skills
+  - vulnerability
+  - review
+
+sdlc_phase: testing
+solves: "Security checks are often skipped or inconsistent in fast AI loops"
+
+pricing:
+  model: open-source
+  details: "Free and open-source"

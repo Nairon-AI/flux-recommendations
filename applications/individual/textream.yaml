@@ -1,0 +1,51 @@
+name: textream
+category: application
+tagline: "macOS teleprompter with live speech-tracked scrolling"
+
+description: |
+  Textream is a macOS teleprompter app for presenters, interviews, and recordings with speech-aware highlighting and overlay modes.
+
+use_cases:
+  - Live demos and technical presentations
+  - Interview prep
+  - Recording tutorials with smooth script tracking
+
+prerequisites:
+  - macOS
+
+install:
+  type: manual
+  command: |
+    Download the app from the project releases or homepage.
+
+verification:
+  type: manual
+  test_command: "Load a script and start speech tracking"
+  success_indicator: "Prompter scroll follows speech in real time"
+
+resources:
+  - url: https://github.com/f/textream
+    type: github
+  - url: https://textream.fka.dev/
+    type: homepage
+
+added_date: 2026-02-23
+source: manual
+
+ratings:
+  usefulness: 3
+  setup_difficulty: 1
+
+tags:
+  - macos
+  - teleprompter
+  - presentation
+  - speech
+  - productivity
+
+sdlc_phase: documentation
+solves: "Presentations and demos need smoother script delivery"
+
+pricing:
+  model: open-source
+  details: "Free and open-source"

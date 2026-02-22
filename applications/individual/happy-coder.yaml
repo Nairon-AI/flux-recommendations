@@ -1,0 +1,53 @@
+name: happy-coder
+category: application
+tagline: "Control Claude Code sessions remotely from mobile"
+
+description: |
+  Happy Coder lets you control AI coding sessions from phone or web while running agents on machines you own. It emphasizes local ownership and end-to-end encryption.
+
+use_cases:
+  - Monitor and steer coding sessions away from desk
+  - Run parallel sessions on owned hardware
+  - Keep coding workflows mobile
+
+prerequisites:
+  - Node.js 18+
+  - A machine running Claude Code
+
+install:
+  type: manual
+  command: |
+    npm install -g happy-coder
+    happy --auth
+
+verification:
+  type: manual
+  test_command: "Connect mobile app and start a remote session"
+  success_indicator: "Remote device can view and interact with session"
+
+resources:
+  - url: https://happy.engineering/
+    type: homepage
+  - url: https://happy.engineering/docs/
+    type: docs
+
+added_date: 2026-02-23
+source: manual
+
+ratings:
+  usefulness: 5
+  setup_difficulty: 2
+
+tags:
+  - remote
+  - claude-code
+  - mobile
+  - parallel-development
+  - encryption
+
+sdlc_phase: implementation
+solves: "Agent sessions are tied to one machine and hard to supervise remotely"
+
+pricing:
+  model: open-source
+  details: "Free and open-source"

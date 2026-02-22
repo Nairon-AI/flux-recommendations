@@ -1,0 +1,52 @@
+name: playwriter
+category: mcp
+tagline: "Control real logged-in browser sessions via MCP"
+
+description: |
+  playwriter combines a Chrome extension and MCP/CLI bridge so agents can automate real browser sessions with existing auth state.
+
+use_cases:
+  - Automate authenticated browser workflows
+  - Run stateful browser tasks with agents
+  - Use MCP-based browser control in coding loops
+
+prerequisites:
+  - Chrome browser
+  - MCP-compatible client
+
+install:
+  type: manual
+  command: |
+    Install Playwriter browser extension and follow repo MCP setup instructions.
+
+verification:
+  type: mcp_connect
+  test_command: "Trigger a simple browser action through MCP"
+  success_indicator: "Browser action executes in authenticated session"
+
+resources:
+  - url: https://github.com/remorses/playwriter
+    type: github
+  - url: https://chromewebstore.google.com/detail/playwriter-mcp/jfeammnjpkecdekppnclgkkffahnhfhe
+    type: homepage
+
+added_date: 2026-02-23
+source: manual
+
+ratings:
+  usefulness: 5
+  setup_difficulty: 3
+
+tags:
+  - mcp
+  - browser-automation
+  - chrome
+  - stateful
+  - testing
+
+sdlc_phase: testing
+solves: "Most browser automation fails when auth/session state is missing"
+
+pricing:
+  model: open-source
+  details: "Free and open-source"

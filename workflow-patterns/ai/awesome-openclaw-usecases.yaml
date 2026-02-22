@@ -1,0 +1,49 @@
+name: awesome-openclaw-usecases
+category: workflow-pattern
+tagline: "Community playbook of real OpenClaw use cases"
+
+description: |
+  A curated awesome-list of practical OpenClaw workflows. Useful for finding real patterns before reinventing your own automation flow.
+
+use_cases:
+  - Discover proven OpenClaw workflows
+  - Onboard teammates to agent workflows
+  - Benchmark your current setup against community patterns
+
+prerequisites:
+  - Interest in OpenClaw-based workflows
+
+install:
+  type: manual
+  command: |
+    Open the repository and review relevant use cases
+
+verification:
+  type: manual
+  test_command: "Adopt one listed use case in your workflow"
+  success_indicator: "At least one pattern is reusable in your project"
+
+resources:
+  - url: https://github.com/hesamsheikh/awesome-openclaw-usecases
+    type: github
+
+added_date: 2026-02-23
+source: manual
+
+ratings:
+  usefulness: 4
+  setup_difficulty: 1
+
+tags:
+  - openclaw
+  - awesome-list
+  - workflow
+  - agentic
+  - playbooks
+
+sdlc_phase: planning
+solves: "Teams waste time rediscovering already-known workflow patterns"
+
+pricing:
+  model: open-source
+  details: "Free and open-source"

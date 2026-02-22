@@ -1,0 +1,51 @@
+name: marketingskills
+category: skill
+tagline: "Marketing-focused AI skill library for growth work"
+
+description: |
+  marketingskills packages reusable prompts and workflows for CRO, SEO, copywriting, analytics, and growth execution.
+
+use_cases:
+  - Automate growth experiments
+  - Generate structured marketing analysis
+  - Standardize conversion-focused workflows
+
+prerequisites:
+  - Skill-compatible coding agent
+
+install:
+  type: skill
+  command: |
+    git clone https://github.com/coreyhaines31/marketingskills.git ~/.claude/skills/marketingskills
+
+verification:
+  type: manual
+  test_command: "Run one CRO or SEO skill from the library"
+  success_indicator: "Skill output follows defined marketing workflow"
+
+resources:
+  - url: https://github.com/coreyhaines31/marketingskills
+    type: github
+  - url: https://marketing-skills.com
+    type: homepage
+
+added_date: 2026-02-23
+source: manual
+
+ratings:
+  usefulness: 4
+  setup_difficulty: 1
+
+tags:
+  - marketing
+  - seo
+  - cro
+  - copywriting
+  - skills
+
+sdlc_phase: requirements
+solves: "Product teams lack repeatable AI workflows for growth execution"
+
+pricing:
+  model: open-source
+  details: "Free and open-source"
