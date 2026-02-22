@@ -1,0 +1,63 @@
+name: react-scan
+category: cli-tool
+tagline: "Detect React performance bottlenecks with near-zero setup"
+
+description: |
+  React Scan automatically highlights expensive React renders and component-level
+  performance hotspots. It can run with package install, CDN, or CLI mode.
+
+  Useful when teams feel UI lag but do not have clear visibility into which
+  components are causing the slowdown.
+
+use_cases:
+  - Detect slow renders and unnecessary rerenders in React apps
+  - Profile component-level performance during feature work
+  - Give coding agents concrete performance targets instead of vague lag reports
+
+prerequisites:
+  - React application
+  - Node.js (for package/CLI usage)
+
+install:
+  type: manual
+  command: |
+    # Auto setup (recommended)
+    npx -y react-scan@latest init
+
+    # Or package install
+    npm i react-scan
+
+    # CLI mode for local/remote scan
+    npx react-scan@latest http://localhost:3000
+
+verification:
+  type: manual
+  test_command: "Open the app with react-scan enabled and interact with heavy UI flows"
+  success_indicator: "React Scan overlay flags components with expensive render behavior"
+
+resources:
+  - url: https://github.com/aidenybai/react-scan
+    type: github
+  - url: https://react-scan.com
+    type: homepage
+
+added_date: 2026-02-23
+source: manual
+
+ratings:
+  usefulness: 5
+  setup_difficulty: 1
+
+tags:
+  - react
+  - performance
+  - profiling
+  - frontend
+  - debugging
+
+sdlc_phase: testing
+solves: "React performance issues are hard to localize without component-level visibility"
+
+pricing:
+  model: open-source
+  details: "Free and open-source"

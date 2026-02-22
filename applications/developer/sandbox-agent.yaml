@@ -1,0 +1,53 @@
+name: sandbox-agent
+category: application
+tagline: "Run coding agents in isolated sandboxes over HTTP"
+
+description: |
+  sandbox-agent provides a unified runtime and API for controlling coding agents in sandboxed environments. It supports multiple agent backends for controlled execution.
+
+use_cases:
+  - Run agents in isolated infrastructure
+  - Integrate coding agents into backend services
+  - Execute parallel tasks safely in sandboxes
+
+prerequisites:
+  - Container or sandbox environment
+
+install:
+  type: manual
+  command: |
+    git clone https://github.com/rivet-dev/sandbox-agent.git
+    cd sandbox-agent
+    # Follow README quick start
+
+verification:
+  type: manual
+  test_command: "Start the server and call a health endpoint"
+  success_indicator: "Sandbox API responds and can launch an agent task"
+
+resources:
+  - url: https://github.com/rivet-dev/sandbox-agent
+    type: github
+  - url: https://sandboxagent.dev
+    type: homepage
+
+added_date: 2026-02-23
+source: manual
+
+ratings:
+  usefulness: 5
+  setup_difficulty: 3
+
+tags:
+  - sandbox
+  - agent-runtime
+  - parallel-development
+  - http-api
+  - automation
+
+sdlc_phase: implementation
+solves: "Teams need safer execution boundaries for autonomous coding agents"
+
+pricing:
+  model: open-source
+  details: "Free and open-source"

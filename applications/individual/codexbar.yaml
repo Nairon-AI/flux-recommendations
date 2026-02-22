@@ -1,0 +1,51 @@
+name: codexbar
+category: application
+tagline: "macOS menu bar monitor for coding model usage limits"
+
+description: |
+  CodexBar tracks usage windows and quotas for coding AI providers from a lightweight macOS menu bar app.
+
+use_cases:
+  - Track remaining model quotas
+  - Avoid unexpected usage lockouts
+  - Monitor multi-provider coding budgets
+
+prerequisites:
+  - macOS 14+
+
+install:
+  type: manual
+  command: |
+    Download and install from project releases or homepage.
+
+verification:
+  type: manual
+  test_command: "Open app and connect at least one provider"
+  success_indicator: "Usage metrics appear in menu bar"
+
+resources:
+  - url: https://github.com/steipete/CodexBar
+    type: github
+  - url: https://codexbar.app
+    type: homepage
+
+added_date: 2026-02-23
+source: manual
+
+ratings:
+  usefulness: 4
+  setup_difficulty: 1
+
+tags:
+  - macos
+  - usage-monitoring
+  - codex
+  - claude
+  - productivity
+
+sdlc_phase: documentation
+solves: "Teams get blocked when model usage limits are invisible"
+
+pricing:
+  model: open-source
+  details: "Free and open-source"

@@ -1,0 +1,54 @@
+name: react-doctor
+category: cli-tool
+tagline: "Scan React code health and propose targeted fixes"
+
+description: |
+  React Doctor analyzes React code for performance, correctness, and maintainability issues. It helps teams and agents catch React-specific problems early.
+
+use_cases:
+  - Audit large React codebases
+  - Find performance anti-patterns
+  - Guide agents toward safe refactors
+
+prerequisites:
+  - Node.js
+  - React codebase
+
+install:
+  type: manual
+  command: |
+    git clone https://github.com/millionco/react-doctor.git
+    cd react-doctor
+    # Follow README install instructions
+
+verification:
+  type: manual
+  test_command: "Run a project scan command from README"
+  success_indicator: "Scan report produced for the project"
+
+resources:
+  - url: https://github.com/millionco/react-doctor
+    type: github
+  - url: https://react.doctor
+    type: homepage
+
+added_date: 2026-02-23
+source: manual
+
+ratings:
+  usefulness: 5
+  setup_difficulty: 2
+
+tags:
+  - react
+  - linting
+  - performance
+  - diagnostics
+  - frontend
+
+sdlc_phase: review
+solves: "React-specific regressions slip through generic tooling"
+
+pricing:
+  model: open-source
+  details: "Free and open-source"

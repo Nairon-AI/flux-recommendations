@@ -5,7 +5,7 @@ tagline: "Fast git hooks manager - catches errors before CI"
 description: |
   Lefthook is a fast, cross-platform git hooks manager. Runs typecheck + lint
   on staged files in ~5 seconds, catching errors before they reach CI.
-  
+
   Much faster than Husky. Great for Bun/Node projects.
 
 use_cases:
@@ -24,7 +24,7 @@ install:
     # Install
     npm install -D lefthook
     # or: bun add -D lefthook
-    
+
     # Initialize
     npx lefthook install
   config_snippet: |

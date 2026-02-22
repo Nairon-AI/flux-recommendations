@@ -1,0 +1,49 @@
+name: cartograph
+category: skill
+tagline: "Visual architecture mapping plugin for OpenCode"
+
+description: |
+  cartograph is an OpenCode plugin that observes repository context and produces visual architecture maps while coding.
+
+use_cases:
+  - Visualize architecture while implementing
+  - Keep diagrams updated with code changes
+  - Understand unfamiliar modules faster
+
+prerequisites:
+  - OpenCode plugin support
+
+install:
+  type: skill
+  command: |
+    git clone https://github.com/cloudshipai/cartograph.git ~/.claude/skills/cartograph
+
+verification:
+  type: manual
+  test_command: "Start plugin and open local visualization UI"
+  success_indicator: "Codebase map renders and updates"
+
+resources:
+  - url: https://github.com/cloudshipai/cartograph
+    type: github
+
+added_date: 2026-02-23
+source: manual
+
+ratings:
+  usefulness: 4
+  setup_difficulty: 2
+
+tags:
+  - codebase-mapping
+  - opencode
+  - visualization
+  - architecture
+  - plugin
+
+sdlc_phase: planning
+solves: "Architecture understanding lags behind fast code changes"
+
+pricing:
+  model: open-source
+  details: "Free and open-source"

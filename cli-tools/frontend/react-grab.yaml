@@ -1,0 +1,53 @@
+name: react-grab
+category: cli-tool
+tagline: "Copy exact React context directly from the browser"
+
+description: |
+  react-grab captures component context from a running website so coding agents can receive precise frontend state and structure.
+
+use_cases:
+  - Give agents accurate UI context
+  - Speed up frontend bug reports
+  - Reduce ambiguous screenshot-only handoffs
+
+prerequisites:
+  - React application
+
+install:
+  type: manual
+  command: |
+    git clone https://github.com/aidenybai/react-grab.git
+    cd react-grab
+    # Follow README extension/CLI setup
+
+verification:
+  type: manual
+  test_command: "Capture context from a React component on a live page"
+  success_indicator: "Structured component context copied successfully"
+
+resources:
+  - url: https://github.com/aidenybai/react-grab
+    type: github
+  - url: https://react-grab.com
+    type: homepage
+
+added_date: 2026-02-23
+source: manual
+
+ratings:
+  usefulness: 5
+  setup_difficulty: 2
+
+tags:
+  - react
+  - frontend
+  - context-capture
+  - agent-workflow
+  - debugging
+
+sdlc_phase: implementation
+solves: "Frontend prompts fail when agents do not get exact runtime context"
+
+pricing:
+  model: open-source
+  details: "Free and open-source"

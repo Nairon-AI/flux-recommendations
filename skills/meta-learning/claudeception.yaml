@@ -1,0 +1,49 @@
+name: claudeception
+category: skill
+tagline: "Continuously extract reusable skills from solved problems"
+
+description: |
+  Claudeception turns non-obvious debugging and implementation learnings into reusable skills so future sessions start with better context instead of zero.
+
+use_cases:
+  - Capture debugging wins as reusable skills
+  - Build long-term team memory
+  - Reduce repeated trial-and-error across sessions
+
+prerequisites:
+  - Claude Code skill support
+
+install:
+  type: skill
+  command: |
+    git clone https://github.com/blader/Claudeception.git ~/.claude/skills/claudeception
+
+verification:
+  type: manual
+  test_command: "Invoke /claudeception after completing a task"
+  success_indicator: "A reusable skill is proposed or generated from session learnings"
+
+resources:
+  - url: https://github.com/blader/Claudeception
+    type: github
+
+added_date: 2026-02-23
+source: manual
+
+ratings:
+  usefulness: 5
+  setup_difficulty: 2
+
+tags:
+  - memory
+  - continuous-learning
+  - claude-code
+  - skill-extraction
+  - productivity
+
+sdlc_phase: documentation
+solves: "Teams repeatedly rediscover fixes because session knowledge is not retained"
+
+pricing:
+  model: open-source
+  details: "Free and open-source"

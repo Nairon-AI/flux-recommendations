@@ -1,0 +1,67 @@
+name: huggingface
+category: model
+tagline: Find, compare, and use fine-tuned models for specific tasks
+
+description: |
+  Hugging Face Hub is a large model registry where teams can discover, evaluate,
+  and share pretrained and fine-tuned checkpoints for many domains and tasks.
+
+  It is useful when your default model underperforms and you need a domain-tuned
+  alternative for coding, NLP, vision, speech, or multimodal workflows.
+
+use_cases:
+  - Discover fine-tuned LLMs for niche use cases
+  - Compare model cards, licenses, and benchmarks before adoption
+  - Source models for local inference, training, or hosted deployment
+
+friction_signals:
+  - "default model is not good enough"
+  - "need a fine-tuned model"
+  - "domain-specific model"
+  - "model quality mismatch"
+
+prerequisites: []
+
+install:
+  type: config
+  config_snippet: |
+    # Discovery flow:
+    # 1) Search models at https://huggingface.co/models
+    # 2) Filter by task, license, and hardware constraints
+    # 3) Validate model card + evaluation data before rollout
+
+verification:
+  type: manual
+  test_command: "Find and run one task-specific model from the Hub"
+  success_indicator: "Selected model performs better than baseline on target task"
+
+related_tools:
+  - reasoning-models
+  - frontend-models
+
+resources:
+  - url: https://huggingface.co
+    type: homepage
+  - url: https://huggingface.co/docs/hub/en/models-the-hub
+    type: docs
+
+added_date: "2026-02-23"
+source: manual
+
+ratings:
+  usefulness: 5
+  setup_difficulty: 1
+
+tags:
+  - model
+  - model-hub
+  - fine-tuning
+  - llm
+  - discovery
+
+sdlc_phase: requirements
+solves: Default foundation models may not match domain-specific task requirements
+
+pricing:
+  model: freemium
+  details: Free model discovery with optional paid compute/inference services

@@ -1,0 +1,51 @@
+name: cli-continues
+category: cli-tool
+tagline: "Resume AI coding sessions across tools with one command"
+
+description: |
+  cli-continues transfers coding session context between agent tools such as Claude Code, Codex, Copilot, Cursor, Gemini, and OpenCode. Use it when you need to switch tools mid-task without losing progress.
+
+use_cases:
+  - Switch from one coding agent to another mid-task
+  - Recover context after tool outages
+  - Keep parallel agent runs coordinated
+
+prerequisites:
+  - Node.js 18+
+  - At least one supported coding agent CLI
+
+install:
+  type: manual
+  command: |
+    npx continues --help
+    # Follow repo docs for per-tool adapters
+
+verification:
+  type: command_exists
+  test_command: "npx continues --help"
+  success_indicator: "CLI prints help output"
+
+resources:
+  - url: https://github.com/yigitkonur/cli-continues
+    type: github
+
+added_date: 2026-02-23
+source: manual
+
+ratings:
+  usefulness: 5
+  setup_difficulty: 2
+
+tags:
+  - session-handoff
+  - parallel-development
+  - productivity
+  - codex
+  - claude-code
+
+sdlc_phase: implementation
+solves: "Context loss when switching between coding agents"
+
+pricing:
+  model: open-source
+  details: "Free and open-source"

@@ -1,0 +1,52 @@
+name: zele
+category: cli-tool
+tagline: "Manage Gmail and calendar from your terminal"
+
+description: |
+  zele provides terminal-first workflows for email and calendar management, designed for both humans and coding agents.
+
+use_cases:
+  - Process inbox from terminal
+  - Automate calendar and email routines
+  - Let agents summarize inbound communication
+
+prerequisites:
+  - Google account
+  - OAuth setup from README
+
+install:
+  type: manual
+  command: |
+    git clone https://github.com/remorses/zele.git
+    cd zele
+    # Follow README authentication setup
+
+verification:
+  type: manual
+  test_command: "Run initial auth flow and list inbox items"
+  success_indicator: "CLI can read messages/calendar entries"
+
+resources:
+  - url: https://github.com/remorses/zele
+    type: github
+
+added_date: 2026-02-23
+source: manual
+
+ratings:
+  usefulness: 4
+  setup_difficulty: 3
+
+tags:
+  - gmail
+  - calendar
+  - terminal
+  - automation
+  - communication
+
+sdlc_phase: implementation
+solves: "Email and calendar context is hard to automate in coding workflows"
+
+pricing:
+  model: open-source
+  details: "Free and open-source"

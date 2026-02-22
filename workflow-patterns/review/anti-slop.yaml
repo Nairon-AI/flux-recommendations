@@ -1,0 +1,49 @@
+name: anti-slop
+category: workflow-pattern
+tagline: "Auto-close low-quality AI-generated pull requests"
+
+description: |
+  anti-slop is a GitHub Action that scores incoming pull requests with configurable quality checks and can automatically close low-signal submissions.
+
+use_cases:
+  - Protect maintainers from AI spam PRs
+  - Enforce contribution quality bars
+  - Automate triage of low-value pull requests
+
+prerequisites:
+  - GitHub Actions enabled
+
+install:
+  type: manual
+  command: |
+    Create a workflow using peakoss/anti-slop@v0 on pull_request_target with pull-requests: write permission.
+
+verification:
+  type: manual
+  test_command: "Open a test PR that violates blocked terms or quality settings"
+  success_indicator: "Action comments and closes or flags the PR as configured"
+
+resources:
+  - url: https://github.com/peakoss/anti-slop
+    type: github
+
+added_date: 2026-02-23
+source: manual
+
+ratings:
+  usefulness: 5
+  setup_difficulty: 2
+
+tags:
+  - github-actions
+  - pr-quality
+  - governance
+  - anti-slop
+  - review
+
+sdlc_phase: review
+solves: "Maintainers lose time manually triaging low-quality AI PRs"
+
+pricing:
+  model: open-source
+  details: "Free and open-source"

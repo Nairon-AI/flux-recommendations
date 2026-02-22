@@ -1,0 +1,52 @@
+name: launchpad
+category: application
+tagline: "Template for shipping product launch videos in React"
+
+description: |
+  launchpad is a Remotion-based template stack for producing product launch content quickly with modern web tooling.
+
+use_cases:
+  - Generate launch videos from code
+  - Speed up product marketing assets
+  - Reuse a consistent video pipeline
+
+prerequisites:
+  - Node.js
+  - Remotion/React familiarity
+
+install:
+  type: manual
+  command: |
+    git clone https://github.com/trycua/launchpad.git
+    cd launchpad
+    # Follow README setup
+
+verification:
+  type: manual
+  test_command: "Render sample composition"
+  success_indicator: "Video renders successfully from template"
+
+resources:
+  - url: https://github.com/trycua/launchpad
+    type: github
+
+added_date: 2026-02-23
+source: manual
+
+ratings:
+  usefulness: 3
+  setup_difficulty: 2
+
+tags:
+  - remotion
+  - react
+  - template
+  - marketing
+  - video
+
+sdlc_phase: documentation
+solves: "Teams need repeatable pipelines for launch content"
+
+pricing:
+  model: open-source
+  details: "Free and open-source"

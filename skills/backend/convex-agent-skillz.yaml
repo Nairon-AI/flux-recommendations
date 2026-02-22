@@ -1,0 +1,50 @@
+name: convex-agent-skillz
+category: skill
+tagline: "Convex-focused backend skills for AI coding agents"
+
+description: |
+  convex-agent-skillz provides reusable skills for Convex queries, mutations, auth, and agent-centric backend patterns.
+
+use_cases:
+  - Standardize Convex coding patterns
+  - Speed up backend implementation with agents
+  - Reduce Convex-specific mistakes
+
+prerequisites:
+  - Convex project
+  - Skill-compatible coding agent
+
+install:
+  type: skill
+  command: |
+    git clone https://github.com/PolarCoding85/convex-agent-skillz.git ~/.claude/skills/convex-agent-skillz
+
+verification:
+  type: manual
+  test_command: "Use the skill on a Convex feature task"
+  success_indicator: "Skill produces Convex-valid implementation guidance"
+
+resources:
+  - url: https://github.com/PolarCoding85/convex-agent-skillz
+    type: github
+
+added_date: 2026-02-23
+source: manual
+
+ratings:
+  usefulness: 4
+  setup_difficulty: 2
+
+tags:
+  - convex
+  - backend
+  - skill
+  - typescript
+  - agent-workflow
+
+sdlc_phase: implementation
+solves: "Generic agents miss framework-specific Convex best practices"
+
+pricing:
+  model: open-source
+  details: "Free and open-source"

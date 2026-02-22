@@ -1,0 +1,51 @@
+name: claude-chill
+category: cli-tool
+tagline: "Smooth large Claude terminal redraws with a PTY proxy"
+
+description: |
+  claude-chill is a PTY proxy designed to reduce rendering thrash and improve terminal UX during large Claude Code output bursts.
+
+use_cases:
+  - Improve terminal responsiveness
+  - Reduce visual flicker in heavy sessions
+  - Stabilize long-running agent outputs
+
+prerequisites:
+  - Claude Code usage in terminal
+
+install:
+  type: manual
+  command: |
+    git clone https://github.com/davidbeesley/claude-chill.git
+    cd claude-chill
+    # Follow README build/install
+
+verification:
+  type: manual
+  test_command: "Run claude-chill proxy with Claude Code"
+  success_indicator: "Terminal updates are smoother and easier to read"
+
+resources:
+  - url: https://github.com/davidbeesley/claude-chill
+    type: github
+
+added_date: 2026-02-23
+source: manual
+
+ratings:
+  usefulness: 4
+  setup_difficulty: 2
+
+tags:
+  - terminal
+  - claude-code
+  - pty
+  - performance
+  - ux
+
+sdlc_phase: implementation
+solves: "Large terminal redraws reduce readability and speed"
+
+pricing:
+  model: open-source
+  details: "Free and open-source"

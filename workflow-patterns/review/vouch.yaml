@@ -1,0 +1,49 @@
+name: vouch
+category: workflow-pattern
+tagline: "Trust-gating model for open-source participation"
+
+description: |
+  vouch introduces explicit trust relationships for participation and moderation, helping communities gate sensitive actions without heavy centralized controls.
+
+use_cases:
+  - Design contributor trust systems
+  - Gate sensitive repositories or actions
+  - Run community moderation with explicit vouches
+
+prerequisites:
+  - Community governance process
+
+install:
+  type: manual
+  command: |
+    Review vouch docs and apply governance model to your project workflow.
+
+verification:
+  type: manual
+  test_command: "Run a trial trust policy in a staging repository"
+  success_indicator: "Policy decisions follow explicit vouch rules"
+
+resources:
+  - url: https://github.com/mitchellh/vouch
+    type: github
+
+added_date: 2026-02-23
+source: manual
+
+ratings:
+  usefulness: 4
+  setup_difficulty: 3
+
+tags:
+  - trust
+  - governance
+  - moderation
+  - open-source
+  - review
+
+sdlc_phase: review
+solves: "Contribution trust decisions are often ad hoc and inconsistent"
+
+pricing:
+  model: open-source
+  details: "Free and open-source"

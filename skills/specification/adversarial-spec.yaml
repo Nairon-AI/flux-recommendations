@@ -1,0 +1,49 @@
+name: adversarial-spec
+category: skill
+tagline: "Refine specs through multi-model adversarial debate"
+
+description: |
+  adversarial-spec uses multiple models to critique and strengthen specifications before implementation, reducing missed requirements.
+
+use_cases:
+  - Harden PRDs before coding
+  - Expose hidden assumption gaps
+  - Improve requirement quality for agent execution
+
+prerequisites:
+  - Claude Code plugin/skill support
+
+install:
+  type: skill
+  command: |
+    git clone https://github.com/zscole/adversarial-spec.git ~/.claude/skills/adversarial-spec
+
+verification:
+  type: manual
+  test_command: "Run adversarial-spec against a draft spec"
+  success_indicator: "Spec receives structured critique with improvements"
+
+resources:
+  - url: https://github.com/zscole/adversarial-spec
+    type: github
+
+added_date: 2026-02-23
+source: manual
+
+ratings:
+  usefulness: 4
+  setup_difficulty: 2
+
+tags:
+  - spec
+  - planning
+  - multi-model
+  - requirements
+  - quality
+
+sdlc_phase: requirements
+solves: "Weak specs create downstream rework and scope drift"
+
+pricing:
+  model: open-source
+  details: "Free and open-source"

@@ -1,0 +1,51 @@
+name: tuistory
+category: cli-tool
+tagline: "Playwright-style testing for terminal user interfaces"
+
+description: |
+  tuistory brings browser-style test automation ideas to TUIs so teams can regression-test command line interfaces and interactive terminals.
+
+use_cases:
+  - Regression testing for TUIs
+  - Automate terminal UI scenarios
+  - Validate CLI interaction flows
+
+prerequisites:
+  - Bun/Node environment
+
+install:
+  type: manual
+  command: |
+    git clone https://github.com/remorses/tuistory.git
+    cd tuistory
+    # Follow README quick start
+
+verification:
+  type: manual
+  test_command: "Run the example TUI test suite"
+  success_indicator: "TUI test executes and reports pass/fail"
+
+resources:
+  - url: https://github.com/remorses/tuistory
+    type: github
+
+added_date: 2026-02-23
+source: manual
+
+ratings:
+  usefulness: 4
+  setup_difficulty: 3
+
+tags:
+  - testing
+  - tui
+  - automation
+  - cli
+  - regression
+
+sdlc_phase: testing
+solves: "Terminal interfaces often ship without repeatable regression tests"
+
+pricing:
+  model: open-source
+  details: "Free and open-source"

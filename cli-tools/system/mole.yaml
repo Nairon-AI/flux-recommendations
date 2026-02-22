@@ -1,0 +1,51 @@
+name: mole
+category: cli-tool
+tagline: "Deep clean and optimize macOS from terminal"
+
+description: |
+  Mole provides terminal utilities to clean, optimize, and maintain macOS environments used for development.
+
+use_cases:
+  - Recover disk space on dev machines
+  - Clean stale app data
+  - Maintain fast local development environments
+
+prerequisites:
+  - macOS
+
+install:
+  type: manual
+  command: |
+    git clone https://github.com/tw93/Mole.git
+    cd Mole
+    # Follow README install
+
+verification:
+  type: manual
+  test_command: "Run a non-destructive analysis command from README"
+  success_indicator: "CLI reports cleanup/optimization opportunities"
+
+resources:
+  - url: https://github.com/tw93/Mole
+    type: github
+
+added_date: 2026-02-23
+source: manual
+
+ratings:
+  usefulness: 3
+  setup_difficulty: 2
+
+tags:
+  - macos
+  - system
+  - cleanup
+  - maintenance
+  - cli
+
+sdlc_phase: implementation
+solves: "Local machine bloat degrades developer velocity"
+
+pricing:
+  model: open-source
+  details: "Free and open-source"

@@ -1,0 +1,49 @@
+name: humanizer
+category: skill
+tagline: "Rewrite robotic AI text into natural human language"
+
+description: |
+  humanizer is a Claude Code skill that converts stiff AI-generated prose into clearer, more natural writing for docs and communication.
+
+use_cases:
+  - Polish README and docs tone
+  - Humanize AI draft content
+  - Improve user-facing copy quality
+
+prerequisites:
+  - Claude Code skill support
+
+install:
+  type: skill
+  command: |
+    git clone https://github.com/blader/humanizer.git ~/.claude/skills/humanizer
+
+verification:
+  type: manual
+  test_command: "Run humanizer on AI-generated text sample"
+  success_indicator: "Output reads more natural and less repetitive"
+
+resources:
+  - url: https://github.com/blader/humanizer
+    type: github
+
+added_date: 2026-02-23
+source: manual
+
+ratings:
+  usefulness: 4
+  setup_difficulty: 1
+
+tags:
+  - writing
+  - docs
+  - editing
+  - communication
+  - skill
+
+sdlc_phase: documentation
+solves: "AI-written text often sounds repetitive and low-trust"
+
+pricing:
+  model: open-source
+  details: "Free and open-source"

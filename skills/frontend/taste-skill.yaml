@@ -1,0 +1,67 @@
+name: taste-skill
+category: skill
+tagline: "Give your AI good taste - stop generic 'slop' UI generation"
+
+description: |
+  Taste-Skill gives your AI good design taste. It stops agents from generating
+  boring, generic frontend code and forces them to build modern, high-end interfaces.
+  
+  Single SKILL.md file with 3 control dials:
+  - DESIGN_VARIANCE (1-10): layout creativity (safe grids → asymmetric art)
+  - MOTION_INTENSITY (1-10): animation level (static → cinematic spring physics)
+  - VISUAL_DENSITY (1-10): spacing (art gallery luxury → cockpit data density)
+  
+  Works with Cursor, Claude Code, Codex, and other AI coding tools.
+
+use_cases:
+  - Building modern, high-end landing pages
+  - Avoiding generic AI-generated UI patterns
+  - Creating distinctive visual identities
+  - Tuning design style via simple dials
+
+prerequisites:
+  - AI coding tool (Claude Code, Cursor, Codex, etc.)
+
+install:
+  type: skill
+  command: |
+    # Download SKILL.md from repo
+    curl -O https://raw.githubusercontent.com/Leonxlnx/taste-skill/main/SKILL.md
+    
+    # Move to your project or global skills folder
+    mv SKILL.md ~/.claude/skills/taste-skill/SKILL.md
+    
+    # Or keep in project root and reference with @SKILL.md
+
+verification:
+  type: manual
+  test_command: "Ask AI to build a landing page and check for distinctive design"
+  success_indicator: "UI has intentional asymmetry, motion, and spacing based on dial settings"
+
+resources:
+  - url: https://github.com/Leonxlnx/taste-skill
+    type: github
+
+added_date: 2026-02-23
+source: manual
+
+ratings:
+  usefulness: 5
+  setup_difficulty: 1
+
+tags:
+  - frontend
+  - design
+  - ui
+  - taste
+  - anti-slop
+  - landing-pages
+  - motion
+  - aesthetics
+
+sdlc_phase: implementation
+solves: "AI generates boring, generic UI - same layouts, same spacing, same animations"
+
+pricing:
+  model: open-source
+  details: "Free and open-source"

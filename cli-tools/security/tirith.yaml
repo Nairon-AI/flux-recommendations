@@ -1,0 +1,51 @@
+name: tirith
+category: cli-tool
+tagline: "Guard terminal workflows against command injection patterns"
+
+description: |
+  tirith protects terminal workflows from homograph links, ANSI injection tricks, and unsafe pipe-to-shell patterns before execution.
+
+use_cases:
+  - Harden terminal-first teams
+  - Prevent dangerous copy-paste command flows
+  - Protect agent-generated shell commands
+
+prerequisites:
+  - Terminal-based workflow
+
+install:
+  type: manual
+  command: |
+    git clone https://github.com/sheeki03/tirith.git
+    cd tirith
+    # Follow README install
+
+verification:
+  type: manual
+  test_command: "Run tirith against a known unsafe sample"
+  success_indicator: "Unsafe command pattern is flagged or blocked"
+
+resources:
+  - url: https://github.com/sheeki03/tirith
+    type: github
+
+added_date: 2026-02-23
+source: manual
+
+ratings:
+  usefulness: 5
+  setup_difficulty: 3
+
+tags:
+  - security
+  - terminal
+  - command-safety
+  - injection
+  - cli
+
+sdlc_phase: testing
+solves: "Terminal users are exposed to subtle command injection vectors"
+
+pricing:
+  model: open-source
+  details: "Free and open-source"

@@ -1,0 +1,54 @@
+name: electrobun
+category: application
+tagline: "Build tiny cross-platform desktop apps with Bun"
+
+description: |
+  Electrobun is a Bun-based desktop framework for shipping fast, lightweight desktop apps with TypeScript. Good fit when Electron feels too heavy for your use case.
+
+use_cases:
+  - Ship desktop utilities quickly
+  - Build TypeScript desktop apps with smaller footprint
+  - Prototype internal desktop tooling
+
+prerequisites:
+  - Bun
+  - TypeScript knowledge
+
+install:
+  type: manual
+  command: |
+    git clone https://github.com/blackboardsh/electrobun.git
+    cd electrobun
+    # Follow README quick start
+
+verification:
+  type: manual
+  test_command: "Run the sample app from README"
+  success_indicator: "Example desktop app boots successfully"
+
+resources:
+  - url: https://github.com/blackboardsh/electrobun
+    type: github
+  - url: http://blackboard.sh/electrobun
+    type: homepage
+
+added_date: 2026-02-23
+source: manual
+
+ratings:
+  usefulness: 4
+  setup_difficulty: 3
+
+tags:
+  - desktop
+  - bun
+  - typescript
+  - cross-platform
+  - framework
+
+sdlc_phase: implementation
+solves: "Desktop app stacks often feel heavy for small tools"
+
+pricing:
+  model: open-source
+  details: "Free and open-source"
