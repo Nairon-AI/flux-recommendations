@@ -1,25 +1,23 @@
 name: supermemory
 category: mcp
-tagline: Persistent memory across Claude sessions
-description: 'Supermemory MCP gives Claude persistent memory that survives session
-  restarts.
-
-  Store project knowledge, user preferences, learned patterns, and context
-
-  that carries forward to future sessions.
-
-
-  Essential for long-running projects where you want Claude to "remember" decisions.
-
-  '
+tagline: Long-term memory layer for AI — your second brain
+description: |
+  Supermemory gives AI persistent memory across sessions. No more re-explaining context.
+  
+  Automatically extracts and stores relevant information while you chat. 
+  Connects to 100+ apps including Claude, Cursor, Warp. Syncs with GitHub, 
+  Notion, Google Drive, OneDrive, S3, and web crawlers.
+  
+  Find implicit connections across your memories with AI-driven knowledge graphs.
 use_cases:
-- Storing project-specific context
-- Remembering user preferences
-- Tracking decisions and rationale
-- Building up knowledge over time
+- Storing project-specific context that persists
+- Remembering user preferences and decisions
+- Syncing documentation from GitHub/Notion/Drive
+- Building knowledge graphs across projects
+- Eliminating "I already told you this" moments
 prerequisites:
-- Supermemory account
-- API key
+- Supermemory account (free tier available)
+- API key from supermemory.ai
 install:
   type: mcp
   command: 'npx -y @anthropic-ai/create-mcp@latest add supermemory --config claude
@@ -50,10 +48,10 @@ tags:
 - context
 - knowledge-base
 sdlc_phase: documentation
-solves: AI forgets project context between sessions - re-explaining the same things
+solves: AI forgets everything between sessions — you re-explain context constantly
 pricing:
   model: freemium
-  details: Free tier available. Pro plans for teams
+  details: Free tier available. Pro plans for teams and API access
 mentions:
 - url: https://x.com/realmcore_/status/2025018787171631337
   author: '@realmcore_'
