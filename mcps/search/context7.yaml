@@ -56,18 +56,4 @@ solves: AI hallucinates outdated APIs and library patterns because training data
 pricing:
   model: free
   details: Free and open-source
-mentions:
-- url: https://x.com/ryancarson/status/2025189538012729744
-  author: '@ryancarson'
-  text: 'Documentation drift - it''s your new worse enemy when working with agents
-    on large existing projects.
 
-
-    I''m using a mix of CI checks, custom linters and GitHub actions to help battle
-    this.
-
-
-    My Code Factory setup, which includes a Design System, is starting to work really
-    well.'
-  date: '2026-02-22'
-  likes: 130

@@ -67,18 +67,4 @@ solves: Managing two tools (Prettier+ESLint) with conflicting configs - complexi
 pricing:
   model: open-source
   details: Free and open-source (MIT)
-mentions:
-- url: https://x.com/EastlondonDev/status/2025063991798538680
-  author: '@EastlondonDev'
-  text: Hi @taalas_inc I’m sure you’re busy right now - I’m competing in a YC MCP
-    hackathon tomorrow and I’d love to show off your super fast api in my entry, could
-    you set me up with access? I was on the winning team of the London Grok hackathon
-    & I’ll give it my best shot here in SF to
-  date: '2026-02-21'
-  likes: 4
-- url: https://x.com/ryancarson/status/2025175305875267874
-  author: '@ryancarson'
-  text: "This is so fast it's hard to believe. \n\nUse the demo and you'll see what\
-    \ I mean."
-  date: '2026-02-22'
-  likes: 102
+

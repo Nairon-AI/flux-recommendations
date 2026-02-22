@@ -82,13 +82,4 @@ solves: Design handoff friction - separate tools for design and code, context lo
 pricing:
   model: freemium
   details: Free for personal use. Team plans coming
-mentions:
-- url: https://x.com/ryancarson/status/2025252570197790739
-  author: '@ryancarson'
-  text: 'If you’re not frustrated when you’re working on your UI with your agent,
-    you don’t care enough about the details.
 
-
-    Good UI and UX is a long, painful grind. https://t.co/cQBUyt8ihA'
-  date: '2026-02-22'
-  likes: 171
