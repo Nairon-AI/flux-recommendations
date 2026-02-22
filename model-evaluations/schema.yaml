@@ -1,0 +1,99 @@
+version: "1.0"
+description: Schema for 3-day model evaluation reports generated from X/Twitter data.
+
+required:
+  - model_name
+  - lab
+  - release_date
+  - evaluation_window
+  - tweet_count
+  - sentiment_score
+  - use_cases
+  - limitations
+  - sources
+
+fields:
+  model_name:
+    type: string
+    description: Public model name (e.g., Claude 4.5 Sonnet)
+
+  lab:
+    type: string
+    description: Lab identifier (account handle or organization name)
+
+  release_date:
+    type: string
+    format: iso8601
+
+  evaluation_window:
+    type: object
+    required: [start, end, days]
+    fields:
+      start:
+        type: string
+        format: iso8601
+      end:
+        type: string
+        format: iso8601
+      days:
+        type: number
+
+  tweet_count:
+    type: number
+    description: Total number of tweets analyzed in the evaluation window
+
+  sentiment_score:
+    type: number
+    description: 0-100 sentiment derived from community posts
+
+  use_cases:
+    type: array
+    item:
+      type: object
+      required: [domain, rating, evidence]
+      fields:
+        domain:
+          type: string
+          description: Use-case area (coding, frontend, backend, architecture, etc.)
+        rating:
+          type: number
+          description: 1-5 confidence from observed tweet evidence
+        evidence:
+          type: array
+          item: string
+          description: URLs supporting this use-case claim
+
+  limitations:
+    type: array
+    item:
+      type: object
+      required: [category, description, evidence]
+      fields:
+        category:
+          type: string
+        description:
+          type: string
+        evidence:
+          type: array
+          item: string
+
+  sources:
+    type: array
+    item:
+      type: object
+      required: [url, author, likes, retweets, views]
+      fields:
+        url:
+          type: string
+        author:
+          type: string
+        likes:
+          type: number
+        retweets:
+          type: number
+        views:
+          type: number
+
+  generated_at:
+    type: string
+    format: iso8601

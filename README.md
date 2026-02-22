@@ -14,6 +14,7 @@ Used by [`/flux:improve`](https://github.com/Nairon-AI/flux) to recommend tools,
 | `skills/` | *(flat)* | Standalone skills |
 | `plugins/` | *(empty)* | Claude Code plugins |
 | `workflow-patterns/` | `git/`, `testing/`, `ai/` | Best practices (not tools) |
+| `model-evaluations/` | *(flat)* | 3-day model capability reports from X/Twitter signals |
 
 ### Structure
 
@@ -40,6 +41,8 @@ workflow-patterns/
 ├── git/          # pre-commit-hooks, atomic-commits
 ├── testing/      # test-first-debugging
 └── ai/           # agents-md-structure, context-management
+
+model-evaluations/ # generated reports (claude-4-5, gpt-5, etc.)
 ```
 
 ## Adding Recommendations
@@ -128,6 +131,22 @@ Issues are created with:
 4. Claude determines relevance for each recommendation
 5. User selects which to install
 6. Flux installs and verifies
+
+## Model Evaluation Radar
+
+`scripts/model-eval-radar.py` monitors AI lab release announcements and runs a 3-day collection window:
+
+1. Detects release tweets from labs (`@AnthropicAI`, `@OpenAI`, `@GoogleAI`, etc.)
+2. Collects monitored-account and high-engagement discovery tweets for each model
+3. Generates structured reports in `model-evaluations/`
+
+Run manually:
+
+```bash
+TWITTER_API_KEY=... python3 scripts/model-eval-radar.py
+```
+
+Or use `.github/workflows/model-eval-radar.yml` for daily automation.
 
 ## Community
 
