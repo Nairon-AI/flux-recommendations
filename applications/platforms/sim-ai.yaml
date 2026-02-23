@@ -1,0 +1,117 @@
+name: sim-ai
+category: application
+tagline: Visual drag-and-drop AI agent workflow builder
+description: |
+  Sim is an open-source platform for building and deploying AI agent workflows
+  visually. Think "Figma for AI workflows" - drag, drop, and connect agents,
+  tools, and blocks on a canvas, then run them instantly.
+
+  ## Key Features
+
+  - **Visual Canvas** - Design workflows by connecting nodes
+  - **Copilot** - Generate nodes and fix errors from natural language
+  - **100+ Integrations** - OpenAI, Anthropic, Gemini, Groq, Ollama, and more
+  - **Vector Databases** - Upload docs, let agents answer from your content
+  - **Real-time Execution** - See workflows run as you build
+  - **Self-hostable** - Run on your own infrastructure
+
+  ## Quick Start
+
+  ### Cloud (Fastest)
+  Go to [sim.ai](https://sim.ai) and start building
+
+  ### Self-hosted (NPM)
+  ```bash
+  npx simstudio
+  # → http://localhost:3000
+  ```
+  Requires Docker running.
+
+  ### Self-hosted (Docker Compose)
+  ```bash
+  git clone https://github.com/simstudioai/sim
+  cd sim
+  docker compose up
+  ```
+
+  ## Use Cases
+
+  - Build chatbots with RAG over your documents
+  - Create multi-agent systems with specialized roles
+  - Automate workflows across Discord, Slack, email
+  - Prototype AI features before coding them
+  - Connect local models via Ollama for privacy
+
+  ## Why Sim vs n8n?
+
+  - AI-native design (built for agents, not just automation)
+  - Copilot for faster workflow creation
+  - Better UX for agent-specific patterns
+  - Works with local models out of the box
+
+use_cases:
+  - Prototyping AI agent workflows
+  - Building chatbots and RAG systems
+  - Multi-agent orchestration
+  - No-code AI automation
+  - Testing agent architectures visually
+
+prerequisites:
+  - Docker (for self-hosted)
+  - API keys for chosen LLM providers
+
+install:
+  type: npm
+  command: |
+    # Quickest: use cloud at sim.ai
+    
+    # Self-hosted:
+    npx simstudio
+    
+    # Or with Docker:
+    git clone https://github.com/simstudioai/sim
+    cd sim && docker compose up
+
+verification:
+  type: manual
+  test_command: Open http://localhost:3000 after npx simstudio
+  success_indicator: Sim canvas loads with node palette
+
+resources:
+  - url: https://sim.ai
+    type: homepage
+  - url: https://github.com/simstudioai/sim
+    type: github
+  - url: https://docs.sim.ai
+    type: docs
+  - url: https://www.youtube.com/watch?v=_Mr-mga_hG4
+    type: video
+
+added_date: "2026-02-24"
+source: manual
+source_url: https://sim.ai
+
+ratings:
+  usefulness: 5
+  setup_difficulty: 2
+
+tags:
+  - workflow-builder
+  - visual
+  - drag-and-drop
+  - ai-agents
+  - no-code
+  - open-source
+  - rag
+  - multi-agent
+
+sdlc_phase: planning
+solves: Building AI agent workflows requires coding - Sim provides visual canvas for rapid prototyping
+
+pricing:
+  model: freemium
+  details: |
+    Community (Free): $20 usage limit, 5GB storage, 5 min execution
+    Pro ($20/mo): 150 runs/min, 50GB storage, unlimited logs
+    Team ($40/mo): 300 runs/min, 500GB pooled storage, Slack support
+    Enterprise: Custom pricing, SSO, SOC2
