@@ -2,12 +2,23 @@
 
 Thanks for helping improve AI development workflows!
 
+Anyone can submit a PR. We have an AI slop detector that automatically triages low-quality submissions.
+
+## What We're Looking For
+
+- **Tweets/X posts** → discussions, tips, tool mentions
+- **YouTube videos** → tutorials, demos, walkthroughs
+- **GitHub repos** → tools, MCPs, libraries
+- **Blog posts, docs, product pages** → anything useful
+
 ## Adding a New Recommendation
 
 1. Fork this repo
 2. Create a YAML file in the appropriate category folder
 3. Follow the [schema.yaml](schema.yaml) format
 4. Submit a PR
+
+PRs are automatically analyzed for duplicates and relevance.
 
 ## YAML Template
 
