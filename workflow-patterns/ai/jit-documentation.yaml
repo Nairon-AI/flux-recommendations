@@ -1,0 +1,117 @@
+name: jit-documentation
+category: workflow-pattern
+tagline: Generate docs just-in-time during planning, not static files
+description: |
+  "Doc rot" is real. Static documentation gets stale fast, especially
+  with AI-accelerated development. Instead of maintaining extensive docs,
+  let AI generate documentation just-in-time during planning phases.
+
+  ## The Problem with Static Docs
+  
+  - Documentation drifts from reality within days
+  - Maintaining docs is a constant tax
+  - AI reads outdated docs and makes wrong assumptions
+  - More docs ≠ better AI assistance
+
+  ## The JIT Documentation Approach
+
+  ### During Planning Mode
+  ```
+  User: "I need to add a payment feature"
+  
+  AI: "Let me analyze the codebase and generate relevant documentation:
+  
+  ## Current Payment Context
+  - PaymentService in src/services/payment.ts
+  - Uses Stripe SDK v12
+  - Existing methods: createCharge, refund, getBalance
+  
+  ## Relevant Patterns
+  - All payments go through PaymentQueue
+  - Webhooks handled in src/api/webhooks/stripe.ts
+  
+  ## Suggested Implementation
+  ..."
+  ```
+
+  ### What to Keep Static
+  - High-level architecture diagrams
+  - Critical business rules that rarely change
+  - Setup/onboarding instructions
+  - API contracts with external systems
+
+  ### What to Generate JIT
+  - Implementation details
+  - Code structure explanations  
+  - Pattern documentation
+  - How-to guides for specific features
+
+  ## Implementation
+
+  ```markdown
+  # CLAUDE.md
+  
+  ## Documentation Approach
+  
+  Do NOT rely on docs/ folder - it may be outdated.
+  
+  When starting a task:
+  1. Analyze actual code to understand current state
+  2. Generate fresh context documentation as needed
+  3. Include this context in your planning response
+  
+  Exception: ARCHITECTURE.md contains stable, high-level decisions.
+  ```
+
+use_cases:
+  - Fast-moving codebases with AI assistance
+  - Reducing documentation maintenance burden
+  - Ensuring AI has accurate context
+  - Agile teams with frequent changes
+
+prerequisites:
+  - AI assistant with codebase access
+  - Planning mode or similar workflow
+
+install:
+  type: manual
+  command: |
+    # Add to CLAUDE.md:
+    
+    ## Documentation Policy
+    
+    Static docs may be outdated. When working on a feature:
+    
+    1. READ the actual code, not just docs
+    2. GENERATE fresh context by analyzing relevant files
+    3. INCLUDE this analysis in your planning output
+    4. UPDATE docs only for stable, high-level decisions
+    
+    Trust code over documentation when they conflict.
+
+verification:
+  type: manual
+  success_indicator: AI generates accurate context from code, not stale docs
+
+added_date: "2026-02-24"
+source: x-discovery
+source_url: https://x.com/mattpocockuk
+
+ratings:
+  usefulness: 4
+  setup_difficulty: 1
+
+tags:
+  - documentation
+  - jit
+  - planning
+  - doc-rot
+  - ai-workflow
+  - context-generation
+
+sdlc_phase: planning
+solves: Static docs get stale and mislead AI - JIT generation ensures accurate context
+
+pricing:
+  model: free
+  details: Workflow pattern, no tools required
