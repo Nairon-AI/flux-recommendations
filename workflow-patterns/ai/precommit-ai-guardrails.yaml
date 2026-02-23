@@ -1,0 +1,117 @@
+name: precommit-ai-guardrails
+category: workflow-pattern
+tagline: Use pre-commit hooks and CI as guardrails for AI code
+description: |
+  Friction via pre-commit hooks, CI pipelines, and strong types is now
+  DESIRABLE when working with AI. These automated checks catch AI mistakes
+  that would otherwise require manual review.
+
+  ## The Mindset Shift
+  
+  Traditional view: "Pre-commit hooks slow me down"
+  AI-assisted view: "Pre-commit hooks catch AI mistakes for free"
+
+  ## Recommended Guardrails
+
+  ### Pre-commit Hooks
+  - **Linting** (ESLint, Biome) - catch style/quality issues
+  - **Formatting** (Prettier) - consistent code style
+  - **Type checking** (tsc --noEmit) - catch type errors
+  - **Tests** (vitest run) - catch breaking changes
+
+  ### CI Pipeline
+  - Full test suite
+  - Build verification
+  - Security scanning
+  - Bundle size checks
+
+  ### Strong Types
+  - Strict TypeScript config
+  - `exactOptionalPropertyTypes: true`
+  - `noUncheckedIndexedAccess: true`
+  - Zod/Valibot for runtime validation
+
+  ## Implementation
+
+  ```bash
+  # Install husky + lint-staged
+  npx husky-init && npm install
+  npm install -D lint-staged
+
+  # .husky/pre-commit
+  npx lint-staged
+  npm run typecheck
+  npm test
+  ```
+
+  ## CLAUDE.md Integration
+  ```markdown
+  ## Quality Gates
+  All code must pass before commit:
+  - `npm run lint` - no lint errors
+  - `npm run typecheck` - no type errors  
+  - `npm test` - all tests pass
+  
+  If pre-commit hooks fail, fix the issues before continuing.
+  ```
+
+use_cases:
+  - Catching AI-generated code quality issues
+  - Maintaining codebase consistency with AI
+  - Reducing manual code review burden
+  - Building confidence in AI commits
+
+prerequisites:
+  - Node.js project
+  - Git repository
+
+install:
+  type: npm
+  command: |
+    # Set up husky and lint-staged
+    npx husky-init
+    npm install -D lint-staged
+    
+    # Configure lint-staged in package.json:
+    # "lint-staged": {
+    #   "*.{ts,tsx}": ["eslint --fix", "prettier --write"],
+    #   "*.{json,md}": ["prettier --write"]
+    # }
+    
+    # Enable strict TypeScript:
+    # tsconfig.json: "strict": true
+
+verification:
+  type: command_exists
+  test_command: ls .husky/pre-commit
+  success_indicator: Pre-commit hook file exists
+
+resources:
+  - url: https://typicode.github.io/husky/
+    type: docs
+  - url: https://github.com/lint-staged/lint-staged
+    type: github
+
+added_date: "2026-02-24"
+source: x-discovery
+source_url: https://x.com/mattpocockuk
+
+ratings:
+  usefulness: 5
+  setup_difficulty: 2
+
+tags:
+  - pre-commit
+  - ci
+  - typescript
+  - linting
+  - ai-guardrails
+  - husky
+  - lint-staged
+
+sdlc_phase: implementation
+solves: AI makes mistakes that slip past human review - automated checks catch them consistently
+
+pricing:
+  model: open-source
+  details: Free tools (husky, lint-staged, ESLint)
