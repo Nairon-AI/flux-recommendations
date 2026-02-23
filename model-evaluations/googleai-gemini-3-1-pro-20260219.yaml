@@ -1,0 +1,67 @@
+model_name: Gemini 3.1 Pro
+lab: GoogleAI
+release_date: '2026-02-19T19:54:19Z'
+evaluation_window:
+  start: '2026-02-19T19:54:19Z'
+  end: '2026-02-22T19:54:19Z'
+  days: 3
+tweet_count: 9
+sentiment_score: 100
+use_cases:
+- domain: coding
+  rating: 2
+  evidence:
+  - https://x.com/Replit/status/2024578806208745637
+  - https://x.com/deedydas/status/2024693612307763299
+- domain: reasoning
+  rating: 2
+  evidence:
+  - https://x.com/antigravity/status/2024922996972912779
+limitations: []
+sources:
+- url: https://x.com/Google/status/2024598510499426433
+  author: '@Google'
+  likes: 17461
+  retweets: 1173
+  views: 1469565
+- url: https://x.com/Replit/status/2024578806208745637
+  author: '@Replit'
+  likes: 7085
+  retweets: 483
+  views: 3994398
+- url: https://x.com/jrgarciadev/status/2025195992526500050
+  author: '@jrgarciadev'
+  likes: 8372
+  retweets: 399
+  views: 502594
+- url: https://x.com/deedydas/status/2024693612307763299
+  author: '@deedydas'
+  likes: 2497
+  retweets: 157
+  views: 4997816
+- url: https://x.com/mattiapomelli/status/2024896819927404894
+  author: '@mattiapomelli'
+  likes: 2990
+  retweets: 112
+  views: 386255
+- url: https://x.com/Abmankendrick/status/2024867845482463418
+  author: '@Abmankendrick'
+  likes: 2046
+  retweets: 145
+  views: 141302
+- url: https://x.com/antigravity/status/2024922996972912779
+  author: '@antigravity'
+  likes: 1939
+  retweets: 140
+  views: 106125
+- url: https://x.com/viktoroddy/status/2024832167164133766
+  author: '@viktoroddy'
+  likes: 1839
+  retweets: 150
+  views: 108609
+- url: https://x.com/kevinkern/status/2024936336038195382
+  author: '@kevinkern'
+  likes: 1430
+  retweets: 51
+  views: 115633
+generated_at: '2026-02-23T10:28:49Z'
