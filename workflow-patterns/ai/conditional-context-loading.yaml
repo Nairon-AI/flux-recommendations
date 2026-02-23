@@ -1,0 +1,124 @@
+name: conditional-context-loading
+category: workflow-pattern
+tagline: Load CLAUDE.md context only when relevant using triggers
+description: |
+  Pattern for optimizing large CLAUDE.md files by loading context conditionally.
+  When your CLAUDE.md exceeds 200 lines, use triggers to load relevant docs
+  only when specific files or patterns are touched.
+
+  ## The Problem
+  
+  Large CLAUDE.md files waste tokens. Claude sees "most of this is irrelevant"
+  in the system message and may ignore important rules.
+
+  ## The Solution: Trigger-Action Rules
+
+  Instead of personality descriptions, write executable rules:
+
+  **Bad (ignored):**
+  ```
+  You are helpful. Care about code quality. Be thorough.
+  ```
+
+  **Good (executed):**
+  ```
+  If you touch files matching *_generator.*, load docs/EVALS.md
+  If running tests, always run the full suite first
+  If editing API routes, check docs/API_CONVENTIONS.md
+  ```
+
+  ## Syntax Options
+
+  ### If-Then Syntax
+  ```markdown
+  If you touch evals with *_generator.* filename, load docs/EVALS.md
+  If editing components/, read COMPONENT_GUIDELINES.md first
+  ```
+
+  ### XML Conditional Blocks (recommended by @dexhorthy)
+  ```markdown
+  <important if="touching files in src/api/">
+  All API routes must validate input with zod schemas.
+  Error responses follow RFC 7807 format.
+  </important>
+
+  <important if="writing tests">
+  Use vitest, not jest. Mock external services.
+  </important>
+  ```
+
+  ## Testing Triggers
+  
+  Test trigger prompts in a separate Claude window before adding to CLAUDE.md.
+  This catches issues before they affect your main workflow.
+
+use_cases:
+  - Large codebases with area-specific conventions
+  - Monorepos with different rules per package
+  - Projects with extensive documentation
+  - Reducing token usage in AI sessions
+
+prerequisites:
+  - CLAUDE.md file over 200 lines
+  - Documentation organized by area/concern
+
+install:
+  type: manual
+  command: |
+    # 1. Audit your CLAUDE.md for sections that only apply sometimes
+    # 2. Move those sections to separate files (docs/EVALS.md, etc.)
+    # 3. Add trigger rules to CLAUDE.md:
+    
+    # Example triggers:
+    # If you touch files matching *_generator.*, load docs/EVALS.md
+    # If editing src/api/, read docs/API_CONVENTIONS.md
+    
+    # Or use XML syntax:
+    # <important if="touching database migrations">
+    # Always create reversible migrations. Test rollback locally.
+    # </important>
+
+verification:
+  type: manual
+  success_indicator: Claude loads relevant docs only when touching matching files
+
+resources:
+  - url: https://x.com/i/status/2025952283742347281
+    type: twitter
+  - url: https://docs.bswen.com/blog/2026-02-05-claude-md-effective-rules/
+    type: docs
+
+added_date: "2026-02-24"
+source: x-discovery
+source_url: https://x.com/i/status/2025952283742347281
+
+ratings:
+  usefulness: 5
+  setup_difficulty: 2
+
+tags:
+  - claude-md
+  - context-management
+  - token-optimization
+  - triggers
+  - conditional-loading
+  - large-codebases
+
+sdlc_phase: implementation
+solves: Large CLAUDE.md files waste tokens and get ignored - triggers load only relevant context
+
+pricing:
+  model: free
+  details: Pattern for existing tools
+
+mentions:
+  - url: https://x.com/i/status/2025952283742347281
+    author: "@dexhorthy"
+    text: "Been using exclusively if…then… syntax in CLAUDE.md. Recently really liking <important if=\"…condition…\">…instructions…</important>"
+    date: "2026-02-23"
+    likes: 6
+  - url: https://x.com/garrytan
+    author: "@garrytan"
+    text: "Big tip: as CLAUDE.md gets longer than 200 lines, put in triggers so Claude knows if you touch evals with *_generator.* filename, load docs/EVALS.md"
+    date: "2026-02-23"
+    likes: 0
