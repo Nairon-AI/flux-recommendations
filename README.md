@@ -2,7 +2,7 @@
 
 Curated database of workflow optimizations for AI-augmented development.
 
-Used by [`/flux:improve`](https://github.com/Nairon-AI/flux) to recommend tools, plugins, and patterns.
+Used by [`/nbench:improve`](https://github.com/Nairon-AI/n-bench) to recommend tools, plugins, and patterns.
 
 ## Categories
 
@@ -145,7 +145,7 @@ Issues are created with:
 
 ## How It Works
 
-1. User runs `/flux:improve`
+1. User runs `/nbench:improve`
 2. Flux analyzes their environment (repo, MCPs, sessions)
 3. Fetches recommendations from this repo
 4. Claude determines relevance for each recommendation

@@ -8,7 +8,7 @@ Supports:
 - Claude Code (JSONL files)
 
 The intelligent analysis (frustration detection, pattern recognition)
-is done by the agent running /flux:improve, not this script.
+is done by the agent running /nbench:improve, not this script.
 """
 
 import json

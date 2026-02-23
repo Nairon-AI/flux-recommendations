@@ -18,7 +18,7 @@ jobs:
       - name: Clone flux plugin repo
         uses: actions/checkout@v4
         with:
-          repository: Nairon-AI/flux
+          repository: Nairon-AI/n-bench
           path: flux-plugin
           token: ${{ secrets.PAT_TOKEN }}
       
