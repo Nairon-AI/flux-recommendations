@@ -1,0 +1,126 @@
+name: codex-multi-agent
+category: workflow-pattern
+tagline: Run parallel specialized agents in Codex CLI
+description: |
+  OpenAI Codex CLI supports multi-agent workflows where specialized agents
+  run in parallel and consolidate results. Useful for complex tasks that
+  benefit from parallelization like codebase exploration or multi-step features.
+
+  ## Enable Multi-Agent Mode
+
+  ### Via CLI
+  ```
+  /experimental
+  ```
+  Then enable "Multi-agents" and restart Codex.
+
+  ### Via Config File
+  ```toml
+  # ~/.codex/config.toml
+  [features]
+  multi_agent = true
+  ```
+
+  ## How It Works
+
+  1. Codex spawns specialized sub-agents in parallel
+  2. Each agent works on its assigned task independently
+  3. Codex waits for all results
+  4. Returns consolidated response
+
+  ## Example Prompt
+
+  ```
+  Review the following points on the current PR (this branch vs main).
+  Spawn one agent per point, wait for all, and summarize results:
+  1. Security issues
+  2. Code quality
+  3. Bugs
+  4. Race conditions
+  5. Test flakiness
+  6. Maintainability
+  ```
+
+  ## Custom Agent Configuration
+
+  Define agents with different models and instructions:
+
+  ```toml
+  # ~/.codex/config.toml
+  [agents.explorer]
+  model = "gpt-5.3-codex"
+  instructions = "Focus on codebase exploration and discovery"
+
+  [agents.implementer]
+  model = "gpt-5.2"
+  instructions = "Implement features following existing patterns"
+  ```
+
+  Or via files in `.agents/` directory with markdown frontmatter.
+
+  ## Managing Sub-Agents
+
+  - `/agent` - Switch between active agent threads
+  - Ask Codex to steer, stop, or close agent threads
+  - View activity in CLI (IDE/app visibility coming soon)
+
+use_cases:
+  - Parallel code review across multiple dimensions
+  - Codebase exploration with specialized scouts
+  - Multi-file feature implementation
+  - Complex refactoring tasks
+
+prerequisites:
+  - OpenAI Codex CLI installed
+  - API access to OpenAI models
+
+install:
+  type: manual
+  command: |
+    # Enable via config:
+    echo '[features]
+    multi_agent = true' >> ~/.codex/config.toml
+    
+    # Or use /experimental in CLI
+
+verification:
+  type: manual
+  test_command: codex then /experimental
+  success_indicator: Multi-agents option appears in experimental menu
+
+resources:
+  - url: https://developers.openai.com/codex/multi-agent/
+    type: docs
+  - url: https://developers.openai.com/codex/config-advanced/
+    type: docs
+  - url: https://x.com/i/status/2025850814108213330
+    type: twitter
+
+added_date: "2026-02-24"
+source: x-discovery
+source_url: https://x.com/i/status/2025850814108213330
+
+ratings:
+  usefulness: 4
+  setup_difficulty: 1
+
+tags:
+  - codex
+  - multi-agent
+  - parallel
+  - openai
+  - agent-orchestration
+
+sdlc_phase: implementation
+solves: Complex tasks need multiple specialized perspectives - parallel agents divide and conquer
+
+pricing:
+  model: paid
+  details: Requires OpenAI API access, usage-based pricing
+
+mentions:
+  - url: https://x.com/i/status/2025850814108213330
+    author: "@jasonzhou1993"
+    text: "Codex CLI actually supports multi-agent now. Open config.toml, add [features] multi_agent = true, then run /experimental"
+    date: "2026-02-23"
+    likes: 144
