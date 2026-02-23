@@ -1,0 +1,121 @@
+name: ascii-wireframing
+category: application
+tagline: Token-efficient wireframing for AI with ASCII art tools
+description: |
+  ASCII wireframing tools let you create UI mockups in plain text that AI
+  can understand perfectly. More token-efficient than images, more precise
+  than verbal descriptions, and version-controllable in git.
+
+  ## Why ASCII Wireframes for AI?
+
+  - **Token-efficient**: Plain text uses far fewer tokens than images
+  - **Unambiguous**: AI interprets ASCII layouts with high accuracy
+  - **Version-controllable**: Diff and track changes in git
+  - **Copy-paste ready**: Works in any text environment
+  - **Forces focus**: Structure over aesthetics
+
+  ## Recommended Tools
+
+  ### ASCIIFlow (asciiflow.com)
+  Free web-based tool for drawing ASCII diagrams:
+  - Boxes, lines, arrows, freeform drawing
+  - Export to plain text
+  - Keyboard-driven workflow
+
+  ### Mockdown (mockdown.design)
+  ASCII wireframe generator specifically for AI:
+  - Designed for AI consumption
+  - Quick layout prototyping
+  - Export formats optimized for prompts
+
+  ## Example Workflow
+
+  1. **Create ASCII wireframe** in ASCIIFlow or Mockdown
+  ```
+  +------------------+------------------+
+  |     HEADER       |     LOGO         |
+  +------------------+------------------+
+  |                                     |
+  |  +--------+  +--------+  +--------+ |
+  |  | Card 1 |  | Card 2 |  | Card 3 | |
+  |  +--------+  +--------+  +--------+ |
+  |                                     |
+  +-------------------------------------+
+  |            FOOTER                   |
+  +-------------------------------------+
+  ```
+
+  2. **Paste into AI prompt**
+  ```
+  Build this layout using Tailwind CSS:
+  [ASCII wireframe]
+  ```
+
+  3. **AI generates accurate code**
+  The structured format leads to more accurate implementations.
+
+use_cases:
+  - Quick UI mockups for AI coding assistants
+  - Documentation that lives in code
+  - Planning phase wireframes
+  - README diagrams
+
+prerequisites:
+  - Web browser for ASCIIFlow/Mockdown
+
+install:
+  type: manual
+  command: |
+    # No installation - these are web tools
+    
+    # ASCIIFlow: https://asciiflow.com
+    # Mockdown: https://mockdown.design
+    
+    # Workflow:
+    # 1. Create wireframe in web tool
+    # 2. Copy ASCII output
+    # 3. Paste into CLAUDE.md, prompts, or specs
+
+verification:
+  type: manual
+  success_indicator: AI generates layout matching ASCII wireframe
+
+resources:
+  - url: https://asciiflow.com
+    type: homepage
+  - url: https://mockdown.design
+    type: homepage
+  - url: https://x.com/i/status/2023972912345043301
+    type: twitter
+  - url: https://www.youtube.com/watch?v=DUCTZQeReHA
+    type: video
+
+added_date: "2026-02-24"
+source: x-discovery
+source_url: https://x.com/i/status/2023972912345043301
+
+ratings:
+  usefulness: 4
+  setup_difficulty: 1
+
+tags:
+  - wireframing
+  - ascii
+  - ui-design
+  - prototyping
+  - token-efficient
+  - ai-prompts
+
+sdlc_phase: planning
+solves: Describing UI layouts to AI is imprecise - ASCII wireframes are unambiguous and token-efficient
+
+pricing:
+  model: free
+  details: ASCIIFlow and Mockdown are free web tools
+
+mentions:
+  - url: https://x.com/i/status/2023972912345043301
+    author: "@tranmautritam"
+    text: "ASCII is the new way you wireframe for AI. Try this GREAT tool mockdown.design"
+    date: "2026-02-23"
+    likes: 383
