@@ -1,0 +1,118 @@
+name: cross-model-debugging
+category: workflow-pattern
+tagline: Use different AI models in sequence for better debugging
+description: |
+  Pattern for debugging stubborn issues by using multiple AI models in sequence.
+  Different models explore different parts of the solution space - combine
+  their strengths for faster root cause analysis.
+
+  ## The Pattern
+
+  When your primary AI can't fix a bug:
+
+  1. **Primary model attempts fix** (e.g., Claude Code)
+     - If stuck, don't keep retrying
+
+  2. **Switch to secondary model** (e.g., Codex)
+     - Ask for ANY working solution, even hacky
+     - The workaround doesn't need to be clean
+
+  3. **Feed workaround back to primary model**
+     - "Here's a hacky workaround that works. What's the root cause?"
+     - "Clean this up into a principled fix"
+
+  ## Why It Works
+
+  > "Different models explore different parts of the solution space.
+  > One generates a messy but working patch, the other abstracts and
+  > compresses it into a principled fix."
+  > - @CentroxAI
+
+  This creates **adversarial review between stochastic systems**.
+  The cross-model critique often outperforms either model in isolation.
+
+  ## Real Example
+
+  ```
+  Claude Code: couldn't fix the bug
+  ↓
+  Codex: wrote a hacky workaround
+  ↓
+  Claude Code: "Ah, the root cause is X" → fixed in 10 LOC
+  ```
+
+  ## Model Pairing Suggestions
+
+  | Creative/Fast | Critical/Thorough |
+  |---------------|-------------------|
+  | Claude Code   | GPT-4/Codex       |
+  | Codex         | Claude Code       |
+  | Cursor        | Claude Code       |
+
+  The key is pairing models with different "personalities" and training data.
+
+use_cases:
+  - Debugging issues that stump a single AI
+  - Complex multi-file bugs
+  - Performance issues with unclear root cause
+  - Legacy code with poor documentation
+
+prerequisites:
+  - Access to multiple AI coding assistants
+  - Ability to share code/context between tools
+
+install:
+  type: manual
+  command: |
+    # No installation needed - this is a workflow pattern
+    
+    # When stuck on a bug:
+    # 1. Try primary AI (Claude Code, etc.)
+    # 2. If stuck, switch to secondary AI (Codex, etc.)
+    # 3. Ask secondary for ANY working solution
+    # 4. Feed workaround back to primary for root cause analysis
+
+verification:
+  type: manual
+  success_indicator: Root cause identified after cross-model analysis
+
+resources:
+  - url: https://x.com/i/status/2024415326981718174
+    type: twitter
+  - url: https://www.chatprd.ai/how-i-ai/workflows/implement-model-vs-model-ai-code-reviews-for-quality-control
+    type: docs
+
+added_date: "2026-02-24"
+source: x-discovery
+source_url: https://x.com/i/status/2024415326981718174
+
+ratings:
+  usefulness: 4
+  setup_difficulty: 2
+
+tags:
+  - debugging
+  - multi-model
+  - cross-model
+  - root-cause-analysis
+  - adversarial-review
+  - pair-programming
+
+sdlc_phase: implementation
+solves: Single AI gets stuck in local minima - cross-model critique explores more solution space
+
+pricing:
+  model: free
+  details: Uses existing AI tools
+
+mentions:
+  - url: https://x.com/i/status/2024415326981718174
+    author: "@CentroxAI"
+    text: "This is actually the optimal workflow. Different models explore different parts of the solution space. Cross-model critique often outperforms either in isolation."
+    date: "2026-02-22"
+    likes: 9
+  - url: https://x.com/teej_m
+    author: "@teej_m"
+    text: "Claude Code couldn't fix a bug. I gave it to Codex and it wrote a hacky workaround. I gave the workaround back to Claude, asked for root cause, and it fixed the issue in 10 LOC."
+    date: "2026-02-22"
+    likes: 0
