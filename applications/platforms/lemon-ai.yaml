@@ -1,0 +1,108 @@
+name: lemon-ai
+category: application
+tagline: Voice-to-action AI agent for Mac that executes tasks
+description: |
+  Lemon (heylemon.ai) is a Mac app that turns spoken commands into completed
+  work - not just text, but actual actions. Press fn, describe what you need,
+  and Lemon handles it across whatever app you're working in.
+
+  **Note:** Multiple products share the "Lemon AI" name. This is heylemon.ai,
+  the Mac voice assistant. Not lemonai.ai (knowledge platform) or others.
+
+  ## How It Works
+
+  1. Press the **fn key** (or configured hotkey)
+  2. Speak your instruction naturally
+  3. Lemon executes the full task
+  4. Stay in your current app - no tab switching
+
+  ## Key Capabilities
+
+  - **Email replies** - Drafts tone-matched responses, attaches files, queues invites
+  - **Document creation** - Research and create docs from voice prompts
+  - **Instant search** - Retrieve info without opening new tabs
+  - **Cross-app execution** - Works inside any Mac app
+  - **Tone editing** - Rewrite text style without copy-pasting
+
+  ## Claimed Performance
+
+  - 5x faster typing speed via voice
+  - 12x faster email replies
+  - 70% fewer tabs opened during work sessions
+
+  ## Real Example
+
+  > "Reply to John about the pricing call. Be friendly, confirm the timeline,
+  > and attach the proposal."
+  >
+  > 5 seconds later: Email drafted, subject written, attachment added, ready to send.
+
+  ## Why Better Than Siri?
+
+  | Task | Siri | Lemon |
+  |------|------|-------|
+  | Reply to email + attach file | "I can't help with that" | Done in 5 seconds |
+  | Create doc from meeting notes | Not supported | Creates and structures doc |
+  | Multi-step workflows | Fails | Executes end-to-end |
+
+use_cases:
+  - Email-heavy knowledge work
+  - Reducing context switching during deep work
+  - Voice-first productivity workflows
+  - Quick document creation and editing
+  - Research without leaving current app
+
+prerequisites:
+  - macOS
+  - Microphone access
+  - Accessibility permissions
+
+install:
+  type: manual
+  command: |
+    # Download from heylemon.ai
+    # 1. Visit https://heylemon.ai
+    # 2. Click "Download for Mac"
+    # 3. Grant microphone and accessibility permissions
+    # 4. Press fn to activate
+
+verification:
+  type: manual
+  test_command: Press fn key and speak a command
+  success_indicator: Lemon executes the spoken task
+
+resources:
+  - url: https://heylemon.ai
+    type: homepage
+  - url: https://vibecoding.app/blog/lemon-ai-review
+    type: docs
+
+added_date: "2026-02-24"
+source: x-discovery
+source_url: https://x.com/i/status/2024084705214087452
+
+ratings:
+  usefulness: 4
+  setup_difficulty: 1
+
+tags:
+  - voice-assistant
+  - mac
+  - productivity
+  - task-execution
+  - dictation
+  - workflow-automation
+
+sdlc_phase: implementation
+solves: Context switching between apps kills productivity - voice commands execute tasks without leaving current app
+
+pricing:
+  model: free
+  details: Currently free to download, no subscription required (early stage)
+
+mentions:
+  - url: https://x.com/i/status/2024084705214087452
+    author: "@beginnersblog1"
+    text: "Lemon: Email drafted. Tone matched. Calendar opened. Meeting invite ready. Time: 9 seconds. The gap between these tools isn't closing. It just became a canyon."
+    date: "2026-02-23"
+    likes: 71
