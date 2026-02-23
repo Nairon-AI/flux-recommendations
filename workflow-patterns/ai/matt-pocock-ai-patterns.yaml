@@ -1,0 +1,115 @@
+name: matt-pocock-ai-patterns
+category: workflow-pattern
+tagline: 9 patterns for 100% AI-contributed code workflows
+description: |
+  Battle-tested patterns from Matt Pocock (@mattpocockuk) after months of
+  working with 100% AI-contributed code. These patterns transform how you
+  think about AI-assisted development.
+
+  ## The 9 Brain Changes
+
+  1. **WAY more time thinking about integration testing**
+     - AI can't verify its own UI work without tests
+     - Frontend? Playwright. Backend? Vitest.
+
+  2. **Friction via pre-commit hooks/CI/strong types is now super desirable**
+     - Let automated checks catch AI mistakes
+     - Strong TypeScript types guide AI toward correct code
+
+  3. **AI has no taste for UI - prototype extremely aggressively before PRD**
+     - Don't commit to detailed specs until you've seen visual prototypes
+     - Iterate visually first, then document
+
+  4. **AI has no taste for software architecture - be extremely explicit**
+     - Define modules and interfaces explicitly
+     - Don't let AI decide your architecture
+
+  5. **Deep grey-box modules with simple interfaces are KING**
+     - Let AI control what's in the box
+     - You control the interfaces to decrease cognitive load
+
+  6. **Huge reliance on Effect.ts for DI and strongly typed errors**
+     - Dependency injection helps AI understand context
+     - Typed errors prevent silent failures
+
+  7. **Much more meta-programming - skills as repeatable SOPs**
+     - Turn your expertise into skills/rules files
+     - Make your patterns reproducible
+
+  8. **Doc rot is real - JIT docs during plan mode beat static docs**
+     - Don't maintain massive documentation
+     - Let AI generate docs when needed during planning
+
+  9. **Higher cognitive load to keep up with LLM changes**
+     - Review AI changes carefully
+     - The codebase evolves fast
+
+  ## Key Rule
+  > "How do I allow this agent to check its own work?"
+  > Frontend? Playwright. Backend? Vitest. NPM library? attw + npm publish --dry-run
+
+use_cases:
+  - Transitioning to AI-first development workflows
+  - Reducing AI-generated code quality issues
+  - Building sustainable AI-augmented codebases
+  - Training teams on effective AI collaboration
+
+prerequisites:
+  - Experience with AI coding assistants
+  - TypeScript project (recommended)
+
+install:
+  type: manual
+  command: |
+    # These are mindset patterns, not installable tools.
+    # Implement by:
+    
+    # 1. Add pre-commit hooks and strong CI checks
+    # 2. Write integration tests for all AI-generated code
+    # 3. Define explicit module interfaces in your CLAUDE.md
+    # 4. Create skills/rules for your coding patterns
+    # 5. Use Effect.ts or similar for DI and typed errors
+
+verification:
+  type: manual
+  success_indicator: AI-generated code passes automated checks without manual intervention
+
+resources:
+  - url: https://x.com/i/status/2024049581529460839
+    type: twitter
+  - url: https://www.totaltypescript.com
+    type: homepage
+  - url: https://effect.website
+    type: docs
+
+added_date: "2026-02-24"
+source: x-discovery
+source_url: https://x.com/i/status/2024049581529460839
+
+ratings:
+  usefulness: 5
+  setup_difficulty: 3
+
+tags:
+  - ai-workflow
+  - typescript
+  - testing
+  - architecture
+  - matt-pocock
+  - best-practices
+  - integration-testing
+  - pre-commit-hooks
+
+sdlc_phase: implementation
+solves: AI generates code without taste for UI/architecture - these patterns add guardrails and feedback loops
+
+pricing:
+  model: free
+  details: Mindset patterns, no cost
+
+mentions:
+  - url: https://x.com/i/status/2024049581529460839
+    author: "@mattpocockuk"
+    text: "I have been at 100% AI-contributed code for a few months now. Here are 9 ways it's changed my brain..."
+    date: "2026-02-23"
+    likes: 1084
