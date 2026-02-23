@@ -1,0 +1,142 @@
+name: worktree-parallel-agents
+category: workflow-pattern
+tagline: Run parallel AI agents without conflicts using git worktrees
+description: |
+  Built-in git worktree support in Claude Code enables running multiple AI agents
+  in parallel without file conflicts or context interference. Each agent gets
+  its own isolated working directory while sharing the same git history.
+
+  ## The Problem
+
+  Traditional workflow when switching tasks:
+  ```bash
+  git stash push -m "WIP: feature"
+  git checkout main
+  # do urgent work
+  git checkout feature-branch
+  git stash pop
+  # hope no conflicts...
+  # rebuild mental context...
+  # wait for Claude to re-understand...
+  ```
+
+  This destroys the deep understanding Claude built about your task.
+
+  ## The Solution: Git Worktrees
+
+  With `claude --worktree`:
+  - **Instant task switching** - just change directories
+  - **Zero context loss** - each session maintains understanding
+  - **Complete isolation** - features/bugs don't interfere
+  - **Parallel execution** - multiple agents work simultaneously
+
+  ## Usage
+
+  ### CLI Flag
+  ```bash
+  claude --worktree
+  # Creates isolated worktree for this session
+  ```
+
+  ### Multiple Parallel Sessions
+  ```bash
+  # Terminal 1: Feature work
+  cd ~/project
+  claude --worktree  # Works on feature branch
+
+  # Terminal 2: Urgent bugfix
+  cd ~/project
+  claude --worktree  # Works on bugfix in separate directory
+  ```
+
+  ### Subagent Isolation
+  ```yaml
+  # .claude/agents/my-agent.md
+  ---
+  name: parallel-worker
+  isolation: worktree
+  ---
+  ```
+
+  ## How It Works
+
+  Git worktrees attach multiple working directories to one repository:
+  ```
+  ~/project/              # Main worktree (main branch)
+  ~/project-worktrees/
+    ├── feature-x/        # Worktree for feature-x branch
+    ├── bugfix-123/       # Worktree for bugfix branch
+    └── experiment/       # Worktree for experiments
+  ```
+
+  Each directory has its own files but shares `.git` data.
+
+use_cases:
+  - Parallel feature development with multiple agents
+  - Urgent bugfixes without losing feature context
+  - A/B testing different implementations
+  - Running tests on one branch while coding on another
+
+prerequisites:
+  - Claude Code CLI
+  - Git repository with at least one commit
+
+install:
+  type: manual
+  command: |
+    # Built into Claude Code - no installation needed
+    
+    # Use the --worktree flag:
+    claude --worktree
+    
+    # Or configure subagents with isolation:
+    # .claude/agents/worker.md
+    # ---
+    # isolation: worktree
+    # ---
+
+verification:
+  type: command_exists
+  test_command: claude --help | grep worktree
+  success_indicator: --worktree flag appears in help output
+
+resources:
+  - url: https://www.threads.com/@boris_cherny/post/DVAAnexgRUj
+    type: twitter
+  - url: https://git-scm.com/docs/git-worktree
+    type: docs
+  - url: https://notes.muthu.co/2026/02/the-complete-guide-to-git-worktrees-with-claude-code/
+    type: docs
+  - url: https://www.youtube.com/watch?v=z_VI51k-tn0
+    type: video
+
+added_date: "2026-02-24"
+source: x-discovery
+source_url: https://x.com/i/status/2025850814108213330
+
+ratings:
+  usefulness: 5
+  setup_difficulty: 1
+
+tags:
+  - git
+  - worktree
+  - parallel-development
+  - claude-code
+  - multi-agent
+  - isolation
+  - context-preservation
+
+sdlc_phase: implementation
+solves: Context switching destroys AI understanding - worktrees preserve context per task
+
+pricing:
+  model: free
+  details: Built into Claude Code
+
+mentions:
+  - url: https://www.threads.com/@boris_cherny/post/DVAAnexgRUj
+    author: "@boris_cherny"
+    text: "Introducing: built-in git worktree support for Claude Code. Now agents can run in parallel without interfering with one another."
+    date: "2026-02-20"
+    likes: 1200
