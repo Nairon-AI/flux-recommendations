@@ -1,4 +1,4 @@
-# Flux Recommendations
+# N-bench Recommendations
 
 Curated database of workflow optimizations for AI-augmented development.
 
@@ -71,7 +71,7 @@ AI-slop pull requests are automatically triaged and closed by the anti-slop work
 
 ### Via Slack (Internal)
 
-Core team members drop URLs into the private `#flux-inbox` channel. That's it.
+Core team members drop URLs into the private `#nbench-inbox` channel. That's it.
 
 **Supported URLs:**
 - Tweets/X posts → discussions, tips, tool mentions
@@ -98,7 +98,7 @@ Each recommendation is a YAML file following [schema.yaml](schema.yaml).
 ```
 ┌─────────────┐     ┌─────────────────────┐     ┌─────────────────┐
 │   Slack     │────▶│ Cloudflare Worker   │────▶│ GitHub Action   │
-│ #flux-inbox │     │ (extracts URLs)     │     │ (analyzes)      │
+│ #nbench-inbox│     │ (extracts URLs)     │     │ (analyzes)      │
 └─────────────┘     └─────────────────────┘     └─────────────────┘
                                                         │
                     ┌───────────────────────────────────┘
@@ -126,7 +126,7 @@ Each recommendation is a YAML file following [schema.yaml](schema.yaml).
 
 | Component | Purpose |
 |-----------|---------|
-| **Slack `#flux-inbox`** | Drop zone for URLs - just paste and go |
+| **Slack `#nbench-inbox`** | Drop zone for URLs - just paste and go |
 | **Cloudflare Worker** | Receives Slack events, extracts URLs, triggers GitHub |
 | **GitHub Action** | Orchestrates fetching and analysis |
 | **Twitter API** | Fetches tweet content + thread context |
@@ -139,18 +139,18 @@ Issues are created with:
 - **Type prefix**: `Tweet:`, `Video:`, `Tool:`, `MCP:`, `Plugin:`, etc.
 - **Verdict**: ✅ Yes / ❌ No / 🤔 Maybe / 🔄 Duplicate
 - **Metadata**: Relevance stars, category, SDLC phases
-- **Duplicate check**: Against existing recommendations + flux plugin built-ins
+- **Duplicate check**: Against existing recommendations + N-bench plugin built-ins
 
 ---
 
 ## How It Works
 
 1. User runs `/nbench:improve`
-2. Flux analyzes their environment (repo, MCPs, sessions)
+2. N-bench analyzes their environment (repo, MCPs, sessions)
 3. Fetches recommendations from this repo
 4. Claude determines relevance for each recommendation
 5. User selects which to install
-6. Flux installs and verifies
+6. N-bench installs and verifies
 
 ## Model Evaluation Radar
 
