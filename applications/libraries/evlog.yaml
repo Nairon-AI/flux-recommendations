@@ -1,0 +1,109 @@
+name: evlog
+category: application
+tagline: Wide-event logging library for TypeScript/Nuxt/Nitro
+description: |
+  evlog is a TypeScript logging library for wide events and structured errors.
+  Works with Nuxt, Nitro, and standalone TypeScript. Includes Agent Skills for
+  instant adoption in AI-assisted codebases.
+
+  ## The Wide Events Philosophy (from loggingsucks.com)
+  
+  Traditional logging is broken - it's optimized for writing, not querying. 
+  Instead of scattering 17 log lines for a single request, emit ONE wide event
+  per service hop containing everything needed to debug:
+  
+  - User context (id, subscription tier, account age, LTV)
+  - Business context (cart value, feature flags, payment method)
+  - Technical context (duration, status, error codes, retry attempts)
+  - Correlation IDs (request_id, trace_id)
+  
+  Key principles:
+  - High cardinality fields (user_id, order_id) make logs actually useful
+  - High dimensionality (50+ fields) means more questions you can answer
+  - Tail sampling: always keep errors/slow requests, sample the rest
+  - Stop logging what code is doing, log what happened to the request
+
+  Features:
+  - Wide Events: Accumulate context throughout request, emit once at end
+  - Structured Errors: Errors with `why`, `fix`, and `link` fields
+  - Log Draining: Fire-and-forget to Axiom, PostHog, OTLP (Grafana/Datadog/Honeycomb)
+  - Smart Sampling: Head/tail sampling, keep errors and slow requests
+  - Client Transport: Send browser logs to server with automatic enrichment
+  - First-class Nuxt/Nitro/TanStack Start integration
+
+use_cases:
+  - Debugging production issues with full request context
+  - Feeding structured data to AI agents for analysis
+  - Replacing scattered console.log with single canonical log lines
+  - Understanding why errors happened, not just that they happened
+
+prerequisites:
+  - Node.js/TypeScript project
+  - Nuxt, Nitro, or TanStack Start (for framework integration)
+
+install:
+  type: npm
+  command: |
+    npm install evlog
+    
+    # For Nuxt:
+    # nuxt.config.ts: modules: ['evlog/nuxt']
+    
+    # For Nitro/TanStack Start:
+    # nitro.config.ts: modules: [evlog({ env: { service: 'my-app' } })]
+    
+    # Install the Claude skill for pattern adoption:
+    npx skills add hugorcd/evlog
+
+verification:
+  type: command_exists
+  test_command: npm list evlog
+  success_indicator: evlog@x.x.x appears in output
+
+resources:
+  - url: https://evlog.dev
+    type: homepage
+  - url: https://github.com/HugoRCD/evlog
+    type: github
+  - url: https://www.npmjs.com/package/evlog
+    type: docs
+  - url: https://loggingsucks.com
+    type: docs
+
+added_date: "2026-02-24"
+source: x-discovery
+source_url: https://x.com/i/status/2025903985937498144
+
+ratings:
+  usefulness: 5
+  setup_difficulty: 2
+
+tags:
+  - logging
+  - typescript
+  - nuxt
+  - nitro
+  - wide-events
+  - structured-errors
+  - observability
+  - debugging
+  - ai-agents
+
+sdlc_phase: implementation
+solves: Scattered console.logs make debugging impossible - wide events give complete request context in one queryable line
+
+pricing:
+  model: open-source
+  details: Free, MIT licensed
+
+mentions:
+  - url: https://x.com/i/status/2025903985937498144
+    author: "@hugorcd"
+    text: "evlog now supports @tan_stack start. Structured, wide-event logging with automatic context capture and smart sampling."
+    date: "2026-02-23"
+    likes: 37
+  - url: https://loggingsucks.com
+    author: "@boristane"
+    text: "Your logs are lying to you. Instead of logging what your code is doing, log what happened to this request. One wide event per service hop with 50+ fields."
+    date: "2024-12-20"
+    likes: 0
