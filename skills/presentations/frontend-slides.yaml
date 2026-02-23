@@ -1,0 +1,105 @@
+name: frontend-slides
+category: skill
+tagline: Create stunning web presentations from scratch or PPTX
+description: |
+  Claude skill for creating zero-dependency, animation-rich HTML presentations.
+  Helps non-designers discover their aesthetic through visual exploration
+  ("show, don't tell"), then generates production-quality slide decks.
+
+  ## Core Philosophy
+
+  1. **Zero Dependencies** - Single HTML files with inline CSS/JS
+  2. **Show, Don't Tell** - Generate visual previews, not abstract choices
+  3. **Distinctive Design** - Avoid generic "AI slop" aesthetics
+  4. **Production Quality** - Accessible, performant, well-commented
+
+  ## Features
+
+  - **Aesthetic Interview** - Claude asks about your preferences first
+  - **Multiple Directions** - Shows several design options to choose from
+  - **Cool Animations** - Transitions and hover effects
+  - **Interactive Elements** - Cursor effects and hover states
+  - **Responsive** - Auto-fits on any screen
+  - **PPTX Conversion** - Convert existing slides, preserve brand assets
+
+  ## How It Works
+
+  1. Claude interviews you about aesthetics
+  2. Generates 2-3 visual directions to "show not tell"
+  3. You pick your favorite
+  4. Claude builds the full presentation
+
+  ## Example Prompt
+
+  ```
+  Create a slide deck for my product launch:
+  - 10 slides
+  - Modern, minimal aesthetic
+  - Include animations between slides
+  - Dark theme with accent colors
+  ```
+
+use_cases:
+  - Product launch presentations
+  - Technical talks and demos
+  - Pitch decks
+  - Internal team presentations
+  - Converting legacy PPTX to web
+
+prerequisites:
+  - Claude Code with skills support
+
+install:
+  type: skill
+  command: |
+    # Install the skill:
+    npx skills add zarazhangrui/frontend-slides
+    
+    # Or via playbooks:
+    npx playbooks add skill zarazhangrui/frontend-slides --skill frontend-slides
+    
+    # Then use by describing your presentation needs
+
+verification:
+  type: command_exists
+  test_command: ls ~/.claude/skills/ | grep frontend-slides
+  success_indicator: frontend-slides skill directory exists
+
+resources:
+  - url: https://github.com/zarazhangrui/frontend-slides
+    type: github
+  - url: https://playbooks.com/skills/zarazhangrui/frontend-slides/frontend-slides
+    type: docs
+  - url: https://x.com/i/status/2016337615843434646
+    type: twitter
+
+added_date: "2026-02-24"
+source: x-discovery
+source_url: https://x.com/i/status/2016337615843434646
+
+ratings:
+  usefulness: 4
+  setup_difficulty: 1
+
+tags:
+  - presentations
+  - slides
+  - html
+  - animations
+  - design
+  - pptx-conversion
+  - zero-dependency
+
+sdlc_phase: documentation
+solves: PowerPoint is tedious and code can create much better slides - this skill unlocks web presentation generation
+
+pricing:
+  model: open-source
+  details: Free, MIT licensed
+
+mentions:
+  - url: https://x.com/i/status/2016337615843434646
+    author: "@zarazhangrui"
+    text: "I created a Claude Skill that makes beautiful slides on the web. The world hasn't woken up to the fact that code can create much better slides than most PPT tools."
+    date: "2026-02-23"
+    likes: 3466
