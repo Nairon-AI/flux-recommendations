@@ -17,57 +17,9 @@ Used by [`/nbench:improve`](https://github.com/Nairon-AI/n-bench) to recommend t
 | `models/` | *(flat)* | Model guidance and model hubs |
 | `model-evaluations/` | *(flat)* | 3-day model capability reports from X/Twitter signals |
 
-### Structure
-
-```
-mcps/
-├── design/       # excalidraw, figma, pencil
-├── browser/      # playwriter
-├── search/       # exa, context7
-├── productivity/ # linear, supermemory
-└── dev/          # github
-
-cli-tools/
-├── linting/      # oxlint, biome
-├── git/          # lefthook
-├── terminal/     # jq, fzf
-├── tasks/        # beads
-├── agent-workflow/ # cli-continues, nightshift
-├── communication/  # zele, whatsapp-cli
-├── frontend/       # react-grab
-├── security/       # tirith
-├── testing/        # agent-browser, tuistory
-├── review/         # critique
-└── system/         # mole
-
-applications/
-├── individual/    # wispr-flow, raycast, dia (personal productivity)
-├── collaboration/ # granola (team/stakeholder communication)
-├── developer/     # sandbox-agent, pageindex, nanobot
-└── frameworks/    # electrobun, launchpad
-
-skills/
-├── frontend/        # taste-skill, ui-skills
-├── codebase-mapping/# cartographer, cartograph
-├── meta-learning/   # claudeception
-└── ...              # research, backend, security, writing
-
-workflow-patterns/
-├── git/          # pre-commit-hooks, atomic-commits
-├── testing/      # test-first-debugging
-├── ai/           # agents-md-structure, context-management
-└── review/       # anti-slop, vouch
-
-models/            # frontend-models, reasoning-models, huggingface
-
-model-evaluations/ # generated reports (claude-4-5, gpt-5, etc.)
-```
-
 ## Adding Recommendations
 
-> **Note:** Only the Nairon core team can add recommendations to prevent low-quality submissions.
-
-AI-slop pull requests are automatically triaged and closed by the anti-slop workflow.
+Anyone can submit a PR! We have an AI slop detector that automatically triages low-quality submissions.
 
 ### Via Slack (Internal)
 
