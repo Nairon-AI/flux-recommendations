@@ -1,0 +1,120 @@
+name: explicit-architecture-for-ai
+category: workflow-pattern
+tagline: AI has no taste for architecture - be extremely explicit
+description: |
+  AI coding assistants have no inherent sense of software architecture.
+  They'll happily create inconsistent patterns, mix concerns, and make
+  poor structural decisions unless you're extremely explicit.
+
+  ## The Problem
+  
+  AI will:
+  - Put code wherever seems convenient
+  - Create new patterns instead of following existing ones
+  - Mix business logic with infrastructure
+  - Ignore separation of concerns
+
+  ## The Solution: Explicit Architecture Documentation
+
+  ### 1. Document Your Module Structure
+  ```markdown
+  ## Architecture
+  
+  src/
+    domain/       # Business logic, no external dependencies
+    application/  # Use cases, orchestrates domain
+    infrastructure/ # DB, APIs, external services
+    presentation/ # UI components, routes
+  
+  Rules:
+  - Domain NEVER imports from infrastructure
+  - Application orchestrates, doesn't implement
+  - Infrastructure implements interfaces from domain
+  ```
+
+  ### 2. Define Module Interfaces Explicitly
+  ```markdown
+  ## Module Interfaces
+  
+  UserService interface:
+  - createUser(data: CreateUserInput): Promise<User>
+  - getUser(id: string): Promise<User | null>
+  - updateUser(id: string, data: UpdateUserInput): Promise<User>
+  
+  AI: Implement against these interfaces. Do not add methods
+  without explicit approval.
+  ```
+
+  ### 3. Grey-Box Modules
+  Define simple interfaces, let AI control implementation details:
+  
+  > "Deep, grey-box modules with simple interfaces are KING.
+  > Let AI control what's in the box to decrease your cognitive load."
+  
+  You define: `interface PaymentService { charge(amount: Money): Promise<Receipt> }`
+  AI implements: All the internal complexity
+
+use_cases:
+  - Large codebases with AI assistance
+  - Maintaining architectural consistency
+  - Onboarding AI to existing projects
+  - Preventing architectural drift
+
+prerequisites:
+  - Existing architecture decisions
+  - CLAUDE.md or similar context file
+
+install:
+  type: manual
+  command: |
+    # Add to CLAUDE.md:
+    
+    ## Architecture Rules
+    
+    ### Module Structure
+    src/
+      domain/       # Pure business logic
+      application/  # Use case orchestration  
+      infrastructure/ # External integrations
+      ui/           # React components
+    
+    ### Constraints
+    - domain/ has ZERO external imports
+    - New features go in application/, not domain/
+    - All DB access through infrastructure/repositories/
+    
+    ### When Adding Code
+    1. Identify correct module based on responsibility
+    2. Follow existing patterns in that module
+    3. Ask if unsure about placement
+
+verification:
+  type: manual
+  success_indicator: AI places code in architecturally correct locations
+
+resources:
+  - url: https://blog.cleancoder.com/uncle-bob/2012/08/13/the-clean-architecture.html
+    type: docs
+
+added_date: "2026-02-24"
+source: x-discovery
+source_url: https://x.com/mattpocockuk
+
+ratings:
+  usefulness: 5
+  setup_difficulty: 3
+
+tags:
+  - architecture
+  - clean-architecture
+  - module-design
+  - ai-workflow
+  - documentation
+  - interfaces
+
+sdlc_phase: planning
+solves: AI makes poor architectural decisions - explicit documentation guides it to correct patterns
+
+pricing:
+  model: free
+  details: Documentation pattern, no tools required
