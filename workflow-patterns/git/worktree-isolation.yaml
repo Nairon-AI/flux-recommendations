@@ -64,3 +64,20 @@ solves: "Branch-switching and stash churn break flow and AI context during multi
 pricing:
   model: free
   details: "Built into Git"
+
+mentions:
+  - url: https://x.com/mattpocockuk/status/2025242370816487487
+    author: "@mattpocockuk"
+    text: "claude --worktree is so good I'm making it my new default. Here's a demo."
+    date: "2026-02-22"
+    likes: 1659
+  - url: https://x.com/mattpocockuk/status/2025225505843069086
+    author: "@mattpocockuk"
+    text: "LOVE seeing this be built into CC itself. Especially parallelizing subagents makes spawning a bunch of agents to do a lot of work simpler. Especially when merge conflicts are so cheap."
+    date: "2026-02-22"
+    likes: 188
+  - url: https://x.com/dani_avila7/status/2025336648913793506
+    author: "@dani_avila7"
+    text: "By default, Claude Code worktrees are created in .claude/worktrees inside your project. You can change this location in Settings. It's good practice to keep your worktrees outside your project directory."
+    date: "2026-02-22"
+    likes: 56

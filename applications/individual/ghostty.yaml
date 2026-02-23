@@ -65,3 +65,15 @@ solves: "Terminal context switching friction when running multiple concurrent co
 pricing:
   model: open-source
   details: "Free and open-source"
+
+mentions:
+  - url: https://x.com/dani_avila7/status/2025280714606780749
+    author: "@dani_avila7"
+    text: "Ghostty lets you control the opacity of unfocused splits. Just add unfocused-split-opacity = 0.85 to config. Super useful when working across multiple panes."
+    date: "2026-02-22"
+    likes: 1193
+  - url: https://x.com/dani_avila7/status/2025402765241909497
+    author: "@dani_avila7"
+    text: "Diagram about SAND to use Ghostty with Claude Code multiagents."
+    date: "2026-02-22"
+    likes: 89

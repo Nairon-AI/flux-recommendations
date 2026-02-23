@@ -1,0 +1,74 @@
+name: process-engineering
+category: workflow-pattern
+tagline: "High-leverage automation of grindy dev tasks with AI"
+
+description: |
+  In the AI era, previously "low ROI" grindy tasks become dramatically higher 
+  leverage when automated. Focus engineering effort on:
+  
+  - Complete test coverage (AI can write and maintain tests)
+  - Good devops config (AI excels at infrastructure-as-code)
+  - Good CI/CD (predictable pipelines = AI-friendly)
+  - Managing envs for dev, staging, prod (declarative configs)
+  
+  Process engineering is extremely high leverage now because AI handles
+  the repetitive implementation while you define the standards.
+
+use_cases:
+  - Prioritizing infrastructure work that AI can maintain
+  - Building test suites that enable safe AI refactoring
+  - Creating guardrails that let AI operate autonomously
+  - Reducing manual toil through systematic automation
+
+prerequisites:
+  - AI coding assistant (Claude Code, Cursor, etc.)
+  - Version control with CI/CD
+
+install:
+  type: manual
+  command: |
+    # This is a mindset shift, not a tool install
+    # Prioritize:
+    # 1. Test coverage - AI can write tests, you verify intent
+    # 2. CI/CD pipeline - Catches AI mistakes automatically
+    # 3. Environment configs - Declarative = AI-friendly
+    # 4. Linting/formatting - Consistent code = easier AI context
+
+verification:
+  type: manual
+  test_command: "Review your CI pipeline - does it catch AI mistakes?"
+  success_indicator: "Failed builds from AI changes are caught before merge"
+
+resources:
+  - url: https://x.com/realmcore_/status/2025313600253125109
+    type: twitter
+
+added_date: 2026-02-23
+source: x-discovery
+source_url: https://x.com/realmcore_/status/2025313600253125109
+
+ratings:
+  usefulness: 5
+  setup_difficulty: 3
+
+tags:
+  - process
+  - automation
+  - ci-cd
+  - testing
+  - infrastructure
+  - high-leverage
+
+sdlc_phase: planning
+solves: "Knowing where to focus engineering effort in an AI-augmented workflow"
+
+pricing:
+  model: free
+  details: "Conceptual framework, no cost"
+
+mentions:
+  - url: https://x.com/realmcore_/status/2025313600253125109
+    author: "@realmcore_"
+    text: "Lots of simple, grindy dev tasks that used to be considered low ROI and now dramatically higher leverage: Complete test coverage, A good devops config, Good CICD, Managing envs for dev, staging, and prod. All this to say, process engineering is extremely high leverage now."
+    date: "2026-02-22"
+    likes: 321

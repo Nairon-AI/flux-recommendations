@@ -1,0 +1,85 @@
+name: oh-my-opencode
+category: cli-tool
+tagline: "Multi-model agent harness with parallel background agents"
+
+description: |
+  Oh My OpenCode (OMO) is a batteries-included plugin for OpenCode that enables
+  multi-model orchestration across Claude, GPT, Gemini, Kimi, and more.
+  
+  Key features:
+  - Parallel background agents ("ultrawork" command)
+  - Oracle and Librarian specialized agents
+  - LSP/AST tools integration
+  - Multi-provider model routing
+  - Ralph loop for autonomous task execution
+
+use_cases:
+  - Running parallel AI agents across multiple models
+  - Orchestrating Claude + GPT + Gemini for different strengths
+  - Long-running autonomous coding tasks
+  - Breaking free from single-provider lock-in
+
+prerequisites:
+  - OpenCode installed
+  - At least one AI provider subscription (Claude/GPT/Gemini)
+
+install:
+  type: npm
+  command: |
+    # Interactive installer (recommended)
+    bunx oh-my-opencode install
+    # or
+    npx oh-my-opencode install
+
+    # Follow prompts to configure your subscriptions
+
+verification:
+  type: command_exists
+  test_command: "opencode --help | grep -i oh-my"
+  success_indicator: "Oh My OpenCode commands appear in help"
+
+resources:
+  - url: https://github.com/code-yeongyu/oh-my-opencode
+    type: github
+  - url: https://www.npmjs.com/package/oh-my-opencode
+    type: homepage
+
+added_date: 2026-02-23
+source: x-discovery
+source_url: https://x.com/justsisyphus/status/2025455986623012923
+
+ratings:
+  usefulness: 5
+  setup_difficulty: 2
+
+tags:
+  - opencode
+  - multi-model
+  - agent-orchestration
+  - background-agents
+  - ultrawork
+  - sisyphus
+
+sdlc_phase: implementation
+solves: "Single-provider lock-in and lack of parallel agent orchestration"
+
+pricing:
+  model: open-source
+  details: "Free and open-source (33K+ stars)"
+
+mentions:
+  - url: https://x.com/justsisyphus/status/2025455986623012923
+    author: "@justsisyphus"
+    text: "I spent way too long optimizing my opencode + omo model config. Turns out I can do without Anthropic! Codex, GLM & MiniMax are perfectly balanced now."
+    date: "2026-02-22"
+    likes: 41
+  - url: https://x.com/justsisyphus/status/2024934447548882955
+    author: "@justsisyphus"
+    text: "Yes we rewrote our ultralong readme. Now we have decent gpt support, opensource model support, hashline edit from oh-my-pi support by default."
+    date: "2026-02-21"
+    likes: 83
+  - url: https://x.com/Berezin12345/status/2025288948881473846
+    author: "@Berezin12345"
+    text: "oh-my-opencode is phenomenal and once you try it there's no skipping it"
+    date: "2026-02-22"
+    likes: 6
