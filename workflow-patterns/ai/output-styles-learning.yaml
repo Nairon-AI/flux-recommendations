@@ -1,0 +1,102 @@
+name: output-styles-learning
+category: workflow-pattern
+tagline: Learn while AI codes using Claude's output styles
+description: |
+  Six strategies from Cory House (@housecor) to maintain and improve your
+  programming skills while using AI coding assistants. Don't become a
+  prompt-only developer - stay engaged and keep learning.
+
+  ## The 6 Learning Strategies
+
+  1. **Ask questions directly**
+     - "How do I add an API endpoint?"
+     - Simple but effective for quick learning
+
+  2. **Socratic method prompting**
+     - "Teach me <concept> using the Socratic method"
+     - AI asks you questions to guide understanding
+
+  3. **Explicit learning mode request**
+     - "I want to learn via examples. Give me alternative perspectives
+       and concrete examples. Ask me questions to test my understanding."
+     - Forces AI to be educational, not just productive
+
+  4. **Use /output explanatory mode** (Claude Code)
+     - Run: `/output-style explanatory`
+     - Claude explains implementation choices as it works
+     - Adds "Insights" between coding steps
+
+  5. **Use /output learning mode** (Claude Code)
+     - Run: `/output-style learning`
+     - Claude pauses and prompts YOU to write pieces of code
+     - Collaborative pair-programming style
+
+  6. **Create custom output styles**
+     - `/output-style:new I want a style that teaches Next.js best practices`
+     - Tailor the learning experience to your needs
+
+  ## Built-in Claude Code Output Styles
+  
+  - **Default**: Efficient task completion
+  - **Explanatory**: Educational insights while coding
+  - **Learning**: You take turns coding with Claude
+
+use_cases:
+  - Junior developers learning from AI-generated code
+  - Staying sharp while using AI assistants
+  - Learning new frameworks with AI guidance
+  - Onboarding to unfamiliar codebases
+
+prerequisites:
+  - Claude Code (for /output-style commands)
+  - Any AI assistant (for prompt-based strategies)
+
+install:
+  type: manual
+  command: |
+    # In Claude Code, run:
+    /output-style explanatory   # For educational mode
+    /output-style learning      # For pair-programming mode
+    
+    # Or create custom:
+    /output-style:new <description of learning style>
+
+verification:
+  type: manual
+  success_indicator: Claude explains reasoning or prompts you to contribute code
+
+resources:
+  - url: https://code.claude.com/docs/en/output-styles
+    type: docs
+  - url: https://x.com/i/status/2024164214269480983
+    type: twitter
+
+added_date: "2026-02-24"
+source: x-discovery
+source_url: https://x.com/i/status/2024164214269480983
+
+ratings:
+  usefulness: 4
+  setup_difficulty: 1
+
+tags:
+  - learning
+  - output-styles
+  - claude-code
+  - education
+  - pair-programming
+  - skill-development
+
+sdlc_phase: implementation
+solves: Developers stop learning when AI does all the coding - these patterns keep you engaged and growing
+
+pricing:
+  model: free
+  details: Built into Claude Code
+
+mentions:
+  - url: https://x.com/i/status/2024164214269480983
+    author: "@housecor"
+    text: "Problem: I want to learn while using AI to code. Here are the 6 solutions I've found so far..."
+    date: "2026-02-23"
+    likes: 83
