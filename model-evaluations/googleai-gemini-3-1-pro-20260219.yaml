@@ -1,0 +1,78 @@
+model_name: Gemini 3.1 Pro
+lab: GoogleAI
+release_date: '2026-02-19T19:54:19Z'
+evaluation_window:
+  start: '2026-02-19T19:54:19Z'
+  end: '2026-02-22T19:54:19Z'
+  days: 3
+tweet_count: 11
+sentiment_score: 50
+use_cases:
+- domain: coding
+  rating: 2
+  evidence:
+  - https://x.com/Replit/status/2024578806208745637
+  - https://x.com/deedydas/status/2024693612307763299
+- domain: frontend
+  rating: 2
+  evidence:
+  - https://x.com/jrgarciadev/status/2025571859580813736
+  - https://x.com/ann_nnng/status/2025149254449463561
+limitations: []
+sources:
+- url: https://x.com/Google/status/2024598510499426433
+  author: '@Google'
+  likes: 17496
+  retweets: 1176
+  views: 1478334
+- url: https://x.com/Replit/status/2024578806208745637
+  author: '@Replit'
+  likes: 8005
+  retweets: 551
+  views: 4796952
+- url: https://x.com/jrgarciadev/status/2025195992526500050
+  author: '@jrgarciadev'
+  likes: 8635
+  retweets: 413
+  views: 544558
+- url: https://x.com/deedydas/status/2024693612307763299
+  author: '@deedydas'
+  likes: 2502
+  retweets: 157
+  views: 5008962
+- url: https://x.com/jrgarciadev/status/2025571859580813736
+  author: '@jrgarciadev'
+  likes: 4823
+  retweets: 288
+  views: 344652
+- url: https://x.com/MengTo/status/2025508242546413899
+  author: '@MengTo'
+  likes: 4372
+  retweets: 239
+  views: 308312
+- url: https://x.com/mattiapomelli/status/2024896819927404894
+  author: '@mattiapomelli'
+  likes: 3000
+  retweets: 113
+  views: 387980
+- url: https://x.com/Abmankendrick/status/2024867845482463418
+  author: '@Abmankendrick'
+  likes: 2049
+  retweets: 145
+  views: 142539
+- url: https://x.com/viktoroddy/status/2024832167164133766
+  author: '@viktoroddy'
+  likes: 1854
+  retweets: 152
+  views: 111312
+- url: https://x.com/kevinkern/status/2024936336038195382
+  author: '@kevinkern'
+  likes: 1431
+  retweets: 51
+  views: 116103
+- url: https://x.com/ann_nnng/status/2025149254449463561
+  author: '@ann_nnng'
+  likes: 994
+  retweets: 51
+  views: 57598
+generated_at: '2026-02-24T10:14:09Z'
