@@ -58,8 +58,8 @@ sdlc_phase: implementation
 solves: "No visual interface for tracking and orchestrating multiple AI coding agents"
 
 pricing:
-  model: open-source
-  details: "Free and open-source. Apache 2.0 license."
+  model: freemium
+  details: "Free for 1 user. Pro $30/mo for teams (2-49 users). Enterprise custom pricing. Open source (Apache 2.0)."
 
 mentions:
   - author: "@addyosmani"

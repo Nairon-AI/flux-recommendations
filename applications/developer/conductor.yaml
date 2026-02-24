@@ -56,8 +56,8 @@ sdlc_phase: implementation
 solves: "Managing multiple AI coding agents requires complex terminal juggling"
 
 pricing:
-  model: freemium
-  details: "Free tier available. Check conductor.build for Pro pricing."
+  model: free
+  details: "Free Mac app. No pricing page - download directly from conductor.build"
 
 mentions:
   - author: "@nexxel"

@@ -34,8 +34,10 @@ related_tools:
 resources:
   - url: https://superset.sh/
     type: homepage
-  - url: https://github.com/nicholasgriffintn/superset
+  - url: https://github.com/superset-sh/superset
     type: github
+  - url: https://docs.superset.sh/
+    type: docs
 
 added_date: 2026-02-25
 source: manual
@@ -58,4 +60,4 @@ solves: "Running multiple CLI agents requires complex worktree and session manag
 
 pricing:
   model: open-source
-  details: "Free tier + Pro $20/seat/mo. Apache 2.0 license."
+  details: "Free and open-source. Apache 2.0 license. Build from source or download Mac app."
