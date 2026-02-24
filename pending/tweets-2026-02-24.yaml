@@ -1,0 +1,318 @@
+- author: '@dani_avila7'
+  date: '2026-02-24'
+  likes: 196
+  text: 'I replaced Claude Code’s default --worktree command with a custom one built
+    around Ghostty, Lazygit, and Yazi.
+
+
+    By default, Claude Code creates worktrees inside the .claude/worktrees folder
+    within the same project.
+
+
+    That means if you spin up 3 worktrees, you end up with 3 complet'
+  url: https://x.com/dani_avila7/status/2026161210950119888
+- author: '@dani_avila7'
+  date: '2026-02-24'
+  likes: 29
+  text: 'WebSockets at last!
+
+
+    The first time I started working with the OpenAI API, back in the days of Ada,
+    Babbage, and Davinci, they didn’t even have streaming.
+
+
+    And the first thing I thought was: how amazing would it be to just plug a WebSocket
+    into this and stop suffering so much wit'
+  url: https://x.com/dani_avila7/status/2026059467843076538
+- author: '@dani_avila7'
+  date: '2026-02-24'
+  likes: 55
+  text: 'Please don’t delete your CLAUDE/AGENTS .md
+
+
+    Don’t just read the headline, watch the video all the way to the end.'
+  url: https://x.com/dani_avila7/status/2026017497078776070
+- author: '@dani_avila7'
+  date: '2026-02-24'
+  likes: 24
+  text: 'Are subagents in Claude Code getting stuck in the TUI for you too?
+
+
+    It’s happened to me a couple of times now, when subagents start a long task list,
+    they just stay running forever.
+
+
+    Even if I stop Claude with esc, they’re still there… the only fix so far is closing
+    the session a'
+  url: https://x.com/dani_avila7/status/2026012332405735447
+- author: '@dani_avila7'
+  date: '2026-02-24'
+  likes: 40
+  text: 'My website https://t.co/zcqfpuXOSv is literally VSCode with Claude Code installed.
+
+
+    The folders and files are sections about me and my projects.
+
+
+    Why did I build it like that?? Why not xD
+
+
+    I love creating tools for devs, and this reflects exactly who I am.
+
+
+    Inside the site you ca'
+  url: https://x.com/dani_avila7/status/2025986010627338549
+- author: '@pvncher'
+  date: '2026-02-24'
+  likes: 37
+  text: "The Claude cobol thing is silly. \n\nSome mainframe apps have zero test coverage\
+    \ and are just barely holding together.\n\nThere’s no chance an autonomous Claude\
+    \ can guarantee a perfect port with no oversight, even if it’s able to make progress\
+    \ on deciphering the existing code."
+  url: https://x.com/pvncher/status/2026109195196502510
+- author: '@pvncher'
+  date: '2026-02-24'
+  likes: 11
+  text: 'This is the part that people don''t get about AI agents.
+
+
+    Yes compaction is getting better, but it''s no substitute for a human with broad
+    understanding of the project and problem.'
+  url: https://x.com/pvncher/status/2025996401423815088
+- author: '@pvncher'
+  date: '2026-02-24'
+  likes: 27
+  text: 'There''s a fallacy here around building with agents, where just because you
+    can do more and more with them, doesn''t mean the need for human oversight reaches
+    zero in the near-medium term.
+
+
+    I see first hand how much complexity you have to wrangle with models. Engineering
+    isn''t dead'
+  url: https://x.com/pvncher/status/2025993542821175613
+- author: '@pvncher'
+  date: '2026-02-24'
+  likes: 51
+  text: 'We kind of went from AI is slop to AI will destroy the economy, in the matter
+    of a few weeks.
+
+
+    The thing is, LLMs are still kind of slop and it takes a lot of work to get great
+    results out of them. The work required will go down, but LLMs still work very
+    differently than people.'
+  url: https://x.com/pvncher/status/2025986061101355350
+- author: '@pvncher'
+  date: '2026-02-24'
+  likes: 77
+  text: "My life every week now on the pro plan \nI get 6 days worth of usage :/ https://t.co/CIwynj7osp"
+  url: https://x.com/pvncher/status/2025952973818405126
+- author: '@nummanali'
+  date: '2026-02-24'
+  likes: 4
+  text: "Reinforcement learning is fascinating \n\nIt's where models learn how to\
+    \ solve problems through trial and error\n\nCurrently is takes time for it to\
+    \ go through this process \n\nBut imagine when models become so fast, that they\
+    \ do 1 million iterations in a blink of an eye\n\nGame over? ht"
+  url: https://x.com/nummanali/status/2026062703932907755
+- author: '@nummanali'
+  date: '2026-02-24'
+  likes: 24
+  text: 'Chinese companies were distilling from Anthropic (no surprise) but now with
+    evidence
+
+
+    Exchanges with Claude:
+
+
+    MiniMax 13 million
+
+    Moonshot AI (Kimi) 3.4 million
+
+    DeepSeek 150,000
+
+
+    The only ones not on the list are Z .ai (GLM) and Alibaba (Qwen)
+
+
+    Inherently not illegal to do for you'
+  url: https://x.com/nummanali/status/2026013733005471816
+- author: '@nummanali'
+  date: '2026-02-24'
+  likes: 17
+  text: "Kind of crazy to think about how LLMs write code \n\nIt's literally a statistical\
+    \ simulation that determines the next token \n\nThe post training determines how\
+    \ the probabilities are adjusted based on what's in training datasets\n\nIt's\
+    \ no surprise why Researchers are surprised by the "
+  url: https://x.com/nummanali/status/2025923903348978137
+- author: '@justinsunyt'
+  date: '2026-02-24'
+  likes: 15
+  text: https://t.co/lQF60EGSCe
+  url: https://x.com/justinsunyt/status/2026008036377326077
+- author: '@realmcore_'
+  date: '2026-02-24'
+  likes: 6
+  text: 'Sonnet-4.6-RL-deep-fry-experimental
+
+
+    is actually pretty good in the right harness'
+  url: https://x.com/realmcore_/status/2026145156014194701
+- author: '@realmcore_'
+  date: '2026-02-24'
+  likes: 24
+  text: 'Rebuilding is cheap now
+
+    Learning about the problem space by prototyping is cheap now
+
+
+    Makes more sense to build fast and then throw it out faster once you know the
+    constraints'
+  url: https://x.com/realmcore_/status/2026049828082663830
+- author: '@realmcore_'
+  date: '2026-02-24'
+  likes: 12
+  text: 'Yoloing a slop cannon without caring about it''s output is a great recipe
+    for problems that will eat your roadmap down the line.
+
+
+    Get as much dev leverage as you possibly can, but do it in a way that makes sense
+    for you'
+  url: https://x.com/realmcore_/status/2026029117142192131
+- author: '@realmcore_'
+  date: '2026-02-24'
+  likes: 21
+  text: '2026 is the year of the slop cannon
+
+
+    If YOU 🫵 want to build YOUR OWN slop cannon!
+
+
+    Just. fucking don''t.
+
+
+    Make sure you''re actually building good systems and love the craft. That isn''t
+    going away any time soon.
+
+
+    Happy monday.'
+  url: https://x.com/realmcore_/status/2026025983195922549
+- author: '@tokengobbler'
+  date: '2026-02-24'
+  likes: 15
+  text: 'COBOL migration isn''t bottlenecked by slow translation.
+
+
+    It''s bottlenecked by the risk tolerance of the most risk-averse companies on
+    earth, untangling 50 years of infrastructure, and 5 year enterprise contracts'
+  url: https://x.com/tokengobbler/status/2026033847943766317
+- author: '@tokengobbler'
+  date: '2026-02-24'
+  likes: 2
+  text: Fun watching codex-spark in an endless loop reading files for the last hour,
+    let's see if it ever figures it out... https://t.co/OOgv1Ql0JO
+  url: https://x.com/tokengobbler/status/2025996123601588630
+- author: '@tokengobbler'
+  date: '2026-02-24'
+  likes: 2
+  text: 'Who has historical data on Codex / Claude Code TPM (via subscription)?
+
+
+    I''m convinced throughput swings wildly throughout the day. Would love to see
+    real numbers so I know I''m not crazy'
+  url: https://x.com/tokengobbler/status/2025981912599216631
+- author: '@tokengobbler'
+  date: '2026-02-24'
+  likes: 3
+  text: eslint.config.js &gt; https://t.co/rE7DsIGvqp
+  url: https://x.com/tokengobbler/status/2025926084361900476
+- author: '@tokengobbler'
+  date: '2026-02-24'
+  likes: 3
+  text: "If you couldn't replace your laptop with a t3.small and still run your browser,\
+    \ full dev toolchain, databases, etc… \n\nWhy do you think the next generation\
+    \ of AI coding agents will live in tiny sandboxes?"
+  url: https://x.com/tokengobbler/status/2025925356566299010
+- author: '@EastlondonDev'
+  date: '2026-02-24'
+  likes: 2
+  text: I am gonna vibe code so much secure infrastructure with this baby
+  url: https://x.com/EastlondonDev/status/2026053295878639851
+- author: '@EastlondonDev'
+  date: '2026-02-24'
+  likes: 9
+  text: 'RT @zmzlois: I spent three weeks rewriting Medfin''s document ingestion pipeline
+    and increased accuracy from 56.35% to 94.41% (with exceptio…'
+  url: https://x.com/EastlondonDev/status/2025915146665898132
+- author: '@__morse'
+  date: '2026-02-24'
+  likes: 6
+  text: in kimaki I can tell opencode to search and find a previous session and send
+    a message there. I can even handoff from one session to a new one. this is so
+    much better than compaction. this even works across all my projects
+  url: https://x.com/__morse/status/2026002833829499324
+- author: '@justsisyphus'
+  date: '2026-02-24'
+  likes: 9
+  text: 'RT @q_yeon_gyu_kim: https://t.co/8vxbrFAD7v'
+  url: https://x.com/justsisyphus/status/2026032269065117932
+- author: '@parcadei'
+  date: '2026-02-24'
+  likes: 10
+  text: "Quick thoughts on the  Citrini scenario:\n \nIt’s a great read, and an interesting\
+    \ hypothetical scenario but as an attempt to model a scenario it fails because\
+    \ the foundation it’s built on is unstable. \n \nThe core idea of a ‘negative\
+    \ feedback loop with no brake’ leading to a cascad"
+  url: https://x.com/parcadei/status/2026034292795867405
+- author: '@mattpocockuk'
+  date: '2026-02-24'
+  likes: 27
+  text: 'Never run claude /init
+
+
+    It''ll burn tokens, go out of date in days, and bloat your system prompt.
+
+
+    Here''s why: https://t.co/mVi7VIb84j'
+  url: https://x.com/mattpocockuk/status/2026230545605161119
+- author: '@mattpocockuk'
+  date: '2026-02-24'
+  likes: 905
+  text: 'The most effective technique I''ve found to improve Claude Code''s output
+    is 20 years old:
+
+
+    Write a failing test first.
+
+
+    Here''s how I use it: https://t.co/KmsphCXs8y'
+  url: https://x.com/mattpocockuk/status/2025935480609468862
+- author: '@mattpocockuk'
+  date: '2026-02-24'
+  likes: 151
+  text: 'Spend this morning''s usage allowance building a thumbnail creator
+
+
+    Pretty freaking great IMO https://t.co/V0ssearBmP'
+  url: https://x.com/mattpocockuk/status/2025929472633876912
+- author: '@mattpocockuk'
+  date: '2026-02-24'
+  likes: 281
+  text: 'RGR + Claude Code is so good.
+
+
+    Red test -&gt; Implementation -&gt; Green test
+
+
+    ...is pretty hard to cheat for an LLM. Gives me a lot of confidence to move fast.'
+  url: https://x.com/mattpocockuk/status/2025893402827489496
+- author: '@ryancarson'
+  date: '2026-02-24'
+  likes: 298
+  text: "Great video. \n\nReminded me to do a hard-prune of all my agents md files.\
+    \ \n\nOpened them in vscode and cut cut cut."
+  url: https://x.com/ryancarson/status/2025993265732854132
+- author: '@ryancarson'
+  date: '2026-02-24'
+  likes: 14
+  text: Great opportunity to work on a big problem with an awesome team.
+  url: https://x.com/ryancarson/status/2025900382396768708
