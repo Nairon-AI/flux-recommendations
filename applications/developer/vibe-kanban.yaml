@@ -1,0 +1,66 @@
+name: vibe-kanban
+category: application
+tagline: "Kanban board to orchestrate AI coding agents"
+
+description: |
+  Vibe Kanban is an open-source web-based Kanban interface for orchestrating multiple AI coding agents (Claude Code, Codex, Gemini CLI, Amp). Track task status, switch between agents, run them in parallel or sequence, and centralize MCP configs. Supports remote projects via SSH.
+
+use_cases:
+  - Visual task management for AI agent work
+  - Switch between different coding agents easily
+  - Run agents in parallel or sequence
+  - Track which tasks agents are working on
+  - Centralize MCP configurations
+  - Access remote projects via SSH
+
+prerequisites:
+  - Node.js / npm
+  - At least one CLI coding agent authenticated
+
+install:
+  type: npm
+  command: |
+    npx vibe-kanban
+
+verification:
+  type: manual
+  success_indicator: "Vibe Kanban web UI opens in browser"
+
+related_tools:
+  - conductor
+  - superset
+  - decapod
+
+resources:
+  - url: https://www.vibekanban.com/
+    type: homepage
+  - url: https://github.com/BloopAI/vibe-kanban
+    type: github
+
+added_date: 2026-02-25
+source: manual
+
+ratings:
+  usefulness: 5
+  setup_difficulty: 1
+
+tags:
+  - multi-agent
+  - orchestration
+  - parallel-development
+  - kanban
+  - web-ui
+  - open-source
+  - agent-agnostic
+  - remote-ssh
+
+sdlc_phase: implementation
+solves: "No visual interface for tracking and orchestrating multiple AI coding agents"
+
+pricing:
+  model: open-source
+  details: "Free and open-source. Apache 2.0 license."
+
+mentions:
+  - author: "@addyosmani"
+    text: "Vibe Kanban: orchestrate multiple AI coding agents in parallel. Free and 100% open-source!"

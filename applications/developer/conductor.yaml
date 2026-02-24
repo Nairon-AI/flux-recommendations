@@ -1,0 +1,66 @@
+name: conductor
+category: application
+tagline: "Run a team of coding agents on your Mac"
+
+description: |
+  Conductor is a Mac app for orchestrating teams of Claude Code and Codex agents in parallel. Each agent gets an isolated git worktree workspace. Built-in diff viewer for reviewing changes before merging.
+
+use_cases:
+  - Run multiple Claude Code/Codex instances simultaneously
+  - Isolate agent work in separate git worktrees
+  - Review and merge changes from multiple agents
+  - Coordinate parallel development tasks
+
+prerequisites:
+  - macOS
+  - Claude Code or Codex CLI installed
+
+install:
+  type: manual
+  command: |
+    # Download from https://conductor.build/
+    # Or via Homebrew (if available)
+
+verification:
+  type: manual
+  success_indicator: "Conductor app launches and connects to agents"
+
+related_tools:
+  - superset
+  - vibe-kanban
+  - decapod
+
+resources:
+  - url: https://conductor.build/
+    type: homepage
+  - url: https://docs.conductor.build/
+    type: docs
+
+added_date: 2026-02-25
+source: manual
+
+ratings:
+  usefulness: 5
+  setup_difficulty: 2
+
+tags:
+  - multi-agent
+  - orchestration
+  - parallel-development
+  - git-worktree
+  - claude-code
+  - codex
+  - mac-app
+
+sdlc_phase: implementation
+solves: "Managing multiple AI coding agents requires complex terminal juggling"
+
+pricing:
+  model: freemium
+  details: "Free tier available. Check conductor.build for Pro pricing."
+
+mentions:
+  - author: "@nexxel"
+    text: "gave this a try and holy shit. this is a new productivity unlock"
+  - author: "Zach Blume (Stripe)"
+    text: "I've been using Conductor every day for a while now and it's the future. The last time I felt this strongly about a developer tool was Vercel and Supabase."

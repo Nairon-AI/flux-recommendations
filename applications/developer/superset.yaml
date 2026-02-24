@@ -1,0 +1,61 @@
+name: superset
+category: application
+tagline: "Run 10+ parallel coding agents on your machine"
+
+description: |
+  Superset is an open-source Mac terminal that orchestrates CLI-based coding agents (Claude Code, Codex, Aider, OpenCode) in parallel. Each agent runs in its own isolated git worktree. Features include persistent terminal sessions, built-in diff viewer, and IDE integration (VS Code, Cursor, JetBrains, Xcode).
+
+use_cases:
+  - Run 10+ coding agents in parallel
+  - Isolate agent work with git worktree per agent
+  - Survive crashes with persistent daemon sessions
+  - Review changes with built-in diff viewer
+  - Forward ports from agent workspaces
+
+prerequisites:
+  - macOS
+  - At least one CLI coding agent (Claude Code, Codex, Aider, OpenCode)
+
+install:
+  type: manual
+  command: |
+    # Download from https://superset.sh/
+    # Open source: https://github.com/nicholasgriffintn/superset
+
+verification:
+  type: manual
+  success_indicator: "Superset terminal launches and can create workspaces"
+
+related_tools:
+  - conductor
+  - vibe-kanban
+  - decapod
+
+resources:
+  - url: https://superset.sh/
+    type: homepage
+  - url: https://github.com/nicholasgriffintn/superset
+    type: github
+
+added_date: 2026-02-25
+source: manual
+
+ratings:
+  usefulness: 5
+  setup_difficulty: 2
+
+tags:
+  - multi-agent
+  - orchestration
+  - parallel-development
+  - git-worktree
+  - terminal
+  - open-source
+  - agent-agnostic
+
+sdlc_phase: implementation
+solves: "Running multiple CLI agents requires complex worktree and session management"
+
+pricing:
+  model: open-source
+  details: "Free tier + Pro $20/seat/mo. Apache 2.0 license."
