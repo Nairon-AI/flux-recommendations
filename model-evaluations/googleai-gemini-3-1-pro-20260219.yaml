@@ -1,0 +1,72 @@
+model_name: Gemini 3.1 Pro
+lab: GoogleAI
+release_date: '2026-02-19T19:54:19Z'
+evaluation_window:
+  start: '2026-02-19T19:54:19Z'
+  end: '2026-02-22T19:54:19Z'
+  days: 3
+tweet_count: 10
+sentiment_score: 50
+use_cases:
+- domain: coding
+  rating: 2
+  evidence:
+  - https://x.com/Replit/status/2024578806208745637
+- domain: frontend
+  rating: 2
+  evidence:
+  - https://x.com/jrgarciadev/status/2025571859580813736
+  - https://x.com/ann_nnng/status/2025149254449463561
+limitations: []
+sources:
+- url: https://x.com/Google/status/2024598510499426433
+  author: '@Google'
+  likes: 17533
+  retweets: 1179
+  views: 1484482
+- url: https://x.com/Replit/status/2024578806208745637
+  author: '@Replit'
+  likes: 8991
+  retweets: 615
+  views: 5638663
+- url: https://x.com/jrgarciadev/status/2025195992526500050
+  author: '@jrgarciadev'
+  likes: 8663
+  retweets: 414
+  views: 560825
+- url: https://x.com/jrgarciadev/status/2025571859580813736
+  author: '@jrgarciadev'
+  likes: 5027
+  retweets: 301
+  views: 371703
+- url: https://x.com/MengTo/status/2025508242546413899
+  author: '@MengTo'
+  likes: 4402
+  retweets: 241
+  views: 313296
+- url: https://x.com/mattiapomelli/status/2024896819927404894
+  author: '@mattiapomelli'
+  likes: 3001
+  retweets: 113
+  views: 389185
+- url: https://x.com/viktoroddy/status/2024832167164133766
+  author: '@viktoroddy'
+  likes: 1871
+  retweets: 152
+  views: 113379
+- url: https://x.com/kevinkern/status/2024936336038195382
+  author: '@kevinkern'
+  likes: 1430
+  retweets: 51
+  views: 116358
+- url: https://x.com/perplexity_ai/status/2024590462057922864
+  author: '@perplexity_ai'
+  likes: 1295
+  retweets: 59
+  views: 84593
+- url: https://x.com/ann_nnng/status/2025149254449463561
+  author: '@ann_nnng'
+  likes: 997
+  retweets: 51
+  views: 58254
+generated_at: '2026-02-25T10:28:54Z'

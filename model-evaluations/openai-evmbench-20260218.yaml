@@ -1,0 +1,99 @@
+model_name: EVMbench
+lab: OpenAI
+release_date: '2026-02-18T18:46:44Z'
+evaluation_window:
+  start: '2026-02-18T18:46:44Z'
+  end: '2026-02-21T18:46:44Z'
+  days: 3
+tweet_count: 11
+sentiment_score: 33
+use_cases:
+- domain: coding
+  rating: 4
+  evidence:
+  - https://x.com/0xalpo/status/2024196291354624141
+  - https://x.com/mattunchi/status/2024317623627108776
+  - https://x.com/coinbureau/status/2024245386345664977
+- domain: frontend
+  rating: 3
+  evidence:
+  - https://x.com/saintniko/status/2024205288497422833
+  - https://x.com/mattunchi/status/2024317623627108776
+  - https://x.com/heathcliff_eth/status/2024882010284552463
+- domain: backend
+  rating: 2
+  evidence:
+  - https://x.com/mattunchi/status/2024317623627108776
+  - https://x.com/Altcoinist/status/2024456784367296614
+- domain: architecture
+  rating: 2
+  evidence:
+  - https://x.com/mattunchi/status/2024317623627108776
+- domain: agents
+  rating: 4
+  evidence:
+  - https://x.com/OpenAI/status/2024193883748651102
+  - https://x.com/zoomerfied/status/2024195148289098092
+  - https://x.com/0xalpo/status/2024196291354624141
+limitations:
+- category: latency
+  description: Community reported latency-related issues
+  evidence:
+  - https://x.com/heathcliff_eth/status/2024882010284552463
+sources:
+- url: https://x.com/OpenAI/status/2024193883748651102
+  author: '@OpenAI'
+  likes: 8796
+  retweets: 1291
+  views: 2369759
+- url: https://x.com/saintniko/status/2024205288497422833
+  author: '@saintniko'
+  likes: 2067
+  retweets: 180
+  views: 363714
+- url: https://x.com/zoomerfied/status/2024195148289098092
+  author: '@zoomerfied'
+  likes: 755
+  retweets: 83
+  views: 140644
+- url: https://x.com/0xalpo/status/2024196291354624141
+  author: '@0xalpo'
+  likes: 619
+  retweets: 73
+  views: 155434
+- url: https://x.com/AltcoinDaily/status/2024228840726548728
+  author: '@AltcoinDaily'
+  likes: 344
+  retweets: 65
+  views: 19737
+- url: https://x.com/mattunchi/status/2024317623627108776
+  author: '@mattunchi'
+  likes: 351
+  retweets: 50
+  views: 39682
+- url: https://x.com/coinbureau/status/2024245386345664977
+  author: '@coinbureau'
+  likes: 289
+  retweets: 57
+  views: 23687
+- url: https://x.com/heathcliff_eth/status/2024882010284552463
+  author: '@heathcliff_eth'
+  likes: 291
+  retweets: 46
+  views: 4075
+- url: https://x.com/0xalpo/status/2024196295746109762
+  author: '@0xalpo'
+  likes: 181
+  retweets: 18
+  views: 11141
+- url: https://x.com/Altcoinist/status/2024456784367296614
+  author: '@Altcoinist'
+  likes: 130
+  retweets: 31
+  views: 5446
+- url: https://x.com/Mintttch2/status/2024406901547819401
+  author: '@Mintttch2'
+  likes: 81
+  retweets: 37
+  views: 4624
+generated_at: '2026-02-25T10:28:35Z'
