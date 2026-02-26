@@ -1,0 +1,87 @@
+model_name: Gemini 3.1 Pro
+lab: GoogleAI
+release_date: '2026-02-19T19:54:19Z'
+evaluation_window:
+  start: '2026-02-19T19:54:19Z'
+  end: '2026-02-22T19:54:19Z'
+  days: 3
+tweet_count: 12
+sentiment_score: 50
+use_cases:
+- domain: coding
+  rating: 2
+  evidence:
+  - https://x.com/Replit/status/2024578806208745637
+  - https://x.com/GoogleAI/status/2024573281680887823
+- domain: frontend
+  rating: 2
+  evidence:
+  - https://x.com/jrgarciadev/status/2025571859580813736
+  - https://x.com/GoogleAI/status/2024573281680887823
+- domain: reasoning
+  rating: 2
+  evidence:
+  - https://x.com/GoogleAI/status/2024573281680887823
+limitations: []
+sources:
+- url: https://x.com/Google/status/2024598510499426433
+  author: '@Google'
+  likes: 17535
+  retweets: 1179
+  views: 1487768
+- url: https://x.com/Replit/status/2024578806208745637
+  author: '@Replit'
+  likes: 9636
+  retweets: 666
+  views: 6262526
+- url: https://x.com/jrgarciadev/status/2025195992526500050
+  author: '@jrgarciadev'
+  likes: 8669
+  retweets: 414
+  views: 563804
+- url: https://x.com/jrgarciadev/status/2025571859580813736
+  author: '@jrgarciadev'
+  likes: 5046
+  retweets: 304
+  views: 377188
+- url: https://x.com/MengTo/status/2025508242546413899
+  author: '@MengTo'
+  likes: 4405
+  retweets: 242
+  views: 315011
+- url: https://x.com/MengTo/status/2024761123049001103
+  author: '@MengTo'
+  likes: 3455
+  retweets: 203
+  views: 259204
+- url: https://x.com/mattiapomelli/status/2024896819927404894
+  author: '@mattiapomelli'
+  likes: 3004
+  retweets: 113
+  views: 390157
+- url: https://x.com/GoogleAI/status/2024573281680887823
+  author: '@GoogleAI'
+  likes: 1941
+  retweets: 189
+  views: 179357
+- url: https://x.com/Abmankendrick/status/2024867845482463418
+  author: '@Abmankendrick'
+  likes: 2059
+  retweets: 146
+  views: 143700
+- url: https://x.com/viktoroddy/status/2024832167164133766
+  author: '@viktoroddy'
+  likes: 1876
+  retweets: 152
+  views: 114266
+- url: https://x.com/daniel_z1909/status/2024619824723153195
+  author: '@daniel_z1909'
+  likes: 1625
+  retweets: 176
+  views: 125616
+- url: https://x.com/kevinkern/status/2024936336038195382
+  author: '@kevinkern'
+  likes: 1431
+  retweets: 51
+  views: 116459
+generated_at: '2026-02-26T10:12:04Z'
