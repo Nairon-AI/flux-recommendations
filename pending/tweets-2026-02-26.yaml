@@ -1,0 +1,347 @@
+- author: '@dani_avila7'
+  date: '2026-02-26'
+  likes: 9
+  text: 'Claude Code Templates on GitHub has grown to over 2K forks and 21K stars
+
+
+    Each week, several good PRs arrive, and I review them to understand how the SKILLs
+    being built are evolving.
+
+
+    Humanly, it’s impossible to fully retain and analyze that amount of information
+    manually, so I’m'
+  url: https://x.com/dani_avila7/status/2026884614082421013
+- author: '@dani_avila7'
+  date: '2026-02-26'
+  likes: 5
+  text: 'This is exactly what I meant when I said you should never rely on the first
+    release of a piece of software.
+
+
+    Wait for the LTS. Let the opensource community battle-test and harden it, even
+    if contributors come from rival companies'
+  url: https://x.com/dani_avila7/status/2026865943096222073
+- author: '@dani_avila7'
+  date: '2026-02-26'
+  likes: 74
+  text: 'Perplexity Computer just opened a PR on my repo, starting with a simple task...
+    improving SEO
+
+
+    What stands out is how it executes.
+
+
+    Exploring with Gemini, then switching to Opus when it’s time to actually write
+    code (I haven’t seen it use Codex or Grok)
+
+
+    I’m going to ramp up the '
+  url: https://x.com/dani_avila7/status/2026776491015442925
+- author: '@dani_avila7'
+  date: '2026-02-26'
+  likes: 13
+  text: "Some of my daily tasks already feel like this. \n\nI don’t watch the AI do\
+    \ them anymore… I just know they’ll get done.\n\nThe GUI disappeared, and that\
+    \ feels completely normal now.\n\nRead the article \U0001F447 https://t.co/KWFzluWYJX"
+  url: https://x.com/dani_avila7/status/2026748690837447114
+- author: '@dani_avila7'
+  date: '2026-02-26'
+  likes: 544
+  text: 'Testing Perplexity Computer 👀
+
+
+    So far, the flow is basically... you start the agent, let it run, and wait until
+    it finishes the tasks.
+
+
+    What I’m seeing in each agent’s execution is that it selects the model depending
+    on the task.
+
+
+    In this example, it handled several tasks with Ge'
+  url: https://x.com/dani_avila7/status/2026702478801252697
+- author: '@dani_avila7'
+  date: '2026-02-26'
+  likes: 152
+  text: "Perplexity just dropped Computer!\n\nThink OpenClaw but multi-model, cloud-based,\
+    \ and connected to your entire stack. \n\nNo local setup, no single model lock-in.\n\
+    \nIt picks the best model for each step on its own. Claude for reasoning, Gemini\
+    \ for research, Grok for speed. \n\nRuns auto"
+  url: https://x.com/dani_avila7/status/2026696864721154221
+- author: '@pvncher'
+  date: '2026-02-26'
+  likes: 30
+  text: 'I put a ton of work into making @RepoPrompt a lot more accessible, and I’ve
+    had several people reach out that they started daily driving it as their agent
+    now with the 2.0 update
+
+
+    It’s just a really great experience, and you can bring your subs in a legit way!'
+  url: https://x.com/pvncher/status/2026852278376816718
+- author: '@pvncher'
+  date: '2026-02-26'
+  likes: 22
+  text: 'Just released @RepoPrompt 2.0.10 with full support for @ file tagging and
+    skill invocation via slash commands.
+
+
+    The agent feels great to use with both codex and Claude. Give it a try if you
+    haven’t already!'
+  url: https://x.com/pvncher/status/2026782576338207184
+- author: '@nummanali'
+  date: '2026-02-26'
+  likes: 12
+  text: "Added a PR for support for @Kimi_Moonshot, @Zai_org  and @MiniMax_AI coding\
+    \ plans to the new Hermes Agent from @NousResearch \n\nThe feature was referenced\
+    \ through Pi Agent provider system from @badlogicgames \n\nDone with Codex CLI\
+    \ multi agent system \n\nYou can just build things http"
+  url: https://x.com/nummanali/status/2026814113028993341
+- author: '@nummanali'
+  date: '2026-02-26'
+  likes: 5
+  text: "Do you have a video or ad in mind? \n\nI have access to flow with lots of\
+    \ credits \n\nWould love to experiment and build out ideas \n\nDM or Comment,\
+    \ open to both \n\nI like expanding my skillset in AI and media generation hasn’t\
+    \ been touched in a while"
+  url: https://x.com/nummanali/status/2026783612247371842
+- author: '@nummanali'
+  date: '2026-02-26'
+  likes: 24
+  text: "For anything non coding related, currently Anthropic wins from a generalists\
+    \ perspective \n\nIf your teams new to AI and has many functions, the easiest\
+    \ foot in the door is with Claude \n\nIt’s fast, good at writing, design and dopamine\
+    \ inducing \n\n+1 for this new scheduling feature"
+  url: https://x.com/nummanali/status/2026782614955118683
+- author: '@nummanali'
+  date: '2026-02-26'
+  likes: 14
+  text: It never should’ve went past 4GB in the first place
+  url: https://x.com/nummanali/status/2026781608355750374
+- author: '@nummanali'
+  date: '2026-02-26'
+  likes: 23
+  text: "Well done @Teknium \n\nThis is the most innovative agent implementations\
+    \ I’ve seen\n\nHybrid between coding agent and assistant\n\nSession storage is\
+    \ DB based and skills are first class primitives \n\nGateway built in too\n\n\
+    You even use it for your RL pipeline with Atropos \U0001F914"
+  url: https://x.com/nummanali/status/2026774225994776634
+- author: '@nummanali'
+  date: '2026-02-26'
+  likes: 17
+  text: "Find myself reposting Andrej every other day now\n\nRead this to get a sense\
+    \ of where we are and the direction we should go in \n\nAgentic engineering -\
+    \ just remember that \n\nNot slop shop drops but architected solutions delivered\
+    \ in minutes"
+  url: https://x.com/nummanali/status/2026753066314133791
+- author: '@nummanali'
+  date: '2026-02-26'
+  likes: 105
+  text: 'Enable Remote sessions by default in Claude Code
+
+
+    They appear in the mobile app and desktop app session list by default then
+
+
+    Really good if you would forget to run /remote-connect or in the middle of a session
+    and need to pop out https://t.co/UZN9Wf7nul'
+  url: https://x.com/nummanali/status/2026660350045692381
+- author: '@nummanali'
+  date: '2026-02-26'
+  likes: 109
+  text: 'Sigh
+
+
+    Why is Opus so lazy
+
+
+    Codex found 12 issues with it''s work
+
+
+    If GPT 5.3 releases with better product and design sense then Opus will no longer
+    be needed https://t.co/BaK1Ah2pLK'
+  url: https://x.com/nummanali/status/2026647273522835780
+- author: '@nummanali'
+  date: '2026-02-26'
+  likes: 9
+  text: LLM psychosis or truly remarkable?
+  url: https://x.com/nummanali/status/2026643735866479033
+- author: '@nummanali'
+  date: '2026-02-26'
+  likes: 216
+  text: 'I have 3x Claude Code passes for a weeks free access
+
+
+    Drop a comment and I''ll randomly select three tomorrow https://t.co/bXqrkZK7cz'
+  url: https://x.com/nummanali/status/2026640911480836523
+- author: '@nummanali'
+  date: '2026-02-26'
+  likes: 127
+  text: "Re-write your repo to be agent native \n\nHave Claude Code and Codex review\
+    \ your current codebase\n\nScore it for being agent native\n- fully typed\n- traversable\
+    \ \n- test coverage\n- feedback loops\n- self documenting \n\nThen ask for refactoring\
+    \ plan\n\nYou need to do this to stay ahead"
+  url: https://x.com/nummanali/status/2026637461732929635
+- author: '@justinsunyt'
+  date: '2026-02-26'
+  likes: 1
+  text: claude writing me a binary patcher so i can play VNs on my mac https://t.co/Sp9vusaNSK
+  url: https://x.com/justinsunyt/status/2026953494486519963
+- author: '@justinsunyt'
+  date: '2026-02-26'
+  likes: 21
+  text: 'RT @capydotai: GPT-5.3 Codex and Gemini 3.1 Pro now available in Capy https://t.co/O8zFPgqPl4'
+  url: https://x.com/justinsunyt/status/2026727584638316808
+- author: '@realmcore_'
+  date: '2026-02-26'
+  likes: 9
+  text: 'Figured something really nice out
+
+
+    The new meta for code gen will look something like this:
+
+
+    1. Spawn X agents
+
+    2. Spawn Y more agents
+
+    3. While Y agents run
+
+    - Review X agents code
+
+    - Spawn Z more agents
+
+    4. Repeat 1-3 until death
+
+    5. Launch N agents overnight
+
+    6. Review N agent code'
+  url: https://x.com/realmcore_/status/2026942012575117411
+- author: '@realmcore_'
+  date: '2026-02-26'
+  likes: 874
+  text: 'RT @lawrencecchen: Introducing cmux: the open-source terminal built for coding
+    agents.
+
+
+    - Vertical tabs
+
+    - Blue rings around panes that need…'
+  url: https://x.com/realmcore_/status/2026923145157030021
+- author: '@EastlondonDev'
+  date: '2026-02-26'
+  likes: 6
+  text: Minecraft on cloudflare containers doesn’t look so stupid now!!
+  url: https://x.com/EastlondonDev/status/2026723809491906905
+- author: '@__morse'
+  date: '2026-02-26'
+  likes: 19
+  text: 'kimaki is now ready to support opencode running in remote machines, so you
+    can start sessions in a sandbox or a different machine
+
+
+    what sandbox services should I support first?
+
+
+    It will be available as a /new-sandbox command, it will create a Discord thread
+    associated with a sand'
+  url: https://x.com/__morse/status/2026604611407093924
+- author: '@justsisyphus'
+  date: '2026-02-26'
+  likes: 68
+  text: 'We’ve identified industrial-scale awesome use cases with @deepseek_ai , @Kimi_Moonshot
+    , and @MiniMax_AI.
+
+
+    Those use cases can be created with @AnthropicAI if they have not banned @opencode'
+  url: https://x.com/justsisyphus/status/2026662203345211573
+- author: '@justsisyphus'
+  date: '2026-02-26'
+  likes: 66
+  text: 'We told you this a month ago.
+
+    Use oh-my-opencode.
+
+
+    /init-deep
+
+
+    Told you guys'
+  url: https://x.com/justsisyphus/status/2026631433159401978
+- author: '@justsisyphus'
+  date: '2026-02-26'
+  likes: 6
+  text: 'RT @dillon_mulroy: @stevoland1 @BHolmesDev i cribbed the baseline from oh-my-opencode'
+  url: https://x.com/justsisyphus/status/2026630772900376863
+- author: '@parcadei'
+  date: '2026-02-26'
+  likes: 2
+  text: 'RT @projectionheart: .@parcadei musings on memory https://t.co/071uOFIIns'
+  url: https://x.com/parcadei/status/2026885005167694139
+- author: '@parcadei'
+  date: '2026-02-26'
+  likes: 20
+  text: 'currently integrating Ouros into my Hermes Agent
+
+
+    so he can get an infinite memory in his terminal RLM-style
+
+
+    this is gonna be an exciting week'
+  url: https://x.com/parcadei/status/2026877743011410215
+- author: '@mattpocockuk'
+  date: '2026-02-26'
+  likes: 334
+  text: 'My terminal history:
+
+
+    gh issue create
+
+    gh issue create
+
+    pnpm ralph
+
+    gh issue create
+
+    pnpm ralph'
+  url: https://x.com/mattpocockuk/status/2026669944553816275
+- author: '@mattpocockuk'
+  date: '2026-02-26'
+  likes: 103
+  text: 'What are the biggest ways you''ve seen people screw up coding with AI?
+
+
+    I.e. they think the AI is bad, but really they''re just holding it wrong'
+  url: https://x.com/mattpocockuk/status/2026620167405305913
+- author: '@mattpocockuk'
+  date: '2026-02-26'
+  likes: 1126
+  text: 'Claude Code: "npm add ..."
+
+
+    You: "Use pnpm, you idiot!"
+
+
+    *adds it to CLAUDE​.md*
+
+
+    Claude: "npm add ..."
+
+
+    There''s a better way:'
+  url: https://x.com/mattpocockuk/status/2026612337440870781
+- author: '@ryancarson'
+  date: '2026-02-26'
+  likes: 95
+  text: '<rant>
+
+
+    MY KINGDOM for one agent that can actually do e2e design -> pixel-perfect frontend
+    code (including auth so it can login to the app).
+
+
+    I''m currently using @paper + Claude Code + Codex CLI + Codex Mac App + agent-browser
+    + Claude Code Chrome extension + ...
+
+
+    It''s ridiculous'
+  url: https://x.com/ryancarson/status/2026648401320739286
