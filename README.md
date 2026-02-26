@@ -1,8 +1,8 @@
-# N-bench Recommendations
+# Flux Recommendations
 
 Curated database of workflow optimizations for AI-augmented development.
 
-Used by [`/nbench:improve`](https://github.com/Nairon-AI/n-bench) to recommend tools, plugins, and patterns.
+Used by [`/flux:improve`](https://github.com/Nairon-AI/flux) to recommend tools, plugins, and patterns.
 
 ## Categories
 
@@ -27,12 +27,12 @@ See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines. Each recommendation is a 
 
 ## How It Works
 
-1. User runs `/nbench:improve`
-2. N-bench analyzes their environment (repo, MCPs, sessions)
+1. User runs `/flux:improve`
+2. Flux analyzes their environment (repo, MCPs, sessions)
 3. Fetches recommendations from this repo
 4. Claude determines relevance for each recommendation
 5. User selects which to install
-6. N-bench installs and verifies
+6. Flux installs and verifies
 
 ## Model Evaluation Radar
 
