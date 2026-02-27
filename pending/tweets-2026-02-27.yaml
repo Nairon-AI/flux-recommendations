@@ -1,0 +1,383 @@
+- author: '@dani_avila7'
+  date: '2026-02-27'
+  likes: 27
+  text: Then, from the same CLI, I connected all the other https://t.co/LzgxzEp9ew
+    MCPs as well
+  url: https://x.com/dani_avila7/status/2027242547446239443
+- author: '@dani_avila7'
+  date: '2026-02-27'
+  likes: 19
+  text: 'Great news! 👏👏
+
+
+    Starting the weekend by updating Claude Code and enjoying the rate limit reset.'
+  url: https://x.com/dani_avila7/status/2027233198996853035
+- author: '@dani_avila7'
+  date: '2026-02-27'
+  likes: 10
+  text: "Playing around with Claude Health to motivate myself… \U0001F923 \n\nI guess\
+    \ it didn’t count the brutal CrossFit class I crushed today! https://t.co/rM82ITHGMk"
+  url: https://x.com/dani_avila7/status/2027227299574157402
+- author: '@dani_avila7'
+  date: '2026-02-27'
+  likes: 71
+  text: 'Something interesting about Perplexity Computer… every task starts by loading
+    Skills
+
+
+    This means that at the beginning they run a Skill search, similar to a “Tool search
+    tool” mechanism.
+
+
+    My assumption is that a similar selection process happens when choosing which
+    model executes'
+  url: https://x.com/dani_avila7/status/2027148371937333696
+- author: '@dani_avila7'
+  date: '2026-02-27'
+  likes: 109
+  text: 'Key detail I just discovered in Claude Code
+
+
+    You can manage your https://t.co/vbpTd8Z8qa account’s MCP connections directly
+    from the CLI.
+
+
+    This means the handling of different Claude environments is becoming centralized...
+    CLI, Web, Desktop, and Mobile.
+
+
+    I love this because I try'
+  url: https://x.com/dani_avila7/status/2027111853503947020
+- author: '@dani_avila7'
+  date: '2026-02-27'
+  likes: 8
+  text: 'Somewhere in Cupertino:
+
+
+    let baseHours = Array(1...12)
+
+    let baseMinutes = Array(0...59)
+
+
+    Looks infinite to me… Shipped and iPhone++'
+  url: https://x.com/dani_avila7/status/2027069437631730089
+- author: '@pvncher'
+  date: '2026-02-27'
+  likes: 48
+  text: Would be pretty bad if ai is good enough to displace labour but not good enough
+    to make novel scientific discoveries
+  url: https://x.com/pvncher/status/2027224583615435070
+- author: '@pvncher'
+  date: '2026-02-27'
+  likes: 20
+  text: If code is free why are people forking OS repos?
+  url: https://x.com/pvncher/status/2027063839741604277
+- author: '@pvncher'
+  date: '2026-02-27'
+  likes: 7
+  text: 'RT @kwaude: @RepoPrompt is honestly so so good as an agent harness. I have
+    been using Codex 5.3 pretty much exclusively for the last month,…'
+  url: https://x.com/pvncher/status/2027000575930290277
+- author: '@nummanali'
+  date: '2026-02-27'
+  likes: 2
+  text: "For a second I thought April fools \n\nBut it’s real!\n\n“once approved,\
+    \ to expand to markets around the world, including Dubai, New York, Los Angeles,\
+    \ the United Kingdom, and Japan.”"
+  url: https://x.com/nummanali/status/2027307182329385001
+- author: '@nummanali'
+  date: '2026-02-27'
+  likes: 7
+  text: 'How''d I miss this one!!
+
+
+    Codex has a theme picker now!?? https://t.co/Gzs3PfyDxA'
+  url: https://x.com/nummanali/status/2027291022099648879
+- author: '@nummanali'
+  date: '2026-02-27'
+  likes: 9
+  text: "The latest version of Codex got a new lick of color!\n\nI never knew how\
+    \ much I would like a popping terminal \n\nThe colors are pastel with a hint of\
+    \ neon\n\nLove it https://t.co/mobYGzjpdw"
+  url: https://x.com/nummanali/status/2027290297013592529
+- author: '@nummanali'
+  date: '2026-02-27'
+  likes: 4
+  text: "The support from @thdxr for @DarioAmodei speaks volumes \n\nHe’s an open\
+    \ critic of @AnthropicAI approach to consumerism so when he aligns it must point\
+    \ to a generally correct stance IMO\n\nFYI he is the lead of @opencode if you\
+    \ didn’t know and a respected voice on X https://t.co/S8AV"
+  url: https://x.com/nummanali/status/2027281849312006635
+- author: '@nummanali'
+  date: '2026-02-27'
+  likes: 7
+  text: 'CMUX Founders Edition
+
+
+    Guess who’s user number one https://t.co/2AjV2ortb6'
+  url: https://x.com/nummanali/status/2026987450195710337
+- author: '@nummanali'
+  date: '2026-02-27'
+  likes: 298
+  text: "I think I've found the best ADE for coding agents\n\n- Native Ghostty Lib\
+    \ \n- GPU Accelerated \n- Notifications support\n- Keyboard shortcuts\n- Supports\
+    \ all agents\n- Browser built in\n- MacOS Native \n- Zero Worktrees \n\nWebsite\
+    \ clean, docs are on point and OSS\n\nhttps://t.co/cR5oUYzGcG h"
+  url: https://x.com/nummanali/status/2026968675597598875
+- author: '@realmcore_'
+  date: '2026-02-27'
+  likes: 2
+  text: Probably the biggest blocker I've seen from talking to people about how they
+    automate their coding stack is having a habit of learning about the problem space
+    by running their implementation process like a greedy algo
+  url: https://x.com/realmcore_/status/2027128634792968674
+- author: '@realmcore_'
+  date: '2026-02-27'
+  likes: 145
+  text: 'Combining sonnet 4.6 with codex 5.3 feels like an opus 4.5 class improvement
+    to my workflow.
+
+
+    I''ve solved bugs that have existed in our system for months... in like 30 min'
+  url: https://x.com/realmcore_/status/2027102743731786159
+- author: '@tokengobbler'
+  date: '2026-02-27'
+  likes: 69
+  text: When your AI strategy is a dropdown menu
+  url: https://x.com/tokengobbler/status/2027089557938717069
+- author: '@tokengobbler'
+  date: '2026-02-27'
+  likes: 8
+  text: 'Excited to host OpenClaw Demo Night on the 5th with @AITinkerers London and
+    @attio !
+
+
+    Yes it''s hype, yes I''m claw-pilled, yes you should come if you are too.
+
+
+    https://t.co/tLmxpSmTkR'
+  url: https://x.com/tokengobbler/status/2027058115951174056
+- author: '@tokengobbler'
+  date: '2026-02-27'
+  likes: 10
+  text: Guadalajara
+  url: https://x.com/tokengobbler/status/2027057199403401359
+- author: '@tokengobbler'
+  date: '2026-02-27'
+  likes: 2
+  text: Incredible dataset of office workers staring at fridges for far too long
+  url: https://x.com/tokengobbler/status/2027057063252095167
+- author: '@tokengobbler'
+  date: '2026-02-27'
+  likes: 7
+  text: 'Don''t use SQLite
+
+
+    https://t.co/0t1DiisnIP'
+  url: https://x.com/tokengobbler/status/2027044210310824434
+- author: '@tokengobbler'
+  date: '2026-02-27'
+  likes: 2
+  text: Refreshing to see user feedback instead of the usual mix of vague posts and
+    paid shills on the tl
+  url: https://x.com/tokengobbler/status/2026989650007441581
+- author: '@EastlondonDev'
+  date: '2026-02-27'
+  likes: 426
+  text: 'RT @bercankilic: Nvidia has quietly solved robotics end-to-end with their
+    last three releases. Incredible.'
+  url: https://x.com/EastlondonDev/status/2027093940994789850
+- author: '@EastlondonDev'
+  date: '2026-02-27'
+  likes: 4
+  text: 'RT @artemmurzin: for everybody on claude code 2.1.59, you need to downgrade
+    NOW
+
+
+    this version overcounts token usage by 10x, some ppl repor…'
+  url: https://x.com/EastlondonDev/status/2027077060942762039
+- author: '@kevinkern'
+  date: '2026-02-27'
+  likes: 3
+  text: 'finally had some time to setup "sonja" my openclaw agent for accounting.
+
+
+    first, I started codex and prepared the inbox for ''sonja'' the way a sysadmin
+    would for a new hire.
+
+
+    used the gog CLI with codex and created an onboarding plan:
+
+
+    Prepare:
+
+    - cleaned up the inbox
+
+    - added filte'
+  url: https://x.com/kevinkern/status/2027170972827013405
+- author: '@kevinkern'
+  date: '2026-02-27'
+  likes: 0
+  text: guess the 'web' section on derstandard news site will end up being called
+    'AI', since it's mostly about AI anyway. https://t.co/HEIkrFCO4o
+  url: https://x.com/kevinkern/status/2027163297561063608
+- author: '@kevinkern'
+  date: '2026-02-27'
+  likes: 3
+  text: "back from a few days off at the Basel carnival. worked on the multi-agent\
+    \ view for taugentic and built it with the same workflow I use with Codex, but\
+    \ adapted for the app. \n\nsee video below. https://t.co/cCXP5FKhib"
+  url: https://x.com/kevinkern/status/2027152445248311380
+- author: '@justsisyphus'
+  date: '2026-02-27'
+  likes: 14
+  text: 'Sisyphus Labs is live at Hashed Lounge Seoul!
+
+
+    @_junhoyeo and @q_yeon_gyu_kim are hosting advisory sessions for young builders
+    at a conference organized by @minpeterx and @hashed_official -- empowering talents
+    to stretch across the globe.
+
+
+    Next stop is San Francisco 🇺🇸 https://t.'
+  url: https://x.com/justsisyphus/status/2027261835393835517
+- author: '@justsisyphus'
+  date: '2026-02-27'
+  likes: 28
+  text: "hi guys do you have any plans to support this opensource person?\n\nwho made\
+    \ that anthropic ban drama with opencode\n\n@OpenAI @Kimi_Moonshot @Zai_org @MiniMax_AI\
+    \ @deepseek_ai @github \n\n@q_yeon_gyu_kim literally benchmarks all of those models\
+    \ by his hand and money to optimize and uti"
+  url: https://x.com/justsisyphus/status/2027245351804281058
+- author: '@justsisyphus'
+  date: '2026-02-27'
+  likes: 52
+  text: 'RT @q_yeon_gyu_kim: @lydiahallie can i apply too? i am the creator of that
+    oh-my-opencode https://t.co/6v4XFrOaov'
+  url: https://x.com/justsisyphus/status/2027243067976384855
+- author: '@justsisyphus'
+  date: '2026-02-27'
+  likes: 27
+  text: another thing to copy to oh-my-opencode! yay!
+  url: https://x.com/justsisyphus/status/2027240447870148754
+- author: '@parcadei'
+  date: '2026-02-27'
+  likes: 1
+  text: https://t.co/hANuXXnG72
+  url: https://x.com/parcadei/status/2027255809382424739
+- author: '@parcadei'
+  date: '2026-02-27'
+  likes: 285
+  text: "RT @0xSero: Let me make your life better. \n\nDo you spam Claude Code all\
+    \ day? Are you struggling to keep track of all your projects, termina…"
+  url: https://x.com/parcadei/status/2027056655720935925
+- author: '@parcadei'
+  date: '2026-02-27'
+  likes: 1
+  text: what life was like for agents before context engineering became a thing https://t.co/ukSMxyUTgD
+  url: https://x.com/parcadei/status/2027037886382493806
+- author: '@parcadei'
+  date: '2026-02-27'
+  likes: 11
+  text: https://t.co/8mcPXOkYHX
+  url: https://x.com/parcadei/status/2027004014315888679
+- author: '@parcadei'
+  date: '2026-02-27'
+  likes: 22
+  text: 'this is insanely good, the level of quality is 🤌
+
+
+    Claude just become Claudio da Vinci'
+  url: https://x.com/parcadei/status/2027000133246697784
+- author: '@parcadei'
+  date: '2026-02-27'
+  likes: 0
+  text: what a beautiful time to be alive https://t.co/x3MbvMeTq4
+  url: https://x.com/parcadei/status/2026991037508673890
+- author: '@mattpocockuk'
+  date: '2026-02-27'
+  likes: 33
+  text: 'My newsletter is the best place for real engineers (not vibe coders) to become
+    AI Heroes.
+
+
+    The secret sauce to working with AI isn''t some fancy new set of techniques.
+
+
+    It''s good old software fundamentals. RTFM here:
+
+
+    https://t.co/qXCzaJ5MZq https://t.co/4v4RYi7Q8C'
+  url: https://x.com/mattpocockuk/status/2027127225317789981
+- author: '@mattpocockuk'
+  date: '2026-02-27'
+  likes: 159
+  text: 'This guy gets it
+
+
+    The AI Hype Train is just an excuse for me to teach you software fundamentals
+    https://t.co/QG8ib4gsRT'
+  url: https://x.com/mattpocockuk/status/2027114490932642024
+- author: '@mattpocockuk'
+  date: '2026-02-27'
+  likes: 1638
+  text: 'RT @mattpocockuk: The most important thing when you''re working with coding
+    agents:
+
+
+    DO NOT DELEGATE YOUR THINKING
+
+
+    Not only will this make…'
+  url: https://x.com/mattpocockuk/status/2027095171213443276
+- author: '@mattpocockuk'
+  date: '2026-02-27'
+  likes: 660
+  text: 'If you throw AI at a bad codebase, you''re going to get worse results. Garbage
+    in, garbage out.
+
+
+    And holding it together in your head will land you in cognitive debt.
+
+
+    But these problems have a 20-year old solution: deep modules.
+
+
+    Here''s how: https://t.co/9zkEDrs2Ef'
+  url: https://x.com/mattpocockuk/status/2026960849512870063
+- author: '@ryancarson'
+  date: '2026-02-27'
+  likes: 46
+  text: '"Great taste" is cope for humans.'
+  url: https://x.com/ryancarson/status/2027152726598058083
+- author: '@ryancarson'
+  date: '2026-02-27'
+  likes: 285
+  text: "Seriously, just use Agentation for frontend dev work. \n\nSo freaking useful\
+    \ (and it's free).\n\nhttps://t.co/ah5HDf3b3m\n\nWay to go @benjitaylor https://t.co/GclOiIcLit"
+  url: https://x.com/ryancarson/status/2027136292299956335
+- author: '@ryancarson'
+  date: '2026-02-27'
+  likes: 188
+  text: 'I think we''re going to see a lot more of this.
+
+
+    If you''re an information worker, and you''re not using multiple agents to increase
+    your impact, you''re at risk.'
+  url: https://x.com/ryancarson/status/2027134565886693734
+- author: '@ryancarson'
+  date: '2026-02-27'
+  likes: 10
+  text: Is the Singularity here? We're covering the important AI news. Join us! https://t.co/IePiBr75w8
+  url: https://x.com/ryancarson/status/2027060506138493161
+- author: '@ryancarson'
+  date: '2026-02-27'
+  likes: 37
+  text: In case you didn't see it ...
+  url: https://x.com/ryancarson/status/2027047083190911057
+- author: '@ryancarson'
+  date: '2026-02-27'
+  likes: 119
+  text: In this episode I talk about how to setup your repo as a Code Factory so 100%
+    of the code is written and reviewed by agents.
+  url: https://x.com/ryancarson/status/2027041745645580390
