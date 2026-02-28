@@ -1,0 +1,109 @@
+name: ona
+category: application
+tagline: AI software engineers that run autonomously in your infrastructure
+description: |
+  Ona is an AI engineering workforce platform that provides AI software engineers
+  working across the entire development lifecycle. Unlike traditional AI assistants,
+  Ona agents execute autonomously in the background - from task to pull request.
+
+  ## Key Features
+
+  - **Background Agents** - Task in, pull request out. Agents execute end-to-end
+  - **Automations** - Agent fleets at scale, triggered on PRs, schedules, or webhooks
+  - **Connected Environments** - Full cloud environments with tools, network access, permissions
+  - **Governance** - VPC deployment, audit trails, scoped credentials, kernel-level policy enforcement
+  - **Enterprise-Ready** - SOC 2, GDPR compliant, trusted by Fortune 500
+
+  ## Use Cases
+
+  ### Code Migration & Modernization
+  Migrate hundreds of repos in parallel - COBOL, Java & framework upgrades, CI pipelines.
+  Ona does the work, you review the PRs.
+
+  ### AI Code Review
+  Compiles, runs tests, and reviews in a real environment - not just pattern scanning.
+
+  ### Automated CVE Remediation
+  Remediates what your scanner finds across hundreds of repos in isolated environments.
+  Tested, with PRs ready for review.
+
+  ## Why Ona?
+
+  - 4x productivity increase (customer reported)
+  - 83% of PRs co-authored by Ona (top-100 global company case study)
+  - 400+ Python repos modernized in 6 months
+  - 90-95% of migration work automated
+
+  ## Enterprise Customers
+
+  BNY, Blackstone, Vanta, Pearson, EquipmentShare, Hargreaves Lansdown
+
+use_cases:
+  - Large-scale code migrations (COBOL to modern languages)
+  - Framework upgrades across multiple repositories
+  - Automated security vulnerability remediation
+  - AI-powered code review with real environment testing
+  - CI/CD pipeline modernization
+  - Backlog ticket automation at scale
+
+prerequisites:
+  - Enterprise account for full features
+  - Repository access (GitHub, GitLab, etc.)
+
+install:
+  type: manual
+  command: |
+    # Sign up at https://ona.com
+    
+    # For free tier:
+    # Visit https://app.gitpod.io and connect your repositories
+    
+    # For enterprise demo:
+    # Request at https://ona.com/contact/demo
+
+verification:
+  type: manual
+  test_command: Connect a repository and run a background agent task
+  success_indicator: Agent produces a pull request from a task description
+
+resources:
+  - url: https://ona.com
+    type: homepage
+  - url: https://ona.com/docs
+    type: docs
+  - url: https://ona.com/pricing
+    type: homepage
+  - url: https://x.com/ona_hq
+    type: twitter
+  - url: https://github.com/gitpod-io
+    type: github
+
+added_date: "2026-03-01"
+source: manual
+source_url: https://ona.com
+
+ratings:
+  usefulness: 5
+  setup_difficulty: 2
+
+tags:
+  - ai-agents
+  - autonomous
+  - background-agents
+  - code-migration
+  - enterprise
+  - code-review
+  - security
+  - cve-remediation
+  - automations
+  - agent-fleet
+
+sdlc_phase: implementation
+solves: Manual code migrations and repetitive engineering tasks at scale - Ona automates with autonomous background agents
+
+pricing:
+  model: freemium
+  details: |
+    Free tier available via Gitpod integration.
+    Enterprise pricing for VPC deployment, governance features, and dedicated support.
+    Request demo for custom pricing at https://ona.com/contact/demo
