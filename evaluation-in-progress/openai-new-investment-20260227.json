@@ -1,0 +1,34 @@
+{
+  "model": "new investment",
+  "lab": "OpenAI",
+  "window_start": "2026-02-27T13:31:31Z",
+  "window_end": "2026-03-02T13:31:31Z",
+  "tweet_count": 2,
+  "tweets": [
+    {
+      "id": "2027376050263793814",
+      "url": "https://x.com/OpenAI/status/2027376050263793814",
+      "author": "@OpenAI",
+      "text": "Helping AI reach more people requires deep collaboration across the ecosystem.\n\nToday we\u2019re announcing new investment, with support from @SoftBank, @NVIDIA, and @Amazon, to scale the infrastructure needed to bring AI to everyone.\n\nhttps://t.co/xW0ItgMTLe",
+      "likes": 3069,
+      "retweets": 339,
+      "quotes": 200,
+      "views": 741362,
+      "created_at": "Fri Feb 27 13:31:31 +0000 2026",
+      "source": "discovery"
+    },
+    {
+      "id": "2027405928694235358",
+      "url": "https://x.com/CanadianPM/status/2027405928694235358",
+      "author": "@CanadianPM",
+      "text": "Prime Minister Carney is in Mumbai to forge new partnerships, diversify Canada\u2019s trade, and attract new investment. https://t.co/wzCYd0myNV",
+      "likes": 1547,
+      "retweets": 191,
+      "quotes": 15,
+      "views": 27314,
+      "created_at": "Fri Feb 27 15:30:15 +0000 2026",
+      "source": "discovery"
+    }
+  ],
+  "updated_at": "2026-02-28T09:47:51Z"
+}
