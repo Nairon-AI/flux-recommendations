@@ -1,78 +1,85 @@
 name: github
 category: mcp
-tagline: "GitHub's official MCP - issues, PRs, repos, actions directly in Claude"
+tagline: GitHub's official MCP - issues, PRs, repos, actions directly in Claude
+description: 'GitHub''s official MCP server connects Claude directly to GitHub''s
+  platform.
 
-description: |
-  GitHub's official MCP server connects Claude directly to GitHub's platform.
   Browse repos, manage issues and PRs, analyze code, monitor CI/CD, and automate
+
   workflows through natural language.
-  
+
+
   27k+ stars, actively maintained by GitHub. Works with any repo you have access to.
 
+  '
 use_cases:
-  - Browse and query code across repositories
-  - Create, update, and manage issues and PRs
-  - Monitor GitHub Actions workflow runs
-  - Analyze security findings and Dependabot alerts
-  - Review code changes and triage bugs
-
+- Browse and query code across repositories
+- Create, update, and manage issues and PRs
+- Monitor GitHub Actions workflow runs
+- Analyze security findings and Dependabot alerts
+- Review code changes and triage bugs
 prerequisites:
-  - GitHub account
-  - Personal Access Token (PAT) with repo scope
-  - Node.js 18+
-
+- GitHub account
+- Personal Access Token (PAT) with repo scope
+- Node.js 18+
 install:
   type: mcp
-  command: |
-    # Generate a GitHub PAT at: https://github.com/settings/tokens
-    # Select 'repo' scope for private repos, 'public_repo' for public only
-    
-    # Install globally
-    npm install -g @modelcontextprotocol/server-github
-    
-    # Or use npx in config (recommended)
-  config_snippet: |
-    {
-      "mcpServers": {
-        "github": {
-          "command": "npx",
-          "args": ["-y", "@modelcontextprotocol/server-github"],
-          "env": {
-            "GITHUB_PERSONAL_ACCESS_TOKEN": "<your-token>"
-          }
-        }
-      }
-    }
+  command: '# Generate a GitHub PAT at: https://github.com/settings/tokens
 
+    # Select ''repo'' scope for private repos, ''public_repo'' for public only
+
+
+    # Install globally
+
+    npm install -g @modelcontextprotocol/server-github
+
+
+    # Or use npx in config (recommended)
+
+    '
+  config_snippet: "{\n  \"mcpServers\": {\n    \"github\": {\n      \"command\": \"\
+    npx\",\n      \"args\": [\"-y\", \"@modelcontextprotocol/server-github\"],\n \
+    \     \"env\": {\n        \"GITHUB_PERSONAL_ACCESS_TOKEN\": \"<your-token>\"\n\
+    \      }\n    }\n  }\n}\n"
 verification:
   type: mcp_connect
-  test_command: "List my GitHub repositories"
-  success_indicator: "Should return list of repos you have access to"
-
+  test_command: List my GitHub repositories
+  success_indicator: Should return list of repos you have access to
 resources:
-  - url: https://github.com/github/github-mcp-server
-    type: github
-  - url: https://github.com/settings/tokens
-    type: docs
-
+- url: https://github.com/github/github-mcp-server
+  type: github
+- url: https://github.com/settings/tokens
+  type: docs
 added_date: 2026-02-21
 source: manual
-
 ratings:
   usefulness: 5
   setup_difficulty: 2
-
 tags:
-  - github
-  - version-control
-  - issues
-  - pull-requests
-  - ci-cd
-  - code-review
-
+- github
+- version-control
+- issues
+- pull-requests
+- ci-cd
+- code-review
 sdlc_phase: review
-solves: "Context switching between IDE and GitHub - breaking flow to manage PRs and issues"
-
+solves: Context switching between IDE and GitHub - breaking flow to manage PRs and
+  issues
 pricing:
   model: free
-  details: "Free and open-source (official GitHub MCP)"
+  details: Free and open-source (official GitHub MCP)
+mentions:
+- url: https://x.com/dani_avila7/status/2027544077168779381
+  author: '@dani_avila7'
+  text: 'Semantic analysis dashboard for Claude Code Templates... built with Perplexity
+    Computer
+
+
+    https://t.co/IWh3SH7HNt has 1,500+ components: SKILLs, Subagents, Commands, MCPs,
+    Hooks, and more.
+
+
+    I’d been meaning to run a semantic analysis to extract distribution KPIs and classify
+    every'
+  date: '2026-02-28'
+  likes: 47

@@ -1,0 +1,397 @@
+- author: '@_catwu'
+  date: '2026-02-28'
+  likes: 4257
+  text: Proud to work at Anthropic and stand up for our values 💛
+  url: https://x.com/_catwu/status/2027563181158371482
+- author: '@dani_avila7'
+  date: '2026-02-28'
+  likes: 7
+  text: "For those who have asked me about how I made the animation… it was with @perplexity_ai\
+    \ Computer \n\nIt used Veo 3 to modify the original gif and create the new one.\n\
+    \nIt’s crazy to have absolutely all the frontier models in a single agent \U0001F44F"
+  url: https://x.com/dani_avila7/status/2027601062970945730
+- author: '@dani_avila7'
+  date: '2026-02-28'
+  likes: 38
+  text: 'When I jump into a repo I don’t know in Claude Code, I use the codebase-explorer
+    subagent
+
+
+    Save this post so you can use it when you need it.
+
+
+    This subagent will:
+
+    - Detect patterns across the codebase
+
+    - Read the most important project files
+
+    - Deliver everything you need to get st'
+  url: https://x.com/dani_avila7/status/2027578872049398016
+- author: '@dani_avila7'
+  date: '2026-02-28'
+  likes: 81
+  text: 'Claude Code Remote Control is now available for Pro users!
+
+
+    Though that GIF is missing something... devs don''t only leave their computers
+    to go to the bathroom.
+
+
+    We also go to the kitchen for coffee 😅 https://t.co/kcfeKLgMwk'
+  url: https://x.com/dani_avila7/status/2027480599120707899
+- author: '@dani_avila7'
+  date: '2026-02-28'
+  likes: 11
+  text: 'Here is the Link, if you want to see the full report 👇
+
+
+    https://t.co/IRgpVb1FDt'
+  url: https://x.com/dani_avila7/status/2027423504262451319
+- author: '@dani_avila7'
+  date: '2026-02-28'
+  likes: 77
+  text: "Sharing this because it’s more important than it looks\n\nThis ranking shows\
+    \ the stack Claude Code tends to pick when you let the agent run autonomously.\
+    \ \n\nWhen you delegate real workflows, it consistently defaults to this set of\
+    \ services and frameworks.\n\nAs Claude Code and other c"
+  url: https://x.com/dani_avila7/status/2027356692774580648
+- author: '@pvncher'
+  date: '2026-02-28'
+  likes: 35
+  text: "As part of this big release I’m also doing a 20% off sale for the next week.\
+    \ \n\nNever been a better time to give @RepoPrompt a real try"
+  url: https://x.com/pvncher/status/2027402347157061980
+- author: '@pvncher'
+  date: '2026-02-28'
+  likes: 115
+  text: 'This is @RepoPrompt 2.0
+
+
+    A fully integrated agent, that makes it seamless to use RP''s powerful MCP tools,
+    with a built-in oracle and context builder.
+
+
+    A first class experience showcasing how much better and efficient your agents
+    can be with good context engineering tools. https:/'
+  url: https://x.com/pvncher/status/2027402090759467312
+- author: '@nummanali'
+  date: '2026-02-28'
+  likes: 14
+  text: "Now this is leaning into the models \n\nCodex can’t do ASCII like Claude\
+    \ \n\nIt’s the way I wire frame and understand concepts everyday \n\nLove the\
+    \ pace of updates from both teams!!"
+  url: https://x.com/nummanali/status/2027544975068533133
+- author: '@nummanali'
+  date: '2026-02-28'
+  likes: 46
+  text: "I asked Boris if he has any sub agents and he said his most used was a simplify\
+    \ one combined with the batch one here \n\nNow it’s going to come as part of the\
+    \ official Claude Code system \n\nTrust me, keep it simple, keep it clean - let\
+    \ the models do the work for you"
+  url: https://x.com/nummanali/status/2027542202830737661
+- author: '@nummanali'
+  date: '2026-02-28'
+  likes: 162
+  text: "At this rate Andrej is going to make his own AI Lab \n\nHis current set up\
+    \ has\n- 1 chief scientist\n- 8 independent solo researchers\n- 8 junior researchers\n\
+    \nHe clearly says not great but with someone of his caliber who says he can't\
+    \ make it work?"
+  url: https://x.com/nummanali/status/2027522318872789245
+- author: '@nummanali'
+  date: '2026-02-28'
+  likes: 11
+  text: "Are we entering a dystopian era?\n\nA US company has never in history been\
+    \ designated a Supply Chain risk \n\nIt'll be all eyes on @OpenAI, @Google and\
+    \ @xai to see how they respond\n\nWill they allow unfettered access to their models?\
+    \ \n\nOr will @PalantirTech go on to create their own?"
+  url: https://x.com/nummanali/status/2027520432945922342
+- author: '@nummanali'
+  date: '2026-02-28'
+  likes: 5
+  text: "Ratio is still too low\n\nWe're saying there's people still tabbing (autocomplete)\
+    \ 1 to 1 against complete agent work being done? \n\nIf you're not on the Agent\
+    \ train you're closing to missing it\n\nThere's probably only one more scheduled\
+    \ slot left\n\ni.e. before the next model release"
+  url: https://x.com/nummanali/status/2027515050697658853
+- author: '@nummanali'
+  date: '2026-02-28'
+  likes: 4
+  text: 'Metaphor from Claude on KL Divergence
+
+
+    KL (Kullback-Leibler) divergence is the speedometer that tells you how fast you''re
+    driving away from the original model
+
+
+    Too fast = crash (policy collapse)
+
+
+    The KL coefficient (like the 0.001 in DeepSeek-R1) is how hard you press the brakes'
+  url: https://x.com/nummanali/status/2027512170590679127
+- author: '@nummanali'
+  date: '2026-02-28'
+  likes: 45
+  text: "Learning with Claude Code\n\nI'm not a normal learner, I can't learn from\
+    \ reading\n\nI can't learn from boring or mundane content\n\nWhat works for me:\n\
+    - Progressive disclosure\n- Learn by doing \n- Quizes and exercises\n- Video /\
+    \ Interactive \n- An engaging tutor\n\nSo I hired Claude >>>\n\nI"
+  url: https://x.com/nummanali/status/2027500650498572434
+- author: '@nummanali'
+  date: '2026-02-28'
+  likes: 7
+  text: "The current state of AI is the Agentic realm\n\nWhere agents can act and\
+    \ work autonomously \n\nEngineering and model improvements have made this possible\n\
+    \n@openclaw, is an Agent framework - one I think is perfect to experiment with\n\
+    \nNow with GPT 5.3 Codex Spark⚡️"
+  url: https://x.com/nummanali/status/2027486335419011461
+- author: '@nummanali'
+  date: '2026-02-28'
+  likes: 191
+  text: "Obsidian is literally the perfect system for human / ai note taking \n\n\
+    The only blocker was that you required a desktop app to sync \n\nThis will allow\
+    \ you to run obsidian on a VPS with your preferred agents \n\nSync it back to\
+    \ view anywhere - already have my OpenClaw agent on it"
+  url: https://x.com/nummanali/status/2027469734502097316
+- author: '@nummanali'
+  date: '2026-02-28'
+  likes: 20
+  text: "This is specific to Antigravity - which is a free product and additional\
+    \ usage for those with Pro/Ultra plans \n\nIt’s supposed to be used in the IDE,\
+    \ as it gives access to Claude models too\n\nI don’t use it but do use the Gemini\
+    \ CLI\n\n@OfficialLoganK is that restricted too?"
+  url: https://x.com/nummanali/status/2027449677180743990
+- author: '@nummanali'
+  date: '2026-02-28'
+  likes: 142
+  text: 'Gas Town but for real engineering!
+
+
+    Middleman from the legend that made dev-browser
+
+
+    “You''re not an IC anymore. You''ve become a project manager. You need a middle
+    manager.
+
+
+    Middleman gives you one. You talk to a single persistent manager agent per project.”
+
+
+    Excited to set up!! h'
+  url: https://x.com/nummanali/status/2027432676504780853
+- author: '@nummanali'
+  date: '2026-02-28'
+  likes: 9
+  text: What life should look like after AGI
+  url: https://x.com/nummanali/status/2027400052105208096
+- author: '@nummanali'
+  date: '2026-02-28'
+  likes: 8
+  text: "Nikita knows all about the agent drama on X \n\nDon’t trust everything you\
+    \ see \n\nTry yourself and validate - whether small idea or big"
+  url: https://x.com/nummanali/status/2027358202224857229
+- author: '@nummanali'
+  date: '2026-02-28'
+  likes: 82
+  text: "Mission Control from @FactoryAI \n\nLooks like they’ve cracked the UX for\
+    \ autonomous running agents\n\nI imagine the pour out from Cursor from Enterprises\
+    \ will be going to Factory \n\nExcited to see what @AmpCode do in this space\n\
+    \nThere real value in being model agnostic"
+  url: https://x.com/nummanali/status/2027342384766263673
+- author: '@nummanali'
+  date: '2026-02-28'
+  likes: 54
+  text: "Cannot wait for realtime conversations with Codex \n\nGiven that Codex core\
+    \ is used across all Codex products \n\nMy bet is that this will be for a new\
+    \ product line\n\nMaybe phone your agent or a new orchestration layer \n\nThe\
+    \ full release will probably be tied to GPT 5.3 release"
+  url: https://x.com/nummanali/status/2027319087345307891
+- author: '@realmcore_'
+  date: '2026-02-28'
+  likes: 2
+  text: 'Most people will not create a tsunami of software
+
+
+    So be it
+
+
+    The ones who do were always going to with or without AI'
+  url: https://x.com/realmcore_/status/2027666588913279187
+- author: '@realmcore_'
+  date: '2026-02-28'
+  likes: 89
+  text: "RT @rithvanga: Cursor is losing because they can't RL foundational SOTA reasoning\
+    \ models for their harness. \n\nOnly model providers can now…"
+  url: https://x.com/realmcore_/status/2027564288014225686
+- author: '@realmcore_'
+  date: '2026-02-28'
+  likes: 14
+  text: 'I am insanely excited for the next few weeks of coding agent dev
+
+
+    Vaguepoasting is back.
+
+    OpenAi is back (Codex 5.3)
+
+    OSS Models winning (GLM-5 is fantastic @Zai_org )
+
+    Evals standardizing on Harbor
+
+    @PrimeIntellect & continuous learning
+
+    @NousResearch agent
+
+
+    Its all in full swing'
+  url: https://x.com/realmcore_/status/2027563528132112386
+- author: '@tokengobbler'
+  date: '2026-02-28'
+  likes: 745
+  text: 'RT @saranormous: there’s actually a whole raft of tech companies where if
+    the founders are not AI wartime you should abandon ship real fast'
+  url: https://x.com/tokengobbler/status/2027392874682179704
+- author: '@tokengobbler'
+  date: '2026-02-28'
+  likes: 13
+  text: 'The future of work isn’t writing code, it’s planning and reviewing it.
+
+
+    For small startups, outshipping the competition is survival.
+
+
+    Plan faster. Review faster. Ship more. https://t.co/Tqes1SCroy'
+  url: https://x.com/tokengobbler/status/2027329955986657730
+- author: '@EastlondonDev'
+  date: '2026-02-28'
+  likes: 1718
+  text: 'RT @snowmaker: Even the best developer tools mostly still don''t let you
+    sign up for an account via API.  This is a big miss in the claude c…'
+  url: https://x.com/EastlondonDev/status/2027324945424949623
+- author: '@kevinkern'
+  date: '2026-02-28'
+  likes: 8
+  text: 'openclaw launched their secrets update including sops.
+
+
+    when I built clawlets, I added sops as part of the stack to improve security by
+    encrypting agent configurations and secrets. https://t.co/TotP1eZtDX'
+  url: https://x.com/kevinkern/status/2027466085771931822
+- author: '@kevinkern'
+  date: '2026-02-28'
+  likes: 29
+  text: 'there are still two things that drive me crazy with codex
+
+
+    1. It claims work is done when it''s clearly not.
+
+    2. Instead of using deslop, you end up having to defallback.
+
+
+    SSOT pattern is great, but it needs extra caution in a larger codebase. https://t.co/gJmtfd2zof'
+  url: https://x.com/kevinkern/status/2027446946282020974
+- author: '@kevinkern'
+  date: '2026-02-28'
+  likes: 4
+  text: put together a logo concept for the taugentic AI coding app. https://t.co/ztOlqB4Szz
+  url: https://x.com/kevinkern/status/2027377687443202257
+- author: '@justsisyphus'
+  date: '2026-02-28'
+  likes: 3
+  text: 'RT @Lonbaker: Moving to OMO means better performance, reliability, and simplicity.
+
+
+    Replaced Telegram/WhatsApp with Tailscale + tmux'
+  url: https://x.com/justsisyphus/status/2027639525972054119
+- author: '@justsisyphus'
+  date: '2026-02-28'
+  likes: 44
+  text: "you saw those mission @FactoryAI, right?\nwe even read one from @EnoReyes\
+    \ \n\nwe had that like a month ago on oh-my-opencode @opencode \nnot a clickbait\n\
+    we are opensource so you can see from our git logs\n\nwe exactly have had those\
+    \ same concepts! \U0001F9F5\n\n\U0001F447"
+  url: https://x.com/justsisyphus/status/2027613892214722958
+- author: '@justsisyphus'
+  date: '2026-02-28'
+  likes: 8
+  text: our claude code compatible layer now supports for the feature that is even
+    not updated yet
+  url: https://x.com/justsisyphus/status/2027587650396557374
+- author: '@justsisyphus'
+  date: '2026-02-28'
+  likes: 294
+  text: 'RT @trq212: if you are a Claude customer, this is what you should know- you
+    are most likely unaffected https://t.co/PIw9knQ5QK'
+  url: https://x.com/justsisyphus/status/2027570330857005232
+- author: '@justsisyphus'
+  date: '2026-02-28'
+  likes: 30211
+  text: "RT @AnthropicAI: A statement on the comments from Secretary of War Pete Hegseth.\
+    \ \n\nhttps://t.co/Gg7Zb09IMR"
+  url: https://x.com/justsisyphus/status/2027566991591280689
+- author: '@parcadei'
+  date: '2026-02-28'
+  likes: 0
+  text: 'If you feel like you lose agency in ideation &amp; decision making when using
+    agents
+
+
+    You should tune in to Marianne’s demo of Apo 🤌'
+  url: https://x.com/parcadei/status/2027581354494357613
+- author: '@mattpocockuk'
+  date: '2026-02-28'
+  likes: 242
+  text: docker sandbox run claude .
+  url: https://x.com/mattpocockuk/status/2027363801922752605
+- author: '@mattpocockuk'
+  date: '2026-02-28'
+  likes: 80
+  text: 'No video today.
+
+
+    But my thoughts are around the benefits of up-front research as part of PRD design.
+
+
+    ''Research'' in AI coding basically means doing an Explore phase with an agent
+    and caching it - usually saving it to a markdown file in the repo.
+
+
+    This can be really useful for whe'
+  url: https://x.com/mattpocockuk/status/2027319225400856992
+- author: '@ryancarson'
+  date: '2026-02-28'
+  likes: 270
+  text: Here’s how I use Agentation + queuing messages in Codex to crank through frontend
+    work much faster https://t.co/JW6kZ0IP1m
+  url: https://x.com/ryancarson/status/2027481166496874876
+- author: '@ryancarson'
+  date: '2026-02-28'
+  likes: 236
+  text: 'Here''s a quick video showing you how I''ve set up my local dev environment
+    to do a lot of parallel work at the same time.
+
+
+    I''m really enjoying the Codex app. Over the past year I''ve been 100% in the
+    TUI/CLI but I think the GUI form factor is really starting to work and I’m enjoyin'
+  url: https://x.com/ryancarson/status/2027477487689863407
+- author: '@ryancarson'
+  date: '2026-02-28'
+  likes: 186
+  text: "From the creator of Agentation. \n\nGoing to download this and try it as\
+    \ soon as I get back to my desk today."
+  url: https://x.com/ryancarson/status/2027422165994184728
+- author: '@ryancarson'
+  date: '2026-02-28'
+  likes: 546
+  text: "Just had a pretty shocking @openclaw experience. \n\nI was emailed by (what\
+    \ I thought was) an executive assistant who said her boss wanted to meet with\
+    \ me to chat about the AI industry and that he respected my work - she gave me\
+    \ a little bit of information about her boss and was as"
+  url: https://x.com/ryancarson/status/2027404650694021615
+- author: '@ryancarson'
+  date: '2026-02-28'
+  likes: 104
+  text: "Just had a magical moment with an agent + skill. \n\nI have a \"Using Sentry\
+    \ CLI\" skill:\n\n\"Configures and uses the Sentry CLI with 1Password Shell Plugin\
+    \ authentication. Use when setting up Sentry CLI auth, troubleshooting SENTRY_AUTH_TOKEN\
+    \ issues, or running sentry-cli commands wit"
+  url: https://x.com/ryancarson/status/2027336441353646413
