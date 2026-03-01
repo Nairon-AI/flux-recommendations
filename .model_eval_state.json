@@ -1,0 +1,26 @@
+{
+  "active": [
+    {
+      "id": "openai-new-investment-20260227",
+      "model_name": "new investment",
+      "lab": "OpenAI",
+      "release_date": "2026-02-27T13:31:31Z",
+      "window_start": "2026-02-27T13:31:31Z",
+      "window_end": "2026-03-02T13:31:31Z",
+      "release_tweet": {
+        "id": "2027376050263793814",
+        "url": "https://x.com/OpenAI/status/2027376050263793814",
+        "author": "@OpenAI",
+        "text": "Helping AI reach more people requires deep collaboration across the ecosystem.\n\nToday we\u2019re announcing new investment, with support from @SoftBank, @NVIDIA, and @Amazon, to scale the infrastructure needed to bring AI to everyone.\n\nhttps://t.co/xW0ItgMTLe",
+        "likes": 3268,
+        "retweets": 360,
+        "quotes": 207,
+        "views": 811843,
+        "created_at": "Fri Feb 27 13:31:31 +0000 2026",
+        "source": "release"
+      }
+    }
+  ],
+  "completed": [],
+  "last_run": "2026-03-01T09:51:53Z"
+}
