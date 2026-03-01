@@ -1,4 +1,4 @@
-# Contributing to N-bench Recommendations
+# Contributing to Flux Recommendations
 
 Thanks for helping improve AI development workflows!
 

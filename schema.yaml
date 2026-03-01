@@ -1,4 +1,4 @@
-# N-bench Recommendations Schema
+# Flux Recommendations Schema
 # Each recommendation file should follow this structure
 
 type: object
