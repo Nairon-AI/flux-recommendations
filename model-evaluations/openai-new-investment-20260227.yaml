@@ -1,0 +1,88 @@
+model_name: new investment
+lab: OpenAI
+release_date: '2026-02-27T13:31:31Z'
+evaluation_window:
+  start: '2026-02-27T13:31:31Z'
+  end: '2026-03-02T13:31:31Z'
+  days: 3
+tweet_count: 13
+sentiment_score: 50
+use_cases:
+- domain: frontend
+  rating: 3
+  evidence:
+  - https://x.com/MarkJCarney/status/2028438003861815622
+  - https://x.com/MarkJCarney/status/2028183788161843232
+  - https://x.com/OpenAI/status/2027376050263793814
+- domain: architecture
+  rating: 2
+  evidence:
+  - https://x.com/OpenAI/status/2027376050263793814
+limitations: []
+sources:
+- url: https://x.com/MarkJCarney/status/2028438003861815622
+  author: '@MarkJCarney'
+  likes: 5908
+  retweets: 840
+  views: 99936
+- url: https://x.com/MarkJCarney/status/2028183788161843232
+  author: '@MarkJCarney'
+  likes: 4309
+  retweets: 563
+  views: 108385
+- url: https://x.com/OpenAI/status/2027376050263793814
+  author: '@OpenAI'
+  likes: 3301
+  retweets: 362
+  views: 838396
+- url: https://x.com/CanadianPM/status/2027405928694235358
+  author: '@CanadianPM'
+  likes: 1777
+  retweets: 221
+  views: 34862
+- url: https://x.com/vast_ai/status/2027837457065250891
+  author: '@vast_ai'
+  likes: 266
+  retweets: 6
+  views: 1034598
+- url: https://x.com/DeItaone/status/2027376258716242088
+  author: '@DeItaone'
+  likes: 541
+  retweets: 49
+  views: 126923
+- url: https://x.com/zerohedge/status/2027376298696343872
+  author: '@zerohedge'
+  likes: 294
+  retweets: 25
+  views: 265637
+- url: https://x.com/PTI_News/status/2028420660373135578
+  author: '@PTI_News'
+  likes: 329
+  retweets: 22
+  views: 5501
+- url: https://x.com/cspotweet/status/2027427648381542860
+  author: '@cspotweet'
+  likes: 151
+  retweets: 64
+  views: 10193
+- url: https://x.com/coinbureau/status/2027379441085665657
+  author: '@coinbureau'
+  likes: 184
+  retweets: 30
+  views: 12217
+- url: https://x.com/Investingcom/status/2027393449142444266
+  author: '@Investingcom'
+  likes: 123
+  retweets: 19
+  views: 14511
+- url: https://x.com/TnInvestment/status/2027987481237590151
+  author: '@TnInvestment'
+  likes: 106
+  retweets: 19
+  views: 5571
+- url: https://x.com/ANI/status/2028201827007946839
+  author: '@ANI'
+  likes: 83
+  retweets: 15
+  views: 7903
+generated_at: '2026-03-03T10:06:15Z'
