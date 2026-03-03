@@ -1,0 +1,142 @@
+name: daytona
+category: application
+tagline: Secure and elastic infrastructure for running AI-generated code
+description: |
+  Daytona provides fast, scalable, stateful infrastructure for AI agents. It offers
+  secure sandboxes for executing AI-generated code with sub-90ms creation times
+  and full isolation from your production infrastructure.
+
+  ## Key Features
+
+  - **Sub-90ms Sandbox Creation** - Lightning-fast from code to execution
+  - **Isolated Runtime** - Execute AI-generated code with zero infrastructure risk
+  - **Massive Parallelization** - Run concurrent AI workflows in isolated environments
+  - **Environment Snapshots** - Save, restore, and resume any agent workflow instantly
+  - **Stateful by Design** - Sandboxes run indefinitely for long-running tasks
+  - **Multi-Region** - Low-latency deployment across US, EU, and Asia
+  - **Open Source** - 54.9k+ GitHub stars, verify every line of code
+
+  ## API Features
+
+  - **Process Execution** - Run code/commands with real-time output streaming
+  - **File System Operations** - Full CRUD with granular permission controls
+  - **Git Integration** - Native Git operations and secure credential handling
+  - **Built-in LSP** - Language server with multi-language completion and analysis
+
+  ## Use Cases
+
+  - **AI Evaluations** - Scale evals across parallel environments
+  - **Code Interpreter** - Run untrusted code in isolated environments
+  - **Coding Agents** - Execute agent code with RESTful API and state persistence
+  - **Data Analysis** - Process large datasets on clusters
+  - **Reinforcement Learning** - Enable long-horizon planning in stateful environments
+  - **Computer Use** - Virtual desktops (Linux, Windows, macOS) for agent control
+
+  ## Human in the Loop
+
+  - SSH Access to any sandbox instantly
+  - VS Code Browser with one-click access
+  - Full Web Terminal in browser
+
+  ## Python SDK
+
+  ```python
+  from daytona import Daytona
+
+  daytona = Daytona()
+  sandbox = daytona.create()
+
+  response = sandbox.process.code_run('print("Hello World!")')
+  print(response.result)
+
+  sandbox.fs.upload_file(b"content", "/home/daytona/data.txt")
+  ```
+
+  ## Trusted By
+
+  LangChain, Turing, Browser-use, SambaNova, Prosus, Snorkel AI, Orchids
+
+use_cases:
+  - Running AI-generated code safely in sandboxes
+  - AI evaluations at scale with reproducible states
+  - Code interpreter for untrusted code execution
+  - Coding agent execution with state persistence
+  - Data analysis and visualization
+  - Computer use automation (Linux/Windows/macOS)
+  - Reinforcement learning environments
+
+prerequisites:
+  - Python 3.8+ (for SDK)
+  - API key from Daytona
+
+install:
+  type: manual
+  command: |
+    # Python SDK
+    pip install daytona
+    
+    # Quick start
+    from daytona import Daytona
+    daytona = Daytona()
+    sandbox = daytona.create()
+    
+    # Self-hosted (Enterprise)
+    # Deploy on your own infrastructure - contact for details
+
+verification:
+  type: manual
+  test_command: |
+    from daytona import Daytona
+    daytona = Daytona()
+    sandbox = daytona.create()
+    response = sandbox.process.code_run('print("test")')
+    print(response.result)
+  success_indicator: Sandbox creates and executes code successfully
+
+resources:
+  - url: https://daytona.io
+    type: homepage
+  - url: https://github.com/daytonaio/daytona
+    type: github
+  - url: https://www.daytona.io/docs
+    type: docs
+  - url: https://www.daytona.io/dotfiles
+    type: homepage
+
+added_date: "2026-03-01"
+source: manual
+source_url: https://daytona.io
+
+ratings:
+  usefulness: 5
+  setup_difficulty: 2
+
+tags:
+  - sandbox
+  - ai-infrastructure
+  - code-execution
+  - isolated-runtime
+  - agent-runtime
+  - parallel-development
+  - stateful
+  - open-source
+  - enterprise
+  - computer-use
+
+sdlc_phase: implementation
+solves: AI agents need secure, fast, isolated environments to execute code - Daytona provides sub-90ms sandboxes with full APIs
+
+pricing:
+  model: freemium
+  details: |
+    Pay-as-you-go with $200 free compute included.
+    vCPU: $0.0504/hr | Memory: $0.0162/hr per GiB | Storage: $0.000108/hr per GiB
+    GPU support available for ML workloads.
+    Enterprise: Customer-managed compute, runs in your cloud/VPC.
+
+mentions:
+  - url: https://x.com/hwchase17/status/example
+    author: "@hwchase17"
+    text: "While building our coding agent, we hit limitations around our sandboxing. Daytona jumped in, contributed a working PR within hours, and fully unblocked us."
+    date: "2026-02-15"
+    likes: 500
