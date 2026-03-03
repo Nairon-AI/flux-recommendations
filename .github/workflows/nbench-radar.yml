@@ -55,164 +55,51 @@ jobs:
           echo "matched=$MATCHED" >> $GITHUB_OUTPUT
           echo "pending=$PENDING" >> $GITHUB_OUTPUT
 
-      - name: Create PR
+      - name: Auto-commit social proof (autonomous mode)
         if: inputs.dry_run != 'true'
         env:
           GH_TOKEN: ${{ secrets.PAT_TOKEN }}
         run: |
-          if [ -z "$(git status --porcelain)" ]; then
-            echo "No changes to commit"
-            exit 0
-          fi
-
-          git config user.name "N-bench Radar"
-          git config user.email "nbench-radar@nairon.ai"
-
-          DATE=$(date +%Y-%m-%d)
-          BRANCH="radar/$DATE"
-
-          if git ls-remote --exit-code --heads origin "$BRANCH" >/dev/null 2>&1; then
-            BRANCH="radar/$DATE-$(date +%H%M)"
-          fi
-
-          git checkout -b "$BRANCH"
-          git add -A
-          
-          # Get list of updated recommendation files
-          UPDATED_RECS=$(git diff --cached --name-only | grep -E '\.yaml$' | grep -v 'pending/' | grep -v 'schema.yaml' | grep -v 'accounts.yaml' | grep -v '.monitor_state.json' || true)
-          PENDING_FILE=$(git diff --cached --name-only | grep 'pending/' || true)
-          
-          # Build commit message
-          git commit -m "radar: ${{ steps.monitor.outputs.matched }} mentions, ${{ steps.monitor.outputs.pending }} pending - $DATE"
-          git push -u origin "$BRANCH"
-          
-          # Build PR title
           MATCHED="${{ steps.monitor.outputs.matched }}"
           PENDING="${{ steps.monitor.outputs.pending }}"
+          DATE=$(date +%Y-%m-%d)
           
-          if [ "$MATCHED" -gt 0 ] && [ "$PENDING" -gt 0 ]; then
-            TITLE="Radar: ${MATCHED} social proof mentions + ${PENDING} new discoveries"
-          elif [ "$MATCHED" -gt 0 ]; then
-            TITLE="Radar: ${MATCHED} social proof mentions added"
-          elif [ "$PENDING" -gt 0 ]; then
-            TITLE="Radar: ${PENDING} new tool discoveries to review"
-          else
-            TITLE="Radar: $DATE collection"
-          fi
+          git config user.name "N-bench Radar"
+          git config user.email "nbench-radar@nairon.ai"
           
-          # Build PR body
-          cat > /tmp/pr-body.md << 'EOFHEADER'
-          ## Summary
-          EOFHEADER
+          # AUTONOMOUS LOGIC:
+          # - If MATCHED > 0: Auto-commit social proof directly to main (valuable)
+          # - If MATCHED = 0: Discard pending tweets (noise requiring manual review)
           
-          echo "" >> /tmp/pr-body.md
-          echo "| Metric | Count |" >> /tmp/pr-body.md
-          echo "|--------|-------|" >> /tmp/pr-body.md
-          echo "| Mentions added to recommendations | $MATCHED |" >> /tmp/pr-body.md
-          echo "| New discoveries (pending review) | $PENDING |" >> /tmp/pr-body.md
-          echo "" >> /tmp/pr-body.md
-          
-          # Show recommendations that got mentions
-          echo "## Recommendations Updated" >> /tmp/pr-body.md
-          echo "" >> /tmp/pr-body.md
-          
-          if [ -n "$UPDATED_RECS" ]; then
-            echo "$UPDATED_RECS" | while read -r file; do
-              name=$(basename "$file" .yaml)
-              echo "- \`$name\`" >> /tmp/pr-body.md
-            done
-          else
-            echo "_No recommendations updated this run_" >> /tmp/pr-body.md
-          fi
-          
-          echo "" >> /tmp/pr-body.md
-          
-          # Show pending tweets with details
-          echo "## Pending Tweets (New Discoveries)" >> /tmp/pr-body.md
-          echo "" >> /tmp/pr-body.md
-          
-          if [ -n "$PENDING_FILE" ] && [ -f "$PENDING_FILE" ]; then
-            echo "Review these tweets for potential new recommendations:" >> /tmp/pr-body.md
-            echo "" >> /tmp/pr-body.md
+          if [ "$MATCHED" -gt 0 ]; then
+            echo "Auto-committing $MATCHED validated social proof mentions"
             
-            # Parse pending YAML and show as table
-            python3 - "$PENDING_FILE" >> /tmp/pr-body.md << 'PYTHONEOF'
-          import yaml
-          import sys
-          import re
-          
-          def extract_topic(text):
-              """Try to extract the main tool/topic from tweet text."""
-              # Common patterns
-              text_lower = text.lower()
-              
-              # Look for tool mentions
-              tools = re.findall(r'@(\w+)', text)
-              if tools and tools[0] not in ['', 'the', 'a']:
-                  return tools[0]
-              
-              # Look for quoted terms
-              quoted = re.findall(r'"([^"]+)"', text)
-              if quoted:
-                  return quoted[0][:30]
-              
-              # First few words as fallback
-              words = text.split()[:4]
-              return ' '.join(words)[:40]
-          
-          def usefulness_signal(likes):
-              """Rate usefulness based on engagement."""
-              if likes >= 500:
-                  return "🔥 High"
-              elif likes >= 100:
-                  return "⭐ Medium"
-              elif likes >= 20:
-                  return "👀 Low"
-              else:
-                  return "❓ Review"
-          
-          try:
-              with open(sys.argv[1]) as f:
-                  tweets = yaml.safe_load(f) or []
-              
-              # Sort by likes descending
-              tweets = sorted(tweets, key=lambda x: x.get('likes', 0), reverse=True)
-              
-              print("| Topic | Author | Signal | Add? | Why |")
-              print("|-------|--------|--------|------|-----|")
-              
-              for t in tweets[:15]:  # Show max 15
-                  author = t.get('author', 'unknown')
-                  text = t.get('text', '').replace('\n', ' ').replace('|', '/')
-                  url = t.get('url', '')
-                  likes = t.get('likes', 0)
-                  
-                  topic = extract_topic(text)
-                  signal = usefulness_signal(likes)
-                  summary = text[:60] + "..." if len(text) > 60 else text
-                  
-                  print(f"| [{topic}]({url}) | {author} | {signal} ({likes}) | [ ] | |")
-              
-              print()
-              if len(tweets) > 15:
-                  print(f"_+{len(tweets) - 15} more in `{sys.argv[1]}`_")
-          except Exception as e:
-              print(f"_Error reading pending file: {e}_")
-          PYTHONEOF
+            # Only stage recommendation files (not pending/)
+            git add -A
+            git reset -- pending/ 2>/dev/null || true
             
+            # Also update state file
+            git add .monitor_state.json 2>/dev/null || true
+            
+            if [ -n "$(git diff --cached --name-only)" ]; then
+              git commit -m "radar: auto-add $MATCHED social proof mentions - $DATE"
+              git push origin main
+              echo "Committed and pushed $MATCHED mentions to main"
+            else
+              echo "No changes to commit after filtering"
+            fi
           else
-            echo "_No pending tweets_" >> /tmp/pr-body.md
+            echo "No validated mentions found (pending: $PENDING)"
+            echo "Discarding pending tweets - they require manual review"
+            
+            # Only update state file to track seen tweets
+            git checkout -- . 2>/dev/null || true
+            git add .monitor_state.json 2>/dev/null || true
+            
+            if [ -n "$(git diff --cached --name-only)" ]; then
+              git commit -m "radar: update state (no new mentions) - $DATE"
+              git push origin main
+            fi
           fi
           
-          cat >> /tmp/pr-body.md << 'EOFFOOTER'
-          
-          ---
-          
-          ### Review Checklist
-          - [ ] Mentions are relevant and add value
-          - [ ] Pending tweets reviewed - create new recommendation YAMLs for valuable tools
-          
-          *Generated by N-bench Radar*
-          EOFFOOTER
-
-          gh pr create --title "$TITLE" --body-file /tmp/pr-body.md
+          echo "Radar run complete - fully autonomous, no PR created"
