@@ -1,0 +1,46 @@
+name: hermes
+category: application
+tagline: AI markdown editor that helps develop ideas without writing for you
+description: |
+  Hermes is an intelligent markdown editor powered by Claude that focuses on helping
+  users develop their ideas deeper rather than writing content for them.
+  
+  Key features:
+  - AI editor that won't write for you - helps you think deeper
+  - Multiple pages for ideas, outlines, and drafts
+  - Publish directly online
+  - Powered by Claude
+  - Open source
+  
+  The key insight: AI should help you develop better ideas, not replace your thinking.
+  Hermes encourages deeper exploration rather than quick content generation.
+  
+use_cases:
+  - Develop technical specifications and ADRs
+  - Plan complex architecture decisions
+  - Write documentation with AI guidance
+  - Organize ideas into structured outlines
+
+install:
+  type: manual
+  command: "# See: https://github.com/seanxthielen/hermes"
+
+verification:
+  type: manual
+
+resources:
+  - url: https://x.com/seanxthielen/status/2026354478040182800
+    type: tweet
+  - url: https://github.com/seanxthielen/hermes
+    type: homepage
+
+tags:
+  - markdown
+  - ai-writing
+  - idea-development
+  - claude
+
+added_date: "2026-03-04"
+source: slack-inbox
+source_url: https://x.com/seanxthielen/status/2026354478040182800
+sdlc_phase: planning

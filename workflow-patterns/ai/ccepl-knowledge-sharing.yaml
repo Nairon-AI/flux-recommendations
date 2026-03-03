@@ -1,0 +1,45 @@
+name: ccepl-knowledge-sharing
+category: workflow-pattern
+tagline: Share AI prompts, skills, and knowledge across teams as reusable codons
+description: |
+  CCEPL-driven development addresses the problem of fragmented AI knowledge in teams:
+  Everyone uses different AI tools with different prompts and no collective progress.
+  
+  The pattern:
+  - Experiments happen with any AI tool (same as ever)
+  - When something becomes important or repeatable, capture it as a "codon"
+  - Codons are shared and improved collectively
+  - Team members can borrow each other's AI expertise
+  
+  Example: "If I want to borrow Minu's experience making infographics, I steal her
+  codons. If she wants my knowledge of git branching, she steals my codons."
+  
+  Tools like Hankweave implement this pattern for managing shared AI knowledge.
+  
+use_cases:
+  - Share successful AI prompts across team
+  - Build collective AI expertise library
+  - Standardize effective patterns team-wide
+  - Onboard new team members with proven AI workflows
+
+install:
+  type: manual
+  command: "# See: https://hankweave.com"
+
+verification:
+  type: manual
+
+resources:
+  - url: https://x.com/hrishioa/status/2026120154325860463
+    type: tweet
+
+tags:
+  - team-knowledge
+  - prompt-sharing
+  - collective-intelligence
+  - codons
+
+added_date: "2026-03-04"
+source: slack-inbox
+source_url: https://x.com/hrishioa/status/2026120154325860463
+sdlc_phase: planning

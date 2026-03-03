@@ -1,0 +1,51 @@
+name: ai-ready-codebase
+category: workflow-pattern
+tagline: Restructure codebases into deep modules for AI navigation
+description: |
+  Most codebases aren't ready for AI because they lack clear structure. Based on
+  Matt Pocock's insights, the solution is "deep modules" - large chunks of
+  functionality with simple, controlled interfaces.
+  
+  Key insights:
+  - AI sees codebases as disconnected modules without understanding groupings
+  - Deep modules with simple interfaces reduce cognitive burden
+  - File system structure should match mental model of organization
+  - Progressive disclosure of complexity helps both humans and AI
+  - Graybox modules let AI manage implementation while humans control interfaces
+  
+  The pattern:
+  1. Audit existing codebase for natural feature groupings
+  2. Refactor into service-based modules with clear interfaces
+  3. Document public APIs in AGENTS.md
+  4. Use graybox testing to lock down module behavior
+  5. Let AI manage implementation while humans control interfaces
+  
+use_cases:
+  - Prepare legacy codebases for AI-assisted development
+  - Design new projects with AI navigation in mind
+  - Reduce cognitive overhead in complex systems
+  - Create clear boundaries for AI implementation
+
+install:
+  type: manual
+  command: "# Architectural pattern - apply to your codebase"
+
+verification:
+  type: manual
+
+resources:
+  - url: https://youtu.be/uC44zFz7JSM
+    type: video
+  - url: https://x.com/maaborella
+    type: author
+
+tags:
+  - architecture
+  - deep-modules
+  - codebase-structure
+  - ai-navigation
+
+added_date: "2026-03-04"
+source: slack-inbox
+source_url: https://youtu.be/uC44zFz7JSM
+sdlc_phase: planning

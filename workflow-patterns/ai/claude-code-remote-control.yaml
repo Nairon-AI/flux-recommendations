@@ -1,0 +1,46 @@
+name: claude-code-remote-control
+category: workflow-pattern
+tagline: Start tasks on your machine, control from your phone while mobile
+description: |
+  Claude Code's Remote Control feature enables true mobility for AI-assisted development.
+  Kick off a task in your terminal, then control the session from your phone or web
+  while you take a walk or join a meeting.
+  
+  How it works:
+  - Claude keeps running on your machine
+  - Control the session from the Claude app or claude.ai
+  - Seamlessly switch between devices
+  - Provide strategic input from anywhere
+  
+  This transforms AI development from synchronous to asynchronous collaboration.
+  Agents work continuously while humans provide guidance when convenient.
+  
+use_cases:
+  - Start long-running implementations before meetings
+  - Monitor AI progress during commute
+  - Provide guidance to stuck agents remotely
+  - Enable true 24/7 development with human oversight
+
+install:
+  type: manual
+  command: "# Built into Claude Code - use claude.ai or Claude mobile app"
+
+verification:
+  type: manual
+
+resources:
+  - url: https://x.com/claudeai/status/2026418433911603668
+    type: tweet
+  - url: https://claude.ai
+    type: homepage
+
+tags:
+  - claude-code
+  - remote-control
+  - mobile
+  - async-development
+
+added_date: "2026-03-04"
+source: slack-inbox
+source_url: https://x.com/claudeai/status/2026418433911603668
+sdlc_phase: implementation

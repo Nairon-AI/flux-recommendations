@@ -1,0 +1,45 @@
+name: sharetown
+category: cli-tool
+tagline: Instantly share local projects without Vercel or GitHub
+description: |
+  Share.town is the fastest way to share your local project with friends,
+  colleagues, or clients. No deployment to Vercel, no pushing to GitHub.
+  
+  Key features:
+  - Instant tunneling to local development servers
+  - No sign-up required for basic sharing
+  - Works with any local dev server
+  - Share work-in-progress immediately
+  
+  Perfect for AI-assisted development where you need rapid feedback loops
+  without deployment friction.
+  
+use_cases:
+  - Share AI-generated features for immediate stakeholder review
+  - Demo work-in-progress to clients without deploying
+  - Quick collaboration during pair programming
+  - Test with remote users before committing
+
+install:
+  type: manual
+  command: "# See: https://share.town"
+
+verification:
+  type: manual
+
+resources:
+  - url: https://x.com/ivandotcodes/status/2026405187724681458
+    type: tweet
+  - url: https://share.town
+    type: homepage
+
+tags:
+  - sharing
+  - tunneling
+  - local-development
+  - collaboration
+
+added_date: "2026-03-04"
+source: slack-inbox
+source_url: https://x.com/ivandotcodes/status/2026405187724681458
+sdlc_phase: implementation
