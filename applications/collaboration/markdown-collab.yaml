@@ -1,0 +1,47 @@
+name: markdown-collab
+category: application
+tagline: Real-time markdown collaboration designed for AI agent workflows
+description: |
+  Open-source markdown editing and collaboration tool specifically designed for teams
+  working with AI agents and terminal-based workflows.
+  
+  Key features:
+  - Drag-and-drop .md docs (no sign-in required)
+  - GitHub integration for repo-scoped markdown files
+  - Real-time collaboration with cursors and anchored comments
+  - Diff view for tracking changes
+  - Agent-parseable share format
+  - CRDT-based for reliable sync
+  
+  Built for teams that spend more time planning in markdown than coding - which is
+  increasingly common in AI-augmented development workflows.
+  
+use_cases:
+  - Collaborate on CLAUDE.md and AGENTS.md files
+  - Team planning sessions with real-time editing
+  - Share markdown specs with AI agents for parsing
+  - Review and approve planning documents
+
+install:
+  type: manual
+  command: "# See: https://github.com/egeozin/markdown-collab"
+
+verification:
+  type: manual
+
+resources:
+  - url: https://x.com/egeozin/status/2026344803097878939
+    type: tweet
+  - url: https://github.com/egeozin/markdown-collab
+    type: homepage
+
+tags:
+  - markdown
+  - collaboration
+  - real-time
+  - planning
+
+added_date: "2026-03-04"
+source: slack-inbox
+source_url: https://x.com/egeozin/status/2026344803097878939
+sdlc_phase: planning

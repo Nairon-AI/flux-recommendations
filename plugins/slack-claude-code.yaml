@@ -1,0 +1,46 @@
+name: slack-claude-code
+category: plugin
+tagline: Official Slack plugin for Claude Code with search and messaging
+description: |
+  Official Slack plugin for Claude Code that enables AI agents to access team knowledge
+  and collaborate through Slack. Used extensively by the Claude Code team.
+  
+  Key features:
+  - Search Slack messages for context
+  - Send messages and updates to channels
+  - Create documents from AI sessions
+  - Pull team discussion context into coding sessions
+  - Post implementation updates automatically
+  
+  Real-world use: The Claude Code team uses this when agents get stuck on difficult
+  technical problems - the agent can search Slack for relevant context and unblock itself.
+  
+use_cases:
+  - Pull context from team discussions into AI sessions
+  - Post progress updates to development channels
+  - Search for similar problems solved by teammates
+  - Create documentation from coding sessions
+
+install:
+  type: manual
+  command: "# Install via Claude Code plugin system"
+
+verification:
+  type: manual
+
+resources:
+  - url: https://x.com/trq212/status/2026438392679117005
+    type: tweet
+  - url: https://docs.anthropic.com/claude-code/plugins/slack
+    type: documentation
+
+tags:
+  - slack
+  - collaboration
+  - official-plugin
+  - team-context
+
+added_date: "2026-03-04"
+source: slack-inbox
+source_url: https://x.com/trq212/status/2026438392679117005
+sdlc_phase: implementation
