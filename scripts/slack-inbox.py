@@ -292,8 +292,16 @@ def fetch_tweet(tweet_id, api_key):
         return None
 
 
-def fetch_tweet_content(url, api_key):
-    """Fetch tweet and return structured content."""
+def extract_urls_from_text(text):
+    """Extract URLs from text, including t.co shortened links."""
+    url_pattern = r'https?://[^\s<>"{}|\\^`\[\]]+'
+    urls = re.findall(url_pattern, text)
+    # Filter out twitter/x.com URLs (we don't want to recursively fetch tweets)
+    return [u for u in urls if "twitter.com" not in u and "x.com" not in u]
+
+
+def fetch_tweet_content(url, api_key, exa_api_key=None):
+    """Fetch tweet and return structured content, expanding embedded URLs."""
     tweet_id = extract_tweet_id(url)
     if not tweet_id:
         return None
@@ -321,21 +329,54 @@ def fetch_tweet_content(url, api_key):
             parent_context = f"[Replying to @{parent_author}]:\n{parent_text}\n\n"
             print(f"Fetched parent tweet from @{parent_author}")
 
+    # Extract and expand embedded URLs (articles, tools, etc.)
+    embedded_content = ""
+    embedded_urls = extract_urls_from_text(text)
+    if parent_text:
+        embedded_urls.extend(extract_urls_from_text(parent_text))
+
+    if embedded_urls and exa_api_key:
+        print(
+            f"Found {len(embedded_urls)} embedded URL(s) in tweet, fetching content..."
+        )
+        for embedded_url in embedded_urls[:2]:  # Limit to first 2 URLs
+            try:
+                exa_result = fetch_with_exa(embedded_url, exa_api_key)
+                if exa_result:
+                    title = exa_result.get("title", "")
+                    content = exa_result.get("text", "")[:3000]  # Limit size
+                    summary = exa_result.get("summary", "")
+                    embedded_content += f"\n\n---\n**Linked content: {title}**\n"
+                    if summary:
+                        embedded_content += f"Summary: {summary}\n\n"
+                    embedded_content += f"{content}\n"
+                    print(
+                        f"Expanded URL: {embedded_url[:50]}... ({len(content)} chars)"
+                    )
+            except Exception as e:
+                print(f"Failed to expand URL {embedded_url}: {e}")
+
     # Build display format
     if parent_context:
         display = f"**@{parent_author}:**\n> {parent_text}\n\n**↳ @{author} replied:**\n> {text}"
     else:
         display = f"> {text}"
 
+    # Combine tweet text with expanded content
+    full_text = f"{parent_context}[Tweet by @{author}]:\n{text}"
+    if embedded_content:
+        full_text += embedded_content
+
     return {
         "type": "tweet",
-        "text": f"{parent_context}[Tweet by @{author}]:\n{text}",
+        "text": full_text,
         "author": author,
         "author_name": author_name,
         "likes": likes,
         "retweets": retweets,
         "display": display,
         "meta": f"@{author} · {likes} ❤️",
+        "has_embedded_content": bool(embedded_content),
     }
 
 
@@ -809,7 +850,7 @@ def main():
             print("Error: TWITTER_API_KEY required for tweets")
             exit(1)
         print("Fetching tweet...")
-        content = fetch_tweet_content(url, twitter_api_key)
+        content = fetch_tweet_content(url, twitter_api_key, exa_api_key)
     elif url_type == "youtube":
         print("Fetching YouTube content...")
         content = fetch_youtube_content(url, exa_api_key)
