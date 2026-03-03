@@ -1,0 +1,44 @@
+name: eslint-llm-guardrails
+category: workflow-pattern
+tagline: Use ESLint rules to prevent LLM-generated spaghetti code
+description: |
+  Use custom ESLint configurations as guardrails to prevent AI models from generating
+  messy, unstructured code. Configure rule sets specifically designed to catch common
+  patterns of AI-generated code that lacks proper structure.
+  
+  Key insights:
+  - LLMs tend to generate overly verbose, defensive code patterns
+  - Standard ESLint rules can catch many LLM anti-patterns
+  - Custom rule sets can be tuned for AI-specific issues
+  - Automated quality gates catch problems before merge
+  
+  This pattern provides deterministic, automated code quality enforcement that
+  specifically targets AI-generated code patterns.
+  
+use_cases:
+  - Catch LLM spaghetti code patterns automatically
+  - Enforce consistent code quality from AI implementations
+  - Pre-commit hooks for AI code quality
+  - CI/CD quality gates for AI-generated PRs
+
+install:
+  type: manual
+  command: "# Configure ESLint with AI-specific rules"
+
+verification:
+  type: manual
+
+resources:
+  - url: https://x.com/jjenzz/status/2026209487602811123
+    type: tweet
+
+tags:
+  - eslint
+  - code-quality
+  - guardrails
+  - ai-code-review
+
+added_date: "2026-03-04"
+source: slack-inbox
+source_url: https://x.com/jjenzz/status/2026209487602811123
+sdlc_phase: code-review

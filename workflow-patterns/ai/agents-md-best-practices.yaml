@@ -1,0 +1,57 @@
+name: agents-md-best-practices
+category: workflow-pattern
+tagline: Research-backed guidelines for effective AGENTS.md files
+description: |
+  Data-driven guidelines for writing AGENTS.md files that actually improve AI agent
+  performance, based on research showing that doing it wrong hurts performance.
+  
+  Key findings:
+  - Auto-generated files REDUCE success rates by ~3% while increasing cost 20%
+  - Human-written files only marginally improve performance (~4%)
+  - Tools mentioned in AGENTS.md get used 160x more often
+  - Codebase overviews don't help agents navigate faster
+  
+  WHAT TO INCLUDE:
+  - WHAT: Tech stack, project structure, what each part does
+  - WHY: Purpose of project and key components
+  - HOW: Build, test, verify changes; non-obvious tooling (uv, bun, etc.)
+  
+  WHAT NOT TO INCLUDE:
+  - Detailed codebase overviews or directory listings
+  - Code style guidelines (use linters instead)
+  - Task-specific instructions that only apply sometimes
+  - Auto-generated content
+  
+  STRUCTURE:
+  - Keep under 300 lines (some teams use under 60)
+  - Use progressive disclosure with separate files
+  - Use file:line pointers instead of embedding code
+  - Write it yourself deliberately
+  
+use_cases:
+  - Optimize AGENTS.md for better agent performance
+  - Reduce context bloat and inference costs
+  - Structure agent documentation effectively
+  - Avoid common AGENTS.md anti-patterns
+
+install:
+  type: manual
+  command: "# Apply guidelines when creating/updating AGENTS.md"
+
+verification:
+  type: manual
+
+resources:
+  - url: https://x.com/_philschmid/status/2026354033418547444
+    type: tweet
+
+tags:
+  - agents-md
+  - context-management
+  - best-practices
+  - research-backed
+
+added_date: "2026-03-04"
+source: slack-inbox
+source_url: https://x.com/_philschmid/status/2026354033418547444
+sdlc_phase: planning
