@@ -27,6 +27,7 @@ import yaml
 
 # Config
 API_BASE = "https://api.twitterapi.io"
+EXA_API_BASE = "https://api.exa.ai/contents"
 REPO_ROOT = Path(__file__).parent.parent
 ACCOUNTS_FILE = REPO_ROOT / "accounts.yaml"
 STATE_FILE = REPO_ROOT / ".monitor_state.json"
@@ -34,6 +35,76 @@ PENDING_DIR = REPO_ROOT / "pending"
 
 # Rate limiting
 REQUEST_DELAY = 0.5
+
+
+def extract_urls_from_text(text: str) -> list[str]:
+    """Extract URLs from text, including t.co shortened links."""
+    url_pattern = r'https?://[^\s<>"{}|\\^`\[\]]+'
+    urls = re.findall(url_pattern, text)
+    # Filter out twitter/x.com URLs (we don't want to recursively fetch tweets)
+    return [u for u in urls if "twitter.com" not in u and "x.com" not in u]
+
+
+def fetch_with_exa(url: str, api_key: str) -> dict | None:
+    """Fetch URL content using Exa AI."""
+    headers = {
+        "Content-Type": "application/json",
+        "x-api-key": api_key,
+    }
+
+    data = json.dumps(
+        {
+            "urls": [url],
+            "text": True,
+            "summary": True,
+        }
+    ).encode()
+
+    req = urllib.request.Request(
+        EXA_API_BASE, data=data, headers=headers, method="POST"
+    )
+
+    try:
+        with urllib.request.urlopen(req, timeout=60) as resp:
+            result = json.loads(resp.read().decode())
+            results = result.get("results", [])
+            if results:
+                r = results[0]
+                return {
+                    "title": r.get("title", ""),
+                    "text": r.get("text", "")[:3000],  # Limit size
+                    "summary": r.get("summary", ""),
+                }
+            return None
+    except Exception as e:
+        print(f"    Exa fetch error: {e}")
+        return None
+
+
+def expand_tweet_urls(tweet_text: str, exa_api_key: str | None) -> str:
+    """Extract URLs from tweet and fetch their content via Exa."""
+    if not exa_api_key:
+        return ""
+
+    embedded_urls = extract_urls_from_text(tweet_text)
+    if not embedded_urls:
+        return ""
+
+    expanded_content = ""
+    for url in embedded_urls[:2]:  # Limit to first 2 URLs
+        exa_result = fetch_with_exa(url, exa_api_key)
+        if exa_result:
+            title = exa_result.get("title", "")
+            content = exa_result.get("text", "")
+            summary = exa_result.get("summary", "")
+            expanded_content += f"\n\n---\nLinked content: {title}\n"
+            if summary:
+                expanded_content += f"Summary: {summary}\n"
+            expanded_content += f"{content}\n"
+            print(f"    Expanded URL: {url[:50]}...")
+
+    return expanded_content
+
 
 # Folders containing recommendations
 REC_FOLDERS = [
@@ -354,6 +425,7 @@ def evaluate_new_tool_with_llm(
     author: str,
     likes: int,
     api_key: str | None,
+    exa_api_key: str | None = None,
 ) -> dict | None:
     """
     Use LLM to evaluate if a tweet is about a genuinely useful NEW tool
@@ -369,10 +441,18 @@ def evaluate_new_tool_with_llm(
     if likes < 50:
         return None
 
+    # Expand embedded URLs to get actual article/tool content
+    expanded_content = expand_tweet_urls(tweet_text, exa_api_key)
+
+    # Combine tweet text with expanded content
+    full_content = tweet_text
+    if expanded_content:
+        full_content += f"\n\n[LINKED CONTENT]:{expanded_content}"
+
     prompt = f"""Analyze this tweet and determine if it's recommending a specific, useful tool for AI-assisted software development.
 
 Tweet by {author} ({likes} likes):
-"{tweet_text}"
+"{full_content}"
 
 CRITERIA FOR VALUABLE TOOLS:
 1. Must be a SPECIFIC tool, library, MCP server, CLI, plugin, or workflow pattern
@@ -533,6 +613,7 @@ def create_recommendation_yaml(
 def evaluate_and_maybe_create_recommendation(
     tweet: dict,
     anthropic_key: str | None,
+    exa_api_key: str | None = None,
     dry_run: bool = False,
 ) -> bool:
     """
@@ -547,13 +628,14 @@ def evaluate_and_maybe_create_recommendation(
     author = tweet.get("author", "")
     likes = tweet.get("likes", 0)
 
-    # Evaluate with LLM
+    # Evaluate with LLM (with URL expansion if Exa key available)
     tool_data = evaluate_new_tool_with_llm(
         tweet_text=tweet_text,
         tweet_url=tweet_url,
         author=author,
         likes=likes,
         api_key=anthropic_key,
+        exa_api_key=exa_api_key,
     )
 
     if not tool_data:
@@ -647,6 +729,12 @@ def main():
     else:
         print("Warning: ANTHROPIC_API_KEY not set - using strict keyword matching only")
 
+    exa_api_key = os.environ.get("EXA_API_KEY")
+    if exa_api_key:
+        print("URL expansion enabled (Exa)")
+    else:
+        print("Warning: EXA_API_KEY not set - embedded URLs won't be expanded")
+
     # Load data
     accounts = [args.account] if args.account else load_accounts()
     recommendations = load_all_recommendations()
@@ -718,7 +806,7 @@ def main():
             else:
                 # Evaluate if this is a valuable NEW tool worth adding
                 if evaluate_and_maybe_create_recommendation(
-                    mention, anthropic_key, args.dry_run
+                    mention, anthropic_key, exa_api_key, args.dry_run
                 ):
                     unmatched_count += 1  # Now means "new recommendations created"
 
