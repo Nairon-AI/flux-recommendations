@@ -155,7 +155,8 @@ Running this fully autonomous system costs approximately:
 | Flux Radar (tweet monitoring + AI eval) | ~$0.25 | ~$7.50 |
 | Slack Inbox (link processing) | ~$0.05 | ~$1.50 |
 | Twitter API (TwitterAPI.io) | ~$0.20 | ~$6.00 |
-| **Total** | **~$0.50/day** | **~$15/month** |
+| Exa API (URL expansion + tool verification) | ~$0.05 | ~$1.50 |
+| **Total** | **~$0.55/day** | **~$16.50/month** |
 
 **What you're actually paying for:**
 
