@@ -1,0 +1,52 @@
+name: shannon
+category: cli-tool
+tagline: Autonomous AI security tester that finds and exploits vulnerabilities
+description: |
+  Fully autonomous AI hacker for web application security testing. Unlike traditional scanners 
+  that just report potential issues, Shannon actually exploits vulnerabilities with working 
+  proof-of-concept attacks. Performs real SQL injections, auth bypasses, and data exfiltration 
+  tests autonomously.
+  
+  Point it at your web app and get copy-paste ready exploit code for every vulnerability found.
+
+use_cases:
+  - Automated penetration testing before deployment
+  - Security audit of web applications
+  - Finding vulnerabilities traditional scanners miss
+  - Generating proof-of-concept exploits for bug reports
+
+prerequisites:
+  - Python 3.8+
+  - Target web application (test environments only!)
+
+install:
+  type: manual
+  command: |
+    git clone https://github.com/alextweedly/shannon.git
+    cd shannon
+    pip install -r requirements.txt
+
+verification:
+  type: command_exists
+  test_command: python shannon.py --help
+
+resources:
+  - url: https://github.com/alextweedly/shannon
+    type: github
+
+tags:
+  - security
+  - pentesting
+  - autonomous
+  - vulnerability-scanner
+  - exploit
+
+added_date: "2026-03-04"
+source: slack-inbox
+source_url: https://x.com/heynavtoor/status/2028719589241307635
+
+pricing:
+  model: open-source
+  details: "Free, open source"
+
+sdlc_phase: testing

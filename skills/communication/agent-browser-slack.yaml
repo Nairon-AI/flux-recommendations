@@ -1,0 +1,53 @@
+name: agent-browser-slack
+category: skill
+tagline: Control Slack via browser automation - no API keys needed
+description: |
+  Use agent-browser to automate Slack interactions through the web interface. 
+  No Slack API setup required - just authenticate once and the AI agent can:
+  
+  - Send messages to channels/DMs
+  - Read and respond to messages
+  - Post status updates during CI/CD
+  - Notify team about deployments
+  - Control Slack like a human would
+  
+  Perfect for quick automation without API overhead.
+
+use_cases:
+  - Automated team notifications during deployments
+  - Status updates from long-running agent tasks
+  - Cross-channel coordination without API setup
+  - Quick Slack automation without OAuth dance
+
+prerequisites:
+  - agent-browser installed
+  - Slack web access
+
+install:
+  type: skill
+  command: npx skills add vercel-labs/agent-browser --skill slack
+
+verification:
+  type: manual
+  success_indicator: "Agent can send Slack messages via browser"
+
+related_tools:
+  - agent-browser
+
+resources:
+  - url: https://github.com/vercel-labs/agent-browser
+    type: github
+
+tags:
+  - slack
+  - communication
+  - automation
+  - browser
+
+added_date: "2026-03-04"
+source: slack-inbox
+source_url: https://x.com/ctatedev/status/2027809304116342846
+
+pricing:
+  model: free
+  details: "Free, uses existing Slack login"

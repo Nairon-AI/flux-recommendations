@@ -1,0 +1,70 @@
+name: firecrawl
+category: mcp
+tagline: Web scraping and PDF parsing API optimized for AI/LLM pipelines
+description: |
+  Firecrawl turns any website or PDF into clean, LLM-ready markdown. Handles JavaScript-rendered 
+  pages, complex PDFs with charts/graphs, and entire site crawls. Built specifically for feeding 
+  data to AI agents.
+  
+  Key capabilities:
+  - **Scrape**: Single page to clean markdown (handles JS rendering)
+  - **Crawl**: Entire websites with configurable depth
+  - **Map**: Discover all URLs on a site
+  - **PDF Parsing**: Rust-based parser handles 200+ page PDFs with charts in seconds
+  
+  Output is structured and ready for RAG pipelines, agent context, or fine-tuning datasets.
+
+use_cases:
+  - Feed website content to AI agents as clean context
+  - Convert research PDFs/whitepapers to AI-readable format
+  - Build RAG knowledge bases from documentation sites
+  - Extract structured data from JS-heavy web apps
+
+prerequisites:
+  - Firecrawl API key (free tier available)
+
+install:
+  type: mcp
+  command: |
+    npx @anthropic/create-mcp firecrawl
+  config_snippet: |
+    {
+      "mcpServers": {
+        "firecrawl": {
+          "command": "npx",
+          "args": ["-y", "firecrawl-mcp"],
+          "env": {
+            "FIRECRAWL_API_KEY": "your-api-key"
+          }
+        }
+      }
+    }
+
+verification:
+  type: mcp_connect
+  success_indicator: "firecrawl tools available"
+
+resources:
+  - url: https://firecrawl.dev
+    type: homepage
+  - url: https://github.com/mendableai/firecrawl
+    type: github
+  - url: https://docs.firecrawl.dev
+    type: docs
+
+tags:
+  - scraping
+  - pdf
+  - markdown
+  - rag
+  - crawling
+
+added_date: "2026-03-04"
+source: slack-inbox
+source_url: https://x.com/firecrawl/status/2028878214492541208
+
+pricing:
+  model: freemium
+  details: "Free tier: 500 credits/month. Pro: $19/month for 3000 credits"
+
+sdlc_phase: implementation

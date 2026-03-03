@@ -1,0 +1,42 @@
+name: feature-flag-agent-testing
+category: workflow-pattern
+tagline: Use feature flags to test long-running agent outputs
+description: |
+  Trick for getting better outputs from long-running agents:
+  
+  Ask the agent to add a feature flag in the codebase with the condition that 
+  it should always fail when the new code path is taken. This creates a 
+  red-green testing scenario where:
+  
+  1. Agent implements feature behind flag
+  2. Flag ON = new code runs (should fail initially)
+  3. Agent iterates until tests pass
+  4. Flip flag for production
+  
+  Forces agents to write testable, verifiable code.
+
+use_cases:
+  - Testing agent-generated code changes
+  - Incremental feature rollout
+  - Verifying agent work before merging
+  - Red-green development with AI
+
+install:
+  type: manual
+  command: |
+    # Add to your prompts:
+    "Implement this behind a feature flag. The flag should 
+    initially cause tests to fail, proving the new code path 
+    is being exercised."
+
+tags:
+  - testing
+  - feature-flags
+  - agents
+  - verification
+
+added_date: "2026-03-04"
+source: slack-inbox
+source_url: https://x.com/i/status/2028528842491727951
+
+sdlc_phase: testing

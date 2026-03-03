@@ -1,0 +1,48 @@
+name: theorist-mental-model
+category: workflow-pattern
+tagline: Continuously updated mental model to keep long agent sessions focused
+description: |
+  A "Theorist" layer that sits between static plans and shallow session history.
+  Prevents AI agents from ratholing during long-running sessions by maintaining:
+  
+  - **Root cause theory**: What we think the actual problem is
+  - **Theory of victory**: Current best approach to solving it
+  - **Evidence log**: What we've tried and learned
+  
+  Static plans are too high-level. Session history is too shallow and leads to 
+  circular reasoning. The theorist layer provides a living mental model that 
+  updates as the agent learns.
+
+use_cases:
+  - Long-running debugging sessions
+  - Complex multi-step implementations
+  - Exploratory coding with unclear solutions
+  - Preventing agents from repeating failed approaches
+
+install:
+  type: manual
+  command: |
+    # Add to your CLAUDE.md or agent instructions:
+    
+    ## Theorist Protocol
+    Maintain a running "theory document" with:
+    1. Current root cause hypothesis
+    2. Theory of victory (how we'll solve it)
+    3. Evidence for/against current theory
+    4. Update after each significant action
+
+verification:
+  type: manual
+  success_indicator: "Agent maintains and updates theory document during session"
+
+tags:
+  - debugging
+  - long-running
+  - focus
+  - mental-model
+
+added_date: "2026-03-04"
+source: slack-inbox
+source_url: https://x.com/blader/status/2027857861796348062
+
+sdlc_phase: debugging

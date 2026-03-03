@@ -1,0 +1,42 @@
+name: ai-resistant-coaching
+category: workflow-pattern
+tagline: Coaching techniques for engineers who over-rely on AI
+description: |
+  From @mitchellh: How to coach engineers who lean too heavily on AI without 
+  developing their own understanding.
+  
+  Key technique: Ask vague questions that force critical thinking.
+  
+  "Explain to me what you did wrong."
+  
+  If you're too specific, they just ask their AI. The inability to critically 
+  analyze and formulate their own mistakes is a red flag.
+  
+  Signs of problematic AI dependence:
+  - Can't explain their own code changes
+  - Need AI to debug their AI-generated code
+  - No mental model of what they built
+
+use_cases:
+  - Coaching junior engineers
+  - Code review discussions
+  - Interview techniques
+  - Identifying AI over-reliance
+
+install:
+  type: manual
+  command: |
+    # Coaching questions to use:
+    # - "Walk me through what this code does"
+    # - "What would break if we changed X?"
+    # - "Explain what you did wrong"
+
+tags:
+  - coaching
+  - management
+  - code-review
+  - interviews
+
+added_date: "2026-03-04"
+source: slack-inbox
+source_url: https://x.com/dexhorthy/status/2026017537671270632

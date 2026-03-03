@@ -1,0 +1,50 @@
+name: keep
+category: cli-tool
+tagline: Convert X/Twitter threads to markdown by bookmarking any tweet
+description: |
+  Keep lets you turn entire X/Twitter threads into clean markdown by simply 
+  bookmarking any post in the thread. Finally do something useful with your 
+  bookmarked content.
+  
+  Perfect for:
+  - Saving valuable technical threads as documentation
+  - Building context files from X discussions
+  - Archiving insights for AI agent context
+  - Knowledge management from social media
+
+use_cases:
+  - Save technical threads as markdown docs
+  - Build agent context from X discussions
+  - Archive insights before they disappear
+  - Create reference materials from threads
+
+install:
+  type: manual
+  command: |
+    # Install Keep browser extension or CLI
+    # See homepage for installation options
+
+verification:
+  type: manual
+  success_indicator: "Bookmarked thread exports as markdown"
+
+resources:
+  - url: https://keep.sh
+    type: homepage
+  - url: https://x.com/iannuttall
+    type: twitter
+
+tags:
+  - twitter
+  - markdown
+  - bookmarks
+  - documentation
+  - archiving
+
+added_date: "2026-03-04"
+source: slack-inbox
+source_url: https://x.com/i/status/2028869436598526209
+
+pricing:
+  model: freemium
+  details: "Free tier available"

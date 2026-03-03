@@ -1,0 +1,33 @@
+name: web-haptics
+category: cli-tool
+tagline: Custom tactile feedback patterns for web applications
+description: |
+  Bring haptics to the web. Create custom tactile patterns with configurable 
+  strengths and durations for web interactions. Make your app feel as good 
+  as it looks with real tactile feedback.
+  
+  Uses the Web Haptics API for native device feedback.
+
+use_cases:
+  - Add tactile feedback to button clicks
+  - Create custom vibration patterns
+  - Enhance mobile web UX
+  - Make interfaces feel physical
+
+install:
+  type: npm
+  command: npm install web-haptics
+
+resources:
+  - url: https://haptics.lochie.dev
+    type: homepage
+
+tags:
+  - haptics
+  - ux
+  - mobile
+  - feedback
+
+added_date: "2026-03-04"
+source: slack-inbox
+source_url: https://x.com/lochieaxon/status/2028514678784291175

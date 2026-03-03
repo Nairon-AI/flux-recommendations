@@ -1,0 +1,51 @@
+name: perplexica
+category: application
+tagline: Open-source Perplexity clone that runs 100% locally with Ollama
+description: |
+  Full-featured AI search engine that runs locally for $0. Searches the web in real-time, 
+  cites every source, and works with local LLMs via Ollama. Multiple search modes including 
+  general, academic, YouTube, Reddit, and writing assistance. 29K+ GitHub stars.
+  
+  Perfect for privacy-conscious developers or when you need AI search without API costs.
+
+use_cases:
+  - Local AI-powered web search without API costs
+  - Privacy-focused research with source citations
+  - Offline AI search when traveling or without internet
+  - Academic research with proper source attribution
+
+prerequisites:
+  - Docker or Node.js
+  - Ollama (for local models)
+
+install:
+  type: manual
+  command: |
+    git clone https://github.com/ItzCrazyKns/Perplexica.git
+    cd Perplexica
+    docker compose up -d
+
+verification:
+  type: manual
+  success_indicator: Access http://localhost:3000
+
+resources:
+  - url: https://github.com/ItzCrazyKns/Perplexica
+    type: github
+  - url: https://perplexica.io
+    type: homepage
+
+tags:
+  - search
+  - local
+  - ollama
+  - privacy
+  - research
+
+added_date: "2026-03-04"
+source: slack-inbox
+source_url: https://x.com/ihtesham2005/status/2028723408670994600
+
+pricing:
+  model: open-source
+  details: "Free, self-hosted. Uses Ollama for local inference."

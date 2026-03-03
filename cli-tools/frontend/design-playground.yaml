@@ -1,0 +1,33 @@
+name: design-playground
+category: cli-tool
+tagline: Interactive design canvas for vibe-coded prototypes
+description: |
+  Drop any prototype onto an interactive canvas, add components from your 
+  design system, and iterate with drag-and-drop or custom prompts. AI agents 
+  can control the canvas and create variations in parallel.
+  
+  `npx design-playground`
+
+use_cases:
+  - Iterate on vibe-coded prototypes visually
+  - Mix and match design system components
+  - Generate design variations with AI
+  - Parallel design exploration
+
+install:
+  type: npm
+  command: npx design-playground
+
+verification:
+  type: command_exists
+  test_command: npx design-playground --help
+
+tags:
+  - design
+  - frontend
+  - prototyping
+  - canvas
+
+added_date: "2026-03-04"
+source: slack-inbox
+source_url: https://x.com/i/status/2028897272197706201

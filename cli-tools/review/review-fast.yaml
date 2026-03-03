@@ -1,0 +1,40 @@
+name: review-fast
+category: cli-tool
+tagline: Self-healing PRs with automated code review and fixes
+description: |
+  Automated code review tool that doesn't just comment on issues - it fixes them.
+  Self-healing PRs that automatically address review feedback.
+  
+  Instead of back-and-forth review cycles, Review Fast:
+  1. Analyzes PR for issues
+  2. Generates fixes automatically
+  3. Updates the PR with corrections
+  
+  Reduces review cycles from days to minutes.
+
+use_cases:
+  - Automated code review
+  - Self-healing pull requests
+  - Reducing review cycle time
+  - Catching common issues before human review
+
+install:
+  type: manual
+  command: |
+    # See https://review.fast for setup
+
+resources:
+  - url: https://review.fast
+    type: homepage
+
+tags:
+  - code-review
+  - automation
+  - pull-requests
+  - ci-cd
+
+added_date: "2026-03-04"
+source: slack-inbox
+source_url: https://x.com/_7obaid_/status/2026006924249251883
+
+sdlc_phase: review

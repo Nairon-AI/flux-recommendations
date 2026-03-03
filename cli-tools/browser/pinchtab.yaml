@@ -1,0 +1,46 @@
+name: pinchtab
+category: cli-tool
+tagline: 12MB Go binary that gives any AI agent full browser control via HTTP
+description: |
+  High-performance browser control for AI agents. A single 12MB Go binary that 
+  runs Chrome and exposes a plain HTTP API. Any agent, any language, even curl.
+  
+  No config. No setup. No dependencies. Framework-agnostic and token-efficient.
+  
+  Features:
+  - Navigate pages
+  - Read text efficiently
+  - Click/type interactively
+  - Persist sessions
+
+use_cases:
+  - Give any agent browser capabilities
+  - Language-agnostic browser automation
+  - Quick browser tasks without Playwright setup
+  - Token-efficient web interaction
+
+install:
+  type: manual
+  command: |
+    # Download binary from releases
+    curl -LO https://github.com/pinchtab/pinchtab/releases/latest/pinchtab
+    chmod +x pinchtab
+    ./pinchtab
+
+verification:
+  type: command_exists
+  test_command: ./pinchtab --help
+
+resources:
+  - url: https://github.com/pinchtab/pinchtab
+    type: github
+
+tags:
+  - browser
+  - automation
+  - http-api
+  - agents
+
+added_date: "2026-03-04"
+source: slack-inbox
+source_url: https://x.com/i/status/2027906747583893797

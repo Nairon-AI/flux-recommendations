@@ -1,0 +1,37 @@
+name: gtm-engineering
+category: workflow-pattern
+tagline: Replace SDR teams with AI-powered GTM Engineering
+description: |
+  GTM (Go-To-Market) Engineering uses AI agents to automate sales workflows 
+  that traditionally require entire teams. Vercel reportedly replaced a 10-person 
+  inbound SDR team with 1 GTM Engineer using Claude Code.
+  
+  Workflow:
+  1. Install Claude Code
+  2. Connect data APIs (e.g., Crustdata for company data)
+  3. Automate: researching, list building, enrichment, outreach
+  4. Focus humans on revenue-generating conversations only
+
+use_cases:
+  - Automate lead research and enrichment
+  - Build targeted prospect lists
+  - Generate personalized outreach
+  - Reduce SDR headcount while increasing output
+
+install:
+  type: manual
+  command: |
+    # 1. Install Claude Code
+    # 2. Get Crustdata API key (or similar)
+    # 3. Describe current manual workflows
+    # 4. Let Claude automate them
+
+tags:
+  - sales
+  - gtm
+  - automation
+  - outreach
+
+added_date: "2026-03-04"
+source: slack-inbox
+source_url: https://x.com/i/status/2028922432904413463
