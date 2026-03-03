@@ -382,6 +382,49 @@ def fetch_tweet_content(url, api_key, exa_api_key=None):
 
 # --- Exa fetching ---
 
+EXA_SEARCH_BASE = "https://api.exa.ai/search"
+
+
+def search_with_exa(query, api_key, num_results=3):
+    """Search for context about a tool/topic using Exa AI."""
+    headers = {
+        "Content-Type": "application/json",
+        "x-api-key": api_key,
+    }
+
+    data = json.dumps(
+        {
+            "query": query,
+            "numResults": num_results,
+            "type": "auto",
+            "contents": {
+                "text": {"maxCharacters": 1500},
+                "summary": True,
+            },
+        }
+    ).encode()
+
+    req = urllib.request.Request(
+        EXA_SEARCH_BASE, data=data, headers=headers, method="POST"
+    )
+
+    try:
+        with urllib.request.urlopen(req, timeout=30) as resp:
+            result = json.loads(resp.read().decode())
+            results = result.get("results", [])
+            if results:
+                context = []
+                for r in results[:num_results]:
+                    title = r.get("title", "")
+                    text = r.get("text", "")[:500]
+                    url = r.get("url", "")
+                    context.append(f"- {title}: {text}... ({url})")
+                return "\n".join(context)
+            return None
+    except Exception as e:
+        print(f"Exa search error: {e}")
+        return None
+
 
 def fetch_with_exa(url, api_key):
     """Fetch URL content using Exa AI."""
@@ -865,10 +908,45 @@ def main():
         print("Could not fetch content from URL")
         exit(1)
 
+    # Verify ambiguous tool mentions with Exa search
+    tool_verification = ""
+    if url_type == "tweet" and exa_api_key:
+        tweet_text = content.get("text", "")
+        # Check if tweet is short/vague (just a link or under 150 chars of actual content)
+        text_without_urls = re.sub(r"https?://\S+", "", tweet_text).strip()
+
+        # Extract potential tool names (@ mentions that aren't common accounts)
+        tool_mentions = re.findall(r"@(\w+)", tweet_text)
+        common_accounts = {
+            "x",
+            "twitter",
+            "youtube",
+            "github",
+            "vercel",
+            "anthropic",
+            "openai",
+        }
+        tool_mentions = [t for t in tool_mentions if t.lower() not in common_accounts]
+
+        # If content is vague and mentions potential tools, search for context
+        if len(text_without_urls) < 150 and tool_mentions:
+            print(f"Tweet seems vague, searching for tool context: {tool_mentions}")
+            for tool in tool_mentions[:2]:  # Limit to first 2 mentions
+                search_result = search_with_exa(
+                    f"{tool} tool software", exa_api_key, num_results=2
+                )
+                if search_result:
+                    tool_verification += (
+                        f"\n\n[VERIFIED CONTEXT for @{tool}]:\n{search_result}"
+                    )
+                    print(f"Found context for @{tool}")
+
     # Build content section for prompt
     if url_type == "tweet":
         content_section = f"""Tweet by @{content.get("author", "unknown")} ({content.get("author_name", "")}) · {content.get("likes", 0)} likes, {content.get("retweets", 0)} RTs:
 {content.get("text", "")}"""
+        if tool_verification:
+            content_section += tool_verification
     else:
         content_section = f"""URL: {url}
 Type: {url_type}

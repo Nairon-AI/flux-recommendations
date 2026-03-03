@@ -28,6 +28,7 @@ import yaml
 # Config
 API_BASE = "https://api.twitterapi.io"
 EXA_API_BASE = "https://api.exa.ai/contents"
+EXA_SEARCH_BASE = "https://api.exa.ai/search"
 REPO_ROOT = Path(__file__).parent.parent
 ACCOUNTS_FILE = REPO_ROOT / "accounts.yaml"
 STATE_FILE = REPO_ROOT / ".monitor_state.json"
@@ -43,6 +44,46 @@ def extract_urls_from_text(text: str) -> list[str]:
     urls = re.findall(url_pattern, text)
     # Filter out twitter/x.com URLs (we don't want to recursively fetch tweets)
     return [u for u in urls if "twitter.com" not in u and "x.com" not in u]
+
+
+def search_with_exa(query: str, api_key: str, num_results: int = 2) -> str | None:
+    """Search for context about a tool/topic using Exa AI."""
+    headers = {
+        "Content-Type": "application/json",
+        "x-api-key": api_key,
+    }
+
+    data = json.dumps(
+        {
+            "query": query,
+            "numResults": num_results,
+            "type": "auto",
+            "contents": {
+                "text": {"maxCharacters": 1000},
+                "summary": True,
+            },
+        }
+    ).encode()
+
+    req = urllib.request.Request(
+        EXA_SEARCH_BASE, data=data, headers=headers, method="POST"
+    )
+
+    try:
+        with urllib.request.urlopen(req, timeout=30) as resp:
+            result = json.loads(resp.read().decode())
+            results = result.get("results", [])
+            if results:
+                context = []
+                for r in results[:num_results]:
+                    title = r.get("title", "")
+                    text = r.get("text", "")[:400]
+                    context.append(f"- {title}: {text}...")
+                return "\n".join(context)
+            return None
+    except Exception as e:
+        print(f"    Exa search error: {e}")
+        return None
 
 
 def fetch_with_exa(url: str, api_key: str) -> dict | None:
@@ -86,11 +127,10 @@ def expand_tweet_urls(tweet_text: str, exa_api_key: str | None) -> str:
     if not exa_api_key:
         return ""
 
-    embedded_urls = extract_urls_from_text(tweet_text)
-    if not embedded_urls:
-        return ""
-
     expanded_content = ""
+
+    # Expand embedded URLs
+    embedded_urls = extract_urls_from_text(tweet_text)
     for url in embedded_urls[:2]:  # Limit to first 2 URLs
         exa_result = fetch_with_exa(url, exa_api_key)
         if exa_result:
@@ -102,6 +142,34 @@ def expand_tweet_urls(tweet_text: str, exa_api_key: str | None) -> str:
                 expanded_content += f"Summary: {summary}\n"
             expanded_content += f"{content}\n"
             print(f"    Expanded URL: {url[:50]}...")
+
+    # Verify ambiguous tool mentions with search
+    text_without_urls = re.sub(r"https?://\S+", "", tweet_text).strip()
+    tool_mentions = re.findall(r"@(\w+)", tweet_text)
+    common_accounts = {
+        "x",
+        "twitter",
+        "youtube",
+        "github",
+        "vercel",
+        "anthropic",
+        "openai",
+        "claudeai",
+    }
+    tool_mentions = [t for t in tool_mentions if t.lower() not in common_accounts]
+
+    # If content is vague (short text) and mentions potential tools, search for context
+    if len(text_without_urls) < 150 and tool_mentions and not expanded_content:
+        print(f"    Tweet vague, searching for tool context: {tool_mentions[:2]}")
+        for tool in tool_mentions[:2]:
+            search_result = search_with_exa(
+                f"{tool} tool software github", exa_api_key, num_results=2
+            )
+            if search_result:
+                expanded_content += (
+                    f"\n\n---\nVerified context for @{tool}:\n{search_result}"
+                )
+                print(f"    Found context for @{tool}")
 
     return expanded_content
 
