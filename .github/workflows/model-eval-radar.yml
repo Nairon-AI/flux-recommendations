@@ -1,8 +1,9 @@
 name: Model Eval Radar
 
 on:
-  schedule:
-    - cron: "30 9 * * *"
+  # DISABLED - re-enable when ready
+  # schedule:
+  #   - cron: "30 9 * * *"
   workflow_dispatch:
     inputs:
       since_days:
