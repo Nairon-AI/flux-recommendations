@@ -1,0 +1,47 @@
+name: context-plus
+category: cli-tool
+tagline: Reduce 6-10k tokens per prompt with semantic search and context trees
+description: |
+  Context+ is an advanced context management tool for AI coding agents that dramatically
+  reduces token usage while improving agent performance. Uses semantic search, undo trees,
+  blast radius analysis, and context trees to optimize what context is provided to agents.
+  
+  Key features:
+  - Semantic code search by meaning (not just keywords)
+  - Advanced file context trees for precise file selection
+  - Undo trees and restore points for safe experimentation
+  - Blast radius analysis to understand change impact
+  - 6-10k tokens saved per prompt in real-world tests
+  - 2x faster task completion compared to unoptimized agents
+  
+  Built using modern techniques from haskellforall's semantic search work.
+  
+use_cases:
+  - Reduce Claude Code token consumption by 30-50%
+  - Speed up agent task completion with better context
+  - Understand blast radius before making changes
+  - Safe experimentation with restore points
+
+install:
+  type: manual
+  command: "# See: https://github.com/context-plus/context-plus"
+
+verification:
+  type: manual
+
+resources:
+  - url: https://x.com/forloopcodes/status/2027745057483460757
+    type: tweet
+  - url: https://github.com/context-plus/context-plus
+    type: homepage
+
+tags:
+  - context-management
+  - token-optimization
+  - semantic-search
+  - ai-assistant
+
+added_date: "2026-03-04"
+source: slack-inbox
+source_url: https://x.com/forloopcodes/status/2027745057483460757
+sdlc_phase: implementation

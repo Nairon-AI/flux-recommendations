@@ -1,0 +1,46 @@
+name: pair-programmer
+category: cli-tool
+tagline: Screen sharing and voice input for Claude Code
+description: |
+  Pair Programmer extends Claude Code with screen sharing and voice input capabilities,
+  bridging the gap between what you're thinking and what the AI can understand.
+  
+  Key features:
+  - Share your screen with Claude Code
+  - Voice input for natural communication
+  - See visual context like error dialogs, browser state, etc.
+  - Reduce time spent describing what's on screen
+  - Natural pair programming experience
+  
+  Addresses major Claude Code limitation - it writes great code but cannot see your
+  screen or hear you think. This tool fixes that.
+  
+use_cases:
+  - Debug visual issues by showing them directly
+  - Explain complex UI flows verbally
+  - Share browser state during development
+  - Natural conversation while coding
+
+install:
+  type: manual
+  command: "# See: https://github.com/ashu-trv/pair-programmer"
+
+verification:
+  type: manual
+
+resources:
+  - url: https://x.com/ashu_trv/status/2026296815860203888
+    type: tweet
+  - url: https://github.com/ashu-trv/pair-programmer
+    type: homepage
+
+tags:
+  - claude-code
+  - screen-sharing
+  - voice-input
+  - pair-programming
+
+added_date: "2026-03-04"
+source: slack-inbox
+source_url: https://x.com/ashu_trv/status/2026296815860203888
+sdlc_phase: implementation

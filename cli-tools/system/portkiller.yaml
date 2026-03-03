@@ -1,0 +1,47 @@
+name: portkiller
+category: cli-tool
+tagline: Cross-platform port management with kubectl port-forward support
+description: |
+  PortKiller is a powerful native app for managing TCP ports across macOS, Windows,
+  and Linux. Goes beyond simple port listing with developer-focused features.
+  
+  Key features:
+  - Auto-discovers all listening TCP ports
+  - One-click process termination
+  - Search, filtering, and favorites
+  - Watched ports with notifications
+  - Smart categorization for common dev services
+  - kubectl port-forward session management with auto-reconnect
+  - Cloudflare Tunnel connection visibility
+  - Native UI on all platforms
+  
+use_cases:
+  - Kill processes blocking development ports
+  - Manage multiple kubectl port-forward sessions
+  - Monitor development services across projects
+  - Track Cloudflare Tunnel connections
+
+install:
+  type: brew
+  command: brew install --cask productdevbook/tap/portkiller
+
+verification:
+  type: command
+  command: which portkiller || ls /Applications/PortKiller.app
+
+resources:
+  - url: https://x.com/HiTw93/status/2027381957815087359
+    type: tweet
+  - url: https://github.com/productdevbook/portkiller
+    type: homepage
+
+tags:
+  - system-utility
+  - port-management
+  - kubernetes
+  - developer-tools
+
+added_date: "2026-03-04"
+source: slack-inbox
+source_url: https://x.com/HiTw93/status/2027381957815087359
+sdlc_phase: debugging

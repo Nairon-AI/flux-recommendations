@@ -1,0 +1,43 @@
+name: agent-change-walkthrough
+category: skill
+tagline: Explains how AI-made changes flow through the entire system
+description: |
+  A skill that helps developers understand how AI-implemented changes integrate with
+  existing system flows. Instead of just showing what code changed, it explains the
+  end-to-end impact and how the change propagates through the entire codebase.
+  
+  Key insight: Getting AI to implement a feature is the easy part. Understanding how
+  that change fits into the existing end-to-end flow is the hard part.
+  
+  This skill fills the gap between "what changed" and "how it affects the whole system"
+  by providing comprehensive change impact analysis.
+  
+use_cases:
+  - Understand system-wide impact of AI-generated code
+  - Learn unfamiliar codebases through change analysis
+  - Code review AI implementations with full context
+  - Document how new features integrate with existing flows
+
+install:
+  type: manual
+  command: "# See: https://github.com/camsoft2000/agent-change-walkthrough"
+
+verification:
+  type: manual
+
+resources:
+  - url: https://x.com/camsoft2000/status/2027383878852194566
+    type: tweet
+  - url: https://github.com/camsoft2000/agent-change-walkthrough
+    type: homepage
+
+tags:
+  - codebase-mapping
+  - change-analysis
+  - code-review
+  - ai-assistant
+
+added_date: "2026-03-04"
+source: slack-inbox
+source_url: https://x.com/camsoft2000/status/2027383878852194566
+sdlc_phase: code-review

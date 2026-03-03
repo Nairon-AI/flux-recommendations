@@ -1,0 +1,44 @@
+name: agentmap
+category: cli-tool
+tagline: Frontmatter comments for code files to help AI agents understand codebases
+description: |
+  Agentmap adds frontmatter-style comments to the top of code files describing their
+  purpose and context, similar to skills but for source code. The file tree structure
+  with annotations is then injected at the start of agent context to help AI understand
+  the codebase without reading every line of source code.
+  
+  Key features:
+  - Generates descriptive frontmatter comments for code files
+  - Creates structured file tree with purpose annotations
+  - Reduces context bloat by providing pre-digested codebase overview
+  - Similar concept to CLAUDE.md but distributed across files
+  
+use_cases:
+  - Help AI agents navigate unfamiliar codebases faster
+  - Reduce context tokens needed for codebase understanding
+  - Document file purposes in a format optimized for AI consumption
+  - Auto-update documentation after PR merges
+
+install:
+  type: manual
+  command: "# See: https://github.com/agentmap/agentmap"
+
+verification:
+  type: manual
+
+resources:
+  - url: https://x.com/__morse/status/2028048271076175962
+    type: tweet
+  - url: https://github.com/agentmap/agentmap
+    type: homepage
+
+tags:
+  - agent-workflow
+  - context-management
+  - documentation
+  - ai-assistant
+
+added_date: "2026-03-04"
+source: slack-inbox
+source_url: https://x.com/__morse/status/2028048271076175962
+sdlc_phase: implementation

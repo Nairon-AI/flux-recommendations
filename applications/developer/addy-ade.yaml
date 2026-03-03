@@ -1,0 +1,47 @@
+name: addy-ade
+category: application
+tagline: Native Agentic Development Environment with multi-agent coordination
+description: |
+  Addy is the ADE (Agentic Development Environment) - a native app that goes beyond
+  traditional IDEs by coordinating multiple AI agents across the development workflow.
+  
+  Key features:
+  - Chat or Terminal interface
+  - Plan apps/features with AI assistance
+  - Automatically pulls in other agents for plan review and strengthening
+  - Automated code reviews by specialized agents
+  - Automatic bug detection and fixing
+  - Multi-agent coordination for complex tasks
+  
+  Represents the evolution from IDE to ADE - where the development environment
+  actively participates in the development process through agent orchestration.
+  
+use_cases:
+  - Plan features with multi-agent review
+  - Automated code quality checks
+  - Bug detection and auto-fixing
+  - Full SDLC agent coordination
+
+install:
+  type: manual
+  command: "# See: https://addy.dev"
+
+verification:
+  type: manual
+
+resources:
+  - url: https://x.com/morganknutson/status/2027077058028003658
+    type: tweet
+  - url: https://addy.dev
+    type: homepage
+
+tags:
+  - ide
+  - multi-agent
+  - agentic-development
+  - ai-native
+
+added_date: "2026-03-04"
+source: slack-inbox
+source_url: https://x.com/morganknutson/status/2027077058028003658
+sdlc_phase: implementation

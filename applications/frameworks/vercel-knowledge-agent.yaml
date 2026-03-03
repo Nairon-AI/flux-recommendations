@@ -1,0 +1,46 @@
+name: vercel-knowledge-agent
+category: application
+tagline: Multi-platform AI agent template with file operations and GitHub integration
+description: |
+  Full-stack Vercel template for building AI agents with file-based operations,
+  multi-source knowledge bases, and multi-platform deployment. Built on Vercel's
+  Chat SDK with Workflow + Sandbox capabilities.
+  
+  Key features:
+  - Add sources: GitHub repos, YouTube, etc. directly from UI
+  - File-based agent using grep/find/cat operations
+  - Powered by Vercel Workflow + Sandbox
+  - Multi-platform: web chat, GitHub bot, Discord bot
+  - Skills system for editing projects, adding sources, creating agents
+  - Knowledge base always in sync with sources
+  - One-click deployment
+  
+use_cases:
+  - Build knowledge agents for codebases
+  - Create multi-platform AI assistants
+  - File-based codebase exploration
+  - GitHub and Discord bot integration
+
+install:
+  type: manual
+  command: "# Deploy via Vercel: https://vercel.com/templates/knowledge-agent"
+
+verification:
+  type: manual
+
+resources:
+  - url: https://x.com/hugorcd/status/2026395545292681672
+    type: tweet
+  - url: https://vercel.com/templates/knowledge-agent
+    type: homepage
+
+tags:
+  - vercel
+  - knowledge-base
+  - multi-platform
+  - agent-framework
+
+added_date: "2026-03-04"
+source: slack-inbox
+source_url: https://x.com/hugorcd/status/2026395545292681672
+sdlc_phase: implementation
