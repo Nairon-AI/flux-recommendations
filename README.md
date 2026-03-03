@@ -53,6 +53,37 @@ This repo continuously improves itself. The **N-bench Radar** runs daily via Git
 
 The radar ingests useful data from high-intent signals on X, so the recommendation database grows smarter every day without manual curation.
 
+## Slack Inbox (Fully Autonomous)
+
+Drop any link into the Flux Inbox Slack channel → AI evaluates and acts:
+
+| Verdict | Action |
+|---------|--------|
+| **Yes (4-5 stars)** | Auto-creates recommendation YAML, commits to main |
+| **Duplicate** | Auto-closes with explanation |
+| **No / Low value** | Discards silently |
+| **Maybe** | Creates issue for rare human review |
+
+Supports: Tweets, YouTube videos, GitHub repos, articles, any URL.
+
+## Cost of Automation
+
+Running this fully autonomous system costs approximately:
+
+| Component | Daily | Monthly |
+|-----------|-------|---------|
+| N-bench Radar (tweet monitoring + AI eval) | ~$0.25 | ~$7.50 |
+| Slack Inbox (link processing) | ~$0.05 | ~$1.50 |
+| Twitter API (TwitterAPI.io) | ~$0.20 | ~$6.00 |
+| **Total** | **~$0.50/day** | **~$15/month** |
+
+**Value proposition:**
+- Manual equivalent: 1-2 hours/day monitoring X, evaluating tools, writing YAMLs
+- At $50/hr = **$1,500-3,000/month** of human time
+- **ROI: 100-200x** - sleep at night while the database grows itself
+
+The system pays for itself if it saves you **18 minutes per month**.
+
 ## Model Evaluation Radar
 
 `scripts/model-eval-radar.py` monitors AI lab release announcements and runs a 3-day collection window:

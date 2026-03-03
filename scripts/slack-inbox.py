@@ -20,6 +20,9 @@ import subprocess
 import urllib.error
 import urllib.parse
 import urllib.request
+from datetime import datetime
+
+import yaml
 
 try:
     from youtube_transcript_api import YouTubeTranscriptApi
@@ -646,6 +649,81 @@ def create_issue_body(url, content, analysis):
 """
 
 
+def create_recommendation_file(analysis, url, content, recommendations_path):
+    """Create a recommendation YAML file from analysis."""
+    import yaml
+    from datetime import datetime
+
+    content_type = analysis.get("type", "tool")
+    category = analysis.get("category", "discoveries/").rstrip("/")
+
+    # Map content type to folder
+    type_to_folder = {
+        "tool": "cli-tools",
+        "mcp": "mcps",
+        "plugin": "plugins",
+        "skill": "skills",
+        "pattern": "workflow-patterns",
+        "repo": "applications",
+    }
+
+    base_folder = type_to_folder.get(content_type, "discoveries")
+
+    # Extract name from title
+    title = analysis.get("title", "unknown-tool")
+    name = re.sub(r"[^a-z0-9]+", "-", title.lower()).strip("-")[:40]
+
+    # Build folder path
+    if "/" in category:
+        folder_path = os.path.join(recommendations_path, category)
+    else:
+        folder_path = os.path.join(recommendations_path, base_folder)
+
+    os.makedirs(folder_path, exist_ok=True)
+    yaml_path = os.path.join(folder_path, f"{name}.yaml")
+
+    # Don't overwrite existing
+    if os.path.exists(yaml_path):
+        print(f"File already exists: {yaml_path}")
+        return None
+
+    # Build recommendation object
+    rec = {
+        "name": name,
+        "category": content_type,
+        "tagline": analysis.get("tldr", "")[:80],
+        "description": analysis.get("what", ""),
+        "use_cases": analysis.get("action_items", []),
+        "install": {
+            "type": "manual",
+            "command": f"# See: {url}",
+        },
+        "verification": {
+            "type": "manual",
+        },
+        "resources": [
+            {"url": url, "type": "homepage"},
+        ],
+        "tags": [],
+        "added_date": datetime.now().strftime("%Y-%m-%d"),
+        "source": "slack-inbox",
+        "source_url": url,
+        "sdlc_phase": analysis.get("sdlc_phases", ["implementation"])[0]
+        if analysis.get("sdlc_phases")
+        else "implementation",
+    }
+
+    # Add flux impact as description suffix
+    if analysis.get("flux_impact"):
+        rec["description"] += f"\n\n**Flux Impact:** {analysis['flux_impact']}"
+
+    with open(yaml_path, "w") as f:
+        yaml.dump(rec, f, default_flow_style=False, allow_unicode=True, sort_keys=False)
+
+    print(f"Created recommendation: {yaml_path}")
+    return yaml_path
+
+
 def main():
     # Get inputs
     url = os.environ.get("URL") or os.environ.get("TWEET_URL")  # Backward compat
@@ -727,18 +805,97 @@ Type: {url_type}
     prefix = TYPE_PREFIXES.get(content_type, "Link")
     title = f"{prefix}: {analysis.get('title', 'Unknown')}"
 
-    # Create issue body
-    body = create_issue_body(url, content, analysis)
+    verdict = analysis.get("verdict", "Maybe")
+    stars = analysis.get("stars", 3)
 
-    # Write body to file
+    print(f"Verdict: {verdict} ({stars} stars)")
+
+    # AUTONOMOUS DECISION LOGIC:
+    # - "Yes" + 4-5 stars → Create recommendation and commit directly
+    # - "Duplicate" → Skip with log
+    # - "No" or low stars → Skip with log
+    # - "Maybe" → Create issue for human review (rare)
+
+    if verdict == "Duplicate":
+        duplicate_of = analysis.get("duplicate_of", "unknown")
+        reason = analysis.get("duplicate_reason", "Already exists")
+        print(f"SKIP (Duplicate): Already covered by {duplicate_of}")
+        print(f"Reason: {reason}")
+
+        # Create a closed issue for tracking
+        body = create_issue_body(url, content, analysis)
+        with open("/tmp/issue.md", "w") as f:
+            f.write(body)
+
+        cmd = [
+            "gh",
+            "issue",
+            "create",
+            "--title",
+            f"[DUPLICATE] {title}",
+            "--body-file",
+            "/tmp/issue.md",
+            "--label",
+            "duplicate,auto-closed",
+        ]
+        result = subprocess.run(cmd, capture_output=True, text=True)
+        if result.returncode == 0:
+            issue_url = result.stdout.strip()
+            # Close it immediately
+            issue_num = issue_url.split("/")[-1]
+            subprocess.run(
+                [
+                    "gh",
+                    "issue",
+                    "close",
+                    issue_num,
+                    "--comment",
+                    f"Auto-closed: Duplicate of `{duplicate_of}`",
+                ]
+            )
+            print(f"Created and closed duplicate issue: {issue_url}")
+        return
+
+    if verdict == "No" or stars < 3:
+        reason = analysis.get("stars_reason", "Not relevant enough")
+        print(f"SKIP (Low value): {reason}")
+        print("No issue created - not worth adding to Flux recommendations")
+        return
+
+    if verdict == "Yes" and stars >= 4:
+        # HIGH CONFIDENCE: Create recommendation directly
+        print(f"AUTO-ADD: High confidence recommendation ({stars} stars)")
+
+        yaml_path = create_recommendation_file(
+            analysis, url, content, recommendations_path
+        )
+
+        if yaml_path:
+            # Commit and push
+            rel_path = os.path.relpath(yaml_path, recommendations_path)
+
+            subprocess.run(["git", "config", "user.name", "Flux Inbox"], check=True)
+            subprocess.run(
+                ["git", "config", "user.email", "flux-inbox@nairon.ai"], check=True
+            )
+            subprocess.run(["git", "add", yaml_path], check=True)
+
+            commit_msg = f"inbox: auto-add {analysis.get('title', 'unknown')}\n\nSource: {url}\nVerdict: {verdict} ({stars} stars)\nReason: {analysis.get('stars_reason', '')}"
+            subprocess.run(["git", "commit", "-m", commit_msg], check=True)
+            subprocess.run(["git", "push", "origin", "main"], check=True)
+
+            print(f"Committed: {rel_path}")
+            print("No issue created - recommendation added directly to main")
+        return
+
+    # MAYBE or moderate confidence: Create issue for human review
+    print(f"REVIEW NEEDED: Creating issue for human decision")
+
+    body = create_issue_body(url, content, analysis)
     with open("/tmp/issue.md", "w") as f:
         f.write(body)
 
-    # Create issue
-    labels = ["inbox", content_type]
-    duplicate_of = analysis.get("duplicate_of")
-    if duplicate_of:
-        labels.append("duplicate")
+    labels = ["inbox", content_type, "needs-review"]
 
     cmd = ["gh", "issue", "create", "--title", title, "--body-file", "/tmp/issue.md"]
     for label in labels:
@@ -750,7 +907,7 @@ Type: {url_type}
         print(f"Error creating issue: {result.stderr}")
         exit(1)
 
-    print(f"Created issue: {result.stdout.strip()}")
+    print(f"Created issue for review: {result.stdout.strip()}")
 
 
 if __name__ == "__main__":
