@@ -1,0 +1,38 @@
+name: error-screenshot-agent
+category: cli-tool
+tagline: Capture error screenshots and send them directly to coding agents
+description: |
+  A tool that streamlines the process of capturing error screenshots and sending
+  them to coding agents. Eliminates the manual copy-paste workflow when debugging
+  issues from tools like Ahrefs or any web application.
+  
+  Instead of manually screenshotting errors, copying them, and pasting into your
+  AI coding session, this tool automates the capture-to-agent flow.
+  
+use_cases:
+  - Capture browser errors and send to Claude Code
+  - Debug web application issues with visual context
+  - Share error states without manual screenshot workflow
+  - Speed up debugging cycles with instant context sharing
+
+install:
+  type: manual
+  command: "# See: https://x.com/jordienr/status/2027832658789609654"
+
+verification:
+  type: manual
+
+resources:
+  - url: https://x.com/jordienr/status/2027832658789609654
+    type: tweet
+
+tags:
+  - debugging
+  - screenshots
+  - error-handling
+  - automation
+
+added_date: "2026-03-04"
+source: slack-inbox
+source_url: https://x.com/jordienr/status/2027832658789609654
+sdlc_phase: debugging
