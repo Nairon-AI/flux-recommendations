@@ -34,6 +34,25 @@ See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines. Each recommendation is a 
 5. User selects which to install
 6. Flux installs and verifies
 
+## N-bench Radar (Fully Autonomous)
+
+This repo continuously improves itself. The **N-bench Radar** runs daily via GitHub Actions and requires **zero human input**:
+
+1. **Monitors** high-signal X/Twitter accounts (AI developers, tool makers, thought leaders)
+2. **Validates** tweets against existing recommendations → adds social proof mentions
+3. **Evaluates** unmatched tweets with AI → determines if they're about valuable NEW tools
+4. **Auto-creates** recommendation YAMLs for genuinely useful discoveries
+5. **Discards** low-value tweets (general chat, opinions, low engagement)
+6. **Auto-commits** directly to main
+
+**Criteria for new tool discovery:**
+- 50+ likes (engagement signal)
+- Specific tool/MCP/CLI/plugin/skill/pattern (not vague advice)
+- Relevant to AI-assisted development
+- Actionable (has install method, homepage, etc.)
+
+The radar ingests useful data from high-intent signals on X, so the recommendation database grows smarter every day without manual curation.
+
 ## Model Evaluation Radar
 
 `scripts/model-eval-radar.py` monitors AI lab release announcements and runs a 3-day collection window:
