@@ -1,4 +1,4 @@
-name: N-bench Radar
+name: Flux Radar
 
 on:
   schedule:
@@ -64,8 +64,8 @@ jobs:
           NEW_RECS="${{ steps.monitor.outputs.new_recs }}"
           DATE=$(date +%Y-%m-%d)
           
-          git config user.name "N-bench Radar"
-          git config user.email "nbench-radar@nairon.ai"
+          git config user.name "Flux Radar"
+          git config user.email "flux-radar@nairon.ai"
           
           # FULLY AUTONOMOUS LOGIC:
           # 1. Social proof mentions for existing recommendations → auto-commit

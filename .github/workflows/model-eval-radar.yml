@@ -77,8 +77,8 @@ jobs:
             exit 0
           fi
 
-          git config user.name "N-bench Model Eval Radar"
-          git config user.email "nbench-model-radar@nairon.ai"
+          git config user.name "Flux Model Eval Radar"
+          git config user.email "flux-model-radar@nairon.ai"
 
           DATE=$(date +%Y-%m-%d)
           BRANCH="model-eval/$DATE"

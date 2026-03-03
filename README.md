@@ -4,6 +4,84 @@ Curated database of workflow optimizations for AI-augmented development.
 
 Used by [`/flux:improve`](https://github.com/Nairon-AI/flux) to recommend tools, plugins, and patterns.
 
+## Why This Exists
+
+The AI tooling landscape evolves faster than any human can track. New tools, MCPs, plugins, and patterns emerge daily on X/Twitter, YouTube, and GitHub. Keeping up manually means:
+
+- **1-2 hours/day doom-scrolling X** looking for useful tools
+- **Testing and verifying** what each tool actually does
+- **Evaluating relevance** to your workflow
+- **Writing documentation** for things worth keeping
+- **Missing things** because you were sleeping or working
+
+This repo solves that. It's an **always-on autonomous engine** that monitors, evaluates, and ingests the best AI development tools so they're ready when you need them. You stay up-to-date with zero effort, no matter how fast the industry moves.
+
+## Architecture
+
+```mermaid
+flowchart TB
+    subgraph Sources["Data Sources"]
+        X["X/Twitter<br/>High-signal accounts"]
+        Slack["Slack Inbox<br/>Manual link drops"]
+    end
+
+    subgraph Automation["Autonomous Processing"]
+        Radar["Flux Radar<br/>(Daily GitHub Action)"]
+        Worker["Cloudflare Worker<br/>(Webhook listener)"]
+        Inbox["Slack Inbox Script<br/>(GitHub Action)"]
+    end
+
+    subgraph AI["AI Evaluation"]
+        Claude["Claude API<br/>Relevance scoring"]
+        Twitter["Twitter API<br/>Content fetching"]
+        Exa["Exa API<br/>URL analysis"]
+    end
+
+    subgraph Outputs["Actions"]
+        Auto["Auto-commit to main<br/>(4-5 star recommendations)"]
+        Close["Auto-close<br/>(duplicates, low-value)"]
+        Issue["Create issue<br/>(edge cases for review)"]
+        React["Update Slack reaction<br/>(feedback to user)"]
+    end
+
+    subgraph Database["Recommendation Database"]
+        YAML["YAML files<br/>Tools, MCPs, Skills, Patterns"]
+    end
+
+    subgraph Usage["Usage"]
+        Flux["/flux:improve<br/>Recommends relevant tools"]
+    end
+
+    X --> Radar
+    Slack --> Worker
+    Worker --> Inbox
+    
+    Radar --> Twitter
+    Radar --> Claude
+    Inbox --> Claude
+    Inbox --> Exa
+    Inbox --> Twitter
+    
+    Claude --> Auto
+    Claude --> Close
+    Claude --> Issue
+    Inbox --> React
+    
+    Auto --> YAML
+    YAML --> Flux
+```
+
+**How it flows:**
+
+1. **Flux Radar** runs daily, monitoring curated X accounts for AI tool announcements
+2. **Slack Inbox** accepts manual link drops via Cloudflare Worker webhook
+3. **AI evaluates** each item: Is it useful? Is it a duplicate? What category?
+4. **High-confidence items** get auto-committed as recommendation YAMLs
+5. **Low-value items** get auto-closed with reasoning
+6. **`/flux:improve`** pulls from this database to recommend relevant tools
+
+The result: A constantly-growing, AI-curated database of the best development tools, ready to surface exactly when you need them.
+
 ## Categories
 
 | Folder | Subfolders | Description |
@@ -12,8 +90,8 @@ Used by [`/flux:improve`](https://github.com/Nairon-AI/flux) to recommend tools,
 | `cli-tools/` | `linting/`, `git/`, `terminal/`, `tasks/`, `agent-workflow/`, `communication/`, `frontend/`, `security/`, `testing/`, `review/`, `system/` | Command-line tools |
 | `applications/` | `individual/`, `collaboration/`, `developer/`, `frameworks/` | Desktop/native apps and app-building stacks |
 | `skills/` | `frontend/`, `research/`, `backend/`, `codebase-mapping/`, `marketplaces/`, `marketing/`, `writing/`, `meta-learning/`, `security/`, `specification/` | Standalone skills |
-| `plugins/` | *(empty)* | Claude Code plugins |
-| `workflow-patterns/` | `git/`, `testing/`, `ai/`, `review/` | Best practices (not tools) |
+| `plugins/` | *(root)* | Claude Code plugins |
+| `workflow-patterns/` | `git/`, `testing/`, `ai/`, `review/`, `recipes/` | Best practices (not tools) |
 | `models/` | *(flat)* | Model guidance and model hubs |
 | `model-evaluations/` | *(flat)* | 3-day model capability reports from X/Twitter signals |
 
@@ -25,7 +103,7 @@ See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines. Each recommendation is a 
 
 ---
 
-## How It Works
+## How `/flux:improve` Works
 
 1. User runs `/flux:improve`
 2. Flux analyzes their environment (repo, MCPs, sessions)
@@ -34,9 +112,9 @@ See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines. Each recommendation is a 
 5. User selects which to install
 6. Flux installs and verifies
 
-## N-bench Radar (Fully Autonomous)
+## Flux Radar (Fully Autonomous)
 
-This repo continuously improves itself. The **N-bench Radar** runs daily via GitHub Actions and requires **zero human input**:
+This repo continuously improves itself. The **Flux Radar** runs daily via GitHub Actions and requires **zero human input**:
 
 1. **Monitors** high-signal X/Twitter accounts (AI developers, tool makers, thought leaders)
 2. **Validates** tweets against existing recommendations → adds social proof mentions
@@ -57,14 +135,16 @@ The radar ingests useful data from high-intent signals on X, so the recommendati
 
 Drop any link into the Flux Inbox Slack channel → AI evaluates and acts:
 
-| Verdict | Action |
-|---------|--------|
-| **Yes (4-5 stars)** | Auto-creates recommendation YAML, commits to main |
-| **Duplicate** | Auto-closes with explanation |
-| **No / Low value** | Discards silently |
-| **Maybe** | Creates issue for rare human review |
+| Verdict | Action | Slack Reaction |
+|---------|--------|----------------|
+| **Yes (4-5 stars)** | Auto-creates recommendation YAML, commits to main | :white_check_mark: |
+| **Duplicate** | Auto-closes with explanation | :x: |
+| **No / Low value** | Discards silently | :x: |
+| **Maybe** | Creates issue for rare human review | :thinking_face: |
 
 Supports: Tweets, YouTube videos, GitHub repos, articles, any URL.
+
+This leaves room for manual discovery - if you spot something useful while browsing, just drop the link. The system handles everything else.
 
 ## Cost of Automation
 
@@ -72,17 +152,27 @@ Running this fully autonomous system costs approximately:
 
 | Component | Daily | Monthly |
 |-----------|-------|---------|
-| N-bench Radar (tweet monitoring + AI eval) | ~$0.25 | ~$7.50 |
+| Flux Radar (tweet monitoring + AI eval) | ~$0.25 | ~$7.50 |
 | Slack Inbox (link processing) | ~$0.05 | ~$1.50 |
 | Twitter API (TwitterAPI.io) | ~$0.20 | ~$6.00 |
 | **Total** | **~$0.50/day** | **~$15/month** |
 
-**Value proposition:**
-- Manual equivalent: 1-2 hours/day monitoring X, evaluating tools, writing YAMLs
+**What you're actually paying for:**
+
+This isn't about saving money on API calls. It's about **buying back your time and attention**:
+
+- **No more doom-scrolling X** hunting for the next useful tool
+- **No more FOMO** about missing important releases while you sleep
+- **No more manual evaluation** of whether a tool is worth trying
+- **No more context-switching** between "discovery mode" and "build mode"
+- **Stay current automatically** no matter how fast the industry evolves
+
+**The math:**
+- Manual equivalent: 1-2 hours/day monitoring X, testing tools, writing YAMLs
 - At $50/hr = **$1,500-3,000/month** of human time
 - **ROI: 100-200x** - sleep at night while the database grows itself
 
-The system pays for itself if it saves you **18 minutes per month**.
+The system pays for itself if it saves you **18 minutes per month**. In practice, it saves hours.
 
 ## Model Evaluation Radar
 

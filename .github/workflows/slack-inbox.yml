@@ -15,11 +15,11 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       
-      - name: Clone N-bench repo
+      - name: Clone Flux repo
         uses: actions/checkout@v4
         with:
-          repository: Nairon-AI/n-bench
-          path: n-bench
+          repository: Nairon-AI/flux
+          path: flux
           token: ${{ secrets.PAT_TOKEN }}
       
       - name: Set up Python
@@ -42,5 +42,5 @@ jobs:
           SLACK_CHANNEL: ${{ github.event.client_payload.slack_channel }}
           SLACK_TS: ${{ github.event.client_payload.slack_ts }}
           RECOMMENDATIONS_PATH: .
-          FLUX_PLUGIN_PATH: n-bench
+          FLUX_PLUGIN_PATH: flux
         run: python scripts/slack-inbox.py
