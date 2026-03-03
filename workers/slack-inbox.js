@@ -43,7 +43,7 @@ export default {
             if (urls.length > 0) {
               // Trigger GitHub Action for each URL
               for (const url of urls) {
-                await triggerGitHubAction(env, url, event.user);
+                await triggerGitHubAction(env, url, event.user, event.channel, event.ts);
               }
               
               // React to the message
@@ -92,7 +92,7 @@ function extractUrls(text) {
   return [...new Set(filtered)]; // Dedupe
 }
 
-async function triggerGitHubAction(env, url, slackUser) {
+async function triggerGitHubAction(env, url, slackUser, channel, timestamp) {
   const response = await fetch(
     `https://api.github.com/repos/${GITHUB_REPO}/dispatches`,
     {
@@ -108,6 +108,8 @@ async function triggerGitHubAction(env, url, slackUser) {
           url: url,
           tweet_url: url,  // Backward compat
           slack_user: slackUser || "unknown",
+          slack_channel: channel,
+          slack_ts: timestamp,
         },
       }),
     }

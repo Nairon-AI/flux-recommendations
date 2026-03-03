@@ -31,6 +31,47 @@ try:
 except ImportError:
     YOUTUBE_TRANSCRIPT_AVAILABLE = False
 
+
+def update_slack_reaction(
+    channel: str, timestamp: str, add_emoji: str, remove_emoji: str = "eyes"
+):
+    """Update Slack reactions: remove old emoji, add new emoji."""
+    slack_token = os.environ.get("SLACK_BOT_TOKEN")
+    if not slack_token or not channel or not timestamp:
+        print("Skipping Slack reaction update (missing token/channel/ts)")
+        return
+
+    headers = {
+        "Authorization": f"Bearer {slack_token}",
+        "Content-Type": "application/json",
+    }
+
+    # Remove old reaction (eyes)
+    try:
+        data = json.dumps(
+            {"channel": channel, "timestamp": timestamp, "name": remove_emoji}
+        ).encode()
+        req = urllib.request.Request(
+            "https://slack.com/api/reactions.remove", data=data, headers=headers
+        )
+        urllib.request.urlopen(req, timeout=10)
+    except Exception as e:
+        print(f"Failed to remove reaction: {e}")
+
+    # Add new reaction
+    try:
+        data = json.dumps(
+            {"channel": channel, "timestamp": timestamp, "name": add_emoji}
+        ).encode()
+        req = urllib.request.Request(
+            "https://slack.com/api/reactions.add", data=data, headers=headers
+        )
+        urllib.request.urlopen(req, timeout=10)
+        print(f"Updated Slack reaction: -{remove_emoji} +{add_emoji}")
+    except Exception as e:
+        print(f"Failed to add reaction: {e}")
+
+
 TWITTER_API_BASE = "https://api.twitterapi.io"
 ANTHROPIC_API_BASE = "https://api.anthropic.com/v1/messages"
 EXA_API_BASE = "https://api.exa.ai/contents"
@@ -733,6 +774,10 @@ def main():
     recommendations_path = os.environ.get("RECOMMENDATIONS_PATH", ".")
     flux_plugin_path = os.environ.get("FLUX_PLUGIN_PATH", "")
 
+    # Slack reaction tracking
+    slack_channel = os.environ.get("SLACK_CHANNEL", "")
+    slack_ts = os.environ.get("SLACK_TS", "")
+
     if not url:
         print("Error: URL not set")
         exit(1)
@@ -854,12 +899,14 @@ Type: {url_type}
                 ]
             )
             print(f"Created and closed duplicate issue: {issue_url}")
+        update_slack_reaction(slack_channel, slack_ts, "x", "eyes")
         return
 
     if verdict == "No" or stars < 3:
         reason = analysis.get("stars_reason", "Not relevant enough")
         print(f"SKIP (Low value): {reason}")
         print("No issue created - not worth adding to Flux recommendations")
+        update_slack_reaction(slack_channel, slack_ts, "x", "eyes")
         return
 
     if verdict == "Yes" and stars >= 4:
@@ -886,6 +933,10 @@ Type: {url_type}
 
             print(f"Committed: {rel_path}")
             print("No issue created - recommendation added directly to main")
+            update_slack_reaction(slack_channel, slack_ts, "white_check_mark", "eyes")
+        else:
+            # File already exists or failed to create
+            update_slack_reaction(slack_channel, slack_ts, "x", "eyes")
         return
 
     # MAYBE or moderate confidence: Create issue for human review
@@ -908,6 +959,8 @@ Type: {url_type}
         exit(1)
 
     print(f"Created issue for review: {result.stdout.strip()}")
+    # Issue created for review - use thinking emoji to indicate pending human review
+    update_slack_reaction(slack_channel, slack_ts, "thinking_face", "eyes")
 
 
 if __name__ == "__main__":
