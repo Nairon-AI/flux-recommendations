@@ -1,0 +1,356 @@
+- author: '@_catwu'
+  date: '2026-03-03'
+  likes: 1104
+  text: Here's a roundup of how Claude Code has changed engineering at inside Ramp,
+    Rakuten, Brex, Wiz, Shopify, and Spotify 🧵
+  url: https://x.com/_catwu/status/2028603856163426522
+- author: '@dani_avila7'
+  date: '2026-03-03'
+  likes: 273
+  text: 'Excited to be selected for @AnthropicAI Open Source Program
+
+
+    21,800+ stars on GitHub and growing
+
+
+    Huge thanks to the community and the Claude Code team for the support from day
+    one! https://t.co/ejjjdI9L7h'
+  url: https://x.com/dani_avila7/status/2028643970360762801
+- author: '@dani_avila7'
+  date: '2026-03-03'
+  likes: 35
+  text: "I’ve been trying to replicate this with other models and apps\n\n Looks like\
+    \ the search is over"
+  url: https://x.com/dani_avila7/status/2028636850898829336
+- author: '@dani_avila7'
+  date: '2026-03-03'
+  likes: 16
+  text: 'I’ve been using Cubic’s codebase scan and it’s absolutely worth it
+
+
+    In this blog, they show how they ran their codebase scan tool on viNext.
+
+
+    I’ve been using it to monitor bugs in the Claude Code Templates codebase, especially
+    in the CLI tool I use to run agents in sandboxes.
+
+
+    Th'
+  url: https://x.com/dani_avila7/status/2028626966455218656
+- author: '@dani_avila7'
+  date: '2026-03-03'
+  likes: 2016
+  text: Massive respect to the Claude team holding it all together https://t.co/1MdWgZ1fCR
+  url: https://x.com/dani_avila7/status/2028582768544759989
+- author: '@pvncher'
+  date: '2026-03-03'
+  likes: 80
+  text: 'Glm 5 is now #3 on Repo Bench
+
+    Insane gains by the @Zai_org
+
+
+    Previous glm models never cracked 40%, but this one is beating opus 4.6
+
+
+    It’s available now in @RepoPrompt via agent mode too! https://t.co/7lpDIXKAS8'
+  url: https://x.com/pvncher/status/2028579387319128492
+- author: '@pvncher'
+  date: '2026-03-03'
+  likes: 30
+  text: 'Just released @RepoPrompt 2.0.13
+
+    - GLM models now supported in Agent and context builder via Claude Code!
+
+    - Some tightening around codex connectivity failure detection
+
+
+    Also reminder that Repo Prompt is on sale right now through the end of the week
+    for the 2.0 launch!'
+  url: https://x.com/pvncher/status/2028521926314917937
+- author: '@nummanali'
+  date: '2026-03-03'
+  likes: 20
+  text: A whole world of new possibilities!
+  url: https://x.com/nummanali/status/2028588784334295406
+- author: '@nummanali'
+  date: '2026-03-03'
+  likes: 8
+  text: "Makes sense as to why we never saw the OSS models on the ARC AGI benchmarks\
+    \ \n\nThey’re good in singular domains like coding but lack the abstract reasoning\
+    \ of frontier models IMO \n\nDeepSeek v4 has the chance to change this - please\
+    \ be good \U0001F91E"
+  url: https://x.com/nummanali/status/2028578738267365681
+- author: '@nummanali'
+  date: '2026-03-03'
+  likes: 33
+  text: "The new Qwen on device models receiving praise from Elon \n\nThese are densely\
+    \ intelligent and replace the need for APIs for general tasks\n\nWithin a year\
+    \ these could be Opus level as further distillation and training techniques improve\
+    \ \n\nThey can even be embedded in web apps https:"
+  url: https://x.com/nummanali/status/2028565235305525433
+- author: '@nummanali'
+  date: '2026-03-03'
+  likes: 39
+  text: "Incredibly intuitive approach for agentic engineering \n\nRed/Green Testing\
+    \ to steer agents for long runs \n\nFound through: @oikon48"
+  url: https://x.com/nummanali/status/2028543149157544193
+- author: '@nummanali'
+  date: '2026-03-03'
+  likes: 34
+  text: 'dmux makes you a rockstar🤘
+
+
+    If you’re a worktress kind of person (not me), this might be worth your time'
+  url: https://x.com/nummanali/status/2028514081716519091
+- author: '@nummanali'
+  date: '2026-03-03'
+  likes: 26
+  text: 'While Claude Code is down
+
+
+    Try the Gemini CLI - BUT, update it''s system prompt to have it work like Opus
+    https://t.co/23I94Zl5XP'
+  url: https://x.com/nummanali/status/2028478973693272172
+- author: '@nummanali'
+  date: '2026-03-03'
+  likes: 26
+  text: 'Gemini CLI by default system prompt is too narrow
+
+
+    I overrode it with a Partnership Paradigm more compatible with Gemini 3.1 Pro
+
+
+    Had a very positive experience since I made this update, behaves like Opus
+
+
+    Still evaluating and improving, but if you want to try see below 🧵 https:/'
+  url: https://x.com/nummanali/status/2028462257827439066
+- author: '@nummanali'
+  date: '2026-03-03'
+  likes: 3
+  text: I see what you did there
+  url: https://x.com/nummanali/status/2028456699611304329
+- author: '@nummanali'
+  date: '2026-03-03'
+  likes: 43
+  text: "Figma MCP to Code - Best Approach IMO\n\n1. Use Gemini 3.1 Pro\n2. Enable\
+    \ Figma MCP\n3. Add a browser tool\n4. Add Figma Rules \n5. Reset context often\n\
+    6. Work iteratively \n7. Do small commits \n\nCame to this conclusions after 6\
+    \ weeks of iterating\n\nAll links in thread https://t.co/CxGXu"
+  url: https://x.com/nummanali/status/2028426424604852724
+- author: '@realmcore_'
+  date: '2026-03-03'
+  likes: 1
+  text: 'You’re talking about ASI
+
+
+    And no. It already happened. The models are generally intelligent and have agency
+    when prompted.
+
+
+    I’m not sure what more you could classify as “AGI”
+
+
+    The models are smart enough, all that matters now is the harness'
+  url: https://x.com/realmcore_/status/2028675522495217689
+- author: '@realmcore_'
+  date: '2026-03-03'
+  likes: 2563
+  text: 'RT @meatballtimes: software engineering is absolutely not being automated
+    right now.
+
+
+    I barely ever code any more but I have never been bus…'
+  url: https://x.com/realmcore_/status/2028671929432072363
+- author: '@realmcore_'
+  date: '2026-03-03'
+  likes: 2009
+  text: 'RT @thdxr: we''d be so screwed if the companies replacing software engineers
+    could build software'
+  url: https://x.com/realmcore_/status/2028519433464152400
+- author: '@tokengobbler'
+  date: '2026-03-03'
+  likes: 7
+  text: Name a better AI afterparty? I’ll wait
+  url: https://x.com/tokengobbler/status/2028547322301333769
+- author: '@tokengobbler'
+  date: '2026-03-03'
+  likes: 7
+  text: The real brave ones in Dubai are those ordering sushi on day three
+  url: https://x.com/tokengobbler/status/2028472120330559934
+- author: '@EastlondonDev'
+  date: '2026-03-03'
+  likes: 160
+  text: 'RT @jhleath: people frequently ask me: "isn''t it unsafe or slow to use s3
+    as your primary storage?" if you''re used to the existing set of S…'
+  url: https://x.com/EastlondonDev/status/2028477367555899721
+- author: '@EastlondonDev'
+  date: '2026-03-03'
+  likes: 102
+  text: 'RT @therealoliulv: WE WON THE @MistralAI LONDON HACKATHON 🇬🇧🇫🇷
+
+    We made Mistralverse, here''s our demo vid.
+
+
+    @HarryStebbings who says the UK…'
+  url: https://x.com/EastlondonDev/status/2028416238121058802
+- author: '@__morse'
+  date: '2026-03-03'
+  likes: 22
+  text: I just did one of the biggest refactor of my life. had to consume 10 opencode
+    sessions to exhaustion. 200k tokens back to back. all those poor agents. all dead.
+    but it's fucking working
+  url: https://x.com/__morse/status/2028468213181194241
+- author: '@__morse'
+  date: '2026-03-03'
+  likes: 170
+  text: 'I got tired of how every React framework is over engineered and broken so
+    started making my own
+
+
+    it looks just like Express but you can return jsx
+
+
+    no file based routing. no bs
+
+
+    should I release it? https://t.co/0PR2CMBE8Q'
+  url: https://x.com/__morse/status/2028436998512406899
+- author: '@kevinkern'
+  date: '2026-03-03'
+  likes: 5
+  text: wasn't sure which color theme would fit taugentic best, so I added custom
+    themes. https://t.co/H3vkvyKCmE
+  url: https://x.com/kevinkern/status/2028587382220390666
+- author: '@kevinkern'
+  date: '2026-03-03'
+  likes: 42
+  text: codex 0.107 runs into 503 errors. back to 105
+  url: https://x.com/kevinkern/status/2028574986252783806
+- author: '@justsisyphus'
+  date: '2026-03-03'
+  likes: 30
+  text: 'Ultrawork energy in Seoul! ulw ulw
+
+
+    Amazing conversations at the event organized by our maintainer @minpeterx and
+    sponsored by @hashed_official, empowering the next wave of builders.
+
+
+    Next stop, San Francisco 🌉 https://t.co/3QL68mHPMq'
+  url: https://x.com/justsisyphus/status/2028407075722956988
+- author: '@parcadei'
+  date: '2026-03-03'
+  likes: 3
+  text: any model that is 100% being used by a programmer should be let go, they have
+    shown they have no agency beyond what’s being prompted by what’s already inside
+    the programmer
+  url: https://x.com/parcadei/status/2028472719986036752
+- author: '@mattpocockuk'
+  date: '2026-03-03'
+  likes: 278
+  text: 'My /grill-me skill just asked me 24 consecutive questions
+
+
+    I''ve been sat here, writing a PRD, for an hour
+
+
+    This is what software development has become
+
+
+    (and I love it)'
+  url: https://x.com/mattpocockuk/status/2028742165048799335
+- author: '@mattpocockuk'
+  date: '2026-03-03'
+  likes: 189
+  text: 'The failure mode I hit most often when I started with AI (mostly with Cursor)
+    was being too "local".
+
+
+    I would ''@'' a file, then another file, then tell the AI exactly what change
+    I wanted.
+
+
+    This appears to stop the agent from being curious about the rest of the codebase.
+    No ''Explo'
+  url: https://x.com/mattpocockuk/status/2028578915925852535
+- author: '@mattpocockuk'
+  date: '2026-03-03'
+  likes: 265
+  text: 'I have an AI that writes stuff for me. Here are all the phrases I''ve banned
+    it from using:
+
+
+    real power
+
+    wake-up call
+
+    fundamentally changes
+
+    key benefit
+
+    cut through the noise
+
+    key insight
+
+    the irony
+
+    the good news
+
+    the reality
+
+    it''s kind of like
+
+    here''s the thing:
+
+    hard truth
+
+    uncomfortable'
+  url: https://x.com/mattpocockuk/status/2028476691337658600
+- author: '@mattpocockuk'
+  date: '2026-03-03'
+  likes: 351
+  text: 'A nice metaphor I''ve found for how to think about the inputs for multi-agent
+    sessions:
+
+
+    SPEC.md - the destination
+
+    PLAN.md - the journey'
+  url: https://x.com/mattpocockuk/status/2028416678657155490
+- author: '@ryancarson'
+  date: '2026-03-03'
+  likes: 135
+  text: 'As a founder/ceo I would never choose a faster model that''s cheaper and
+    less intelligent.
+
+
+    I want max intelligence, and the cost that comes with it, for me and my team.
+
+
+    Same decision when you have a choice to hire a faster, less experienced employee
+    vs a slower, wiser and more e'
+  url: https://x.com/ryancarson/status/2028576716168581507
+- author: '@ryancarson'
+  date: '2026-03-03'
+  likes: 21
+  text: '"I’m pulling the design-system layout guidance now so the max-width value
+    matches your existing sizing rules instead of introducing a random one-off."
+
+
+    (pats gpt-5.3-codex xHigh on the head) https://t.co/ZfxthjuO0y'
+  url: https://x.com/ryancarson/status/2028514975648563580
+- author: '@ryancarson'
+  date: '2026-03-03'
+  likes: 238
+  text: "It's time for you to think about how an agent can use your app via CLI.\n\
+    \nIn the future, none of us (including our agents) are going to want to log in\
+    \ to a web interface to do anything. \n\nAgents will to do everything via CLI\
+    \ + writing their own code."
+  url: https://x.com/ryancarson/status/2028461476667650317
+- author: '@ryancarson'
+  date: '2026-03-03'
+  likes: 98
+  text: Great tip
+  url: https://x.com/ryancarson/status/2028429611348918334
