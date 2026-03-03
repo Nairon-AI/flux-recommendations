@@ -348,33 +348,228 @@ def add_mention_to_recommendation(
     return True
 
 
-def save_unmatched_tweet(tweet: dict, dry_run: bool = False):
-    """Save unmatched tweet to pending folder for manual review."""
-    PENDING_DIR.mkdir(parents=True, exist_ok=True)
+def evaluate_new_tool_with_llm(
+    tweet_text: str,
+    tweet_url: str,
+    author: str,
+    likes: int,
+    api_key: str | None,
+) -> dict | None:
+    """
+    Use LLM to evaluate if a tweet is about a genuinely useful NEW tool
+    worth adding to the recommendations.
 
-    date_str = datetime.now(timezone.utc).strftime("%Y-%m-%d")
-    pending_file = PENDING_DIR / f"tweets-{date_str}.yaml"
+    Returns:
+        Recommendation dict if valuable, None if not worth adding
+    """
+    if not api_key:
+        return None
 
-    # Load existing pending tweets
-    pending = []
-    if pending_file.exists():
-        with open(pending_file) as f:
-            pending = yaml.safe_load(f) or []
+    # Skip low-engagement tweets
+    if likes < 50:
+        return None
 
-    # Check for duplicate
-    existing_urls = {t.get("url") for t in pending}
-    if tweet["url"] in existing_urls:
-        return False
+    prompt = f"""Analyze this tweet and determine if it's recommending a specific, useful tool for AI-assisted software development.
 
-    pending.append(tweet)
+Tweet by {author} ({likes} likes):
+"{tweet_text}"
+
+CRITERIA FOR VALUABLE TOOLS:
+1. Must be a SPECIFIC tool, library, MCP server, CLI, plugin, or workflow pattern
+2. Must be relevant to AI-assisted coding (Claude Code, Codex, Cursor, Aider, etc.)
+3. Must NOT be: general advice, opinions, jokes, self-promotion without substance
+4. Must NOT be: tools we likely already have (GitHub, VSCode, common libraries)
+5. HIGH SIGNAL: 500+ likes, concrete tool recommendation, actionable
+6. MEDIUM SIGNAL: 100-500 likes, specific tool mention
+7. LOW SIGNAL: <100 likes, vague mention - REJECT unless exceptionally useful
+
+If this IS a valuable new tool recommendation, respond with JSON:
+{{
+  "is_valuable": true,
+  "tool_name": "tool-name-lowercase",
+  "category": "mcp|cli-tool|plugin|skill|application|workflow-pattern",
+  "subcategory": "optional/path",
+  "tagline": "One line description max 80 chars",
+  "description": "2-3 sentence description of what it does and why it's useful",
+  "install_type": "npm|brew|manual|mcp|plugin|skill",
+  "install_command": "npm install x or brew install x etc",
+  "homepage": "https://... if mentioned",
+  "github": "https://github.com/... if mentioned",
+  "tags": ["tag1", "tag2"],
+  "reason": "Why this is valuable"
+}}
+
+If NOT valuable, respond with JSON:
+{{"is_valuable": false, "reason": "brief explanation"}}
+
+Respond with JSON only, no markdown."""
+
+    headers = {
+        "Content-Type": "application/json",
+        "x-api-key": api_key,
+        "anthropic-version": "2023-06-01",
+    }
+
+    body = json.dumps(
+        {
+            "model": LLM_MODEL,
+            "max_tokens": 500,
+            "messages": [{"role": "user", "content": prompt}],
+        }
+    ).encode()
+
+    req = urllib.request.Request(LLM_API_URL, data=body, headers=headers, method="POST")
+
+    try:
+        with urllib.request.urlopen(req, timeout=60) as resp:
+            data = json.loads(resp.read().decode())
+            content = data.get("content", [{}])[0].get("text", "{}")
+
+            # Handle markdown code blocks
+            content = content.strip()
+            if content.startswith("```"):
+                content = content.split("\n", 1)[-1].rsplit("```", 1)[0]
+
+            result = json.loads(content)
+
+            if result.get("is_valuable"):
+                return result
+            else:
+                print(f"    Rejected: {result.get('reason', 'unknown')[:50]}")
+                return None
+
+    except Exception as e:
+        print(f"    LLM evaluation error: {e}")
+        return None
+
+
+def create_recommendation_yaml(
+    tool_data: dict,
+    tweet_url: str,
+    author: str,
+    tweet_text: str,
+    likes: int,
+    dry_run: bool = False,
+) -> Path | None:
+    """Create a recommendation YAML file from LLM-extracted tool data."""
+
+    tool_name = tool_data.get("tool_name", "").lower().replace(" ", "-")
+    if not tool_name:
+        return None
+
+    category = tool_data.get("category", "cli-tool")
+    subcategory = tool_data.get("subcategory", "")
+
+    # Map category to folder
+    category_folders = {
+        "mcp": "mcps",
+        "cli-tool": "cli-tools",
+        "plugin": "plugins",
+        "skill": "skills",
+        "application": "applications",
+        "workflow-pattern": "workflow-patterns",
+    }
+
+    folder_name = category_folders.get(category, "discoveries")
+    folder_path = REPO_ROOT / folder_name
+
+    if subcategory:
+        folder_path = folder_path / subcategory
+
+    folder_path.mkdir(parents=True, exist_ok=True)
+    yaml_path = folder_path / f"{tool_name}.yaml"
+
+    # Don't overwrite existing
+    if yaml_path.exists():
+        print(f"    Skipping {tool_name} - already exists")
+        return None
+
+    # Build recommendation object
+    rec = {
+        "name": tool_name,
+        "category": category,
+        "tagline": tool_data.get("tagline", ""),
+        "description": tool_data.get("description", ""),
+        "install": {
+            "type": tool_data.get("install_type", "manual"),
+            "command": tool_data.get("install_command", "# See homepage"),
+        },
+        "verification": {
+            "type": "manual",
+        },
+        "resources": [],
+        "tags": tool_data.get("tags", []),
+        "added_date": datetime.now(timezone.utc).strftime("%Y-%m-%d"),
+        "source": "x-discovery",
+        "source_url": tweet_url,
+        "mentions": [
+            {
+                "url": tweet_url,
+                "author": author,
+                "text": tweet_text[:280] if len(tweet_text) > 280 else tweet_text,
+                "date": datetime.now(timezone.utc).strftime("%Y-%m-%d"),
+                "likes": likes,
+            }
+        ],
+    }
+
+    # Add resources if provided
+    if tool_data.get("homepage"):
+        rec["resources"].append({"url": tool_data["homepage"], "type": "homepage"})
+    if tool_data.get("github"):
+        rec["resources"].append({"url": tool_data["github"], "type": "github"})
 
     if dry_run:
-        return True
+        print(f"    Would create: {yaml_path}")
+        return yaml_path
 
-    with open(pending_file, "w") as f:
-        yaml.dump(pending, f, default_flow_style=False, allow_unicode=True)
+    with open(yaml_path, "w") as f:
+        yaml.dump(rec, f, default_flow_style=False, allow_unicode=True, sort_keys=False)
 
-    return True
+    print(f"    Created: {yaml_path.relative_to(REPO_ROOT)}")
+    return yaml_path
+
+
+def evaluate_and_maybe_create_recommendation(
+    tweet: dict,
+    anthropic_key: str | None,
+    dry_run: bool = False,
+) -> bool:
+    """
+    Evaluate an unmatched tweet and create a recommendation if valuable.
+    Returns True if a recommendation was created.
+    """
+    if not anthropic_key:
+        return False
+
+    tweet_text = tweet.get("text", "")
+    tweet_url = tweet.get("url", "")
+    author = tweet.get("author", "")
+    likes = tweet.get("likes", 0)
+
+    # Evaluate with LLM
+    tool_data = evaluate_new_tool_with_llm(
+        tweet_text=tweet_text,
+        tweet_url=tweet_url,
+        author=author,
+        likes=likes,
+        api_key=anthropic_key,
+    )
+
+    if not tool_data:
+        return False
+
+    # Create the recommendation
+    result = create_recommendation_yaml(
+        tool_data=tool_data,
+        tweet_url=tweet_url,
+        author=author,
+        tweet_text=tweet_text,
+        likes=likes,
+        dry_run=dry_run,
+    )
+
+    return result is not None
 
 
 def fetch_user_tweets(username: str, api_key: str) -> list[dict]:
@@ -521,9 +716,11 @@ def main():
                 if add_mention_to_recommendation(matched_path, mention, args.dry_run):
                     matched_count += 1
             else:
-                # Save to pending for manual review
-                if save_unmatched_tweet(mention, args.dry_run):
-                    unmatched_count += 1
+                # Evaluate if this is a valuable NEW tool worth adding
+                if evaluate_and_maybe_create_recommendation(
+                    mention, anthropic_key, args.dry_run
+                ):
+                    unmatched_count += 1  # Now means "new recommendations created"
 
         print(f"{new_count} new")
 
@@ -535,7 +732,7 @@ def main():
         save_state(state)
 
     print(f"\nMatched to recommendations: {matched_count}")
-    print(f"Saved to pending: {unmatched_count}")
+    print(f"New recommendations created: {unmatched_count}")
 
     return matched_count + unmatched_count
 

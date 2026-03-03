@@ -50,31 +50,34 @@ jobs:
           
           # Parse stats from output
           MATCHED=$(grep "Matched to recommendations:" /tmp/monitor.log | grep -oE '[0-9]+' || echo "0")
-          PENDING=$(grep "Saved to pending:" /tmp/monitor.log | grep -oE '[0-9]+' || echo "0")
+          NEW_RECS=$(grep "New recommendations created:" /tmp/monitor.log | grep -oE '[0-9]+' || echo "0")
           
           echo "matched=$MATCHED" >> $GITHUB_OUTPUT
-          echo "pending=$PENDING" >> $GITHUB_OUTPUT
+          echo "new_recs=$NEW_RECS" >> $GITHUB_OUTPUT
 
-      - name: Auto-commit social proof (autonomous mode)
+      - name: Auto-commit (fully autonomous)
         if: inputs.dry_run != 'true'
         env:
           GH_TOKEN: ${{ secrets.PAT_TOKEN }}
         run: |
           MATCHED="${{ steps.monitor.outputs.matched }}"
-          PENDING="${{ steps.monitor.outputs.pending }}"
+          NEW_RECS="${{ steps.monitor.outputs.new_recs }}"
           DATE=$(date +%Y-%m-%d)
           
           git config user.name "N-bench Radar"
           git config user.email "nbench-radar@nairon.ai"
           
-          # AUTONOMOUS LOGIC:
-          # - If MATCHED > 0: Auto-commit social proof directly to main (valuable)
-          # - If MATCHED = 0: Discard pending tweets (noise requiring manual review)
+          # FULLY AUTONOMOUS LOGIC:
+          # 1. Social proof mentions for existing recommendations → auto-commit
+          # 2. AI evaluates unmatched tweets → creates new recommendations if valuable
+          # 3. Low-value tweets → discarded (no manual review needed)
           
-          if [ "$MATCHED" -gt 0 ]; then
-            echo "Auto-committing $MATCHED validated social proof mentions"
+          TOTAL=$((MATCHED + NEW_RECS))
+          
+          if [ "$TOTAL" -gt 0 ]; then
+            echo "Auto-committing: $MATCHED social proof mentions + $NEW_RECS new recommendations"
             
-            # Only stage recommendation files (not pending/)
+            # Stage all recommendation files (not pending/)
             git add -A
             git reset -- pending/ 2>/dev/null || true
             
@@ -82,24 +85,32 @@ jobs:
             git add .monitor_state.json 2>/dev/null || true
             
             if [ -n "$(git diff --cached --name-only)" ]; then
-              git commit -m "radar: auto-add $MATCHED social proof mentions - $DATE"
+              # Build smart commit message
+              if [ "$MATCHED" -gt 0 ] && [ "$NEW_RECS" -gt 0 ]; then
+                MSG="radar: $MATCHED mentions + $NEW_RECS new recommendations - $DATE"
+              elif [ "$MATCHED" -gt 0 ]; then
+                MSG="radar: $MATCHED social proof mentions - $DATE"
+              else
+                MSG="radar: $NEW_RECS new AI-discovered recommendations - $DATE"
+              fi
+              
+              git commit -m "$MSG"
               git push origin main
-              echo "Committed and pushed $MATCHED mentions to main"
+              echo "Committed: $MSG"
             else
               echo "No changes to commit after filtering"
             fi
           else
-            echo "No validated mentions found (pending: $PENDING)"
-            echo "Discarding pending tweets - they require manual review"
+            echo "Nothing valuable found today (all tweets rejected by AI evaluation)"
             
             # Only update state file to track seen tweets
             git checkout -- . 2>/dev/null || true
             git add .monitor_state.json 2>/dev/null || true
             
             if [ -n "$(git diff --cached --name-only)" ]; then
-              git commit -m "radar: update state (no new mentions) - $DATE"
+              git commit -m "radar: update state (nothing valuable) - $DATE"
               git push origin main
             fi
           fi
           
-          echo "Radar run complete - fully autonomous, no PR created"
+          echo "Radar run complete - fully autonomous, zero human input required"
