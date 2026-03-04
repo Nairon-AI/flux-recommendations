@@ -1,0 +1,33 @@
+name: openclaw-agent-swarm-orchestration-syste
+category: article
+tagline: Elvis built a system where OpenClaw acts as orchestrator spawning and managing
+  m
+description: 'OpenClaw serves as an orchestration layer that spawns specialized coding
+  agents in isolated worktrees/tmux sessions, with automated monitoring, multi-model
+  code review, and business context integration. The system achieved 94 commits in
+  one day and 7 PRs in 30 minutes through parallel agent execution.
+
+
+  **Flux Impact:** This demonstrates advanced multi-agent orchestration that could
+  enhance Flux''s existing agent patterns. The tmux isolation, business context integration,
+  and automated monitoring could be adapted for Flux''s worker agents and review processes.'
+use_cases:
+- Research OpenClaw setup and configuration for agent orchestration
+- Implement tmux-based agent isolation pattern in Flux workflows
+- Create multi-model code review automation using existing review tools
+- Design task registry system for tracking parallel agent work
+- Explore worktree-based agent isolation (builds on existing worktree patterns)
+- Integrate business context vault with agent prompting
+install:
+  type: manual
+  command: '# See: https://x.com/elvissun/article/2025920521871716562'
+verification:
+  type: manual
+resources:
+- url: https://x.com/elvissun/article/2025920521871716562
+  type: homepage
+tags: []
+added_date: '2026-03-04'
+source: slack-inbox
+source_url: https://x.com/elvissun/article/2025920521871716562
+sdlc_phase: Planning
