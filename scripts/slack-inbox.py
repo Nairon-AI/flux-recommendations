@@ -634,6 +634,54 @@ def fetch_with_exa(url, api_key):
         return None
 
 
+FIRECRAWL_API_BASE = "https://api.firecrawl.dev/v1/scrape"
+
+
+def fetch_with_firecrawl(url, api_key):
+    """Fetch URL content using Firecrawl (handles Cloudflare-protected sites)."""
+    headers = {
+        "Content-Type": "application/json",
+        "Authorization": f"Bearer {api_key}",
+    }
+
+    data = json.dumps(
+        {
+            "url": url,
+            "formats": ["markdown"],
+        }
+    ).encode()
+
+    req = urllib.request.Request(
+        FIRECRAWL_API_BASE, data=data, headers=headers, method="POST"
+    )
+
+    try:
+        with urllib.request.urlopen(req, timeout=60) as resp:
+            result = json.loads(resp.read().decode())
+            if result.get("success"):
+                data = result.get("data", {})
+                markdown = data.get("markdown", "")
+                metadata = data.get("metadata", {})
+                return {
+                    "type": "firecrawl",
+                    "title": metadata.get("title", ""),
+                    "text": markdown[:5000],  # Limit content size
+                    "summary": metadata.get("description", ""),
+                    "author": metadata.get("author", ""),
+                    "url": url,
+                }
+            else:
+                print(f"Firecrawl error: {result.get('error', 'unknown')}")
+                return None
+    except urllib.error.HTTPError as e:
+        error_body = e.read().decode() if e.fp else ""
+        print(f"Firecrawl API error: {e.code} - {error_body[:500]}")
+        return None
+    except Exception as e:
+        print(f"Error calling Firecrawl: {e}")
+        return None
+
+
 def extract_youtube_video_id(url):
     """Extract video ID from various YouTube URL formats."""
     patterns = [
@@ -741,16 +789,25 @@ def fetch_youtube_content(url, exa_api_key=None):
     }
 
 
-def fetch_exa_content(url, api_key, url_type):
-    """Fetch content via Exa and return structured content."""
-    exa_result = fetch_with_exa(url, api_key)
-    if not exa_result:
+def fetch_exa_content(url, api_key, url_type, firecrawl_api_key=None):
+    """Fetch content via Exa, falling back to Firecrawl if Exa fails."""
+    # Try Exa first
+    result = fetch_with_exa(url, api_key)
+    source = "exa"
+
+    # If Exa fails and we have Firecrawl, try that
+    if not result and firecrawl_api_key:
+        print("Exa failed, trying Firecrawl fallback...")
+        result = fetch_with_firecrawl(url, firecrawl_api_key)
+        source = "firecrawl"
+
+    if not result:
         return None
 
-    title = exa_result.get("title", "Unknown")
-    summary = exa_result.get("summary", "")
-    text = exa_result.get("text", "")
-    author = exa_result.get("author", "")
+    title = result.get("title", "Unknown")
+    summary = result.get("summary", "")
+    text = result.get("text", "")
+    author = result.get("author", "")
 
     # Build content section for Claude
     content_text = f"Title: {title}\n"
@@ -765,7 +822,7 @@ def fetch_exa_content(url, api_key, url_type):
         meta = f"🔗 {title}"
         display = f"**{title}**\n\n{summary or text[:500]}"
     else:
-        meta = f"🔗 {title}"
+        meta = f"🔗 {title}" + (f" (via {source})" if source == "firecrawl" else "")
         display = f"**{title}**\n\n{summary or text[:500]}"
 
     return {
@@ -1020,6 +1077,7 @@ def main():
     twitter_api_key = os.environ.get("TWITTER_API_KEY")
     anthropic_api_key = os.environ.get("ANTHROPIC_API_KEY")
     exa_api_key = os.environ.get("EXA_API_KEY")
+    firecrawl_api_key = os.environ.get("FIRECRAWL_API_KEY")
     recommendations_path = os.environ.get("RECOMMENDATIONS_PATH", ".")
     flux_plugin_path = os.environ.get("FLUX_PLUGIN_PATH", "")
 
@@ -1073,12 +1131,12 @@ def main():
         print("Fetching YouTube content...")
         content = fetch_youtube_content(url, exa_api_key)
     else:
-        if not exa_api_key:
-            print("Error: EXA_API_KEY required for non-tweet URLs")
+        if not exa_api_key and not firecrawl_api_key:
+            print("Error: EXA_API_KEY or FIRECRAWL_API_KEY required for non-tweet URLs")
             update_slack_reaction(slack_channel, slack_ts, "x", "eyes")
             exit(1)
-        print(f"Fetching content via Exa...")
-        content = fetch_exa_content(url, exa_api_key, url_type)
+        print(f"Fetching content via Exa (with Firecrawl fallback)...")
+        content = fetch_exa_content(url, exa_api_key, url_type, firecrawl_api_key)
 
     if not content:
         print("Could not fetch content from URL")
