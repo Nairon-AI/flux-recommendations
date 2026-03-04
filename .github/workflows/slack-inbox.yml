@@ -28,7 +28,7 @@ jobs:
           python-version: '3.11'
       
       - name: Install dependencies
-        run: pip install youtube-transcript-api requests
+        run: pip install youtube-transcript-api requests pyyaml
       
       - name: Analyze URL and create issue
         env:
