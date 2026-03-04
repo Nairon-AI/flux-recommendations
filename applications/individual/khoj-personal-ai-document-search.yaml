@@ -1,0 +1,31 @@
+name: khoj-personal-ai-document-search
+category: tweet
+tagline: Khoj is an open-source personal AI that indexes all your documents (Notion,
+  Obsi
+description: 'Khoj is an open-source personal AI assistant that indexes your documents
+  across multiple platforms (Notion, Obsidian, Google Docs, PDFs) and provides question
+  answering with citations. It supports both cloud and self-hosted deployment with
+  local models like Llama and Mistral, maintaining conversation memory across sessions.
+
+
+  **Flux Impact:** Enhances our Agentic SDLC by providing persistent, searchable context
+  across all project documentation and conversations, reducing context amnesia between
+  sessions'
+use_cases:
+- Evaluate Khoj for team documentation indexing
+- Create Khoj MCP server for Claude Code integration
+- Test offline mode with local models for sensitive codebases
+- Integrate with .flux/memory/ for persistent knowledge management
+install:
+  type: manual
+  command: '# See: https://x.com/aiwithjainam/status/2029102301252882560?s=20'
+verification:
+  type: manual
+resources:
+- url: https://x.com/aiwithjainam/status/2029102301252882560?s=20
+  type: homepage
+tags: []
+added_date: '2026-03-04'
+source: slack-inbox
+source_url: https://x.com/aiwithjainam/status/2029102301252882560?s=20
+sdlc_phase: Planning
