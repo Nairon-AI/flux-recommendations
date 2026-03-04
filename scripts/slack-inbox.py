@@ -291,6 +291,7 @@ def extract_article_id(url):
 def fetch_article(article_id, api_key):
     """Fetch article from Twitter API using the /twitter/article endpoint."""
     url = f"{TWITTER_API_BASE}/twitter/article?tweet_id={article_id}"
+    print(f"Fetching article ID: {article_id}")
     req = urllib.request.Request(url)
     req.add_header("X-API-Key", api_key)
     req.add_header("User-Agent", "FluxInbox/1.0")
@@ -300,17 +301,24 @@ def fetch_article(article_id, api_key):
             if data.get("status") == "success":
                 return data.get("article")
             else:
-                print(f"Article API error: {data.get('message', 'unknown')}")
+                print(
+                    f"Article API error: {data.get('message', 'unknown')} - Response: {data}"
+                )
                 return None
+    except urllib.error.HTTPError as e:
+        error_body = e.read().decode() if e.fp else ""
+        print(f"Article API HTTP error: {e.code} - {error_body[:500]}")
+        return None
     except Exception as e:
         print(f"Error fetching article: {e}")
         return None
 
 
-def fetch_article_content(url, api_key):
+def fetch_article_content(url, api_key, exa_api_key=None):
     """Fetch Twitter article content using the dedicated article endpoint."""
     article_id = extract_article_id(url)
     if not article_id:
+        print(f"Could not extract article ID from URL: {url}")
         return None
 
     # Extract author from URL as fallback
@@ -353,7 +361,37 @@ def fetch_article_content(url, api_key):
             "has_embedded_content": False,
         }
 
-    # If API fails, return minimal info so Claude can still try to analyze
+    # Twitter API failed - try Exa as fallback
+    if exa_api_key:
+        print("Twitter article API failed, trying Exa fallback...")
+        exa_result = fetch_with_exa(url, exa_api_key)
+        if exa_result:
+            title = exa_result.get("title", "Twitter Article")
+            text = exa_result.get("text", "")
+            summary = exa_result.get("summary", "")
+            content = text or summary
+
+            if content:
+                print(f"Got article content via Exa: {len(content)} chars")
+                display_preview = (
+                    content[:1000] + "..." if len(content) > 1000 else content
+                )
+
+                return {
+                    "type": "twitter_article",
+                    "text": f"[Twitter Article by @{fallback_author}]\n\nTitle: {title}\n\n{content}",
+                    "author": fallback_author,
+                    "author_name": fallback_author,
+                    "title": title,
+                    "likes": 0,
+                    "views": 0,
+                    "retweets": 0,
+                    "display": f"**{title}**\n\nBy @{fallback_author}\n\n> {display_preview}",
+                    "meta": f"@{fallback_author} (via Exa)",
+                    "has_embedded_content": False,
+                }
+
+    # If all fails, return minimal info
     return {
         "type": "twitter_article",
         "text": f"[Twitter Article by @{fallback_author}]\n\nArticle ID: {article_id}\nURL: {url}\n\n(Could not fetch article content)",
@@ -995,7 +1033,7 @@ def main():
             update_slack_reaction(slack_channel, slack_ts, "x", "eyes")
             exit(1)
         print("Fetching Twitter article...")
-        content = fetch_article_content(url, twitter_api_key)
+        content = fetch_article_content(url, twitter_api_key, exa_api_key)
     elif url_type == "youtube":
         print("Fetching YouTube content...")
         content = fetch_youtube_content(url, exa_api_key)
