@@ -1,0 +1,29 @@
+name: anti-pattern-don-t-submit-unreviewed-age
+category: article
+tagline: Simon Willison warns against filing PRs with agent-generated code you haven't
+  pe
+description: 'Simon Willison identifies a critical anti-pattern: submitting pull requests
+  with AI-generated code that hasn''t been personally reviewed and validated. He emphasizes
+  that developers must take responsibility for ensuring agent-generated code works
+  before asking others to review it.
+
+
+  **Flux Impact:** Reinforces our existing review workflow patterns and could enhance
+  our precommit-ai-guardrails with specific checks for agent-generated code validation'
+use_cases:
+- Add validation checkpoint in flux:work before PR creation
+- Create pre-commit hook that prompts for manual testing evidence
+- Update review patterns to include 'proof of validation' requirements
+install:
+  type: manual
+  command: '# See: https://simonwillison.net/guides/agentic-engineering-patterns/anti-patterns/#inflicting-unreviewed-code-on-collaborators'
+verification:
+  type: manual
+resources:
+- url: https://simonwillison.net/guides/agentic-engineering-patterns/anti-patterns/#inflicting-unreviewed-code-on-collaborators
+  type: homepage
+tags: []
+added_date: '2026-03-04'
+source: slack-inbox
+source_url: https://simonwillison.net/guides/agentic-engineering-patterns/anti-patterns/#inflicting-unreviewed-code-on-collaborators
+sdlc_phase: Code Review
