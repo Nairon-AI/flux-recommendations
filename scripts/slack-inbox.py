@@ -1083,6 +1083,11 @@ def main():
     if not content:
         print("Could not fetch content from URL")
         update_slack_reaction(slack_channel, slack_ts, "x", "eyes")
+        post_slack_reply(
+            slack_channel,
+            slack_ts,
+            "*Could not fetch content* - The website may be blocking automated access (Cloudflare protection). Try a different source or paste the content directly.",
+        )
         exit(1)
 
     # Verify ambiguous tool mentions with Exa search
