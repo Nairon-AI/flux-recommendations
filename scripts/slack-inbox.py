@@ -897,8 +897,16 @@ def parse_analysis(analysis_raw, fallback_text):
         }
 
 
-def create_issue_body(url, content, analysis, yaml_path=None, yaml_content=None):
-    """Create the GitHub issue body. Optionally includes proposed YAML for review."""
+def create_issue_body(
+    url,
+    content,
+    analysis,
+    yaml_path=None,
+    yaml_content=None,
+    slack_channel=None,
+    slack_ts=None,
+):
+    """Create the GitHub issue body. Optionally includes proposed YAML and Slack metadata for review."""
     # Build stars display
     stars = analysis.get("stars", 3)
     stars_display = "⭐" * stars + "☆" * (5 - stars)
@@ -964,6 +972,13 @@ def create_issue_body(url, content, analysis, yaml_path=None, yaml_content=None)
 
     # Proposed YAML section for review issues
     if yaml_path and yaml_content:
+        # Include Slack metadata for the review workflow to update reactions/replies
+        slack_metadata = ""
+        if slack_channel and slack_ts:
+            slack_metadata = f"""
+<!-- SLACK_CHANNEL: {slack_channel} -->
+<!-- SLACK_TS: {slack_ts} -->"""
+
         yaml_section = f"""
 ---
 
@@ -981,7 +996,7 @@ def create_issue_body(url, content, analysis, yaml_path=None, yaml_content=None)
 <!-- YAML_PATH: {yaml_path} -->
 <!-- YAML_START -->
 {yaml_content}
-<!-- YAML_END -->
+<!-- YAML_END -->{slack_metadata}
 """
     else:
         yaml_section = ""
@@ -1392,7 +1407,13 @@ Type: {url_type}
     # Generate proposed YAML for the issue body
     yaml_path, yaml_content = generate_yaml_content(analysis, url)
     body = create_issue_body(
-        url, content, analysis, yaml_path=yaml_path, yaml_content=yaml_content
+        url,
+        content,
+        analysis,
+        yaml_path=yaml_path,
+        yaml_content=yaml_content,
+        slack_channel=slack_channel,
+        slack_ts=slack_ts,
     )
     with open("/tmp/issue.md", "w") as f:
         f.write(body)

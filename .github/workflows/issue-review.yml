@@ -141,8 +141,14 @@ jobs:
             fs.writeFileSync(yamlPath, yamlContent);
             console.log(`Wrote file: ${yamlPath}`);
             
+            // Extract Slack metadata for notification
+            const slackChannelMatch = issueBody.match(/<!-- SLACK_CHANNEL: (.+?) -->/);
+            const slackTsMatch = issueBody.match(/<!-- SLACK_TS: (.+?) -->/);
+            
             core.setOutput('yaml_path', yamlPath);
             core.setOutput('success', 'true');
+            core.setOutput('slack_channel', slackChannelMatch ? slackChannelMatch[1] : '');
+            core.setOutput('slack_ts', slackTsMatch ? slackTsMatch[1] : '');
 
       - name: Commit and push
         if: steps.commit-yaml.outputs.success == 'true'
@@ -198,6 +204,33 @@ jobs:
               issue_number: context.issue.number,
               state: 'closed'
             });
+
+      - name: Update Slack on approval
+        if: steps.commit-yaml.outputs.success == 'true' && steps.commit-yaml.outputs.slack_channel != ''
+        env:
+          SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
+        run: |
+          CHANNEL="${{ steps.commit-yaml.outputs.slack_channel }}"
+          TS="${{ steps.commit-yaml.outputs.slack_ts }}"
+          YAML_PATH="${{ steps.commit-yaml.outputs.yaml_path }}"
+          
+          # Remove the thinking_face reaction
+          curl -s -X POST "https://slack.com/api/reactions.remove" \
+            -H "Authorization: Bearer $SLACK_BOT_TOKEN" \
+            -H "Content-Type: application/json" \
+            -d "{\"channel\": \"$CHANNEL\", \"timestamp\": \"$TS\", \"name\": \"thinking_face\"}" || true
+          
+          # Add checkmark reaction
+          curl -s -X POST "https://slack.com/api/reactions.add" \
+            -H "Authorization: Bearer $SLACK_BOT_TOKEN" \
+            -H "Content-Type: application/json" \
+            -d "{\"channel\": \"$CHANNEL\", \"timestamp\": \"$TS\", \"name\": \"white_check_mark\"}"
+          
+          # Post reply
+          curl -s -X POST "https://slack.com/api/chat.postMessage" \
+            -H "Authorization: Bearer $SLACK_BOT_TOKEN" \
+            -H "Content-Type: application/json" \
+            -d "{\"channel\": \"$CHANNEL\", \"thread_ts\": \"$TS\", \"text\": \"*Approved and merged* :white_check_mark:\n\nAdded to \`$YAML_PATH\`\"}"
 
       - name: Close issue with denial message
         if: steps.parse-decision.outputs.decision == 'deny'
