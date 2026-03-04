@@ -1203,8 +1203,8 @@ Type: {url_type}
         exit(1)
 
     print(f"Created issue for review: {result.stdout.strip()}")
-    # Issue created successfully - link was ingested for review
-    update_slack_reaction(slack_channel, slack_ts, "white_check_mark", "eyes")
+    # Issue created - needs human review (use thinking face to indicate pending decision)
+    update_slack_reaction(slack_channel, slack_ts, "thinking_face", "eyes")
 
 
 if __name__ == "__main__":
