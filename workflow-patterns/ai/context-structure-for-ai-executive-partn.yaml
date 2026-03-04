@@ -1,0 +1,32 @@
+name: context-structure-for-ai-executive-partn
+category: tweet
+tagline: A structured approach to set up Claude with persistent context including
+  memory,
+description: 'JJ Englert shares a systematic approach to setting up Claude with persistent
+  context including personal background, brand voice, working preferences, and tool
+  integrations. The method transforms Claude from a generic assistant to an executive-level
+  partner by providing comprehensive context before each session.
+
+
+  **Flux Impact:** This provides a structured onboarding process for new Flux users
+  to establish comprehensive AI context, making every session more productive from
+  the start. Complements existing brain vault and AGENTS.md patterns with user-specific
+  context.'
+use_cases:
+- Create flux:context-bootstrap skill based on JJ's 8-phase interview process
+- Integrate with existing brain/ vault structure for persistent context
+- Add context validation patterns to ensure consistency across sessions
+- Create templates for about-me.md, brand-voice.md, working-preferences.md files
+install:
+  type: manual
+  command: '# See: https://x.com/JJEnglert/status/2028880724825149483?s=20'
+verification:
+  type: manual
+resources:
+- url: https://x.com/JJEnglert/status/2028880724825149483?s=20
+  type: homepage
+tags: []
+added_date: '2026-03-04'
+source: slack-inbox
+source_url: https://x.com/JJEnglert/status/2028880724825149483?s=20
+sdlc_phase: Planning
