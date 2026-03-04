@@ -1,0 +1,29 @@
+name: agent-skills-as-statecharts-pattern
+category: tweet
+tagline: Using statecharts to structure AI agent skills for better flow control and
+  state
+description: 'A pattern for implementing AI agent skills using statecharts to manage
+  complex state transitions and workflow logic. Statecharts provide visual modeling
+  of agent behavior with explicit states, transitions, and guards.
+
+
+  **Flux Impact:** Improves Agentic SDLC by providing structured state management
+  for complex agent workflows, reducing unpredictable behavior and enabling better
+  error handling'
+use_cases:
+- Research XState integration for agent skills
+- Create template for statechart-based skills
+- Document statechart pattern in workflow-patterns/
+install:
+  type: manual
+  command: '# See: https://x.com/nullvoxpopuli/status/2026823058162417694?s=20'
+verification:
+  type: manual
+resources:
+- url: https://x.com/nullvoxpopuli/status/2026823058162417694?s=20
+  type: homepage
+tags: []
+added_date: '2026-03-04'
+source: slack-inbox
+source_url: https://x.com/nullvoxpopuli/status/2026823058162417694?s=20
+sdlc_phase: Planning
