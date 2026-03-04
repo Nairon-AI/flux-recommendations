@@ -1,0 +1,32 @@
+name: paperclip-ai-business-orchestration-laye
+category: tool
+tagline: Open-source orchestration system for autonomous businesses with org charts,
+  goal
+description: 'Paperclip is an orchestration layer for ''zero-human companies'' that
+  provides organizational structure for autonomous agents. It includes org charts,
+  goal alignment systems, task ownership tracking, budget management, and agent templates
+  to coordinate multiple AI agents in business contexts.
+
+
+  **Flux Impact:** Could enhance Flux''s multi-agent coordination by providing better
+  organizational structure, task ownership tracking, and resource management across
+  the various scouts and workers in our Agentic SDLC system'
+use_cases:
+- Examine Paperclip's agent coordination patterns via `npx paperclipai onboard`
+- Analyze their org chart and task ownership models for multi-agent SDLC workflows
+- Consider adopting their goal alignment approach for coordinating Flux scouts and
+  workers
+- Evaluate their budget/resource management for limiting AI agent execution costs
+install:
+  type: manual
+  command: '# See: https://x.com/dotta/status/2029239759428780116?s=20'
+verification:
+  type: manual
+resources:
+- url: https://x.com/dotta/status/2029239759428780116?s=20
+  type: homepage
+tags: []
+added_date: '2026-03-04'
+source: slack-inbox
+source_url: https://x.com/dotta/status/2029239759428780116?s=20
+sdlc_phase: Planning
