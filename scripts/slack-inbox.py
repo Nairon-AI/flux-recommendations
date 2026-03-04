@@ -161,6 +161,8 @@ def detect_url_type(url):
     if "twitter.com" in url_lower or "x.com" in url_lower:
         if "/status/" in url_lower:
             return "tweet"
+        if "/article/" in url_lower:
+            return "twitter_article"
     if "youtube.com" in url_lower or "youtu.be" in url_lower:
         return "youtube"
     if "github.com" in url_lower:
@@ -275,6 +277,58 @@ def extract_tweet_id(url):
         if match:
             return match.group(1)
     return None
+
+
+def extract_article_id(url):
+    """Extract article ID from Twitter/X article URLs."""
+    for pattern in [r"twitter\.com/\w+/article/(\d+)", r"x\.com/\w+/article/(\d+)"]:
+        match = re.search(pattern, url)
+        if match:
+            return match.group(1)
+    return None
+
+
+def fetch_article_content(url, api_key):
+    """Fetch Twitter article content. Articles are long-form posts on X."""
+    article_id = extract_article_id(url)
+    if not article_id:
+        return None
+
+    # Extract author from URL
+    author_match = re.search(r"(?:twitter|x)\.com/(\w+)/article/", url)
+    author = author_match.group(1) if author_match else "unknown"
+
+    # Try fetching article via Twitter API (articles may be accessible as tweets)
+    tweet = fetch_tweet(article_id, api_key)
+    if tweet:
+        text = tweet.get("text", "")
+        author_name = tweet.get("author", {}).get("name", author)
+        likes = tweet.get("likeCount", 0)
+
+        return {
+            "type": "twitter_article",
+            "text": f"[Twitter Article by @{author}]:\n{text}",
+            "author": author,
+            "author_name": author_name,
+            "likes": likes,
+            "retweets": tweet.get("retweetCount", 0),
+            "display": f"**Twitter Article by @{author}**\n\n> {text[:500]}...",
+            "meta": f"@{author} · {likes} ❤️",
+            "has_embedded_content": False,
+        }
+
+    # If API fails, return minimal info so Claude can still try to analyze
+    return {
+        "type": "twitter_article",
+        "text": f"[Twitter Article by @{author}]\n\nArticle ID: {article_id}\nURL: {url}\n\n(Could not fetch article content - Twitter articles may require special access)",
+        "author": author,
+        "author_name": author,
+        "likes": 0,
+        "retweets": 0,
+        "display": f"**Twitter Article by @{author}**\n\n[Could not fetch content]",
+        "meta": f"@{author}",
+        "has_embedded_content": False,
+    }
 
 
 def fetch_tweet(tweet_id, api_key):
@@ -894,6 +948,12 @@ def main():
             exit(1)
         print("Fetching tweet...")
         content = fetch_tweet_content(url, twitter_api_key, exa_api_key)
+    elif url_type == "twitter_article":
+        if not twitter_api_key:
+            print("Error: TWITTER_API_KEY required for Twitter articles")
+            exit(1)
+        print("Fetching Twitter article...")
+        content = fetch_article_content(url, twitter_api_key)
     elif url_type == "youtube":
         print("Fetching YouTube content...")
         content = fetch_youtube_content(url, exa_api_key)
@@ -942,8 +1002,8 @@ def main():
                     print(f"Found context for @{tool}")
 
     # Build content section for prompt
-    if url_type == "tweet":
-        content_section = f"""Tweet by @{content.get("author", "unknown")} ({content.get("author_name", "")}) · {content.get("likes", 0)} likes, {content.get("retweets", 0)} RTs:
+    if url_type == "tweet" or url_type == "twitter_article":
+        content_section = f"""{"Tweet" if url_type == "tweet" else "Twitter Article"} by @{content.get("author", "unknown")} ({content.get("author_name", "")}) · {content.get("likes", 0)} likes, {content.get("retweets", 0)} RTs:
 {content.get("text", "")}"""
         if tool_verification:
             content_section += tool_verification
