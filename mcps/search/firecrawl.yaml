@@ -11,6 +11,7 @@ description: |
   - **Crawl**: Entire websites with configurable depth
   - **Map**: Discover all URLs on a site
   - **PDF Parsing**: Rust-based parser handles 200+ page PDFs with charts in seconds
+  - **Anti-bot bypass**: Handles Cloudflare, bot protection, and CAPTCHAs that block other scrapers
   
   Output is structured and ready for RAG pipelines, agent context, or fine-tuning datasets.
 
@@ -19,6 +20,7 @@ use_cases:
   - Convert research PDFs/whitepapers to AI-readable format
   - Build RAG knowledge bases from documentation sites
   - Extract structured data from JS-heavy web apps
+  - Scrape Cloudflare-protected sites that return 403/1010 errors with other tools (Exa, etc.)
 
 prerequisites:
   - Firecrawl API key (free tier available)
