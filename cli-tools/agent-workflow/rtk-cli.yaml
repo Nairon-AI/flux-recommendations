@@ -1,0 +1,25 @@
+name: rtk-cli
+category: tool
+tagline: RTK CLI reduces LLM token consumption by 60-90% through efficient command-line
+description: |-
+  RTK appears to be a CLI tool designed to optimize interactions with LLMs by reducing token consumption significantly. The tool claims to achieve 60-90% reduction in tokens, which could dramatically improve AI-augmented development efficiency and cost.
+
+  **Flux Impact:** If RTK delivers on its token reduction claims, it could significantly improve the efficiency of our Agentic SDLC by reducing context costs and enabling more complex multi-agent workflows within token limits
+use_cases:
+- Visit github.com/rtk-ai/rtk to understand the token reduction mechanism
+- Test RTK with sample Flux workflows to validate 60-90% savings claim
+- Document integration steps if effective
+- Consider recommending in flux:improve for users with high token usage
+install:
+  type: manual
+  command: '# See: https://x.com/alifcoder/status/2029193013285851255?s=20'
+verification:
+  type: manual
+resources:
+- url: https://x.com/alifcoder/status/2029193013285851255?s=20
+  type: homepage
+tags: []
+added_date: '2026-03-05'
+source: slack-inbox
+source_url: https://x.com/alifcoder/status/2029193013285851255?s=20
+sdlc_phase: implementation
