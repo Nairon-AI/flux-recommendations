@@ -897,8 +897,8 @@ def parse_analysis(analysis_raw, fallback_text):
         }
 
 
-def create_issue_body(url, content, analysis):
-    """Create the GitHub issue body."""
+def create_issue_body(url, content, analysis, yaml_path=None, yaml_content=None):
+    """Create the GitHub issue body. Optionally includes proposed YAML for review."""
     # Build stars display
     stars = analysis.get("stars", 3)
     stars_display = "⭐" * stars + "☆" * (5 - stars)
@@ -962,6 +962,30 @@ def create_issue_body(url, content, analysis):
     else:
         takeaways_section = ""
 
+    # Proposed YAML section for review issues
+    if yaml_path and yaml_content:
+        yaml_section = f"""
+---
+
+<details>
+<summary><strong>📦 Proposed YAML</strong> (for automated approval)</summary>
+
+**Path:** `{yaml_path}`
+
+```yaml
+{yaml_content}
+```
+
+</details>
+
+<!-- YAML_PATH: {yaml_path} -->
+<!-- YAML_START -->
+{yaml_content}
+<!-- YAML_END -->
+"""
+    else:
+        yaml_section = ""
+
     return f"""[→ View Source]({url}) · {meta}
 
 {content_display}
@@ -990,14 +1014,14 @@ def create_issue_body(url, content, analysis):
 {analysis.get("integration", "")}
 
 </details>
-
+{yaml_section}
 ---
 <sub>via Slack inbox</sub>
 """
 
 
-def create_recommendation_file(analysis, url, content, recommendations_path):
-    """Create a recommendation YAML file from analysis."""
+def generate_yaml_content(analysis, url):
+    """Generate YAML content string without writing to file."""
     import yaml
     from datetime import datetime
 
@@ -1022,17 +1046,12 @@ def create_recommendation_file(analysis, url, content, recommendations_path):
 
     # Build folder path
     if "/" in category:
-        folder_path = os.path.join(recommendations_path, category)
+        folder_path = category
     else:
-        folder_path = os.path.join(recommendations_path, base_folder)
+        folder_path = base_folder
 
-    os.makedirs(folder_path, exist_ok=True)
-    yaml_path = os.path.join(folder_path, f"{name}.yaml")
-
-    # Don't overwrite existing
-    if os.path.exists(yaml_path):
-        print(f"File already exists: {yaml_path}")
-        return None
+    yaml_filename = f"{name}.yaml"
+    yaml_path = f"{folder_path}/{yaml_filename}"
 
     # Build recommendation object
     rec = {
@@ -1064,8 +1083,30 @@ def create_recommendation_file(analysis, url, content, recommendations_path):
     if analysis.get("flux_impact"):
         rec["description"] += f"\n\n**Flux Impact:** {analysis['flux_impact']}"
 
+    yaml_content = yaml.dump(
+        rec, default_flow_style=False, allow_unicode=True, sort_keys=False
+    )
+    return yaml_path, yaml_content
+
+
+def create_recommendation_file(analysis, url, content, recommendations_path):
+    """Create a recommendation YAML file from analysis."""
+    import yaml
+
+    yaml_rel_path, yaml_content = generate_yaml_content(analysis, url)
+    yaml_path = os.path.join(recommendations_path, yaml_rel_path)
+
+    # Create directory if needed
+    folder_path = os.path.dirname(yaml_path)
+    os.makedirs(folder_path, exist_ok=True)
+
+    # Don't overwrite existing
+    if os.path.exists(yaml_path):
+        print(f"File already exists: {yaml_path}")
+        return None
+
     with open(yaml_path, "w") as f:
-        yaml.dump(rec, f, default_flow_style=False, allow_unicode=True, sort_keys=False)
+        f.write(yaml_content)
 
     print(f"Created recommendation: {yaml_path}")
     return yaml_path
@@ -1348,7 +1389,11 @@ Type: {url_type}
     # MAYBE or moderate confidence: Create issue for human review
     print(f"REVIEW NEEDED: Creating issue for human decision")
 
-    body = create_issue_body(url, content, analysis)
+    # Generate proposed YAML for the issue body
+    yaml_path, yaml_content = generate_yaml_content(analysis, url)
+    body = create_issue_body(
+        url, content, analysis, yaml_path=yaml_path, yaml_content=yaml_content
+    )
     with open("/tmp/issue.md", "w") as f:
         f.write(body)
 

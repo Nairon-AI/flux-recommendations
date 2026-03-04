@@ -35,6 +35,7 @@ flowchart TB
         Claude["Claude API<br/>Relevance scoring"]
         Twitter["Twitter API<br/>Content fetching"]
         Exa["Exa API<br/>URL analysis"]
+        Firecrawl["Firecrawl API<br/>Anti-bot bypass fallback"]
     end
 
     subgraph Outputs["Actions"]
@@ -60,6 +61,7 @@ flowchart TB
     Radar --> Claude
     Inbox --> Claude
     Inbox --> Exa
+    Exa -.->|"403/1010 fallback"| Firecrawl
     Inbox --> Twitter
     
     Claude --> Auto
@@ -142,9 +144,29 @@ Drop any link into the Flux Inbox Slack channel → AI evaluates and acts:
 | **No / Low value** | Discards silently | :x: |
 | **Maybe** | Creates issue for rare human review | :thinking_face: |
 
-Supports: Tweets, YouTube videos, GitHub repos, articles, any URL.
+Supports: Tweets, X articles, YouTube videos, GitHub repos, articles, any URL.
+
+**Cloudflare bypass:** Some websites block bot requests with Cloudflare's Browser Integrity Check (error 1010). When Exa API fails with 403/1010, the system automatically falls back to Firecrawl, which can bypass these protections.
 
 This leaves room for manual discovery - if you spot something useful while browsing, just drop the link. The system handles everything else.
+
+### Reviewing "Maybe" Items
+
+When something gets a :thinking_face: reaction, an issue is created for human review. You can review it directly via GitHub issue comments:
+
+**To approve** (commits the recommendation):
+- "approve", "lgtm", "good to go", "add it", "ship it", "yes"
+
+**To reject** (closes the issue):
+- "reject", "close", "deny", "not good", "skip", "no", "pass"
+
+The workflow automatically:
+1. Extracts the proposed YAML from the issue body
+2. Commits it to the appropriate folder
+3. Closes the issue with the outcome
+4. Adds a reaction to your comment (👍 or 👎)
+
+Only users with write access to the repository can approve or reject.
 
 ## Cost of Automation
 
@@ -156,7 +178,8 @@ Running this fully autonomous system costs approximately:
 | Slack Inbox (link processing) | ~$0.05 | ~$1.50 |
 | Twitter API (TwitterAPI.io) | ~$0.20 | ~$6.00 |
 | Exa API (URL expansion + tool verification) | ~$0.05 | ~$1.50 |
-| **Total** | **~$0.55/day** | **~$16.50/month** |
+| Firecrawl API (anti-bot fallback) | ~$0.02 | ~$0.60 |
+| **Total** | **~$0.57/day** | **~$17.10/month** |
 
 **What you're actually paying for:**
 

@@ -1,0 +1,196 @@
+name: Issue Review
+
+on:
+  issue_comment:
+    types: [created]
+
+jobs:
+  process-review:
+    # Only run on issues (not PRs) with needs-review label
+    if: |
+      !github.event.issue.pull_request &&
+      contains(github.event.issue.labels.*.name, 'needs-review')
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      issues: write
+    
+    steps:
+      - name: Check commenter permissions
+        id: check-permission
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const { data: permission } = await github.rest.repos.getCollaboratorPermissionLevel({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              username: context.payload.comment.user.login
+            });
+            
+            const hasWriteAccess = ['admin', 'write'].includes(permission.permission);
+            console.log(`User ${context.payload.comment.user.login} has permission: ${permission.permission}`);
+            core.setOutput('has_access', hasWriteAccess);
+            return hasWriteAccess;
+
+      - name: Parse comment for decision
+        if: steps.check-permission.outputs.has_access == 'true'
+        id: parse-decision
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const comment = context.payload.comment.body.toLowerCase();
+            
+            // Approval keywords
+            const approvePatterns = [
+              'approve', 'approved', 'lgtm', 'looks good',
+              'good to go', 'add it', 'add this', 'merge it',
+              'ship it', 'yes', 'accept', 'accepted', '👍', ':+1:',
+              'worth adding', 'add to recommendations'
+            ];
+            
+            // Denial keywords
+            const denyPatterns = [
+              'reject', 'rejected', 'deny', 'denied', 'close',
+              'not good', 'don\'t add', 'do not add', 'skip',
+              'pass', 'no', 'nope', '👎', ':-1:', 'not worth',
+              'decline', 'declined'
+            ];
+            
+            const isApproval = approvePatterns.some(p => comment.includes(p));
+            const isDenial = denyPatterns.some(p => comment.includes(p));
+            
+            console.log(`Comment: "${context.payload.comment.body}"`);
+            console.log(`Is approval: ${isApproval}, Is denial: ${isDenial}`);
+            
+            if (isApproval && !isDenial) {
+              core.setOutput('decision', 'approve');
+            } else if (isDenial && !isApproval) {
+              core.setOutput('decision', 'deny');
+            } else {
+              core.setOutput('decision', 'none');
+            }
+
+      - name: Checkout repository
+        if: steps.parse-decision.outputs.decision == 'approve'
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+
+      - name: Extract and commit YAML
+        if: steps.parse-decision.outputs.decision == 'approve'
+        id: commit-yaml
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const fs = require('fs');
+            const path = require('path');
+            
+            const issueBody = context.payload.issue.body;
+            
+            // Extract YAML path from marker
+            const pathMatch = issueBody.match(/<!-- YAML_PATH: (.+?) -->/);
+            if (!pathMatch) {
+              core.setFailed('Could not find YAML path in issue body');
+              return;
+            }
+            const yamlPath = pathMatch[1];
+            
+            // Extract YAML content from markers
+            const yamlMatch = issueBody.match(/<!-- YAML_START -->\n([\s\S]*?)\n<!-- YAML_END -->/);
+            if (!yamlMatch) {
+              core.setFailed('Could not find YAML content in issue body');
+              return;
+            }
+            const yamlContent = yamlMatch[1];
+            
+            console.log(`YAML path: ${yamlPath}`);
+            console.log(`YAML content length: ${yamlContent.length}`);
+            
+            // Create directory if needed
+            const dir = path.dirname(yamlPath);
+            if (!fs.existsSync(dir)) {
+              fs.mkdirSync(dir, { recursive: true });
+            }
+            
+            // Check if file already exists
+            if (fs.existsSync(yamlPath)) {
+              core.setFailed(`File already exists: ${yamlPath}`);
+              return;
+            }
+            
+            // Write file
+            fs.writeFileSync(yamlPath, yamlContent);
+            console.log(`Wrote file: ${yamlPath}`);
+            
+            core.setOutput('yaml_path', yamlPath);
+            core.setOutput('success', 'true');
+
+      - name: Commit and push
+        if: steps.commit-yaml.outputs.success == 'true'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add "${{ steps.commit-yaml.outputs.yaml_path }}"
+          git commit -m "Add recommendation from issue #${{ github.event.issue.number }}
+
+          Approved by @${{ github.event.comment.user.login }}
+          
+          Closes #${{ github.event.issue.number }}"
+          git push
+
+      - name: Close issue with approval message
+        if: steps.commit-yaml.outputs.success == 'true'
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const yamlPath = '${{ steps.commit-yaml.outputs.yaml_path }}';
+            
+            await github.rest.issues.createComment({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.issue.number,
+              body: `Approved by @${context.payload.comment.user.login}\n\nCommitted to \`${yamlPath}\``
+            });
+            
+            await github.rest.issues.update({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.issue.number,
+              state: 'closed',
+              labels: ['inbox', 'approved']
+            });
+
+      - name: Close issue with denial message
+        if: steps.parse-decision.outputs.decision == 'deny'
+        uses: actions/github-script@v7
+        with:
+          script: |
+            await github.rest.issues.createComment({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.issue.number,
+              body: `Rejected by @${context.payload.comment.user.login}\n\nThis recommendation will not be added.`
+            });
+            
+            await github.rest.issues.update({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.issue.number,
+              state: 'closed',
+              labels: ['inbox', 'rejected']
+            });
+
+      - name: React to comment
+        if: steps.parse-decision.outputs.decision != 'none' && steps.check-permission.outputs.has_access == 'true'
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const decision = '${{ steps.parse-decision.outputs.decision }}';
+            const reaction = decision === 'approve' ? '+1' : '-1';
+            
+            await github.rest.reactions.createForIssueComment({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              comment_id: context.payload.comment.id,
+              content: reaction
+            });
