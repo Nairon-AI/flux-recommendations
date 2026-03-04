@@ -32,6 +32,11 @@ export default {
       if (body.type === "event_callback") {
         const event = body.event;
         
+        // Ignore bot messages and thread replies
+        if (event.bot_id || event.thread_ts) {
+          return new Response("OK", { status: 200 });
+        }
+        
         // Only process messages in the target channel
         if (event.type === "message" && !event.subtype) {
           const channelId = env.SLACK_CHANNEL_ID;
