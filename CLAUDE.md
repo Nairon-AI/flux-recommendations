@@ -24,6 +24,10 @@ The article endpoint returns:
 
 Authentication: `X-API-Key` header
 
+**Important URL format note:**
+- `x.com/username/article/ID` - Works with API
+- `x.com/i/article/ID` - Does NOT work (different ID system, returns "article not found")
+
 ## Repository Structure
 
 - `scripts/slack-inbox.py` - Processes URLs from Slack, uses Twitter API for tweets/articles
