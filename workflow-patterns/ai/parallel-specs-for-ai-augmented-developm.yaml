@@ -1,0 +1,34 @@
+name: parallel-specs-for-ai-augmented-developm
+category: article
+tagline: Argues that AI agents enable multiple parallel specs/prototypes at low cost,
+  shi
+description: 'The article explains how AI agents flip the traditional software development
+  constraint from execution speed to requirements clarity. It advocates for parallel
+  specification development - writing multiple competing specs and having agents prototype
+  all of them to evaluate tradeoffs before committing to implementation.
+
+
+  **Flux Impact:** Reinforces our Double Diamond approach in /flux:scope and suggests
+  extending it to parallel specification testing. This could become a key differentiator
+  for Flux - being the first system to systematically support parallel AI-prototyped
+  architectural exploration.'
+use_cases:
+- Add --parallel flag to flux-plan that generates multiple competing architectural
+  approaches
+- Create parallel-spec-evaluation skill that compares multiple prototyped approaches
+- Update flux-scope to explicitly mention parallel specification as an option for
+  complex features
+- Document the 'cheap exploration' principle in workflow-patterns/ai/
+install:
+  type: manual
+  command: '# See: https://x.com/augmentcode/article/2026907452277719230'
+verification:
+  type: manual
+resources:
+- url: https://x.com/augmentcode/article/2026907452277719230
+  type: homepage
+tags: []
+added_date: '2026-03-04'
+source: slack-inbox
+source_url: https://x.com/augmentcode/article/2026907452277719230
+sdlc_phase: Planning
