@@ -1,0 +1,31 @@
+name: dots-ocr-multilingual-document-parser
+category: repo
+tagline: Vision-language model for multilingual document layout parsing and OCR in
+  a sing
+description: 'Dots.ocr is a multilingual document layout parsing system that uses
+  a single vision-language model to extract text and understand document structure.
+  It can handle complex layouts across multiple languages without requiring separate
+  OCR and layout analysis steps.
+
+
+  **Flux Impact:** Could enhance agents'' ability to work with visual documents, design
+  mockups, and screenshots - expanding from pure text/code workflows to visual understanding.
+  Particularly useful for UI/UX development and requirements extraction from visual
+  materials.'
+use_cases:
+- Evaluate if document parsing is a common need in our target workflows
+- Consider building MCP server wrapper for document analysis
+- Test integration with screenshot-based debugging workflows
+install:
+  type: manual
+  command: '# See: https://github.com/rednote-hilab/dots.ocr'
+verification:
+  type: manual
+resources:
+- url: https://github.com/rednote-hilab/dots.ocr
+  type: homepage
+tags: []
+added_date: '2026-03-04'
+source: slack-inbox
+source_url: https://github.com/rednote-hilab/dots.ocr
+sdlc_phase: Implementation
