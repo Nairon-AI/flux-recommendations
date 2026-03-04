@@ -32,51 +32,39 @@ jobs:
             core.setOutput('has_access', hasWriteAccess);
             return hasWriteAccess;
 
-      - name: Parse comment for decision
+      - name: Analyze comment with Claude
         if: steps.check-permission.outputs.has_access == 'true'
         id: parse-decision
-        uses: actions/github-script@v7
-        with:
-          script: |
-            const comment = context.payload.comment.body.toLowerCase();
-            
-            // Use word boundary regex for accurate matching
-            const matchesWord = (text, word) => {
-              const regex = new RegExp(`\\b${word}\\b`, 'i');
-              return regex.test(text);
-            };
-            
-            // Approval keywords (checked with word boundaries)
-            const approvePatterns = [
-              'approve', 'approved', 'lgtm', 'looks good',
-              'good to go', 'add it', 'add this', 'merge it',
-              'ship it', 'accept', 'accepted', '👍',
-              'worth adding', 'add to recommendations'
-            ];
-            
-            // Denial keywords (checked with word boundaries)
-            // Removed 'no' and 'pass' as they cause false positives
-            const denyPatterns = [
-              'reject', 'rejected', 'deny', 'denied', 'close this',
-              'not good', 'don\'t add', 'do not add', 'skip this',
-              'nope', '👎', 'not worth', 'decline', 'declined',
-              'don\'t merge', 'do not merge'
-            ];
-            
-            const isApproval = approvePatterns.some(p => matchesWord(comment, p));
-            const isDenial = denyPatterns.some(p => matchesWord(comment, p));
-            
-            console.log(`Comment: "${context.payload.comment.body}"`);
-            console.log(`Is approval: ${isApproval}, Is denial: ${isDenial}`);
-            
-            // Approval takes precedence if both somehow match
-            if (isApproval) {
-              core.setOutput('decision', 'approve');
-            } else if (isDenial) {
-              core.setOutput('decision', 'deny');
-            } else {
-              core.setOutput('decision', 'none');
-            }
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: |
+          COMMENT='${{ github.event.comment.body }}'
+          
+          RESPONSE=$(curl -s https://api.anthropic.com/v1/messages \
+            -H "Content-Type: application/json" \
+            -H "x-api-key: $ANTHROPIC_API_KEY" \
+            -H "anthropic-version: 2023-06-01" \
+            -d "$(jq -n --arg comment "$COMMENT" '{
+              "model": "claude-sonnet-4-20250514",
+              "max_tokens": 50,
+              "messages": [{
+                "role": "user",
+                "content": "Analyze this GitHub issue comment and determine the intent. Reply with ONLY one word: approve, reject, or unclear.\n\nComment: \($comment)"
+              }]
+            }')")
+          
+          DECISION=$(echo "$RESPONSE" | jq -r '.content[0].text' | tr '[:upper:]' '[:lower:]' | tr -d '[:space:]')
+          
+          echo "Comment: $COMMENT"
+          echo "Claude decision: $DECISION"
+          
+          if [[ "$DECISION" == "approve" ]]; then
+            echo "decision=approve" >> $GITHUB_OUTPUT
+          elif [[ "$DECISION" == "reject" ]]; then
+            echo "decision=deny" >> $GITHUB_OUTPUT
+          else
+            echo "decision=none" >> $GITHUB_OUTPUT
+          fi
 
       - name: Checkout repository
         if: steps.parse-decision.outputs.decision == 'approve'
