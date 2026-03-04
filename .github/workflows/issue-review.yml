@@ -40,31 +40,39 @@ jobs:
           script: |
             const comment = context.payload.comment.body.toLowerCase();
             
-            // Approval keywords
+            // Use word boundary regex for accurate matching
+            const matchesWord = (text, word) => {
+              const regex = new RegExp(`\\b${word}\\b`, 'i');
+              return regex.test(text);
+            };
+            
+            // Approval keywords (checked with word boundaries)
             const approvePatterns = [
               'approve', 'approved', 'lgtm', 'looks good',
               'good to go', 'add it', 'add this', 'merge it',
-              'ship it', 'yes', 'accept', 'accepted', '👍', ':+1:',
+              'ship it', 'accept', 'accepted', '👍',
               'worth adding', 'add to recommendations'
             ];
             
-            // Denial keywords
+            // Denial keywords (checked with word boundaries)
+            // Removed 'no' and 'pass' as they cause false positives
             const denyPatterns = [
-              'reject', 'rejected', 'deny', 'denied', 'close',
-              'not good', 'don\'t add', 'do not add', 'skip',
-              'pass', 'no', 'nope', '👎', ':-1:', 'not worth',
-              'decline', 'declined'
+              'reject', 'rejected', 'deny', 'denied', 'close this',
+              'not good', 'don\'t add', 'do not add', 'skip this',
+              'nope', '👎', 'not worth', 'decline', 'declined',
+              'don\'t merge', 'do not merge'
             ];
             
-            const isApproval = approvePatterns.some(p => comment.includes(p));
-            const isDenial = denyPatterns.some(p => comment.includes(p));
+            const isApproval = approvePatterns.some(p => matchesWord(comment, p));
+            const isDenial = denyPatterns.some(p => matchesWord(comment, p));
             
             console.log(`Comment: "${context.payload.comment.body}"`);
             console.log(`Is approval: ${isApproval}, Is denial: ${isDenial}`);
             
-            if (isApproval && !isDenial) {
+            // Approval takes precedence if both somehow match
+            if (isApproval) {
               core.setOutput('decision', 'approve');
-            } else if (isDenial && !isApproval) {
+            } else if (isDenial) {
               core.setOutput('decision', 'deny');
             } else {
               core.setOutput('decision', 'none');
