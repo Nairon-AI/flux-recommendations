@@ -1,0 +1,31 @@
+name: viktor-ai-coworker-for-teams
+category: application
+tagline: AI agent that automates tasks across 3,000+ tools for weeks-long projects
+  in Sla
+description: 'Viktor is an AI coworker that runs for weeks without losing context,
+  coordinates people and deadlines across teams, and integrates with 3,000+ tools.
+  It works directly in Slack and Microsoft Teams to automate tasks and manage long-running
+  projects.
+
+
+  **Flux Impact:** Complements Flux''s session-based workflows by providing persistent
+  project memory and cross-team coordination, enabling true agentic program management
+  at scale'
+use_cases:
+- Trial Viktor for managing multi-epic coordination where Flux handles individual
+  task implementation
+- Explore Viktor's API for programmatic task assignment from Flux workflows
+- Test Viktor's ability to maintain context across week-long development cycles
+install:
+  type: manual
+  command: '# See: https://getviktor.com/'
+verification:
+  type: manual
+resources:
+- url: https://getviktor.com/
+  type: homepage
+tags: []
+added_date: '2026-03-04'
+source: slack-inbox
+source_url: https://getviktor.com/
+sdlc_phase: Planning
