@@ -171,12 +171,32 @@ jobs:
               body: `Approved by @${context.payload.comment.user.login}\n\nCommitted to \`${yamlPath}\``
             });
             
+            // Add approved label
+            await github.rest.issues.addLabels({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.issue.number,
+              labels: ['approved']
+            });
+            
+            // Remove needs-review label
+            try {
+              await github.rest.issues.removeLabel({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: context.issue.number,
+                name: 'needs-review'
+              });
+            } catch (e) {
+              // Label might not exist, ignore
+            }
+            
+            // Close the issue
             await github.rest.issues.update({
               owner: context.repo.owner,
               repo: context.repo.repo,
               issue_number: context.issue.number,
-              state: 'closed',
-              labels: ['inbox', 'approved']
+              state: 'closed'
             });
 
       - name: Close issue with denial message
@@ -191,12 +211,32 @@ jobs:
               body: `Rejected by @${context.payload.comment.user.login}\n\nThis recommendation will not be added.`
             });
             
+            // Add rejected label
+            await github.rest.issues.addLabels({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.issue.number,
+              labels: ['rejected']
+            });
+            
+            // Remove needs-review label
+            try {
+              await github.rest.issues.removeLabel({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: context.issue.number,
+                name: 'needs-review'
+              });
+            } catch (e) {
+              // Label might not exist, ignore
+            }
+            
+            // Close the issue
             await github.rest.issues.update({
               owner: context.repo.owner,
               repo: context.repo.repo,
               issue_number: context.issue.number,
-              state: 'closed',
-              labels: ['inbox', 'rejected']
+              state: 'closed'
             });
 
       - name: React to comment
