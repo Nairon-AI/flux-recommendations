@@ -1,0 +1,29 @@
+name: learning-tests-for-code-behavior
+category: tweet
+tagline: 'LLMs should write learning tests to understand how code behaves - making
+  this a '
+description: 'Learning tests are tests written specifically to explore and document
+  how existing code behaves, rather than to verify correctness. LLMs can write these
+  tests to systematically understand unfamiliar codebases before making changes.
+
+
+  **Flux Impact:** Helps agents understand existing code behavior before making changes,
+  reducing bugs and improving code comprehension in our Agentic SDLC'
+use_cases:
+- Add learning test generation to worker agent workflow
+- Include learning test recommendations in flux:prime output
+- Create skill for generating exploratory tests to understand code behavior
+- Add learning test patterns to anti-slop guidelines
+install:
+  type: manual
+  command: '# See: https://x.com/i/status/2029313300786495554|https://x.com/i/status/2029313300786495554'
+verification:
+  type: manual
+resources:
+- url: https://x.com/i/status/2029313300786495554|https://x.com/i/status/2029313300786495554
+  type: homepage
+tags: []
+added_date: '2026-03-04'
+source: slack-inbox
+source_url: https://x.com/i/status/2029313300786495554|https://x.com/i/status/2029313300786495554
+sdlc_phase: Implementation
