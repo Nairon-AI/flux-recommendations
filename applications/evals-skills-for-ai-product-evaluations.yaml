@@ -1,0 +1,31 @@
+name: evals-skills-for-ai-product-evaluations
+category: repo
+tagline: AI agent skills for evaluating coding agent outputs, identifying common evaluati
+description: 'A collection of AI agent skills for product-specific evaluations of
+  coding agents. Includes eval-audit for diagnostic checks, error-categorization for
+  distinguishing different types of failures, and evaluator-design for building proper
+  evaluation frameworks. Teaches agents to use eval platforms effectively rather than
+  just providing access.
+
+
+  **Flux Impact:** Enables systematic evaluation of AI agent outputs across the SDLC,
+  helping identify when agents make factual errors vs procedural mistakes, improving
+  overall reliability of agentic workflows'
+use_cases:
+- Install evals-skills plugin in Claude Code
+- Run eval-audit on current AI workflow to identify gaps
+- Implement recommended evaluation patterns from audit results
+- Create custom eval skills grounded in specific project requirements
+install:
+  type: manual
+  command: '# See: https://x.com/HamelHusain/article/2028894099483578872'
+verification:
+  type: manual
+resources:
+- url: https://x.com/HamelHusain/article/2028894099483578872
+  type: homepage
+tags: []
+added_date: '2026-03-04'
+source: slack-inbox
+source_url: https://x.com/HamelHusain/article/2028894099483578872
+sdlc_phase: Testing
