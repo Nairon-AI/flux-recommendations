@@ -1,0 +1,30 @@
+name: videodb-ai-video-pipeline-skills
+category: tweet
+tagline: VideoDB provides AI agent skills for video processing - ingest, index, search,
+  a
+description: 'VideoDB offers AI agent skills for comprehensive video pipeline operations
+  including ingestion, indexing, searching, and editing. This fills the ''continuous
+  media'' blind spot in current AI coding assistants that can handle text, code, and
+  web browsing but struggle with video content.
+
+
+  **Flux Impact:** Extends Agentic SDLC to handle multimedia content - agents could
+  analyze demo videos, generate video documentation, or work with video-heavy applications
+  more effectively'
+use_cases:
+- Investigate VideoDB API and skill integration patterns
+- Create video processing skills for common development workflows
+- Add video content analysis to context-scout agent capabilities
+install:
+  type: manual
+  command: '# See: https://x.com/ashu_trv/status/2029188852519522444?s=20'
+verification:
+  type: manual
+resources:
+- url: https://x.com/ashu_trv/status/2029188852519522444?s=20
+  type: homepage
+tags: []
+added_date: '2026-03-04'
+source: slack-inbox
+source_url: https://x.com/ashu_trv/status/2029188852519522444?s=20
+sdlc_phase: Planning
