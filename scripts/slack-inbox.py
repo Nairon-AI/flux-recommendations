@@ -72,6 +72,41 @@ def update_slack_reaction(
         print(f"Failed to add reaction: {e}")
 
 
+def post_slack_reply(channel: str, thread_ts: str, message: str):
+    """Post a reply to a Slack thread."""
+    slack_token = os.environ.get("SLACK_BOT_TOKEN")
+    if not slack_token or not channel or not thread_ts:
+        print("Skipping Slack reply (missing token/channel/ts)")
+        return
+
+    headers = {
+        "Authorization": f"Bearer {slack_token}",
+        "Content-Type": "application/json",
+    }
+
+    try:
+        data = json.dumps(
+            {
+                "channel": channel,
+                "thread_ts": thread_ts,
+                "text": message,
+                "unfurl_links": False,
+                "unfurl_media": False,
+            }
+        ).encode()
+        req = urllib.request.Request(
+            "https://slack.com/api/chat.postMessage", data=data, headers=headers
+        )
+        resp = urllib.request.urlopen(req, timeout=10)
+        result = json.loads(resp.read().decode())
+        if result.get("ok"):
+            print("Posted Slack thread reply")
+        else:
+            print(f"Slack reply error: {result.get('error', 'unknown')}")
+    except Exception as e:
+        print(f"Failed to post Slack reply: {e}")
+
+
 TWITTER_API_BASE = "https://api.twitterapi.io"
 ANTHROPIC_API_BASE = "https://api.anthropic.com/v1/messages"
 EXA_API_BASE = "https://api.exa.ai/contents"
@@ -1161,6 +1196,11 @@ Type: {url_type}
             )
             print(f"Created and closed duplicate issue: {issue_url}")
         update_slack_reaction(slack_channel, slack_ts, "x", "eyes")
+        post_slack_reply(
+            slack_channel,
+            slack_ts,
+            f"*Duplicate* - Already covered by `{duplicate_of}`\n>{reason}",
+        )
         return
 
     if verdict == "No" or stars < 3:
@@ -1168,6 +1208,11 @@ Type: {url_type}
         print(f"SKIP (Low value): {reason}")
         print("No issue created - not worth adding to Flux recommendations")
         update_slack_reaction(slack_channel, slack_ts, "x", "eyes")
+        post_slack_reply(
+            slack_channel,
+            slack_ts,
+            f"*Rejected* ({stars}/5 stars)\n>{reason}",
+        )
         return
 
     if verdict == "Yes" and stars >= 4:
@@ -1215,9 +1260,26 @@ Type: {url_type}
             print(f"Committed: {rel_path}")
             print("No issue created - recommendation added directly to main")
             update_slack_reaction(slack_channel, slack_ts, "white_check_mark", "eyes")
+
+            # Post YAML content as reply
+            try:
+                with open(yaml_path, "r") as f:
+                    yaml_content = f.read()
+                post_slack_reply(
+                    slack_channel,
+                    slack_ts,
+                    f"*Added to recommendations* ({stars}/5 stars)\n```\n{yaml_content}```",
+                )
+            except Exception as e:
+                print(f"Failed to read YAML for Slack reply: {e}")
         else:
             # File already exists or failed to create
             update_slack_reaction(slack_channel, slack_ts, "x", "eyes")
+            post_slack_reply(
+                slack_channel,
+                slack_ts,
+                "*Skipped* - Recommendation file already exists or failed to create",
+            )
         return
 
     # MAYBE or moderate confidence: Create issue for human review
@@ -1240,9 +1302,18 @@ Type: {url_type}
         update_slack_reaction(slack_channel, slack_ts, "x", "eyes")
         exit(1)
 
-    print(f"Created issue for review: {result.stdout.strip()}")
+    issue_url = result.stdout.strip()
+    print(f"Created issue for review: {issue_url}")
     # Issue created - needs human review (use thinking face to indicate pending decision)
     update_slack_reaction(slack_channel, slack_ts, "thinking_face", "eyes")
+
+    # Explain why it needs review
+    reason = analysis.get("stars_reason", "Moderate confidence")
+    post_slack_reply(
+        slack_channel,
+        slack_ts,
+        f"*Needs review* ({stars}/5 stars)\n>{reason}\n\n{issue_url}",
+    )
 
 
 if __name__ == "__main__":
