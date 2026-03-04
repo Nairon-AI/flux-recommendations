@@ -956,9 +956,11 @@ def main():
 
     if not url:
         print("Error: URL not set")
+        update_slack_reaction(slack_channel, slack_ts, "x", "eyes")
         exit(1)
     if not anthropic_api_key:
         print("Error: ANTHROPIC_API_KEY not set")
+        update_slack_reaction(slack_channel, slack_ts, "x", "eyes")
         exit(1)
 
     # Detect URL type
@@ -983,12 +985,14 @@ def main():
     if url_type == "tweet":
         if not twitter_api_key:
             print("Error: TWITTER_API_KEY required for tweets")
+            update_slack_reaction(slack_channel, slack_ts, "x", "eyes")
             exit(1)
         print("Fetching tweet...")
         content = fetch_tweet_content(url, twitter_api_key, exa_api_key)
     elif url_type == "twitter_article":
         if not twitter_api_key:
             print("Error: TWITTER_API_KEY required for Twitter articles")
+            update_slack_reaction(slack_channel, slack_ts, "x", "eyes")
             exit(1)
         print("Fetching Twitter article...")
         content = fetch_article_content(url, twitter_api_key)
@@ -998,12 +1002,14 @@ def main():
     else:
         if not exa_api_key:
             print("Error: EXA_API_KEY required for non-tweet URLs")
+            update_slack_reaction(slack_channel, slack_ts, "x", "eyes")
             exit(1)
         print(f"Fetching content via Exa...")
         content = fetch_exa_content(url, exa_api_key, url_type)
 
     if not content:
         print("Could not fetch content from URL")
+        update_slack_reaction(slack_channel, slack_ts, "x", "eyes")
         exit(1)
 
     # Verify ambiguous tool mentions with Exa search
@@ -1193,12 +1199,23 @@ Type: {url_type}
 
     if result.returncode != 0:
         print(f"Error creating issue: {result.stderr}")
+        update_slack_reaction(slack_channel, slack_ts, "x", "eyes")
         exit(1)
 
     print(f"Created issue for review: {result.stdout.strip()}")
-    # Issue created for review - use thinking emoji to indicate pending human review
-    update_slack_reaction(slack_channel, slack_ts, "thinking_face", "eyes")
+    # Issue created successfully - link was ingested for review
+    update_slack_reaction(slack_channel, slack_ts, "white_check_mark", "eyes")
 
 
 if __name__ == "__main__":
-    main()
+    # Get Slack vars early for error handling
+    slack_channel = os.environ.get("SLACK_CHANNEL", "")
+    slack_ts = os.environ.get("SLACK_TS", "")
+
+    try:
+        main()
+    except Exception as e:
+        print(f"Fatal error: {e}")
+        # Mark as failed in Slack
+        update_slack_reaction(slack_channel, slack_ts, "x", "eyes")
+        raise
