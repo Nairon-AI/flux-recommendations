@@ -1135,18 +1135,38 @@ Type: {url_type}
         )
 
         if yaml_path:
-            # Commit and push
+            # Commit and push with retry logic for race conditions
             rel_path = os.path.relpath(yaml_path, recommendations_path)
 
             subprocess.run(["git", "config", "user.name", "Flux Inbox"], check=True)
             subprocess.run(
                 ["git", "config", "user.email", "flux-inbox@nairon.ai"], check=True
             )
+            # Pull latest before committing to reduce conflicts
+            subprocess.run(["git", "pull", "--rebase", "origin", "main"], check=True)
             subprocess.run(["git", "add", yaml_path], check=True)
 
             commit_msg = f"inbox: auto-add {analysis.get('title', 'unknown')}\n\nSource: {url}\nVerdict: {verdict} ({stars} stars)\nReason: {analysis.get('stars_reason', '')}"
             subprocess.run(["git", "commit", "-m", commit_msg], check=True)
-            subprocess.run(["git", "push", "origin", "main"], check=True)
+
+            # Push with retry - handle race conditions from concurrent workflows
+            max_retries = 3
+            for attempt in range(max_retries):
+                result = subprocess.run(
+                    ["git", "push", "origin", "main"], capture_output=True, text=True
+                )
+                if result.returncode == 0:
+                    break
+                if attempt < max_retries - 1:
+                    print(
+                        f"Push failed (attempt {attempt + 1}), pulling and retrying..."
+                    )
+                    subprocess.run(
+                        ["git", "pull", "--rebase", "origin", "main"], check=True
+                    )
+                else:
+                    print(f"Push failed after {max_retries} attempts: {result.stderr}")
+                    raise subprocess.CalledProcessError(result.returncode, "git push")
 
             print(f"Committed: {rel_path}")
             print("No issue created - recommendation added directly to main")
