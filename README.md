@@ -152,21 +152,35 @@ This leaves room for manual discovery - if you spot something useful while brows
 
 ### Reviewing "Maybe" Items
 
-When something gets a :thinking_face: reaction, an issue is created for human review. You can review it directly via GitHub issue comments:
+When something gets a :thinking_face: reaction, an issue is created for human review. The issue contains all the context you need plus a proposed YAML recommendation.
 
-**To approve** (commits the recommendation):
-- "approve", "lgtm", "good to go", "add it", "ship it", "yes"
+**Review via GitHub comments** - just write naturally:
 
-**To reject** (closes the issue):
-- "reject", "close", "deny", "not good", "skip", "no", "pass"
+| Your Comment | What Happens |
+|--------------|--------------|
+| "Approved - this looks useful" | Commits YAML, closes issue, updates Slack to :white_check_mark: |
+| "Reject - not relevant to our workflows" | Closes issue, no commit |
+| "Interesting but need more info" | No action (unclear intent) |
 
-The workflow automatically:
-1. Extracts the proposed YAML from the issue body
-2. Commits it to the appropriate folder
-3. Closes the issue with the outcome
-4. Adds a reaction to your comment (👍 or 👎)
+Claude analyzes your comment to understand intent - no keywords required. Write naturally.
 
-Only users with write access to the repository can approve or reject.
+**Full review flow:**
+
+```
+Drop link in Slack
+    ↓
+🤔 + "Needs review (3/5 stars)" + GitHub issue created
+    ↓
+You comment on issue: "Approved, add it"
+    ↓
+Claude analyzes → "approve"
+    ↓
+✅ YAML committed → Issue closed → Slack updated to ✅
+    ↓
+"Approved and merged" reply in Slack thread
+```
+
+Only users with **write access** to the repository can approve or reject.
 
 ## Cost of Automation
 
@@ -179,7 +193,8 @@ Running this fully autonomous system costs approximately:
 | Twitter API (TwitterAPI.io) | ~$0.20 | ~$6.00 |
 | Exa API (URL expansion + tool verification) | ~$0.05 | ~$1.50 |
 | Firecrawl API (anti-bot fallback) | ~$0.02 | ~$0.60 |
-| **Total** | **~$0.57/day** | **~$17.10/month** |
+| Issue Review (Claude comment analysis) | ~$0.01 | ~$0.30 |
+| **Total** | **~$0.58/day** | **~$17.40/month** |
 
 **What you're actually paying for:**
 
