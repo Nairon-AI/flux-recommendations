@@ -288,45 +288,83 @@ def extract_article_id(url):
     return None
 
 
+def fetch_article(article_id, api_key):
+    """Fetch article from Twitter API using the /twitter/article endpoint."""
+    url = f"{TWITTER_API_BASE}/twitter/article?tweet_id={article_id}"
+    req = urllib.request.Request(url)
+    req.add_header("X-API-Key", api_key)
+    req.add_header("User-Agent", "FluxInbox/1.0")
+    try:
+        with urllib.request.urlopen(req, timeout=30) as resp:
+            data = json.loads(resp.read().decode())
+            if data.get("status") == "success":
+                return data.get("article")
+            else:
+                print(f"Article API error: {data.get('message', 'unknown')}")
+                return None
+    except Exception as e:
+        print(f"Error fetching article: {e}")
+        return None
+
+
 def fetch_article_content(url, api_key):
-    """Fetch Twitter article content. Articles are long-form posts on X."""
+    """Fetch Twitter article content using the dedicated article endpoint."""
     article_id = extract_article_id(url)
     if not article_id:
         return None
 
-    # Extract author from URL
+    # Extract author from URL as fallback
     author_match = re.search(r"(?:twitter|x)\.com/(\w+)/article/", url)
-    author = author_match.group(1) if author_match else "unknown"
+    fallback_author = author_match.group(1) if author_match else "unknown"
 
-    # Try fetching article via Twitter API (articles may be accessible as tweets)
-    tweet = fetch_tweet(article_id, api_key)
-    if tweet:
-        text = tweet.get("text", "")
-        author_name = tweet.get("author", {}).get("name", author)
-        likes = tweet.get("likeCount", 0)
+    # Fetch via dedicated article endpoint
+    article = fetch_article(article_id, api_key)
+    if article:
+        title = article.get("title", "")
+        preview = article.get("preview_text", "")
+        author_info = article.get("author", {})
+        author = author_info.get("userName", fallback_author)
+        author_name = author_info.get("name", author)
+        likes = article.get("likeCount", 0)
+        views = article.get("viewCount", 0)
+
+        # Extract full content from contents array
+        contents = article.get("contents", [])
+        full_text = "\n\n".join([c.get("text", "") for c in contents if c.get("text")])
+
+        # Build display text
+        display_text = full_text if full_text else preview
+        if len(display_text) > 1000:
+            display_preview = display_text[:1000] + "..."
+        else:
+            display_preview = display_text
 
         return {
             "type": "twitter_article",
-            "text": f"[Twitter Article by @{author}]:\n{text}",
+            "text": f"[Twitter Article by @{author}]\n\nTitle: {title}\n\n{full_text or preview}",
             "author": author,
             "author_name": author_name,
+            "title": title,
             "likes": likes,
-            "retweets": tweet.get("retweetCount", 0),
-            "display": f"**Twitter Article by @{author}**\n\n> {text[:500]}...",
-            "meta": f"@{author} · {likes} ❤️",
+            "views": views,
+            "retweets": 0,
+            "display": f"**{title}**\n\nBy @{author}\n\n> {display_preview}",
+            "meta": f"@{author} · {likes} ❤️ · {views} views",
             "has_embedded_content": False,
         }
 
     # If API fails, return minimal info so Claude can still try to analyze
     return {
         "type": "twitter_article",
-        "text": f"[Twitter Article by @{author}]\n\nArticle ID: {article_id}\nURL: {url}\n\n(Could not fetch article content - Twitter articles may require special access)",
-        "author": author,
-        "author_name": author,
+        "text": f"[Twitter Article by @{fallback_author}]\n\nArticle ID: {article_id}\nURL: {url}\n\n(Could not fetch article content)",
+        "author": fallback_author,
+        "author_name": fallback_author,
+        "title": "",
         "likes": 0,
+        "views": 0,
         "retweets": 0,
-        "display": f"**Twitter Article by @{author}**\n\n[Could not fetch content]",
-        "meta": f"@{author}",
+        "display": f"**Twitter Article by @{fallback_author}**\n\n[Could not fetch content]",
+        "meta": f"@{fallback_author}",
         "has_embedded_content": False,
     }
 
