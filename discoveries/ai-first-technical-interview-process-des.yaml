@@ -1,0 +1,33 @@
+name: ai-first-technical-interview-process-des
+category: article
+tagline: Tolan redesigned their engineering interviews to encourage AI usage, testing
+  can
+description: 'Tolan created an interview process where candidates solve real product
+  problems using AI tools like Claude Code, Cursor, or Codex. The focus shifts from
+  algorithm memorization to architecture decisions, constraint handling, and knowing
+  when code is ready for review versus production.
+
+
+  **Flux Impact:** This validates our Agentic SDLC philosophy by showing how AI-augmented
+  workflows are becoming the new standard for evaluating engineering capability, not
+  just a productivity tool'
+use_cases:
+- Create interview templates based on real product specs that take 2-3 hours with
+  AI assistance
+- Develop evaluation criteria focused on architecture, trade-offs, and code quality
+  judgment
+- Design post-implementation discussion framework around 'ready for review' vs 'ready
+  for production'
+install:
+  type: manual
+  command: '# See: https://www.tolans.com/relay/how-we-hire-engineers-when-ai-writes-our-code'
+verification:
+  type: manual
+resources:
+- url: https://www.tolans.com/relay/how-we-hire-engineers-when-ai-writes-our-code
+  type: homepage
+tags: []
+added_date: '2026-03-04'
+source: slack-inbox
+source_url: https://www.tolans.com/relay/how-we-hire-engineers-when-ai-writes-our-code
+sdlc_phase: Planning
