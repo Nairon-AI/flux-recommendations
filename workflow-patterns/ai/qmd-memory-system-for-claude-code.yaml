@@ -1,0 +1,33 @@
+name: qmd-memory-system-for-claude-code
+category: article
+tagline: Artem shows how to solve Claude Code's memory problem using QMD (local search
+  en
+description: 'QMD is a local search engine that indexes your knowledge vault (Obsidian
+  notes, session history, etc.) with BM25, semantic, and hybrid search modes. The
+  /recall skill provides three context loading modes: temporal (session history by
+  date), topic (BM25 search), and graph (interactive visualization).
+
+
+  **Flux Impact:** Transforms our Agentic SDLC by solving the context amnesia problem
+  - agents can now access rich historical context, past decisions, and accumulated
+  knowledge across all previous sessions, making each interaction build on previous
+  work rather than starting from zero.'
+use_cases:
+- Install QMD and set up vault indexing
+- Create /recall skill wrapper for Flux workflows
+- Add session auto-indexing to Flux hooks
+- Integrate with brain vault system in Flux
+- Test QMD search modes vs existing memory-scout patterns
+install:
+  type: manual
+  command: '# See: https://x.com/ArtemXTech/article/2028330693659332615'
+verification:
+  type: manual
+resources:
+- url: https://x.com/ArtemXTech/article/2028330693659332615
+  type: homepage
+tags: []
+added_date: '2026-03-04'
+source: slack-inbox
+source_url: https://x.com/ArtemXTech/article/2028330693659332615
+sdlc_phase: Planning
