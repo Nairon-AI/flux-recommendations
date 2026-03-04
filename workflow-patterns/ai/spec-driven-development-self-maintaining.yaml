@@ -1,0 +1,31 @@
+name: spec-driven-development-self-maintaining
+category: article
+tagline: Traditional spec-driven development fails because specs become stale; solution
+  i
+description: 'The article argues that spec-driven development fails because specs
+  become outdated like all documentation. It proposes a solution where both humans
+  and agents continuously maintain the spec during execution, with agents updating
+  the plan when they discover constraints or make implementation decisions that differ
+  from the original plan.
+
+
+  **Flux Impact:** This directly improves our Agentic SDLC by making specs living
+  documents that reflect reality, reducing agent confusion from stale plans and improving
+  human oversight of agent decision-making.'
+use_cases:
+- Modify worker agent to write spec updates when making architectural decisions
+- Add spec-diff review step to flux-work after each task completion
+- Create pattern for granular spec updates that surface key decisions without noise
+install:
+  type: manual
+  command: '# See: https://x.com/augmentcode/article/2025993446633492725'
+verification:
+  type: manual
+resources:
+- url: https://x.com/augmentcode/article/2025993446633492725
+  type: homepage
+tags: []
+added_date: '2026-03-04'
+source: slack-inbox
+source_url: https://x.com/augmentcode/article/2025993446633492725
+sdlc_phase: Planning
