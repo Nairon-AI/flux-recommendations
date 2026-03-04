@@ -90,7 +90,14 @@ jobs:
             // Extract YAML path from marker
             const pathMatch = issueBody.match(/<!-- YAML_PATH: (.+?) -->/);
             if (!pathMatch) {
-              core.setFailed('Could not find YAML path in issue body');
+              // Post helpful comment about missing markers
+              await github.rest.issues.createComment({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: context.issue.number,
+                body: `**Error:** This issue was created before the automated review system was deployed.\n\nThe YAML markers are missing from the issue body. Please either:\n1. Edit the issue to add the YAML markers manually, or\n2. Create the recommendation file manually and close this issue.`
+              });
+              core.setFailed('Could not find YAML path in issue body - this is a legacy issue without YAML markers');
               return;
             }
             const yamlPath = pathMatch[1];
@@ -98,6 +105,12 @@ jobs:
             // Extract YAML content from markers
             const yamlMatch = issueBody.match(/<!-- YAML_START -->\n([\s\S]*?)\n<!-- YAML_END -->/);
             if (!yamlMatch) {
+              await github.rest.issues.createComment({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: context.issue.number,
+                body: `**Error:** Could not find YAML content in issue body.\n\nThe YAML_START/YAML_END markers are missing or malformed.`
+              });
               core.setFailed('Could not find YAML content in issue body');
               return;
             }
@@ -114,6 +127,12 @@ jobs:
             
             // Check if file already exists
             if (fs.existsSync(yamlPath)) {
+              await github.rest.issues.createComment({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: context.issue.number,
+                body: `**Error:** File already exists at \`${yamlPath}\`.\n\nThis recommendation may have already been added. Please check and close this issue if it's a duplicate.`
+              });
               core.setFailed(`File already exists: ${yamlPath}`);
               return;
             }
