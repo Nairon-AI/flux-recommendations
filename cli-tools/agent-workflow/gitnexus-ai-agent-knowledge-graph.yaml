@@ -1,0 +1,33 @@
+name: gitnexus-ai-agent-knowledge-graph
+category: tool
+tagline: Local knowledge graph engine that maps codebase dependencies, call chains,
+  and b
+description: 'GitNexus creates a local knowledge graph of your codebase, mapping all
+  dependencies, call chains, execution flows, and breaking change risks. It integrates
+  with Claude Code, Cursor, and Windsurf via MCP to give AI agents complete architectural
+  context before making changes.
+
+
+  **Flux Impact:** Dramatically improves our Agentic SDLC by giving AI agents complete
+  dependency awareness before making changes. This addresses the ''blind acceptance''
+  problem where agents make changes without understanding downstream impacts. Perfect
+  complement to our existing workflow scouts.'
+use_cases:
+- Research GitNexus GitHub repository and installation process
+- Test MCP integration with Claude Code workflow
+- Benchmark against existing context-scout and repo-scout capabilities
+- Create GitNexus skill for Flux plugin integration
+- Document GitNexus setup in Flux improvement recommendations
+install:
+  type: manual
+  command: '# See: https://x.com/sukh_saroy/status/2029400474739458379?s=20'
+verification:
+  type: manual
+resources:
+- url: https://x.com/sukh_saroy/status/2029400474739458379?s=20
+  type: homepage
+tags: []
+added_date: '2026-03-05'
+source: slack-inbox
+source_url: https://x.com/sukh_saroy/status/2029400474739458379?s=20
+sdlc_phase: Implementation
