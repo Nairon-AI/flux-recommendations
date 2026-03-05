@@ -1,0 +1,29 @@
+name: impeccable-design-fluency-agent-skills
+category: tool
+tagline: Tool providing design fluency agent skills for AI-powered frontend development
+  a
+description: 'Impeccable v1.1 provides design fluency skills for AI agents to improve
+  frontend quality. It offers agent skills, supports multiple platforms (Antigravity,
+  VS Code), and includes a ''distill'' command for better AI-generated interfaces.
+
+
+  **Flux Impact:** Enhances our Agentic SDLC by providing specialized design skills
+  that improve AI-generated frontend quality, addressing a common weakness in agent-generated
+  UIs'
+use_cases:
+- Test Impeccable installation in Claude Code environment
+- Integrate design fluency skills into frontend-focused Flux workflows
+- Evaluate compatibility with existing UI skills in Flux
+install:
+  type: manual
+  command: '# See: https://x.com/pbakaus/status/2029334353894162720?s=20'
+verification:
+  type: manual
+resources:
+- url: https://x.com/pbakaus/status/2029334353894162720?s=20
+  type: homepage
+tags: []
+added_date: '2026-03-05'
+source: slack-inbox
+source_url: https://x.com/pbakaus/status/2029334353894162720?s=20
+sdlc_phase: Implementation
