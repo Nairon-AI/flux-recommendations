@@ -1,0 +1,31 @@
+name: tembo-multi-platform-coding-agent-orches
+category: application
+tagline: Tembo orchestrates coding agents across platforms like Slack, Linear, and
+  GitHub
+description: 'Tembo is an orchestration platform that connects coding agents (Claude
+  Code, Cursor, Codex) to external platforms like Slack, Linear, and GitHub. It enables
+  autonomous task execution across multiple repositories with @tembo mentions triggering
+  implementation work.
+
+
+  **Flux Impact:** Extends Flux''s agentic SDLC approach beyond Claude Code sessions
+  to external platforms, enabling autonomous task pickup from Linear tickets, Slack
+  mentions, and GitHub issues. Creates a bridge between planning tools and agent execution.'
+use_cases:
+- Sign up for Tembo and connect GitHub/Slack/Linear integrations
+- Configure @tembo bot access to target repositories
+- Test simple task assignment from Linear ticket to PR creation
+- Explore multi-repo coordination for API + client library updates
+install:
+  type: manual
+  command: '# See: https://www.tembo.io/'
+verification:
+  type: manual
+resources:
+- url: https://www.tembo.io/
+  type: homepage
+tags: []
+added_date: '2026-03-05'
+source: slack-inbox
+source_url: https://www.tembo.io/
+sdlc_phase: Planning
