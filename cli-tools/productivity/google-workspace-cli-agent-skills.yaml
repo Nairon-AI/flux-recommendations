@@ -1,0 +1,29 @@
+name: google-workspace-cli-agent-skills
+category: tool
+tagline: CLI tool with 40+ agent skills for Google Drive, Gmail, Calendar, and all
+  Worksp
+description: 'Google Workspace CLI provides programmatic access to Google Drive, Gmail,
+  Calendar, and all Workspace APIs. Built specifically for both human use and AI agent
+  integration with 40+ pre-built agent skills included.
+
+
+  **Flux Impact:** Enables AI agents to seamlessly integrate with Google Workspace
+  during development - managing project files in Drive, coordinating via Gmail, scheduling
+  via Calendar. The 40+ agent skills provide ready-to-use patterns for workspace automation.'
+use_cases:
+- Investigate the 40+ agent skills included
+- Test integration with Claude Code for file/email workflows
+- Document which skills are most useful for SDLC workflows
+install:
+  type: manual
+  command: '# See: https://x.com/addyosmani/status/2029372736267805081?s=20'
+verification:
+  type: manual
+resources:
+- url: https://x.com/addyosmani/status/2029372736267805081?s=20
+  type: homepage
+tags: []
+added_date: '2026-03-05'
+source: slack-inbox
+source_url: https://x.com/addyosmani/status/2029372736267805081?s=20
+sdlc_phase: Planning
