@@ -1,0 +1,35 @@
+name: claude-code-api-skill
+category: skill
+tagline: Auto-detects language and loads Claude API docs with right integration
+description: Built-in skill for Claude Code that automatically detects your programming
+  language and selects the appropriate Claude API integration method (direct API,
+  tool use, or Agent SDK). It loads relevant reference documentation directly into
+  context and covers streaming, batches, files API, and structured outputs.
+install:
+  type: skill
+  command: /claude-api
+verification:
+  type: manual
+resources: []
+tags:
+- claude
+- api
+- documentation
+- integration
+- auto-detection
+added_date: '2026-03-05'
+source: x-discovery
+source_url: https://x.com/dani_avila7/status/2029360126193180846
+mentions:
+- url: https://x.com/dani_avila7/status/2029360126193180846
+  author: '@dani_avila7'
+  text: 'Claude Code just shipped v2.1.69 with a new built-in skill: /claude-api
+
+
+    It detects your language, picks the right surface (direct API, tool use, or Agent
+    SDK), and loads the relevant reference docs directly into context.
+
+
+    Covers streaming, batches, files API, structured outputs,'
+  date: '2026-03-05'
+  likes: 402

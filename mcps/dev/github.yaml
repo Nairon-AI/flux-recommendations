@@ -83,3 +83,16 @@ mentions:
     every'
   date: '2026-02-28'
   likes: 47
+- url: https://x.com/mattpocockuk/status/2029478118080016703
+  author: '@mattpocockuk'
+  text: 'One thing I''ve noticed about having an AI that can hoover up a backlog is
+    I''m much more aggressive about adding to that backlog
+
+
+    I''ve even added a ''dev feedback form'' to my app that posts directly to a GitHub
+    issue.
+
+
+    Then I run `pnpm ralph` and all the issues get fixed'
+  date: '2026-03-05'
+  likes: 38
