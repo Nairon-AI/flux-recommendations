@@ -1,0 +1,31 @@
+name: agency-agents-ai-specialist-collection
+category: repo
+tagline: A collection of specialized AI agents for different domains like frontend
+  develo
+description: 'Agency-agents is a repository containing specialized AI agents for different
+  domains - frontend development, Reddit community management, whimsy injection, and
+  reality checking. Each agent appears to be a specialized expert with domain-specific
+  knowledge and capabilities.
+
+
+  **Flux Impact:** Could enhance Flux''s agentic approach by providing proven patterns
+  for agent specialization and domain expertise, potentially improving our existing
+  scout system'
+use_cases:
+- Clone and analyze agency-agents repository structure
+- Extract reusable agent specialization patterns
+- Identify agents that could enhance Flux's existing scouts
+- Consider creating Flux skills based on their most effective agents
+install:
+  type: manual
+  command: '# See: https://x.com/i/status/2029496602319339606|https://x.com/i/status/2029496602319339606'
+verification:
+  type: manual
+resources:
+- url: https://x.com/i/status/2029496602319339606|https://x.com/i/status/2029496602319339606
+  type: homepage
+tags: []
+added_date: '2026-03-05'
+source: slack-inbox
+source_url: https://x.com/i/status/2029496602319339606|https://x.com/i/status/2029496602319339606
+sdlc_phase: Planning
