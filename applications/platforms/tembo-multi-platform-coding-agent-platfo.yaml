@@ -1,0 +1,32 @@
+name: tembo-multi-platform-coding-agent-platfo
+category: tool
+tagline: Tembo enables autonomous coding agents to work across platforms like Slack,
+  Line
+description: 'Tembo is a platform that enables autonomous coding agents to work across
+  multiple platforms and repositories. It allows teams to trigger coding tasks by
+  mentioning @tembo in Slack, Linear, or GitHub, and coordinates multi-repo changes
+  with any underlying AI model.
+
+
+  **Flux Impact:** Tembo fills a critical gap in Agentic SDLC by providing multi-platform
+  orchestration that works with Flux''s existing Claude Code workflows. This enables
+  true end-to-end automation from planning (Linear) to communication (Slack) to implementation
+  (GitHub) while preserving agent choice flexibility.'
+use_cases:
+- Evaluate Tembo for multi-repo coordination use cases
+- Test @tembo integration with existing Claude Code workflows
+- Set up Tembo automations for bug fixes and routine maintenance tasks
+- Document Tembo + Flux workflow patterns for team adoption
+install:
+  type: manual
+  command: '# See: https://www.tembo.io/'
+verification:
+  type: manual
+resources:
+- url: https://www.tembo.io/
+  type: homepage
+tags: []
+added_date: '2026-03-05'
+source: slack-inbox
+source_url: https://www.tembo.io/
+sdlc_phase: Planning
