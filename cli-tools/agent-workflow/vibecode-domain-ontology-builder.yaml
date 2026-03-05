@@ -1,0 +1,31 @@
+name: vibecode-domain-ontology-builder
+category: tool
+tagline: A tool that generates minimum viable ontology maps to help understand domain
+  ter
+description: 'Vibecode creates domain-specific terminology maps that help developers
+  and AI agents quickly understand the key concepts, vocabulary, and relationships
+  within technical domains like 3D graphics, machine learning, or specific frameworks.
+  It generates structured ontologies that improve prompt quality and context understanding.
+
+
+  **Flux Impact:** Improves agent context preparation by providing structured domain
+  knowledge upfront, reducing confusion and improving prompt quality when working
+  across different technical domains'
+use_cases:
+- Integrate with flux-plan to auto-generate domain ontologies when working with new
+  frameworks
+- Add domain vocabulary to brain vault for persistent context
+- Create skill that extracts domain terms from existing codebases
+install:
+  type: manual
+  command: '# See: https://x.com/i/status/2029332670115614799|https://x.com/i/status/2029332670115614799'
+verification:
+  type: manual
+resources:
+- url: https://x.com/i/status/2029332670115614799|https://x.com/i/status/2029332670115614799
+  type: homepage
+tags: []
+added_date: '2026-03-05'
+source: slack-inbox
+source_url: https://x.com/i/status/2029332670115614799|https://x.com/i/status/2029332670115614799
+sdlc_phase: Planning
