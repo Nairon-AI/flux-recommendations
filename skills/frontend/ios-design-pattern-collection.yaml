@@ -1,0 +1,31 @@
+name: ios-design-pattern-collection
+category: repo
+tagline: 'Curated showcase of standout iOS app design patterns and interactions organized '
+description: 'Spotted in Prod is a curated collection showcasing the best iOS app
+  designs and interactions. It categorizes apps by design patterns like skeuomorphism,
+  3D effects, social features, onboarding flows, and UI components, allowing developers
+  to discover and study well-executed design implementations.
+
+
+  **Flux Impact:** Enhances design decision-making in mobile development by providing
+  curated examples of proven UI patterns, helping agents make more informed design
+  choices backed by real-world implementations.'
+use_cases:
+- Create 'ios-design-patterns' skill that references this collection during mobile
+  UI planning
+- Integrate pattern search into design-related agent workflows
+- Build a pattern matching system that suggests relevant examples based on feature
+  requirements
+install:
+  type: manual
+  command: '# See: https://www.spottedinprod.com/'
+verification:
+  type: manual
+resources:
+- url: https://www.spottedinprod.com/
+  type: homepage
+tags: []
+added_date: '2026-03-05'
+source: slack-inbox
+source_url: https://www.spottedinprod.com/
+sdlc_phase: Planning
