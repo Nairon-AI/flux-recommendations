@@ -1,0 +1,31 @@
+name: rivet-actors-serverless-stateful-primiti
+category: tool
+tagline: Serverless primitive for stateful workloads like AI agents with built-in
+  persist
+description: 'Rivet Actors provide a serverless primitive for stateful workloads,
+  particularly AI agents. Each actor runs independently with in-memory state, SQLite
+  persistence, WebSockets, queues, and scheduling capabilities. The platform is designed
+  for long-lived processes that can hibernate when idle and scale infinitely.
+
+
+  **Flux Impact:** Enables persistent, stateful AI agents that maintain context across
+  sessions and scale automatically. This addresses a key gap in Agentic SDLC where
+  agents lose context between interactions.'
+use_cases:
+- Add rivet-dev/skills to agent skillset for deployment patterns
+- Create actor templates for common agent workflows
+- Document integration patterns with Claude Code sessions
+- Test actor-based agent deployment in development workflows
+install:
+  type: manual
+  command: '# See: https://rivet.dev/'
+verification:
+  type: manual
+resources:
+- url: https://rivet.dev/
+  type: homepage
+tags: []
+added_date: '2026-03-05'
+source: slack-inbox
+source_url: https://rivet.dev/
+sdlc_phase: Implementation
