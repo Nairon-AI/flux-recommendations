@@ -1,0 +1,30 @@
+name: ship-skills-with-evals-pattern
+category: tweet
+tagline: 'Richard Seroter advocates for evaluating AI skills before deployment, just
+  like '
+description: 'Tweet emphasizing the need to evaluate AI skills/prompts before deployment,
+  similar to how we test code. References a practical guide by Phil Schmid on defining
+  success metrics and iterating on evaluations for AI agent skills.
+
+
+  **Flux Impact:** Strengthens our Agentic SDLC by ensuring AI skills are validated
+  before deployment, reducing agent failures and improving reliability across all
+  development phases'
+use_cases:
+- Create skill-eval-pattern.yaml in workflow-patterns/testing/
+- Add eval checkpoints to agent skill deployment workflows
+- Research Phil Schmid's evaluation methodology for Skills
+- Integrate skill evaluation into flux-work task validation
+install:
+  type: manual
+  command: '# See: https://x.com/rseroter/status/2030001719778697258?s=20'
+verification:
+  type: manual
+resources:
+- url: https://x.com/rseroter/status/2030001719778697258?s=20
+  type: homepage
+tags: []
+added_date: '2026-03-06'
+source: slack-inbox
+source_url: https://x.com/rseroter/status/2030001719778697258?s=20
+sdlc_phase: Testing
