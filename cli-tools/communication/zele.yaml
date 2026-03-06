@@ -1,52 +1,54 @@
 name: zele
 category: cli-tool
-tagline: "Manage Gmail and calendar from your terminal"
+tagline: Manage Gmail and calendar from your terminal
+description: 'zele provides terminal-first workflows for email and calendar management,
+  designed for both humans and coding agents.
 
-description: |
-  zele provides terminal-first workflows for email and calendar management, designed for both humans and coding agents.
-
+  '
 use_cases:
-  - Process inbox from terminal
-  - Automate calendar and email routines
-  - Let agents summarize inbound communication
-
+- Process inbox from terminal
+- Automate calendar and email routines
+- Let agents summarize inbound communication
 prerequisites:
-  - Google account
-  - OAuth setup from README
-
+- Google account
+- OAuth setup from README
 install:
   type: manual
-  command: |
-    git clone https://github.com/remorses/zele.git
+  command: 'git clone https://github.com/remorses/zele.git
+
     cd zele
+
     # Follow README authentication setup
 
+    '
 verification:
   type: manual
-  test_command: "Run initial auth flow and list inbox items"
-  success_indicator: "CLI can read messages/calendar entries"
-
+  test_command: Run initial auth flow and list inbox items
+  success_indicator: CLI can read messages/calendar entries
 resources:
-  - url: https://github.com/remorses/zele
-    type: github
-
+- url: https://github.com/remorses/zele
+  type: github
 added_date: 2026-02-23
 source: manual
-
 ratings:
   usefulness: 4
   setup_difficulty: 3
-
 tags:
-  - gmail
-  - calendar
-  - terminal
-  - automation
-  - communication
-
+- gmail
+- calendar
+- terminal
+- automation
+- communication
 sdlc_phase: implementation
-solves: "Email and calendar context is hard to automate in coding workflows"
-
+solves: Email and calendar context is hard to automate in coding workflows
 pricing:
   model: open-source
-  details: "Free and open-source"
+  details: Free and open-source
+mentions:
+- url: https://x.com/__morse/status/2029657579006148802
+  author: '@__morse'
+  text: "If you tried the new google workspace cli and found it too much of an hassle\
+    \ to set it up, try zele. \n\nit can access gmail &amp; calendar. login with one\
+    \ click\n\nhttps://t.co/N9tfTGfnmD"
+  date: '2026-03-06'
+  likes: 18

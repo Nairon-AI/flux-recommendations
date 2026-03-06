@@ -1,0 +1,29 @@
+name: repoprompt
+category: cli-tool
+tagline: Agent that builds prompts for ChatGPT and implements results directly
+description: RepoPrompt is a tool that automatically generates prompts for AI coding
+  tasks and can implement the AI's responses directly back into your application.
+  It acts as an intermediary agent between your codebase and ChatGPT, streamlining
+  the workflow of getting AI assistance and applying changes.
+install:
+  type: manual
+  command: Unknown - requires research
+verification:
+  type: manual
+resources: []
+tags:
+- prompt-generation
+- chatgpt-integration
+- automation
+- workflow
+added_date: '2026-03-06'
+source: x-discovery
+source_url: https://x.com/pvncher/status/2029633043195912659
+mentions:
+- url: https://x.com/pvncher/status/2029633043195912659
+  author: '@pvncher'
+  text: "Using GPT 5.4 Pro with @RepoPrompt is so easy now\n\nThe agent takes care\
+    \ of building you a prompt, and you just have to hand it over to ChatGPT. \n\n\
+    You can even pass the result back for the agent to implement directly in the app!"
+  date: '2026-03-06'
+  likes: 61

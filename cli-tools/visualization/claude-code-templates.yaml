@@ -1,0 +1,39 @@
+name: claude-code-templates
+category: cli-tool
+tagline: Visualize Claude Code Agent Teams workflow and communication patterns
+description: A CLI tool that provides visualization of Claude Code's Agent Teams feature,
+  showing how the lead agent and team members communicate under the hood. Helps developers
+  understand and debug multi-agent workflows in Claude Code development.
+install:
+  type: npm
+  command: npx claude-code-templates@latest --teams
+verification:
+  type: manual
+resources: []
+tags:
+- claude-code
+- agent-teams
+- visualization
+- workflow
+- debugging
+added_date: '2026-03-06'
+source: x-discovery
+source_url: https://x.com/dani_avila7/status/2029720081307947351
+mentions:
+- url: https://x.com/dani_avila7/status/2029720081307947351
+  author: '@dani_avila7'
+  text: 'Visualize Agent Teams workflow in Claude Code
+
+
+    More and more devs are using the Agent Teams feature, so I built a way to see
+    exactly what''s happening under the hood.
+
+
+    Run this:
+
+    npx claude-code-templates@latest --teams
+
+
+    You get a full view of how the lead agent and the team commun'
+  date: '2026-03-06'
+  likes: 182

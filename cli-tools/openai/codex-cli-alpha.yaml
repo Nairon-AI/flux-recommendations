@@ -1,0 +1,36 @@
+name: codex-cli-alpha
+category: cli-tool
+tagline: Alpha CLI tool for direct OpenAI Codex access with speed optimization
+description: Official OpenAI Codex CLI tool in alpha version that provides direct
+  command-line access to Codex models. Features a '/fast' speed optimization mode
+  for faster code generation responses.
+install:
+  type: npm
+  command: npm i -g @openai/codex@alpha
+verification:
+  type: manual
+resources: []
+tags:
+- openai
+- codex
+- cli
+- alpha
+- speed
+added_date: '2026-03-06'
+source: x-discovery
+source_url: https://x.com/nummanali/status/2029618267770302877
+mentions:
+- url: https://x.com/nummanali/status/2029618267770302877
+  author: '@nummanali'
+  text: 'Never have I been so excited to abuse my Codex limits
+
+
+    To install alpha version of Codex CLI run this:
+
+
+    npm i -g @openai/codex@alpha
+
+
+    Then enable the speed demon with /fast'
+  date: '2026-03-06'
+  likes: 75

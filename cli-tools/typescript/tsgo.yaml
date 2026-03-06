@@ -1,0 +1,35 @@
+name: tsgo
+category: cli-tool
+tagline: Fast TypeScript compiler alternative to tsc
+description: A faster alternative to the standard TypeScript compiler (tsc) for improved
+  build performance. Being recommended alongside turborepo for optimizing TypeScript
+  compilation speed in development workflows.
+install:
+  type: npm
+  command: npm install tsgo
+verification:
+  type: manual
+resources: []
+tags:
+- typescript
+- compiler
+- performance
+- build-tools
+added_date: '2026-03-06'
+source: x-discovery
+source_url: https://x.com/mattpocockuk/status/2029674585440780314
+mentions:
+- url: https://x.com/mattpocockuk/status/2029674585440780314
+  author: '@mattpocockuk'
+  text: 'I''m in the phase of my Ralph journey where I''m happy with the quality and
+    now optimising for speed
+
+
+    tsc -&gt; tsgo
+
+    Task caching with turborepo
+
+
+    Let''s get SHIPPING'
+  date: '2026-03-06'
+  likes: 145
