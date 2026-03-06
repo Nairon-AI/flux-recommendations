@@ -1,0 +1,32 @@
+name: pal-personal-ai-agent-assistant
+category: repo
+tagline: PAL is a personal AI agent system with scheduled tasks, learning capabilities,
+  a
+description: 'PAL is a personal AI agent assistant that provides scheduled tasks (daily
+  briefings, inbox digest, weekly reviews), learning capabilities, and context management.
+  It includes PostgreSQL-based persistence, automated workflows, and integrates with
+  productivity tools for personal knowledge management.
+
+
+  **Flux Impact:** PAL''s scheduling and learning systems could enhance Flux''s agent
+  persistence and automated workflow capabilities, particularly for recurring SDLC
+  tasks like weekly tech debt reviews or monthly security audits'
+use_cases:
+- Analyze PAL's scheduled task implementation for recurring code review/maintenance
+  workflows
+- Extract their context loading patterns for better agent memory persistence
+- Study their learning machine approach for capturing development best practices
+- Evaluate their PostgreSQL schema isolation for multi-project agent data
+install:
+  type: manual
+  command: '# See: https://github.com/agno-agi/pal'
+verification:
+  type: manual
+resources:
+- url: https://github.com/agno-agi/pal
+  type: homepage
+tags: []
+added_date: '2026-03-06'
+source: slack-inbox
+source_url: https://github.com/agno-agi/pal
+sdlc_phase: Planning
