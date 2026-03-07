@@ -1,0 +1,30 @@
+name: siftly-ai-bookmark-knowledge-base
+category: tool
+tagline: Self-hosted AI knowledge base that transforms X bookmarks into searchable,
+  local
+description: 'Siftly is a self-hosted AI knowledge base that processes thousands of
+  saved X/Twitter bookmarks into a searchable database. It runs a full AI pipeline
+  locally to extract insights from accumulated social media knowledge that typically
+  goes unused.
+
+
+  **Flux Impact:** Enhances Agentic SDLC by providing instant access to curated developer
+  knowledge from social media during planning phases, reducing research time and surfacing
+  forgotten tools/patterns'
+use_cases:
+- Test Siftly with existing X bookmarks to evaluate search quality
+- Create workflow to regularly sync new bookmarks into Siftly knowledge base
+- Integrate Siftly search into flux:improve recommendations discovery
+install:
+  type: manual
+  command: '# See: https://x.com/GithubProjects/status/2030380485009199119?s=20'
+verification:
+  type: manual
+resources:
+- url: https://x.com/GithubProjects/status/2030380485009199119?s=20
+  type: homepage
+tags: []
+added_date: '2026-03-07'
+source: slack-inbox
+source_url: https://x.com/GithubProjects/status/2030380485009199119?s=20
+sdlc_phase: Planning
