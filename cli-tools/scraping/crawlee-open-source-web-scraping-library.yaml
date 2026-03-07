@@ -1,0 +1,29 @@
+name: crawlee-open-source-web-scraping-library
+category: tweet
+tagline: Crawlee is a 100% open-source Python web scraping library that bypasses bot
+  dete
+description: 'Crawlee is an open-source Python web scraping library designed to be
+  invisible to bot detection systems. It supports multiple scraping backends (BeautifulSoup,
+  Playwright, raw HTTP), automatic proxy rotation, session management, and parallel
+  crawling with built-in retry mechanisms.
+
+
+  **Flux Impact:** Enables AI agents to reliably gather web data for research, documentation
+  updates, and competitive analysis without being blocked by anti-bot systems'
+use_cases:
+- Add Crawlee to cli-tools recommendations for web scraping tasks
+- Create skill for AI agents to use Crawlee for research and data gathering
+- Document integration patterns with existing Flux scouts that need web data
+install:
+  type: manual
+  command: '# See: https://x.com/hasantoxr/status/2030331610302988358?s=20'
+verification:
+  type: manual
+resources:
+- url: https://x.com/hasantoxr/status/2030331610302988358?s=20
+  type: homepage
+tags: []
+added_date: '2026-03-07'
+source: slack-inbox
+source_url: https://x.com/hasantoxr/status/2030331610302988358?s=20
+sdlc_phase: Implementation
