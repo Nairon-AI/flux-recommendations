@@ -1,0 +1,30 @@
+name: pm-skills-marketplace-for-ai-agents
+category: repo
+tagline: 100+ agentic skills for product management from discovery to strategy, execution
+description: 'PM Skills Marketplace provides over 100 structured agentic skills covering
+  the entire product management lifecycle. Skills are organized into categories like
+  market research, execution, go-to-market, and data analytics, all designed for AI
+  agent consumption.
+
+
+  **Flux Impact:** Extends Flux''s technical SDLC coverage into product management,
+  enabling end-to-end product development workflows from market research through technical
+  implementation'
+use_cases:
+- Evaluate PM skills that complement Flux's technical focus
+- Identify skills for market research and competitive analysis phases
+- Test integration with flux:plan and flux:scope commands
+- Create PM-focused skill recommendations in flux:improve
+install:
+  type: manual
+  command: '# See: https://github.com/phuryn/pm-skills'
+verification:
+  type: manual
+resources:
+- url: https://github.com/phuryn/pm-skills
+  type: homepage
+tags: []
+added_date: '2026-03-07'
+source: slack-inbox
+source_url: https://github.com/phuryn/pm-skills
+sdlc_phase: Planning
