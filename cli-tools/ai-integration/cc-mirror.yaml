@@ -1,0 +1,31 @@
+name: cc-mirror
+category: cli-tool
+tagline: Multi-provider AI model runner for Claude Code with isolation features
+description: CC Mirror allows running AI models from multiple providers (Kimi, OpenRouter,
+  Vercel, Ollama, etc.) with isolated binaries and configurations. It appears to enhance
+  Claude Code functionality by supporting various AI providers in a unified interface
+  with swarm capabilities.
+install:
+  type: npm
+  command: npx cc-mirror
+verification:
+  type: manual
+resources: []
+tags:
+- ai-models
+- multi-provider
+- claude-code
+- isolation
+- swarms
+added_date: '2026-03-07'
+source: x-discovery
+source_url: https://x.com/nummanali/status/2029912902656778302
+mentions:
+- url: https://x.com/nummanali/status/2029912902656778302
+  author: '@nummanali'
+  text: "Re-Announcing CC Mirror \U0001F389\n\nClaude Code, Unshackled\n- Run an model,\
+    \ any provider\n- Isolated binaries and configs \n- Swarms with Kimi K2.5 slaps\n\
+    - Version 2.1.70 supported\n\nKimi, Zai, MiniMax, OpenRouter, Vercel, Ollama...\n\
+    \nTry now - npx cc-mirror\n\nhttps://t.co/TruC20XZE1 https://t"
+  date: '2026-03-07'
+  likes: 169

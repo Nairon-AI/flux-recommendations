@@ -1,0 +1,28 @@
+name: claude-code-desktop
+category: application
+tagline: Claude Code desktop app with local scheduled task automation
+description: Desktop application for Claude Code that now includes local scheduled
+  tasks feature. Allows developers to create schedules for tasks that run regularly,
+  automating repetitive development workflows locally without cloud dependencies.
+install:
+  type: manual
+  command: Download from official Claude Code desktop release
+verification:
+  type: manual
+resources: []
+tags:
+- claude
+- desktop-app
+- task-automation
+- scheduling
+- ai-coding
+added_date: '2026-03-07'
+source: x-discovery
+source_url: https://x.com/_catwu/status/2030110292533977435
+mentions:
+- url: https://x.com/_catwu/status/2030110292533977435
+  author: '@_catwu'
+  text: "RT @trq212: Today we're launching local scheduled tasks in Claude Code desktop.\
+    \ \n\nCreate a schedule for tasks that you want to run regularl…"
+  date: '2026-03-07'
+  likes: 10219

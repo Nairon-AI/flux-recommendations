@@ -96,3 +96,8 @@ mentions:
     Then I run `pnpm ralph` and all the issues get fixed'
   date: '2026-03-05'
   likes: 38
+- url: https://x.com/ryancarson/status/2030117996404887688
+  author: '@ryancarson'
+  text: "Another attack surface: \n\nGitHub Issue titles + agent auto triage"
+  date: '2026-03-07'
+  likes: 23
