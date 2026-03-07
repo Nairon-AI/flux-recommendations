@@ -1,0 +1,28 @@
+name: discord-cli-with-sqlite-backend
+category: repo
+tagline: CLI tool for Discord with SQLite backend to crawl, index and search Discord
+  conv
+description: 'Discrawl is a command-line tool that crawls Discord servers and stores
+  messages, attachments, and mentions in a local SQLite database. It enables developers
+  to index and search Discord conversations for reference and context.
+
+
+  **Flux Impact:** Enables AI agents to access Discord-based knowledge and discussions
+  as context, improving decision-making for teams that use Discord for technical coordination'
+use_cases:
+- Add discrawl to CLI tools recommendations for teams using Discord
+- Create integration pattern for using Discord conversation context in AI workflows
+- Document setup process for indexing technical Discord servers
+install:
+  type: manual
+  command: '# See: https://github.com/steipete/discrawl'
+verification:
+  type: manual
+resources:
+- url: https://github.com/steipete/discrawl
+  type: homepage
+tags: []
+added_date: '2026-03-07'
+source: slack-inbox
+source_url: https://github.com/steipete/discrawl
+sdlc_phase: Planning
