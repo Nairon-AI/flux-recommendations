@@ -1,0 +1,32 @@
+name: x-bookmarks-ai-search
+category: application
+tagline: AI semantic search for X/Twitter bookmarks with Claude integration
+description: An open source tool that provides AI-powered semantic search through
+  your X/Twitter bookmarks, creating a searchable knowledge base. Integrates with
+  Claude Code if installed, helping developers efficiently search through their accumulated
+  bookmark collections for relevant coding resources and references.
+install:
+  type: manual
+  command: See GitHub repository for installation instructions
+verification:
+  type: manual
+resources:
+- url: https://t.co/ff9oZb7JQq
+  type: homepage
+tags:
+- semantic-search
+- bookmarks
+- claude
+- knowledge-base
+- twitter
+added_date: '2026-03-08'
+source: x-discovery
+source_url: https://x.com/nummanali/status/2030227424248541396
+mentions:
+- url: https://x.com/nummanali/status/2030227424248541396
+  author: '@nummanali'
+  text: "Finally! Someone went and did it\n\nAn Open Source X Bookmarks AI semantic\
+    \ search and knowledge base \n\nUtilises Claude Code if already installed on your\
+    \ computer \n\nThis should help you go through that massive backlog https://t.co/ff9oZb7JQq"
+  date: '2026-03-08'
+  likes: 151

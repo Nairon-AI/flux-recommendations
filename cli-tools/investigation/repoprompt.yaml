@@ -1,0 +1,30 @@
+name: repoprompt
+category: cli-tool
+tagline: AI-powered codebase investigation tool with collaborative workflows
+description: RepoPrompt is a tool that provides structured AI workflows for code investigation.
+  Its 'investigate' workflow generates research documents and uses multiple AI models
+  working together to test hypotheses and systematically rule out scenarios to find
+  root causes of issues.
+install:
+  type: manual
+  command: Unknown - requires further research
+verification:
+  type: manual
+resources: []
+tags:
+- debugging
+- investigation
+- ai-collaboration
+- research
+added_date: '2026-03-08'
+source: x-discovery
+source_url: https://x.com/pvncher/status/2030371960845172899
+mentions:
+- url: https://x.com/pvncher/status/2030371960845172899
+  author: '@pvncher'
+  text: "One of my favorite @RepoPrompt workflows is investigate.\n\nIt generates\
+    \ a research doc and does deep research to generate hypotheses the agent can test.\
+    \ \n\nIt lets the models work together to rule out scenarios and get to the root\
+    \ of an issue. Has solved many issues for me! https:/"
+  date: '2026-03-08'
+  likes: 55
