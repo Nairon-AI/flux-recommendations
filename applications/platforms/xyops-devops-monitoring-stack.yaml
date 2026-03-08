@@ -1,0 +1,31 @@
+name: xyops-devops-monitoring-stack
+category: tool
+tagline: Open-source platform combining job scheduling, workflow automation, server
+  monit
+description: 'xyOps is an all-in-one DevOps monitoring platform that combines job
+  scheduling, workflow automation, server monitoring, alerting, and incident response
+  in a single self-hosted dashboard. When alerts fire, it automatically attaches contextual
+  information including running jobs, server snapshots, CPU load, and network data.
+
+
+  **Flux Impact:** Provides comprehensive observability for agent workflows, automatically
+  collecting context when AI-driven processes fail, enabling faster debugging and
+  workflow optimization in Agentic SDLC'
+use_cases:
+- Deploy xyOps locally via Docker to monitor development environment
+- Configure alerts for Flux agent failures and resource issues
+- Set up automatic context collection for CI/CD pipeline failures
+- Create dashboards for monitoring parallel agent workload performance
+install:
+  type: manual
+  command: '# See: https://x.com/i/status/2030673737465622880|https://x.com/i/status/2030673737465622880'
+verification:
+  type: manual
+resources:
+- url: https://x.com/i/status/2030673737465622880|https://x.com/i/status/2030673737465622880
+  type: homepage
+tags: []
+added_date: '2026-03-08'
+source: slack-inbox
+source_url: https://x.com/i/status/2030673737465622880|https://x.com/i/status/2030673737465622880
+sdlc_phase: CI/CD
