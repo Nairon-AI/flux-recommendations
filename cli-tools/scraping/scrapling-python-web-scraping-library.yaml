@@ -1,0 +1,31 @@
+name: scrapling-python-web-scraping-library
+category: tweet
+tagline: Scrapling is a free Python library that bypasses Cloudflare, handles CAPTCHAs,
+  a
+description: 'Scrapling is an all-in-one Python web scraping library that automatically
+  bypasses Cloudflare protection, handles CAPTCHAs, and provides adaptive element
+  tracking. It includes HTTP/3 support, TLS fingerprint spoofing, stealth browser
+  capabilities, and a built-in MCP server for direct Claude integration.
+
+
+  **Flux Impact:** Enables AI agents to reliably extract web data without CAPTCHA/Cloudflare
+  barriers, feeding directly into Claude workflows via MCP. The adaptive element tracking
+  means agents can maintain scraping workflows even when target sites change.'
+use_cases:
+- Test Scrapling's MCP server integration with Claude Code
+- Evaluate performance vs existing crawlee recommendation
+- Create skill template for common scraping patterns with Scrapling
+- Document integration with flux-work for data pipeline tasks
+install:
+  type: manual
+  command: '# See: https://x.com/i/status/2030586222868136096|https://x.com/i/status/2030586222868136096'
+verification:
+  type: manual
+resources:
+- url: https://x.com/i/status/2030586222868136096|https://x.com/i/status/2030586222868136096
+  type: homepage
+tags: []
+added_date: '2026-03-08'
+source: slack-inbox
+source_url: https://x.com/i/status/2030586222868136096|https://x.com/i/status/2030586222868136096
+sdlc_phase: Implementation
