@@ -1,0 +1,32 @@
+name: cli-anything-universal-agent-interface-b
+category: tool
+tagline: CLI-Anything creates agent-native CLI interfaces for any software with one
+  comma
+description: 'CLI-Anything is a tool that automatically generates CLI interfaces for
+  any software to make it agent-controllable. It creates structured, self-describing
+  command-line interfaces that AI agents can discover and use reliably, eliminating
+  the need for custom APIs or complex wrappers.
+
+
+  **Flux Impact:** Enables universal tool integration in our Agentic SDLC by making
+  any software agent-controllable through CLI interfaces, dramatically expanding the
+  tool ecosystem available to AI agents'
+use_cases:
+- Install CLI-Anything from GitHub repository
+- Identify key development tools that lack agent-friendly interfaces
+- Use CLI-Anything to wrap these tools with structured CLI interfaces
+- Test agent interaction with wrapped tools in Claude Code sessions
+- Document CLI patterns for team adoption
+install:
+  type: manual
+  command: '# See: https://x.com/huang_chao4969/status/2030677277974167609?s=20'
+verification:
+  type: manual
+resources:
+- url: https://x.com/huang_chao4969/status/2030677277974167609?s=20
+  type: homepage
+tags: []
+added_date: '2026-03-08'
+source: slack-inbox
+source_url: https://x.com/huang_chao4969/status/2030677277974167609?s=20
+sdlc_phase: Implementation
