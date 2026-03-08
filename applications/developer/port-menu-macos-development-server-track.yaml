@@ -1,0 +1,29 @@
+name: port-menu-macos-development-server-track
+category: tool
+tagline: A macOS menu bar app that tracks and manages your local development servers
+  from
+description: 'Port Menu is a macOS menu bar application that tracks your running development
+  servers and provides quick access to manage them. It helps developers keep track
+  of multiple local services running on different ports during development.
+
+
+  **Flux Impact:** Improves development environment visibility during AI-augmented
+  coding sessions, particularly valuable when agents are working with microservices
+  or multiple local servers'
+use_cases:
+- Test Port Menu with typical Flux development workflows
+- Evaluate integration with flux:prime environment scanning
+- Consider recommending in flux:improve for developers running multiple services
+install:
+  type: manual
+  command: '# See: https://x.com/eduardwieandt/status/2030653886717899106?s=20'
+verification:
+  type: manual
+resources:
+- url: https://x.com/eduardwieandt/status/2030653886717899106?s=20
+  type: homepage
+tags: []
+added_date: '2026-03-08'
+source: slack-inbox
+source_url: https://x.com/eduardwieandt/status/2030653886717899106?s=20
+sdlc_phase: Implementation
