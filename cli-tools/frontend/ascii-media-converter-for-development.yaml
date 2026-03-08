@@ -1,0 +1,30 @@
+name: ascii-media-converter-for-development
+category: tool
+tagline: Free web tool that converts images and videos to ASCII art with real-time
+  render
+description: 'YourASCII is a free web-based tool that converts images and videos to
+  ASCII art with real-time rendering capabilities. It supports multiple color modes
+  and provides instant video export functionality for creating terminal-friendly visual
+  content.
+
+
+  **Flux Impact:** Enables creation of terminal-friendly visual content for CLI tools
+  and developer documentation, supporting the creation of more engaging command-line
+  interfaces in our agentic workflows.'
+use_cases:
+- Test with project logos for CLI tool branding
+- Evaluate for documentation ascii diagrams
+- Consider for terminal UI mockups
+install:
+  type: manual
+  command: '# See: https://yourascii.vercel.app/'
+verification:
+  type: manual
+resources:
+- url: https://yourascii.vercel.app/
+  type: homepage
+tags: []
+added_date: '2026-03-08'
+source: slack-inbox
+source_url: https://yourascii.vercel.app/
+sdlc_phase: Implementation
