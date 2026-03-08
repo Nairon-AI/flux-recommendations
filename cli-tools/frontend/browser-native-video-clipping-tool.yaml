@@ -1,0 +1,29 @@
+name: browser-native-video-clipping-tool
+category: tool
+tagline: Browser-native video editor with audio transcription, custom overlays, and
+  clien
+description: 'A browser-based video editing tool that processes video entirely client-side
+  without server uploads. Features audio stripping, transcription in seconds, custom
+  fonts, text overlays, and renders videos in under a minute using AssemblyAI and
+  other web technologies.
+
+
+  **Flux Impact:** Limited direct impact on Agentic SDLC - more of a content creation
+  tool than a development workflow enhancement'
+use_cases:
+- Research the specific implementation approach (WebAssembly, Web Workers, etc.)
+- Evaluate AssemblyAI integration patterns for transcription workflows
+- Consider creating a skill for automated demo video generation from test runs
+install:
+  type: manual
+  command: '# See: https://x.com/i/status/2030467228295123004|https://x.com/i/status/2030467228295123004'
+verification:
+  type: manual
+resources:
+- url: https://x.com/i/status/2030467228295123004|https://x.com/i/status/2030467228295123004
+  type: homepage
+tags: []
+added_date: '2026-03-08'
+source: slack-inbox
+source_url: https://x.com/i/status/2030467228295123004|https://x.com/i/status/2030467228295123004
+sdlc_phase: Implementation
