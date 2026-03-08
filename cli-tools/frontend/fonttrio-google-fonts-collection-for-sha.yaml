@@ -1,0 +1,31 @@
+name: fonttrio-google-fonts-collection-for-sha
+category: tool
+tagline: A shadcn registry extension that provides curated font pairs to quickly set
+  up t
+description: 'Fonttrio is a shadcn registry extension that provides curated Google
+  Font pairs and automates the entire font setup process. Instead of manually picking
+  fonts, adding them to layout.tsx, and configuring globals.css for each typography
+  element, developers can install complete font combinations with a single command.
+
+
+  **Flux Impact:** Improves AI agents'' ability to make design decisions quickly during
+  implementation phase. Reduces decision paralysis around typography choices and automates
+  tedious configuration steps.'
+use_cases:
+- Add fonttrio to cli-tools/frontend/ recommendations
+- Create font-selection skill for AI agents working on UI projects
+- Include in shadcn/tailwind workflow patterns
+- Add to frontend design fluency skills collection
+install:
+  type: manual
+  command: '# See: https://x.com/i/status/2030354980394430579|https://x.com/i/status/2030354980394430579'
+verification:
+  type: manual
+resources:
+- url: https://x.com/i/status/2030354980394430579|https://x.com/i/status/2030354980394430579
+  type: homepage
+tags: []
+added_date: '2026-03-08'
+source: slack-inbox
+source_url: https://x.com/i/status/2030354980394430579|https://x.com/i/status/2030354980394430579
+sdlc_phase: Implementation
