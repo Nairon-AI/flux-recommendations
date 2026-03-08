@@ -1,0 +1,30 @@
+name: tunnelmole-open-source-ngrok-alternative
+category: tool
+tagline: Open-source tunneling tool built with Go and Cloudflare Workers for exposing
+  loc
+description: 'Tunnelmole is an open-source alternative to ngrok that exposes localhost
+  servers to the internet with a single command. It''s built with Go for performance
+  and uses Cloudflare Workers for the tunneling infrastructure.
+
+
+  **Flux Impact:** Enhances local development capabilities for AI agents by providing
+  reliable localhost exposure, enabling better testing of webhook integrations, API
+  endpoints, and cross-device development workflows'
+use_cases:
+- Research installation options and setup process for tunnelmole
+- Test tunnelmole vs ngrok for performance and reliability
+- Document usage patterns for common dev scenarios (webhook testing, mobile dev, etc.)
+- Consider adding tunnelmole setup to development environment documentation
+install:
+  type: manual
+  command: '# See: https://x.com/i/status/2030318906486018105|https://x.com/i/status/2030318906486018105'
+verification:
+  type: manual
+resources:
+- url: https://x.com/i/status/2030318906486018105|https://x.com/i/status/2030318906486018105
+  type: homepage
+tags: []
+added_date: '2026-03-08'
+source: slack-inbox
+source_url: https://x.com/i/status/2030318906486018105|https://x.com/i/status/2030318906486018105
+sdlc_phase: Implementation
