@@ -1,0 +1,29 @@
+name: terminal-cli-for-twitter-x-access
+category: tool
+tagline: A terminal-first CLI for Twitter/X that requires no API key for access.
+description: 'A command-line interface tool that provides terminal-based access to
+  Twitter/X functionality without requiring API keys. This could enable developers
+  to integrate social media workflows directly into their terminal-based development
+  environment.
+
+
+  **Flux Impact:** Enables terminal-native social workflows that could complement
+  our agentic SDLC by allowing developers to share progress, gather feedback, or monitor
+  tech discussions without leaving the terminal environment.'
+use_cases:
+- Test the tool to verify API-key-free functionality
+- Evaluate integration possibilities with CI/CD pipelines
+- Consider use cases for developer community engagement
+install:
+  type: manual
+  command: '# See: https://x.com/jedisct1/status/2030962676382249415?s=20'
+verification:
+  type: manual
+resources:
+- url: https://x.com/jedisct1/status/2030962676382249415?s=20
+  type: homepage
+tags: []
+added_date: '2026-03-09'
+source: slack-inbox
+source_url: https://x.com/jedisct1/status/2030962676382249415?s=20
+sdlc_phase: Implementation
