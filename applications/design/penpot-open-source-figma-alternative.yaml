@@ -1,0 +1,30 @@
+name: penpot-open-source-figma-alternative
+category: tweet
+tagline: Penpot is a fully open-source design tool that serves as a complete Figma
+  altern
+description: 'Penpot is an open-source design and code collaboration platform built
+  on web standards (SVG, CSS, HTML) with no vendor lock-in. It provides full vector
+  design tools, real-time collaboration, interactive prototyping, and generates ready-to-use
+  code output.
+
+
+  **Flux Impact:** Enables true design-to-code workflows where AI agents can read
+  designs directly and implement them, eliminating the traditional handoff friction
+  between design and development phases.'
+use_cases:
+- Research Penpot API for MCP server development
+- Test design-to-code generation quality
+- Evaluate integration with existing design workflow patterns
+install:
+  type: manual
+  command: '# See: https://x.com/i/status/2031018944455463135|https://x.com/i/status/2031018944455463135'
+verification:
+  type: manual
+resources:
+- url: https://x.com/i/status/2031018944455463135|https://x.com/i/status/2031018944455463135
+  type: homepage
+tags: []
+added_date: '2026-03-09'
+source: slack-inbox
+source_url: https://x.com/i/status/2031018944455463135|https://x.com/i/status/2031018944455463135
+sdlc_phase: Planning
