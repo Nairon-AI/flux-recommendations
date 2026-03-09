@@ -1,0 +1,33 @@
+name: how-coding-agents-are-reshaping-epd
+category: tweet
+tagline: Harrison Chase explains how coding agents are transforming Engineering, Product,
+description: 'A detailed analysis of how coding agents are fundamentally changing
+  Engineering, Product, and Design workflows. The piece argues that traditional PRD-driven
+  processes are dead, implementation bottlenecks have shifted to review, and roles
+  are converging toward builders vs. reviewers.
+
+
+  **Flux Impact:** This analysis validates and extends Flux''s core premise that AI
+  agents are transforming the SDLC. The shift from implementation to review bottlenecks
+  directly supports our agent orchestration approach where multiple specialized agents
+  handle implementation while humans focus on system thinking and review.'
+use_cases:
+- Update flux:plan to emphasize prototype-first development over traditional spec
+  writing
+- Create builder vs reviewer role templates in AGENTS.md guidance
+- Add review-centric workflow patterns that handle high-volume prototype evaluation
+- Develop skills for cross-functional generalists who need product sense + technical
+  execution
+install:
+  type: manual
+  command: '# See: https://x.com/hwchase17/status/2031051115169808685'
+verification:
+  type: manual
+resources:
+- url: https://x.com/hwchase17/status/2031051115169808685
+  type: homepage
+tags: []
+added_date: '2026-03-09'
+source: slack-inbox
+source_url: https://x.com/hwchase17/status/2031051115169808685
+sdlc_phase: Planning
