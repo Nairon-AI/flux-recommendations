@@ -1,0 +1,32 @@
+name: oxfmt-migration-guide-for-js-ts-projects
+category: skill
+tagline: A skill that guides migration from Prettier or Biome to Oxfmt formatter with
+  aut
+description: 'This skill provides a structured approach to migrating JavaScript/TypeScript
+  projects from Prettier or Biome to Oxfmt, a high-performance Prettier-compatible
+  code formatter. It includes automated migration commands and detailed configuration
+  mapping guides.
+
+
+  **Flux Impact:** Enhances our Agentic SDLC by providing agents with specific migration
+  patterns for build tool optimization, supporting the continuous improvement aspect
+  of AI-augmented development workflows.'
+use_cases:
+- Add migrate-oxfmt skill to skills/frontend/ directory
+- Include in /flux:improve recommendations when Prettier/Biome performance issues
+  detected
+- Reference in build optimization workflows
+- Add to frontend modernization patterns
+install:
+  type: manual
+  command: '# See: https://skills.sh/oxc-project/oxc/migrate-oxfmt'
+verification:
+  type: manual
+resources:
+- url: https://skills.sh/oxc-project/oxc/migrate-oxfmt
+  type: homepage
+tags: []
+added_date: '2026-03-09'
+source: slack-inbox
+source_url: https://skills.sh/oxc-project/oxc/migrate-oxfmt
+sdlc_phase: Implementation
