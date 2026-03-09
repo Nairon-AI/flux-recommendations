@@ -1,0 +1,31 @@
+name: semantic-version-changelog-generator
+category: skill
+tagline: AI skill for automatically creating and maintaining CHANGELOG.md files following
+description: 'This skill guides AI agents through identifying released versions, analyzing
+  git history, and documenting changes in a standardized CHANGELOG.md format. It follows
+  Keep a Changelog format and Semantic Versioning principles to categorize changes
+  into Added, Changed, Deprecated, Removed, Fixed, and Security sections.
+
+
+  **Flux Impact:** Enhances Agentic SDLC by automating consistent documentation practices
+  during Implementation and CI/CD phases, ensuring release notes are systematically
+  generated and maintained without manual oversight.'
+use_cases:
+- 'Install skill: `npx skills add https://github.com/prulloac/agent-skills --skill
+  semver-changelog`'
+- Test skill on existing project to generate/update CHANGELOG.md
+- Add changelog generation to release workflow in .flux/workflows/
+- Create brain entry for changelog best practices based on skill output
+install:
+  type: manual
+  command: '# See: https://skills.sh/prulloac/agent-skills/semver-changelog'
+verification:
+  type: manual
+resources:
+- url: https://skills.sh/prulloac/agent-skills/semver-changelog
+  type: homepage
+tags: []
+added_date: '2026-03-09'
+source: slack-inbox
+source_url: https://skills.sh/prulloac/agent-skills/semver-changelog
+sdlc_phase: CI/CD
