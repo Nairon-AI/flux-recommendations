@@ -471,6 +471,43 @@ def fetch_tweet_content(url, api_key, exa_api_key=None):
     if not tweet_id:
         return None
 
+    # First, try to fetch as an article (long-form post)
+    # Some tweets are actually articles but have status URLs
+    article = fetch_article(tweet_id, api_key)
+    if article and article.get("contents"):
+        print(f"Tweet {tweet_id} is actually an article, using article content")
+        title = article.get("title", "")
+        preview = article.get("preview_text", "")
+        author_info = article.get("author", {})
+        author = author_info.get("userName", "unknown")
+        author_name = author_info.get("name", author)
+        likes = article.get("likeCount", 0)
+        views = article.get("viewCount", 0)
+
+        # Extract full content from contents array
+        contents = article.get("contents", [])
+        full_text = "\n\n".join([c.get("text", "") for c in contents if c.get("text")])
+        display_text = full_text if full_text else preview
+
+        if len(display_text) > 1000:
+            display_preview = display_text[:1000] + "..."
+        else:
+            display_preview = display_text
+
+        return {
+            "type": "twitter_article",
+            "text": f"[Twitter Article by @{author}]\n\nTitle: {title}\n\n{full_text or preview}",
+            "author": author,
+            "author_name": author_name,
+            "likes": likes,
+            "views": views,
+            "title": title,
+            "display": f"**{title}**\n\nby @{author} · {likes} ❤️ · {views} views\n\n{display_preview}",
+            "meta": f"@{author} · {likes} ❤️ · {views} views",
+            "has_embedded_content": True,  # Article content is embedded
+        }
+
+    # Not an article - fetch as regular tweet
     tweet = fetch_tweet(tweet_id, api_key)
     if not tweet:
         return None
