@@ -1,0 +1,29 @@
+name: ios-accessibility-agent-skills
+category: skill
+tagline: Agent skill for implementing iOS accessibility features in development workflows
+description: 'An agent skill specifically designed for iOS accessibility implementation.
+  Provides structured guidance for developers to integrate accessibility features
+  into iOS applications. Based on suggestion from @twannl''s video about agent skills.
+
+
+  **Flux Impact:** Enhances our Agentic SDLC by providing specialized accessibility
+  expertise that can be automatically applied during iOS development phases, ensuring
+  inclusive design from the start rather than retrofitting'
+use_cases:
+- Review the published skill structure and implementation patterns
+- Test integration with existing iOS development workflows in Flux
+- Create evaluation criteria for accessibility implementation quality
+- Document best practices for combining with other UI/UX skills
+install:
+  type: manual
+  command: '# See: https://x.com/i/status/2030823388059488558|https://x.com/i/status/2030823388059488558'
+verification:
+  type: manual
+resources:
+- url: https://x.com/i/status/2030823388059488558|https://x.com/i/status/2030823388059488558
+  type: homepage
+tags: []
+added_date: '2026-03-09'
+source: slack-inbox
+source_url: https://x.com/i/status/2030823388059488558|https://x.com/i/status/2030823388059488558
+sdlc_phase: Implementation
