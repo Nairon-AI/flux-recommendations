@@ -1,0 +1,31 @@
+name: oxc-collection-javascript-performance-to
+category: repo
+tagline: A suite of high-performance Rust-based JavaScript tools including parser,
+  linter
+description: 'Oxc is a collection of high-performance JavaScript tools written in
+  Rust, including a parser, linter (oxlint), transformer, and minifier. It provides
+  a complete JavaScript toolchain focused on speed and correctness, serving as a modern
+  alternative to traditional Node.js-based tools.
+
+
+  **Flux Impact:** Enhances Agentic SDLC by providing ultra-fast JavaScript tooling
+  that agents can leverage for parsing, linting, transforming, and minifying code
+  with better performance than traditional tools'
+use_cases:
+- Add oxc-transform to Flux's frontend tooling recommendations
+- Create skill for oxc-based JavaScript performance optimization
+- Document oxc integration patterns in workflow-patterns/javascript/
+- Add oxc to recommended tools for JavaScript project setup
+install:
+  type: manual
+  command: '# See: https://github.com/oxc-project/oxc'
+verification:
+  type: manual
+resources:
+- url: https://github.com/oxc-project/oxc
+  type: homepage
+tags: []
+added_date: '2026-03-09'
+source: slack-inbox
+source_url: https://github.com/oxc-project/oxc
+sdlc_phase: Implementation
