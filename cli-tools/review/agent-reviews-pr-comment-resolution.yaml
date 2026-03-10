@@ -1,0 +1,32 @@
+name: agent-reviews-pr-comment-resolution
+category: tool
+tagline: CLI and agent skills that automatically triage, fix, and reply to PR review
+  comm
+description: 'agent-reviews provides a CLI and agent skills that automatically handle
+  the complete PR review cycle - triaging comments, implementing fixes, replying with
+  commit hashes, and watching for new comments. It''s designed specifically for agents
+  and supports major review bots like Copilot, CodeRabbit, Cursor, and SonarCloud.
+
+
+  **Flux Impact:** Significantly improves Code Review phase efficiency by automating
+  the review-fix-reply cycle, allowing agents to handle bot reviews autonomously and
+  reducing human intervention in iterative review processes.'
+use_cases:
+- 'Install agent-reviews CLI globally: npm install -g agent-reviews'
+- Add agent-reviews skill to Flux skill recommendations
+- Test integration with Claude Code review workflows
+- Document usage patterns in workflow-patterns/review/
+- Consider adding to flux:prime review automation checks
+install:
+  type: manual
+  command: '# See: https://agent-reviews.com/'
+verification:
+  type: manual
+resources:
+- url: https://agent-reviews.com/
+  type: homepage
+tags: []
+added_date: '2026-03-10'
+source: slack-inbox
+source_url: https://agent-reviews.com/
+sdlc_phase: Code Review
