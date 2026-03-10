@@ -1,0 +1,32 @@
+name: custom-pr-agents-on-cloudflare-for-penni
+category: article
+tagline: 'Build custom PR review agents that add analytics, tests, documentation sync,
+  or '
+description: 'A detailed architecture guide for building custom PR review agents using
+  Cloudflare Workers, Workflows, and Sandboxes. The system follows Cursor''s Bugbot
+  Autofix pattern: agents work in isolated sandboxes, push to separate branches, and
+  give humans one-click merge buttons after review.
+
+
+  **Flux Impact:** This provides a production-ready blueprint for autonomous PR agents
+  that fits perfectly with Flux''s Agentic SDLC philosophy - AI agents that can safely
+  operate at the Code Review and CI/CD phases with proper human oversight'
+use_cases:
+- Document the prepare → review → publish pattern as a Flux workflow pattern
+- Create skill templates for common PR automation tasks
+- Add Cloudflare Workers + Sandboxes as a deployment option in platform guides
+- Integrate with existing flux:security-review and flux:impl-review commands
+- Document typed agent output schemas for structured PR automation
+install:
+  type: manual
+  command: '# See: https://x.com/i/status/2031412763902534069|https://x.com/i/status/2031412763902534069'
+verification:
+  type: manual
+resources:
+- url: https://x.com/i/status/2031412763902534069|https://x.com/i/status/2031412763902534069
+  type: homepage
+tags: []
+added_date: '2026-03-10'
+source: slack-inbox
+source_url: https://x.com/i/status/2031412763902534069|https://x.com/i/status/2031412763902534069
+sdlc_phase: Code Review
