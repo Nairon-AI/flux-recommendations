@@ -1,0 +1,33 @@
+name: jetbrains-air
+category: application
+tagline: JetBrains' agentic development environment with multi-LLM support
+description: An agentic development environment from JetBrains that integrates multiple
+  AI models including Codex, Claude, Gemini, and their own Junie model. Offers AI-assisted
+  coding capabilities through JetBrains subscription or bring-your-own-key options.
+install:
+  type: manual
+  command: Available through JetBrains subscription
+verification:
+  type: manual
+resources:
+- url: https://t.co/R6sjHNldWP
+  type: homepage
+tags:
+- jetbrains
+- agentic
+- multi-llm
+- ide
+- codex
+- claude
+- gemini
+added_date: '2026-03-10'
+source: x-discovery
+source_url: https://x.com/nummanali/status/2031049359710650522
+mentions:
+- url: https://x.com/nummanali/status/2031049359710650522
+  author: '@nummanali'
+  text: "Air an Agentic Development Environment \n\nFrom JetBrains - whom one upon\
+    \ a time I couldn't live without\n\nSupports Codex, Claude, Gemini and their own\
+    \ Junie\n- Through JetBrains Subscription or BYOK\n\nhttps://t.co/R6sjHNldWP https://t.co/rCUfIh5bsY"
+  date: '2026-03-10'
+  likes: 104

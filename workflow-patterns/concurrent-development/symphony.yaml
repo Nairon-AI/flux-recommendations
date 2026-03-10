@@ -1,0 +1,36 @@
+name: symphony
+category: workflow-pattern
+tagline: AI-assisted development with concurrent parallel task execution
+description: Symphony is a workflow pattern/tool that enables running multiple AI
+  coding sessions (like Codex) concurrently on parallel tasks. It includes a 'ralph
+  mode' for handling multiple issues/stories simultaneously, allowing developers to
+  leverage AI assistance at scale across multiple development tasks.
+install:
+  type: manual
+  command: See documentation at provided link
+verification:
+  type: manual
+resources:
+- url: https://t.co/2cPmE5GCVC
+  type: homepage
+tags:
+- concurrent
+- codex
+- ai-coding
+- workflow
+- parallel-processing
+added_date: '2026-03-10'
+source: x-discovery
+source_url: https://x.com/ryancarson/status/2031222487673954559
+mentions:
+- url: https://x.com/ryancarson/status/2031222487673954559
+  author: '@ryancarson'
+  text: 'Just got a new MBP M5 and it''s creaking under the load of 10 concurrent
+    Codex sessions.
+
+
+    By the way, this is an adaptation of Symphony (https://t.co/2cPmE5GCVC), running
+    in ralph mode with concurrency set to 10 (these issues/stories can be done in
+    parallel) https://t.co/Kn0B11Ma3'
+  date: '2026-03-10'
+  likes: 229

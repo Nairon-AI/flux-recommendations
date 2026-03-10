@@ -101,3 +101,13 @@ mentions:
   text: "Another attack surface: \n\nGitHub Issue titles + agent auto triage"
   date: '2026-03-07'
   likes: 23
+- url: https://x.com/dani_avila7/status/2031151975732002930
+  author: '@dani_avila7'
+  text: 'I tested Claude Code Review and here''s my experience so far.
+
+
+    Other than not needing a trigger like a GitHub Action and being configurable directly
+    inside Claude Desktop, I see absolutely NO additional functionality or improvement
+    over just setting up claude.yml with the /install'
+  date: '2026-03-10'
+  likes: 159

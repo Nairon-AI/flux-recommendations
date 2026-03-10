@@ -62,3 +62,18 @@ mentions:
     Never leaving this app'
   date: '2026-03-03'
   likes: 337
+- url: https://x.com/kevinkern/status/2031076409540546765
+  author: '@kevinkern'
+  text: 'was running low on disk space.
+
+
+    1. start codex (gpt-5.3-spark is enough)
+
+    2. install &amp; scan with mole `brew install mole`
+
+    3. do the cleanup
+
+
+    (use at your own risk) https://t.co/TKQeX2OCzN'
+  date: '2026-03-10'
+  likes: 33
