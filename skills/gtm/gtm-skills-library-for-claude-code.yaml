@@ -1,0 +1,33 @@
+name: gtm-skills-library-for-claude-code
+category: tweet
+tagline: A free library of 50+ specialized skills teaching Claude Code to execute
+  go-to-m
+description: 'A collection of over 50 specialized skills designed to teach Claude
+  Code how to execute go-to-market activities. The library covers lead generation,
+  competitor monitoring, SEO strategy, content creation, CRM management, and campaign
+  execution - essentially turning Claude into a full GTM execution partner.
+
+
+  **Flux Impact:** Expands our Agentic SDLC to include market research and GTM execution
+  phases, enabling AI agents to handle the complete product lifecycle from development
+  to market launch and user acquisition'
+use_cases:
+- Review the 50+ skills in the library and identify most relevant ones for our use
+  cases
+- Create a curated subset of GTM skills optimized for technical product launches
+- Integrate lead generation and competitor monitoring skills into product planning
+  workflows
+- Test the Reddit scraping and LinkedIn lead finding skills for developer tool marketing
+install:
+  type: manual
+  command: '# See: https://x.com/shivsakhuja/status/2031253899563381123?s=20'
+verification:
+  type: manual
+resources:
+- url: https://x.com/shivsakhuja/status/2031253899563381123?s=20
+  type: homepage
+tags: []
+added_date: '2026-03-10'
+source: slack-inbox
+source_url: https://x.com/shivsakhuja/status/2031253899563381123?s=20
+sdlc_phase: Planning
