@@ -1,0 +1,30 @@
+name: evlog-structured-logging-for-typescript
+category: tool
+tagline: 'Wide events and structured errors for TypeScript with one log per request,
+  full '
+description: 'evlog provides structured logging for TypeScript with wide events that
+  capture full request context. It features structured errors with ''why'' and ''fix''
+  fields, batched pipeline delivery to multiple destinations, and machine-readable
+  output designed for AI agent consumption.
+
+
+  **Flux Impact:** Enhances agent debugging capabilities by providing structured,
+  machine-readable logs with context and actionable error information. Supports the
+  ''Agentic SDLC'' by enabling AI agents to better understand and resolve issues automatically.'
+use_cases:
+- Add evlog skill to skill marketplace for structured logging workflows
+- Create debugging pattern using evlog's structured errors for agent diagnosis
+- Integrate evlog output format with flux:improve for error pattern analysis
+install:
+  type: manual
+  command: '# See: https://www.evlog.dev/'
+verification:
+  type: manual
+resources:
+- url: https://www.evlog.dev/
+  type: homepage
+tags: []
+added_date: '2026-03-10'
+source: slack-inbox
+source_url: https://www.evlog.dev/
+sdlc_phase: Implementation
