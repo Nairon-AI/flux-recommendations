@@ -1,0 +1,31 @@
+name: sandbox-agent-sdk-universal-http-interfa
+category: tool
+tagline: Universal SDK that runs inside sandboxes to control any coding agent (Claude
+  Cod
+description: 'Sandbox Agent SDK is a server that runs inside isolated environments
+  to provide HTTP/SSE control over multiple coding agents. It standardizes APIs across
+  Claude Code, Codex, OpenCode, Amp, and Pi with universal event schemas and session
+  management.
+
+
+  **Flux Impact:** Enables true multi-agent orchestration where Flux can spawn and
+  control multiple coding agents in isolated sandboxes, addressing the core challenge
+  of running AI agents safely in production environments.'
+use_cases:
+- Test Sandbox Agent SDK with Claude Code in a sandbox environment
+- Create Flux skill that uses HTTP API to control remote coding agents
+- Experiment with multi-agent workflows using the unified interface
+- Evaluate event streaming for session persistence and replay
+install:
+  type: manual
+  command: '# See: https://sandboxagent.dev/'
+verification:
+  type: manual
+resources:
+- url: https://sandboxagent.dev/
+  type: homepage
+tags: []
+added_date: '2026-03-10'
+source: slack-inbox
+source_url: https://sandboxagent.dev/
+sdlc_phase: Implementation
