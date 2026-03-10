@@ -1,0 +1,31 @@
+name: docsalot-ai-native-documentation-platfor
+category: application
+tagline: AI-powered documentation platform that automatically generates and updates
+  docs,
+description: 'DocsAlot is an AI-native documentation platform that automatically generates
+  and maintains documentation, help centers, API references, and tutorials. It creates
+  machine-readable artifacts (llms.txt, JSON schemas) and continuously optimizes for
+  AI agent discovery and recommendations.
+
+
+  **Flux Impact:** Enhances Agentic SDLC by automating documentation maintenance throughout
+  the development lifecycle, ensuring AI agents have up-to-date context about codebases
+  and reducing manual documentation overhead in CI/CD workflows.'
+use_cases:
+- Evaluate DocsAlot for automatic documentation generation in Flux workflows
+- Test integration with GitHub PRs for auto-updating project documentation
+- Explore using DocsAlot's AI agent optimization features for better tool discoverability
+- Consider implementing llms.txt generation pattern for Flux plugin documentation
+install:
+  type: manual
+  command: '# See: https://docsalot.dev/'
+verification:
+  type: manual
+resources:
+- url: https://docsalot.dev/
+  type: homepage
+tags: []
+added_date: '2026-03-10'
+source: slack-inbox
+source_url: https://docsalot.dev/
+sdlc_phase: Implementation
