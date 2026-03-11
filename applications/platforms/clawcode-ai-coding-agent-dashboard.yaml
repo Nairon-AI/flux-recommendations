@@ -1,0 +1,32 @@
+name: clawcode-ai-coding-agent-dashboard
+category: tool
+tagline: Desktop dashboard for managing multiple projects with 12 specialized AI coding
+  a
+description: 'ClawCode is a desktop application that provides a unified dashboard
+  for managing multiple coding projects, each with 12 specialized AI agents (coders,
+  planner, QA tester, security auditor, etc.). It includes task boards, workflow canvases,
+  git integration, and parallel agent execution.
+
+
+  **Flux Impact:** Significantly enhances our Agentic SDLC by providing specialized
+  agent roles (security auditor, QA tester, bug hunter) that complement Flux''s workflow
+  structure. The multi-project dashboard addresses the scalability challenge of managing
+  AI-augmented workflows across multiple codebases.'
+use_cases:
+- Download ClawCode desktop application
+- Create workspaces for existing Flux projects
+- Configure project briefs and rules for agent context
+- Test parallel agent execution with Flux-generated plans
+install:
+  type: manual
+  command: '# See: https://clawcode.app/'
+verification:
+  type: manual
+resources:
+- url: https://clawcode.app/
+  type: homepage
+tags: []
+added_date: '2026-03-11'
+source: slack-inbox
+source_url: https://clawcode.app/
+sdlc_phase: Planning
