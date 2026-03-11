@@ -1,0 +1,31 @@
+name: claude-code-agent-teams
+category: workflow-pattern
+tagline: Multi-agent tmux integration for Claude Code with experimental team mode
+description: An experimental feature in Claude Code that enables team mode with tmux
+  integration, automatically opening additional terminal panes for multi-agent workflows.
+  Users can interact with multiple Claude agents simultaneously in separate panes
+  rather than having one main orchestrating agent.
+install:
+  type: manual
+  command: CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS=true claude
+verification:
+  type: manual
+resources: []
+tags:
+- claude-code
+- tmux
+- multi-agent
+- experimental
+- terminal
+added_date: '2026-03-11'
+source: x-discovery
+source_url: https://x.com/nummanali/status/2031477259689754734
+mentions:
+- url: https://x.com/nummanali/status/2031477259689754734
+  author: '@nummanali'
+  text: "Claude Code teams with tmux is really cool \n\nWhen you run with team mode\
+    \ enabled in tmux, it automatically opens the additional terminal in pane \n\n\
+    I don't really get my main agent to orchestrate, I chat to them myself\n\nCLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS=true\
+    \ claude https://t.co"
+  date: '2026-03-11'
+  likes: 485

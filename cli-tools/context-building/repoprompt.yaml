@@ -1,0 +1,29 @@
+name: repoprompt
+category: cli-tool
+tagline: Tool for building context from codebases to enhance AI code reviews
+description: RepoPrompt helps extract and format repository context for AI tools like
+  ChatGPT. It enables 'agentic context building' to provide comprehensive codebase
+  information to AI models for deeper, more informed code reviews and analysis.
+install:
+  type: manual
+  command: Check @RepoPrompt for installation instructions
+verification:
+  type: manual
+resources: []
+tags:
+- code-review
+- context-building
+- chatgpt
+- repository-analysis
+added_date: '2026-03-11'
+source: x-discovery
+source_url: https://x.com/pvncher/status/2031466611652047265
+mentions:
+- url: https://x.com/pvncher/status/2031466611652047265
+  author: '@pvncher'
+  text: "Today is the 1 year anniversary of @RepoPrompt 1.0\n\nTo highlight the occasion,\
+    \ here's a video combining agentic context building, with old school copy pasting,\
+    \ \nto enable you to use ChatGPT's GPT-5.4 Pro to get some of the deepest code\
+    \ reviews around. https://t.co/NqFtbnMnnx"
+  date: '2026-03-11'
+  likes: 73
