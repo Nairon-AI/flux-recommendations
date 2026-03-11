@@ -1,0 +1,31 @@
+name: harness-engineering-leveraging-codex-age
+category: article
+tagline: OpenAI's team built a million-line production product using 0 manually-written
+  c
+description: 'OpenAI''s internal experiment where a team built a production software
+  product with zero manually-written code. Humans focused on designing environments,
+  scaffolding, and feedback loops while Codex agents handled all code implementation,
+  testing, and deployment across 1,500 PRs over 5 months.
+
+
+  **Flux Impact:** This validates our entire Agentic SDLC philosophy and provides
+  concrete patterns for human-agent collaboration at scale. Shows how to redesign
+  engineering roles around agent enablement rather than direct coding.'
+use_cases:
+- Document harness engineering patterns from the article
+- Create 'agent-only' mode in Flux that prevents manual code edits
+- Build depth-first capability construction workflows
+- Develop environment specification templates for agent work
+install:
+  type: manual
+  command: '# See: https://openai.com/index/harness-engineering/'
+verification:
+  type: manual
+resources:
+- url: https://openai.com/index/harness-engineering/
+  type: homepage
+tags: []
+added_date: '2026-03-11'
+source: slack-inbox
+source_url: https://openai.com/index/harness-engineering/
+sdlc_phase: Planning
