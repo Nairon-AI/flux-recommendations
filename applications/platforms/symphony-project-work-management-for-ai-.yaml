@@ -1,0 +1,31 @@
+name: symphony-project-work-management-for-ai-
+category: repo
+tagline: OpenAI's Symphony turns project work into isolated, autonomous implementation
+  ru
+description: 'Symphony is OpenAI''s approach to project management for AI coding agents,
+  focusing on isolated autonomous implementation runs rather than constant supervision.
+  The project appears to integrate with Linear for issue tracking and Codex for implementation,
+  creating an end-to-end workflow for agent-driven development.
+
+
+  **Flux Impact:** Symphony''s autonomous run model could enhance Flux''s agent orchestration
+  by providing better isolation and management of concurrent agent work, potentially
+  improving our multi-agent workflow patterns'
+use_cases:
+- Review Symphony's Elixir implementation for autonomous run patterns
+- Analyze their Linear integration approach for issue tracking
+- Study their isolation model for concurrent agent work
+- Evaluate compatibility with Flux's existing agent teams architecture
+install:
+  type: manual
+  command: '# See: https://github.com/openai/symphony'
+verification:
+  type: manual
+resources:
+- url: https://github.com/openai/symphony
+  type: homepage
+tags: []
+added_date: '2026-03-11'
+source: slack-inbox
+source_url: https://github.com/openai/symphony
+sdlc_phase: Planning
