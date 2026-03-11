@@ -1,0 +1,31 @@
+name: cloudflare-one-api-call-web-scraping
+category: tweet
+tagline: 'Cloudflare released a single API call that crawls any website and returns
+  clean '
+description: 'Cloudflare''s new API provides single-call website crawling that returns
+  clean, readable content without scripts, scraping tools, or browser automation.
+  This enables AI agents to easily monitor competitors, track pricing changes, detect
+  product launches, and analyze landing pages with minimal complexity.
+
+
+  **Flux Impact:** Dramatically simplifies competitive research automation - agents
+  can now gather market intelligence with a single API call instead of complex scraping
+  setups, making AI-augmented product planning more accessible'
+use_cases:
+- Research Cloudflare's new web scraping API documentation and pricing
+- Create agent skill for competitor monitoring using the API
+- Add to Flux recommendations as a scraping alternative to Crawlee/Scrapling
+- Build workflow pattern for automated competitive intelligence
+install:
+  type: manual
+  command: '# See: https://x.com/Nate_Google_/status/2031757785558397367?s=20'
+verification:
+  type: manual
+resources:
+- url: https://x.com/Nate_Google_/status/2031757785558397367?s=20
+  type: homepage
+tags: []
+added_date: '2026-03-11'
+source: slack-inbox
+source_url: https://x.com/Nate_Google_/status/2031757785558397367?s=20
+sdlc_phase: Planning
