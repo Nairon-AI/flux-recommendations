@@ -1,0 +1,29 @@
+name: openui-better-json-render-alternative
+category: tweet
+tagline: 'OpenUI is an open-source format for generative UI that''s 3x faster and
+  uses 67% '
+description: 'OpenUI is an alternative to json-render and A2UI that provides up to
+  3x faster rendering and 67% fewer tokens for generative UI interfaces. It''s designed
+  to work with how AI models actually generate content rather than against their natural
+  patterns.
+
+
+  **Flux Impact:** Improves frontend agent workflows by reducing token usage and generation
+  errors, making UI generation tasks more reliable and efficient in the Agentic SDLC'
+use_cases:
+- Test OpenUI performance vs existing JSON rendering in frontend tasks
+- Create OpenUI skill for UI component generation workflows
+- Document OpenUI integration patterns in frontend workflow guides
+install:
+  type: manual
+  command: '# See: https://x.com/rabi_guha/status/2031751935880314897?s=20'
+verification:
+  type: manual
+resources:
+- url: https://x.com/rabi_guha/status/2031751935880314897?s=20
+  type: homepage
+tags: []
+added_date: '2026-03-11'
+source: slack-inbox
+source_url: https://x.com/rabi_guha/status/2031751935880314897?s=20
+sdlc_phase: Implementation
