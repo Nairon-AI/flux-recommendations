@@ -1,0 +1,31 @@
+name: dmux-parallel-ai-agents-manager
+category: tool
+tagline: dmux is a tmux pane manager that creates AI-powered development sessions
+  with Cl
+description: 'dmux manages multiple AI coding agents in parallel using tmux sessions
+  and git worktrees. It provides automatic branch management, AI-powered commit messages
+  via OpenRouter, and lifecycle hooks for the complete worktree workflow from creation
+  to merge.
+
+
+  **Flux Impact:** Enables true parallel agent execution that Flux''s agentic SDLC
+  has been missing - multiple agents can work on different tasks simultaneously in
+  isolated environments, then merge back systematically'
+use_cases:
+- Install dmux via npm and configure OpenRouter API key
+- Test dmux integration with Claude Code in a sample project
+- Document dmux + Flux workflow pattern for parallel agent execution
+- Create Flux skill for dmux pane management and merge coordination
+install:
+  type: manual
+  command: '# See: https://dmux.ai/'
+verification:
+  type: manual
+resources:
+- url: https://dmux.ai/
+  type: homepage
+tags: []
+added_date: '2026-03-11'
+source: slack-inbox
+source_url: https://dmux.ai/
+sdlc_phase: Implementation
