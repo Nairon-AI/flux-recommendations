@@ -1,0 +1,30 @@
+name: symphony
+category: workflow-pattern
+tagline: Multi-agent orchestration system for AI-powered code generation
+description: Symphony is an open-source system that allows running multiple AI agents
+  concurrently to automate software development workflows. The author reports using
+  it with 5 concurrent agents to write and ship 100% of their code, integrated with
+  Codex and Linear for a complete development pipeline.
+install:
+  type: manual
+  command: See GitHub repository for setup instructions
+verification:
+  type: manual
+resources: []
+tags:
+- multi-agent
+- code-generation
+- automation
+- orchestration
+added_date: '2026-03-12'
+source: x-discovery
+source_url: https://x.com/ryancarson/status/2031755002205655511
+mentions:
+- url: https://x.com/ryancarson/status/2031755002205655511
+  author: '@ryancarson'
+  text: "This is how I run 5 agents concurrently in a Code Factory to write/ship 100%\
+    \ of our code.\n\nIt uses Symphony from @alex_frantic  (oss) + Codex Mac app +\
+    \ @linear \n\nTook me 2-3 days to set up and now it’s *cranking*\n\nhttps://t.co/XZsATH4bil\
+    \ https://t.co/NNnddDGk9k"
+  date: '2026-03-12'
+  likes: 1495

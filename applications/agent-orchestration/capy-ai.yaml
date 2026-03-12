@@ -1,0 +1,32 @@
+name: capy-ai
+category: application
+tagline: Interface to control multiple AI agents working in parallel on code
+description: Capy.ai provides a single clean interface to manage and control multiple
+  AI agents working simultaneously on software development tasks. It allows developers
+  to orchestrate parallel AI assistance for coding workflows.
+install:
+  type: manual
+  command: Visit capydotai website
+verification:
+  type: manual
+resources:
+- url: https://capy.ai
+  type: homepage
+tags:
+- ai-agents
+- parallel-processing
+- code-automation
+- orchestration
+added_date: '2026-03-12'
+source: x-discovery
+source_url: https://x.com/justinsunyt/status/2031785887722549484
+mentions:
+- url: https://x.com/justinsunyt/status/2031785887722549484
+  author: '@justinsunyt'
+  text: 'RT @0xluffy: my job as a swe rn is just me watching multiple agents work
+    in parallel on @capydotai
+
+
+    a single clean interface to control mul…'
+  date: '2026-03-12'
+  likes: 121

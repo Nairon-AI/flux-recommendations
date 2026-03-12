@@ -50,3 +50,18 @@ mentions:
     can use the Telegram Bot Builder Skill from https://t.co/bTs'
   date: '2026-03-07'
   likes: 541
+- url: https://x.com/dani_avila7/status/2031906819908780189
+  author: '@dani_avila7'
+  text: 'Just shipped a Claude Code skill to use Cloudflare''s new /crawl endpoint
+
+
+    In the video I''m posting, the skill crawls 29 pages from the Claude Code docs
+    in one shot. That''s it, one command
+
+
+    Install it: npx claude-code-templates@latest --skill utilities/cf-crawl
+
+
+    Open Claude and ru'
+  date: '2026-03-12'
+  likes: 411
