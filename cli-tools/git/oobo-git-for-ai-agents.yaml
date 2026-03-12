@@ -1,0 +1,33 @@
+name: oobo-git-for-ai-agents
+category: tool
+tagline: A transparent git wrapper that enriches commits with AI session context,
+  trackin
+description: 'Oobo is a git decorator that automatically captures AI context for every
+  commit: which sessions contributed, token counts, code attribution (AI vs human
+  lines), model used, and session duration. It maintains both local developer memory
+  (SQLite) and repo memory (git orphan branch) to create a complete work ledger alongside
+  git''s code ledger.
+
+
+  **Flux Impact:** Provides critical observability for agentic SDLC by tracking AI
+  agent contributions, enabling us to measure code attribution, session costs, and
+  implementation patterns across all AI tools in our workflow'
+use_cases:
+- Install oobo CLI via curl script
+- Run oobo setup to configure tool detection
+- Add oobo alias for git commands in Flux workflows
+- Document oobo usage in agent workflow patterns
+- Integrate oobo stats into flux:score metrics
+install:
+  type: manual
+  command: '# See: https://oobo.ai/'
+verification:
+  type: manual
+resources:
+- url: https://oobo.ai/
+  type: homepage
+tags: []
+added_date: '2026-03-12'
+source: slack-inbox
+source_url: https://oobo.ai/
+sdlc_phase: Implementation
