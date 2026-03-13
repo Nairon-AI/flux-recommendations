@@ -65,3 +65,19 @@ mentions:
     Open Claude and ru'
   date: '2026-03-12'
   likes: 411
+- url: https://x.com/dani_avila7/status/2032296312431894954
+  author: '@dani_avila7'
+  text: 'Just updated the skill with modifiedSince support
+
+
+    just run this command to install:
+
+    npx claude-code-templates@latest --skill utilities/cf-crawl
+
+
+    100+ downloads in one day, let''s see where this skill goes
+
+
+    Link: https://t.co/1PAr4XxL96 https://t.co/cudHwNfDsK'
+  date: '2026-03-13'
+  likes: 16

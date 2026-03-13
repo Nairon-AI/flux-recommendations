@@ -28,3 +28,11 @@ mentions:
     \ https://t.co/NNnddDGk9k"
   date: '2026-03-12'
   likes: 1495
+- url: https://x.com/ryancarson/status/2032081931706192208
+  author: '@ryancarson'
+  text: "Holy shit, just had a feel-the-AGI moment. \n\nSymphony was running overnight,\
+    \ working on merging a bunch of PRs, and it encountered some extra issues in the\
+    \ codebase that were related to PR but not directly applicable. \n\nIt created\
+    \ a backlog issue in Linear and documented it. \n\n\U0001F633\n"
+  date: '2026-03-13'
+  likes: 769
