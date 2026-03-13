@@ -1,0 +1,31 @@
+name: desengs-design-engineering-resource-coll
+category: repo
+tagline: A curated collection of design engineering resources covering UI components,
+  ani
+description: 'DesEngs is a curated resource collection specifically for design engineers,
+  covering UI components, animations, interactions, and career development. It includes
+  links to modern tools like OKLCH color converter, component galleries, interaction
+  design guides, and React libraries for design systems.
+
+
+  **Flux Impact:** Enhances frontend development capabilities by providing curated
+  design engineering resources that agents can reference during UI implementation,
+  improving design quality and modern web practices'
+use_cases:
+- Create a 'design-engineering-resources' skill that references key DesEngs tools
+- Add DesEngs resource links to frontend planning workflows
+- Include component gallery and interaction design resources in UI implementation
+  tasks
+install:
+  type: manual
+  command: '# See: https://desengs.com/|https://desengs.com/'
+verification:
+  type: manual
+resources:
+- url: https://desengs.com/|https://desengs.com/
+  type: homepage
+tags: []
+added_date: '2026-03-13'
+source: slack-inbox
+source_url: https://desengs.com/|https://desengs.com/
+sdlc_phase: Planning
