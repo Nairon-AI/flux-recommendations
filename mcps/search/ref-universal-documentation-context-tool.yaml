@@ -1,0 +1,31 @@
+name: ref-universal-documentation-context-tool
+category: tool
+tagline: MCP server providing unified search across public/private docs to eliminate
+  AI h
+description: 'Ref is an MCP server that provides unified access to both public documentation
+  (OpenAI, Anthropic, Next.js, etc.) and private documentation (GitHub repos, PDFs).
+  It offers two key tools: search_documentation for finding specific sections and
+  read_url for accessing full content.
+
+
+  **Flux Impact:** Significantly improves agent accuracy by providing fresh, authoritative
+  documentation context without consuming massive context windows - essential for
+  reliable Agentic SDLC workflows'
+use_cases:
+- Add Ref MCP server to recommendations
+- Test integration with Claude Code workflows
+- Compare with existing Context7 and Exa MCPs for overlap
+- Document best practices for documentation search in agent workflows
+install:
+  type: manual
+  command: '# See: https://ref.tools/'
+verification:
+  type: manual
+resources:
+- url: https://ref.tools/
+  type: homepage
+tags: []
+added_date: '2026-03-13'
+source: slack-inbox
+source_url: https://ref.tools/
+sdlc_phase: Planning
