@@ -1,0 +1,32 @@
+name: garry-tan-development-stack-setup
+category: repo
+tagline: 'A structured repository setup with 6 opinionated tools designed to provide
+  CEO, '
+description: 'Garry Tan''s gstack provides a complete development setup with 6 specialized
+  tools that function as different roles in a software team. The repository includes
+  browser automation tools, QA testing workflows, and structured team collaboration
+  patterns specifically designed for AI-augmented development with Claude Code.
+
+
+  **Flux Impact:** This provides proven patterns for role-based agent workflows that
+  could enhance Flux''s multi-agent orchestration. The structured approach to CEO,
+  Engineering Manager, and QA roles aligns perfectly with Flux''s agentic SDLC philosophy.'
+use_cases:
+- Analyze the 6 core tools and their role definitions
+- Extract browser automation patterns into Flux skills
+- Study the QA testing workflow patterns
+- Adapt the CEO/Eng Manager/Release Manager role patterns for Flux agents
+- Create skills for the team collaboration workflows
+install:
+  type: manual
+  command: '# See: https://github.com/garrytan/gstack'
+verification:
+  type: manual
+resources:
+- url: https://github.com/garrytan/gstack
+  type: homepage
+tags: []
+added_date: '2026-03-13'
+source: slack-inbox
+source_url: https://github.com/garrytan/gstack
+sdlc_phase: Planning
