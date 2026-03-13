@@ -1,0 +1,36 @@
+name: fastmcp-python-framework-for-mcp-servers
+category: tool
+tagline: FastMCP is a Pythonic framework for building MCP servers that automatically
+  hand
+description: 'FastMCP is the standard Python framework for building Model Context
+  Protocol (MCP) applications. It provides automatic schema generation, validation,
+  and documentation from Python functions, handles transport negotiation and authentication
+  automatically, and includes tools for building servers, clients, and interactive
+  UIs. The framework was incorporated into the official MCP Python SDK and powers
+  70% of MCP servers.
+
+
+  **Flux Impact:** Enables rapid development of custom MCP servers to extend Claude
+  Code capabilities. The automatic schema generation and built-in best practices reduce
+  boilerplate and improve reliability of agent-accessible tools. Supports the Agentic
+  SDLC by making it easier to create domain-specific tools that agents can discover
+  and use.'
+use_cases:
+- 'Install FastMCP: pip install fastmcp'
+- Create simple MCP server with @mcp.tool decorated functions
+- Test server connection with Claude Code MCP configuration
+- Document available FastMCP patterns in skills/mcp/ directory
+- Create example FastMCP server templates for common use cases
+install:
+  type: manual
+  command: '# See: https://gofastmcp.com/getting-started/welcome'
+verification:
+  type: manual
+resources:
+- url: https://gofastmcp.com/getting-started/welcome
+  type: homepage
+tags: []
+added_date: '2026-03-13'
+source: slack-inbox
+source_url: https://gofastmcp.com/getting-started/welcome
+sdlc_phase: Implementation
