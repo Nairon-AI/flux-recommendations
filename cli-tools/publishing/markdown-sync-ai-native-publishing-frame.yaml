@@ -1,0 +1,29 @@
+name: markdown-sync-ai-native-publishing-frame
+category: tool
+tagline: 'A publishing framework built for AI agents to ship websites by writing markdown '
+description: 'markdown.fast is an open-source publishing framework designed specifically
+  for AI agents and developers to quickly ship websites, docs, or blogs. It features
+  terminal-based sync, real-time updates via Convex, and content that''s instantly
+  accessible to browsers, LLMs, and AI agents.
+
+
+  **Flux Impact:** Enables AI agents to autonomously publish content, documentation,
+  and project updates through terminal commands, fitting perfectly into agentic SDLC
+  workflows where agents need to ship documentation alongside code'
+use_cases:
+- Evaluate markdown.fast for agent-driven documentation workflows
+- Test terminal sync integration with Flux agents
+- Consider for automated blog/docs publishing from agent sessions
+install:
+  type: manual
+  command: '# See: https://www.markdown.fast/'
+verification:
+  type: manual
+resources:
+- url: https://www.markdown.fast/
+  type: homepage
+tags: []
+added_date: '2026-03-13'
+source: slack-inbox
+source_url: https://www.markdown.fast/
+sdlc_phase: Implementation
