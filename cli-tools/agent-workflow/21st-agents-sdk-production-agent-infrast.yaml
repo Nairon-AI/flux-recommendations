@@ -1,0 +1,31 @@
+name: 21st-agents-sdk-production-agent-infrast
+category: tool
+tagline: Open-source SDK providing production-grade infrastructure for adding AI agents
+  t
+description: '21st Agents SDK is an open-source infrastructure platform that provides
+  production-grade components for integrating AI agents into applications. It includes
+  built-in UI components, chat history management, spend limits, sandbox management,
+  and observability features that can be deployed with minimal configuration.
+
+
+  **Flux Impact:** Provides production-ready infrastructure for deploying Flux-managed
+  agents, enabling teams to move from development workflows to production agent systems
+  with proper monitoring, spend controls, and user interfaces.'
+use_cases:
+- Evaluate 21st SDK for production Flux agent deployments
+- Test integration with Claude Code workflows
+- Document observability patterns for agent monitoring
+- Create Flux skill for 21st SDK configuration
+install:
+  type: manual
+  command: '# See: https://21st.dev/agents'
+verification:
+  type: manual
+resources:
+- url: https://21st.dev/agents
+  type: homepage
+tags: []
+added_date: '2026-03-13'
+source: slack-inbox
+source_url: https://21st.dev/agents
+sdlc_phase: Implementation
