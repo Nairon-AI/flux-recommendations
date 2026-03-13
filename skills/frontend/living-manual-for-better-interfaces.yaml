@@ -1,0 +1,28 @@
+name: living-manual-for-better-interfaces
+category: article
+tagline: A comprehensive design resource covering interface principles, motion, typograph
+description: 'A curated design manual that covers fundamental interface design principles,
+  motion design, typography, and visual hierarchy. The resource appears to be a living
+  document that gets updated with modern design practices and examples.
+
+
+  **Flux Impact:** Improves the quality of agent-generated interfaces by providing
+  structured design knowledge that can be referenced during UI implementation phases'
+use_cases:
+- Review the manual's content and extract key design principles
+- Create a condensed skill referencing core interface guidelines
+- Integrate design principles into existing UI skills
+- Add to design review checklist for agent-generated interfaces
+install:
+  type: manual
+  command: '# See: https://x.com/i/status/2032566100655751319|https://x.com/i/status/2032566100655751319'
+verification:
+  type: manual
+resources:
+- url: https://x.com/i/status/2032566100655751319|https://x.com/i/status/2032566100655751319
+  type: homepage
+tags: []
+added_date: '2026-03-13'
+source: slack-inbox
+source_url: https://x.com/i/status/2032566100655751319|https://x.com/i/status/2032566100655751319
+sdlc_phase: Planning
