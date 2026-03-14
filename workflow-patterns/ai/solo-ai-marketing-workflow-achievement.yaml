@@ -1,0 +1,33 @@
+name: solo-ai-marketing-workflow-achievement
+category: tweet
+tagline: Anthropic's single growth lead achieved 10× marketing output using Claude
+  Code w
+description: 'Austin Lau at Anthropic built an AI-augmented marketing workflow using
+  Claude Code that automated ad performance analysis, content generation, and template
+  management. The system integrates CSV exports, AI flagging of underperforming ads,
+  automated copy generation, Figma template automation, and live Meta data via MCP
+  servers.
+
+
+  **Flux Impact:** Demonstrates how AI agents can achieve massive productivity gains
+  (10× output) in non-technical domains through workflow automation, validating the
+  Agentic SDLC approach beyond pure software development'
+use_cases:
+- Build MCP server for Meta/Google Ads API integration
+- Create ad performance analysis skill for CSV import and flagging
+- Develop automated copy generation skill with A/B testing variants
+- Integrate Figma MCP for template batch updates
+- Document marketing automation workflow pattern
+install:
+  type: manual
+  command: '# See: https://x.com/i/status/2032863625128587534|https://x.com/i/status/2032863625128587534'
+verification:
+  type: manual
+resources:
+- url: https://x.com/i/status/2032863625128587534|https://x.com/i/status/2032863625128587534
+  type: homepage
+tags: []
+added_date: '2026-03-14'
+source: slack-inbox
+source_url: https://x.com/i/status/2032863625128587534|https://x.com/i/status/2032863625128587534
+sdlc_phase: Planning
