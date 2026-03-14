@@ -1,0 +1,30 @@
+name: oxlint-plugins-for-agent-discipline
+category: tweet
+tagline: Using oxlint plugins as a way to enforce code quality standards when working
+  wit
+description: 'Dillon suggests using oxlint plugins as a disciplinary mechanism for
+  AI coding agents. This implies using linting rules as guardrails to enforce code
+  quality and patterns when agents write code.
+
+
+  **Flux Impact:** Enhances our Agentic SDLC by providing automated code quality enforcement
+  - agents get immediate feedback on code quality issues rather than discovering them
+  later in review'
+use_cases:
+- Research oxlint plugin ecosystem for agent-specific rules
+- Add oxlint integration to Ralph guard system
+- Create agent skill for running oxlint on generated code
+- Document oxlint + agent workflow patterns
+install:
+  type: manual
+  command: '# See: https://x.com/i/status/2032233421313818730|https://x.com/i/status/2032233421313818730'
+verification:
+  type: manual
+resources:
+- url: https://x.com/i/status/2032233421313818730|https://x.com/i/status/2032233421313818730
+  type: homepage
+tags: []
+added_date: '2026-03-13'
+source: slack-inbox
+source_url: https://x.com/i/status/2032233421313818730|https://x.com/i/status/2032233421313818730
+sdlc_phase: Implementation
