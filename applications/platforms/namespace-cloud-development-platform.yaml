@@ -1,0 +1,33 @@
+name: namespace-cloud-development-platform
+category: application
+tagline: High-performance cloud development infrastructure that accelerates CI/CD
+  pipelin
+description: 'Namespace provides high-performance cloud computers designed specifically
+  for development workflows. It offers 2x-10x faster CI/CD runners as drop-in replacements
+  for GitHub Actions and GitLab runners, dedicated cloud environments for AI coding
+  agents (Devboxes), and build acceleration with remote caching for Docker, Bazel,
+  Turbo, and other frameworks.
+
+
+  **Flux Impact:** Significantly enhances Agentic SDLC by providing dedicated cloud
+  environments where AI agents can work without blocking local machines, faster CI/CD
+  for agent-generated code, and built-in observability to monitor agent performance
+  and resource usage.'
+use_cases:
+- Evaluate Namespace vs current CI/CD performance and costs
+- Test Devbox for AI coding agent isolation and performance
+- Integrate build acceleration for Docker/containerized workflows
+- Set up observability dashboards for agent resource monitoring
+install:
+  type: manual
+  command: '# See: https://namespace.so/'
+verification:
+  type: manual
+resources:
+- url: https://namespace.so/
+  type: homepage
+tags: []
+added_date: '2026-03-14'
+source: slack-inbox
+source_url: https://namespace.so/
+sdlc_phase: CI/CD
