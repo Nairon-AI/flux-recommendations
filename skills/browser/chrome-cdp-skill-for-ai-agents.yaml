@@ -1,0 +1,31 @@
+name: chrome-cdp-skill-for-ai-agents
+category: tweet
+tagline: A skill that lets AI coding agents directly see and interact with live Chrome
+  br
+description: 'Chrome CDP (Chrome DevTools Protocol) skill enables AI agents to directly
+  control and interact with live Chrome browser sessions. This eliminates the need
+  for traditional browser automation frameworks like Selenium or Playwright by using
+  Chrome''s native debugging protocol.
+
+
+  **Flux Impact:** Enables agents to perform real-time web UI testing, form filling,
+  and visual validation during implementation phases, making our Agentic SDLC more
+  comprehensive for web development'
+use_cases:
+- Research and locate the chrome-cdp skill implementation
+- Test integration with Claude Code agent workflows
+- Create examples for common web automation tasks
+- Document best practices for CDP-based testing
+install:
+  type: manual
+  command: '# See: https://x.com/i/status/2032897113101631987|https://x.com/i/status/2032897113101631987'
+verification:
+  type: manual
+resources:
+- url: https://x.com/i/status/2032897113101631987|https://x.com/i/status/2032897113101631987
+  type: homepage
+tags: []
+added_date: '2026-03-14'
+source: slack-inbox
+source_url: https://x.com/i/status/2032897113101631987|https://x.com/i/status/2032897113101631987
+sdlc_phase: Testing
