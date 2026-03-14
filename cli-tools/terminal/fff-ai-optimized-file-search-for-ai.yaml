@@ -1,0 +1,29 @@
+name: fff-ai-optimized-file-search-for-ai
+category: tool
+tagline: A faster alternative to fzf/ripgrep specifically optimized for AI workflows
+  with
+description: 'fff-ai is a file search tool optimized for AI coding workflows that
+  provides faster search than fzf/ripgrep with fuzzy code search fallbacks. It uses
+  access frecency, git status, and file size for better sorting and suggestions, resulting
+  in 10% faster wall time and 17% fewer tokens.
+
+
+  **Flux Impact:** Improves AI agent efficiency by reducing context tokens and search
+  time, making file discovery faster and more relevant for coding tasks'
+use_cases:
+- Test fff-ai against fzf in real AI workflows
+- Create agent skill for fff-ai file discovery
+- Benchmark token reduction in context building scenarios
+install:
+  type: manual
+  command: '# See: https://x.com/neogoose_btw/status/2031958079257092427?s=20'
+verification:
+  type: manual
+resources:
+- url: https://x.com/neogoose_btw/status/2031958079257092427?s=20
+  type: homepage
+tags: []
+added_date: '2026-03-14'
+source: slack-inbox
+source_url: https://x.com/neogoose_btw/status/2031958079257092427?s=20
+sdlc_phase: Implementation
