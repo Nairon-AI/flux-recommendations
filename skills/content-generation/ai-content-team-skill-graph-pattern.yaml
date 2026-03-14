@@ -1,0 +1,34 @@
+name: ai-content-team-skill-graph-pattern
+category: skill
+tagline: A structured skill graph approach using interconnected markdown files to
+  turn AI
+description: 'This pattern uses 30+ interconnected markdown files structured as a
+  skill graph to transform AI agents into full content teams. Each file represents
+  a knowledge node (platforms, voice, audience, hooks) connected via wikilinks, enabling
+  the AI to follow context chains automatically and produce native content for multiple
+  platforms from a single input.
+
+
+  **Flux Impact:** Enhances agent specialization by providing structured context graphs
+  that enable consistent, platform-native content generation across multiple channels
+  from single inputs, improving both quality and efficiency of AI-augmented content
+  workflows.'
+use_cases:
+- Create skill graph directory structure with platforms/, voice/, engine/, and audience/
+  folders
+- Build index.md with brand identity, node map, and execution instructions
+- Implement wikilink connections between related knowledge nodes
+- Test with single topic input to validate multi-platform output quality
+install:
+  type: manual
+  command: '# See: https://x.com/i/status/2032796569808830921|https://x.com/i/status/2032796569808830921'
+verification:
+  type: manual
+resources:
+- url: https://x.com/i/status/2032796569808830921|https://x.com/i/status/2032796569808830921
+  type: homepage
+tags: []
+added_date: '2026-03-14'
+source: slack-inbox
+source_url: https://x.com/i/status/2032796569808830921|https://x.com/i/status/2032796569808830921
+sdlc_phase: Planning
