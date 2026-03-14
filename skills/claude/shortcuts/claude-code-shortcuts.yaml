@@ -1,0 +1,35 @@
+name: claude-code-shortcuts
+category: skill
+tagline: Essential keyboard shortcuts for Claude Code development workflow
+description: 'Three productivity shortcuts for Claude Code: `!` prefix for inline
+  bash execution with context retention, `ctrl+s` for draft stashing, and `ctrl+g`
+  for opening prompts in external editor. These shortcuts significantly improve the
+  development workflow by allowing seamless command execution, draft management, and
+  better editing experience.'
+install:
+  type: skill
+  command: Built into Claude Code interface
+verification:
+  type: manual
+resources: []
+tags:
+- claude
+- shortcuts
+- productivity
+- workflow
+added_date: '2026-03-14'
+source: x-discovery
+source_url: https://x.com/_catwu/status/2032499411230785661
+mentions:
+- url: https://x.com/_catwu/status/2032499411230785661
+  author: '@_catwu'
+  text: 'my three favorite claude code shortcuts:
+
+
+    1. `!` prefix runs bash inline. the command + output land in context
+
+    2. `ctrl+s` stashes your draft. type something else, submit, and it pops back
+
+    3. `ctrl+g` opens the prompt (or plan) in $EDITOR for bigger edits'
+  date: '2026-03-14'
+  likes: 1049
