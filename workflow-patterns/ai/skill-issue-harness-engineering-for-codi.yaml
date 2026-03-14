@@ -1,0 +1,33 @@
+name: skill-issue-harness-engineering-for-codi
+category: article
+tagline: Harness engineering is the practice of configuring coding agent components
+  (skil
+description: 'The article introduces ''harness engineering'' as the systematic practice
+  of configuring coding agent components (skills, MCP servers, memory, sub-agents)
+  to improve reliability and task success rates. It positions this as a subset of
+  context engineering focused on leveraging harness configuration points rather than
+  waiting for better models.
+
+
+  **Flux Impact:** This directly validates and enhances Flux''s approach to systematic
+  agent configuration. The harness engineering concept provides a framework for improving
+  the flux:improve command and validates our focus on systematic workflow optimization
+  rather than just waiting for better models.'
+use_cases:
+- Add harness configuration analysis to flux:improve command
+- Create skill for systematic harness engineering assessment
+- Document harness engineering patterns in Flux brain vault
+- Add harness quality metrics to flux:score command
+install:
+  type: manual
+  command: '# See: https://www.humanlayer.dev/blog/skill-issue-harness-engineering-for-coding-agents'
+verification:
+  type: manual
+resources:
+- url: https://www.humanlayer.dev/blog/skill-issue-harness-engineering-for-coding-agents
+  type: homepage
+tags: []
+added_date: '2026-03-14'
+source: slack-inbox
+source_url: https://www.humanlayer.dev/blog/skill-issue-harness-engineering-for-coding-agents
+sdlc_phase: Planning
