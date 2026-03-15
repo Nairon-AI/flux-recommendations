@@ -1,0 +1,33 @@
+name: slate-cli
+category: cli-tool
+tagline: RLM coding agent with multi-modal capabilities and monorepo support
+description: Slate CLI is an RLM (Reinforcement Learning Model) coding agent that
+  provides AI-assisted development with full visibility into sub-agents. It's designed
+  to handle large monorepos effectively and offers intuitive command control for multi-modal
+  coding tasks.
+install:
+  type: manual
+  command: Sign up at realmcore for access
+verification:
+  type: manual
+resources:
+- url: https://realmcore.com
+  type: homepage
+tags:
+- coding-agent
+- monorepo
+- multi-modal
+- rlm
+- cli
+added_date: '2026-03-15'
+source: x-discovery
+source_url: https://x.com/nummanali/status/2032799603209224425
+mentions:
+- url: https://x.com/nummanali/status/2032799603209224425
+  author: '@nummanali'
+  text: "Slate CLI - an RLM Coding Agent \n\nThe experience is excellent\n- no issues\
+    \ on large monorepo\n- full visibility on sub agents\n- intuitive control on commands\n\
+    - on sign up given $10 \n\nIt took 60 seconds to have an expert multi modal coding\
+    \ system\n\nVery impressed @realmcore_ https://"
+  date: '2026-03-15'
+  likes: 140

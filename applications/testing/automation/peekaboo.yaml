@@ -1,0 +1,31 @@
+name: peekaboo
+category: application
+tagline: Playwright-like automation tool for macOS apps in AI coding workflows
+description: A macOS automation tool that enables testing and interaction with Mac
+  applications, similar to how Playwright works for web apps. Particularly useful
+  for AI coding agents that need feedback loops when developing macOS applications,
+  allowing automated testing and validation of UI changes.
+install:
+  type: manual
+  command: Check developer's distribution method
+verification:
+  type: manual
+resources: []
+tags:
+- macos
+- automation
+- testing
+- ui-testing
+- feedback-loop
+added_date: '2026-03-15'
+source: x-discovery
+source_url: https://x.com/nummanali/status/2032803137266811206
+mentions:
+- url: https://x.com/nummanali/status/2032803137266811206
+  author: '@nummanali'
+  text: "I'm making a MacOS app using GPT 5.4\n\nAnd if you understand how to maximise\
+    \ long runs with coding agents - you need a feedback loop \n\nThere is no playwright\
+    \ for Mac Apps but there is PEEKABOO!! \n\nFrom the legend @steipete, this is\
+    \ insane\n\nCodex Loop: edit, review, fix, repeat htt"
+  date: '2026-03-15'
+  likes: 105

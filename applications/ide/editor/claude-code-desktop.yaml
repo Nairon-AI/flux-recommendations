@@ -1,0 +1,35 @@
+name: claude-code-desktop
+category: application
+tagline: Desktop IDE with built-in MCP for frontend preview capabilities
+description: A desktop application that integrates Claude AI with built-in Model Context
+  Protocol (MCP) for frontend development. It automatically activates frontend preview
+  functionality when asking Claude to spin up development servers, streamlining the
+  AI-assisted web development workflow.
+install:
+  type: manual
+  command: ''
+verification:
+  type: manual
+resources: []
+tags:
+- claude
+- mcp
+- frontend
+- preview
+- dev-server
+- ai-ide
+added_date: '2026-03-15'
+source: x-discovery
+source_url: https://x.com/dani_avila7/status/2032856141059747975
+mentions:
+- url: https://x.com/dani_avila7/status/2032856141059747975
+  author: '@dani_avila7'
+  text: 'Claude Code Desktop has a built-in MCP for frontend preview
+
+
+    It activates automatically when you ask Claude to spin up a dev server
+
+
+    Save this thread 👇 https://t.co/cbfNc53X8M'
+  date: '2026-03-15'
+  likes: 479
