@@ -1,0 +1,32 @@
+name: 700-cybersecurity-skills-for-ai-agents
+category: tweet
+tagline: Open-source library containing 700+ cybersecurity skills for AI coding agents
+  co
+description: 'Nicolas Krassas has created an open-source library containing over 700
+  cybersecurity skills specifically designed for AI coding agents. The collection
+  covers digital forensics and incident response (DFIR), threat hunting, cloud security,
+  and other cybersecurity domains.
+
+
+  **Flux Impact:** Significantly enhances Flux''s security capabilities by providing
+  a comprehensive library of specialized cybersecurity skills that can be integrated
+  into the security-scout, security-review, and threat modeling workflows'
+use_cases:
+- Explore the repository to identify specific skills that complement Flux's existing
+  security capabilities
+- Create integration points between these skills and Flux's security-scout agent
+- Add the most relevant skills to the Flux recommendations database
+- Test integration with flux:security-review workflow
+install:
+  type: manual
+  command: '# See: https://x.com/i/status/2032887843802984488|https://x.com/i/status/2032887843802984488'
+verification:
+  type: manual
+resources:
+- url: https://x.com/i/status/2032887843802984488|https://x.com/i/status/2032887843802984488
+  type: homepage
+tags: []
+added_date: '2026-03-15'
+source: slack-inbox
+source_url: https://x.com/i/status/2032887843802984488|https://x.com/i/status/2032887843802984488
+sdlc_phase: Code Review
