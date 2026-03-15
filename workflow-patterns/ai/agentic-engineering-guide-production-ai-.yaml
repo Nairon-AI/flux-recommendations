@@ -1,0 +1,34 @@
+name: agentic-engineering-guide-production-ai-
+category: article
+tagline: Comprehensive 33-chapter guide covering AI agent infrastructure, security,
+  conte
+description: 'A 33-chapter book covering AI agent infrastructure from engineering
+  leadership perspective. Addresses context engineering, agent security (STRIDE, Zanzibar),
+  cost control, observability with OpenTelemetry, multi-agent orchestration, and team
+  adoption patterns. Half the content focuses on non-technical decisions like AI fatigue
+  management, conductor model, and governance.
+
+
+  **Flux Impact:** Provides enterprise-grade patterns for scaling Agentic SDLC beyond
+  individual developer workflows - covers team adoption, security governance, cost
+  management, and production operationalization that Flux teams will need as they
+  mature'
+use_cases:
+- Review security checklist for Flux agent workflows
+- Implement cost tracking patterns for Claude Code usage
+- Apply conductor model to multi-agent Flux orchestration
+- Use maturity model to assess current Flux adoption level
+- Extract incident response patterns for agent failures
+install:
+  type: manual
+  command: '# See: https://agents.siddhantkhare.com/'
+verification:
+  type: manual
+resources:
+- url: https://agents.siddhantkhare.com/
+  type: homepage
+tags: []
+added_date: '2026-03-15'
+source: slack-inbox
+source_url: https://agents.siddhantkhare.com/
+sdlc_phase: Planning
