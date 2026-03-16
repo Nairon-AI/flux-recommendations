@@ -1,0 +1,30 @@
+name: ubiquitous-language-for-ai-agents
+category: tweet
+tagline: Matt Pocock recommends creating shared vocabulary docs to keep humans and
+  AI ali
+description: 'The tweet highlights the value of maintaining ubiquitous language documentation
+  in repositories to ensure consistent terminology between human developers and AI
+  agents. Matt Pocock is developing a /ubiquitous-language skill based on this concept.
+
+
+  **Flux Impact:** Prevents context drift by establishing shared vocabulary between
+  human developers and AI agents, improving consistency across planning, implementation,
+  and review phases'
+use_cases:
+- Create ubiquitous-language skill for domain vocabulary management
+- Integrate terminology validation into flux:plan workflow
+- Add vocabulary consistency checks to quality-auditor agent
+- Update CLAUDE.md templates to include domain language section
+install:
+  type: manual
+  command: '# See: https://x.com/i/status/2033652157426123087|https://x.com/i/status/2033652157426123087'
+verification:
+  type: manual
+resources:
+- url: https://x.com/i/status/2033652157426123087|https://x.com/i/status/2033652157426123087
+  type: homepage
+tags: []
+added_date: '2026-03-16'
+source: slack-inbox
+source_url: https://x.com/i/status/2033652157426123087|https://x.com/i/status/2033652157426123087
+sdlc_phase: Planning
