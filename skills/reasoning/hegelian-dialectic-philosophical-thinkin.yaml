@@ -1,0 +1,31 @@
+name: hegelian-dialectic-philosophical-thinkin
+category: skill
+tagline: A systematic skill for AI agents to apply Hegelian dialectic thinking process
+  en
+description: 'This skill implements a structured Hegelian dialectic process for AI
+  agents, combining classical thesis-antithesis-synthesis with Boyd''s ''Destruction
+  and Creation'' theory. It provides a 7-phase framework for systematic thinking that
+  includes destructive deduction, creative synthesis, and reversibility checks.
+
+
+  **Flux Impact:** Enhances our Agentic SDLC by providing agents with structured philosophical
+  reasoning capabilities, particularly valuable for complex architectural decisions
+  and when synthesizing conflicting requirements or approaches'
+use_cases:
+- Download and evaluate the skill implementation
+- Test integration with flux-plan and flux-work commands
+- Create examples of dialectical thinking in software architecture decisions
+- Document use cases where philosophical reasoning improves agent outcomes
+install:
+  type: manual
+  command: '# See: https://github.com/KyleAMathews/hegelian-dialectic-skill'
+verification:
+  type: manual
+resources:
+- url: https://github.com/KyleAMathews/hegelian-dialectic-skill
+  type: homepage
+tags: []
+added_date: '2026-03-16'
+source: slack-inbox
+source_url: https://github.com/KyleAMathews/hegelian-dialectic-skill
+sdlc_phase: Planning
