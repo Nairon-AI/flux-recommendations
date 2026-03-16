@@ -1,0 +1,44 @@
+name: collaborator
+category: application
+tagline: End-to-end environment for agentic development with infinite canvas
+description: An integrated development environment that combines terminals, context
+  files, and running code on an infinite canvas. Designed specifically for AI agent
+  collaboration, eliminating context switching and tab hunting by keeping agents and
+  work side by side.
+install:
+  type: manual
+  command: Visit website for installation instructions
+verification:
+  type: manual
+resources:
+- url: https://t.co/vfbfy2pGFn
+  type: homepage
+tags:
+- agentic-development
+- canvas-ui
+- ai-collaboration
+- development-environment
+added_date: '2026-03-16'
+source: x-discovery
+source_url: https://x.com/nummanali/status/2033177553448411448
+mentions:
+- url: https://x.com/nummanali/status/2033177553448411448
+  author: '@nummanali'
+  text: 'Collaborator is an end-to-end environment for agentic development
+
+
+    - Terminals, context files, and running code
+
+
+    - All arranged on an infinite canvas in one place
+
+
+    - No context switching, no tab hunting
+
+
+    - Just your agents and your work, side by side
+
+
+    https://t.co/vfbfy2pGFn http'
+  date: '2026-03-16'
+  likes: 102
