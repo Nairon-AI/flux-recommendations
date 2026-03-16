@@ -1,0 +1,30 @@
+name: skillgrade-agent-skills-evaluation-frame
+category: tool
+tagline: 'A Docker-based evaluation framework for AI agent skills with simple two-command '
+description: 'Skillgrade is a framework that simplifies the evaluation of AI agent
+  skills through sandboxed Docker containers. It provides a two-command workflow:
+  `skillgrade init` to create evaluations and `skillgrade` to run them, ensuring skills
+  are tested in isolated environments before deployment.
+
+
+  **Flux Impact:** Enables systematic validation of agent skills before deployment,
+  addressing the ''ship skills with evals'' pattern mentioned in our discoveries.
+  This supports reliable agentic SDLC by ensuring skills work correctly in isolation.'
+use_cases:
+- Install skillgrade CLI tool
+- Create evaluation templates for existing Flux agent skills
+- Integrate skillgrade into the flux:improve workflow for skill validation
+- Add skillgrade checks to CI/CD pipelines for skill repositories
+install:
+  type: manual
+  command: '# See: https://x.com/i/status/2033551471652773950|https://x.com/i/status/2033551471652773950'
+verification:
+  type: manual
+resources:
+- url: https://x.com/i/status/2033551471652773950|https://x.com/i/status/2033551471652773950
+  type: homepage
+tags: []
+added_date: '2026-03-16'
+source: slack-inbox
+source_url: https://x.com/i/status/2033551471652773950|https://x.com/i/status/2033551471652773950
+sdlc_phase: Testing
