@@ -1,0 +1,32 @@
+name: complete-company-context-for-claude-syst
+category: tweet
+tagline: 'Barrett Linburg built a system using Obsidian + Claude Code + instruction
+  files '
+description: 'A three-tool system (Obsidian + Claude Code + instruction files) that
+  gives Claude persistent company knowledge across sessions. Each business topic becomes
+  a markdown file in Obsidian with wikilinks connecting related concepts, allowing
+  Claude to pull full context on any query without re-explanation.
+
+
+  **Flux Impact:** This directly solves the ''context amnesia'' problem Flux addresses
+  by providing a systematic approach to maintaining persistent business context across
+  AI sessions, reducing setup time and improving consistency'
+use_cases:
+- Document this pattern in workflow-patterns/ai/ as 'persistent-company-context'
+- Create a flux:company-context command that scaffolds the Obsidian-style knowledge
+  structure
+- Add wikilink parsing to the brain vault system for better cross-references
+- Build templates for common business knowledge files (team, processes, metrics, etc.)
+install:
+  type: manual
+  command: '# See: https://x.com/DallasAptGP/status/2033574400901935534?s=20'
+verification:
+  type: manual
+resources:
+- url: https://x.com/DallasAptGP/status/2033574400901935534?s=20
+  type: homepage
+tags: []
+added_date: '2026-03-17'
+source: slack-inbox
+source_url: https://x.com/DallasAptGP/status/2033574400901935534?s=20
+sdlc_phase: Planning
