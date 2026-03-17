@@ -1,0 +1,32 @@
+name: flashcompact-specialized-context-compact
+category: tool
+tagline: FlashCompact is a specialized model that compacts context from 200k to 50k
+  token
+description: 'FlashCompact is a specialized AI model designed specifically for context
+  compaction, processing 33k tokens per second and reducing context from 200k to 50k
+  tokens in approximately 1.5 seconds. It focuses on maintaining high quality while
+  dramatically reducing context size for improved AI workflow efficiency.
+
+
+  **Flux Impact:** Addresses a critical bottleneck in agentic SDLC - context length
+  limits. By compacting large codebases and documentation before agent processing,
+  FlashCompact enables more comprehensive context while staying within model limits,
+  improving plan quality and implementation accuracy.'
+use_cases:
+- Research FlashCompact API integration options
+- Prototype context compaction in flux-work pipeline
+- Benchmark compaction quality vs speed trade-offs
+- Add FlashCompact as optional preprocessing in context-heavy Flux commands
+install:
+  type: manual
+  command: '# See: https://x.com/i/status/2033968877345116200|https://x.com/i/status/2033968877345116200'
+verification:
+  type: manual
+resources:
+- url: https://x.com/i/status/2033968877345116200|https://x.com/i/status/2033968877345116200
+  type: homepage
+tags: []
+added_date: '2026-03-17'
+source: slack-inbox
+source_url: https://x.com/i/status/2033968877345116200|https://x.com/i/status/2033968877345116200
+sdlc_phase: Planning
