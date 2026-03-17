@@ -1,0 +1,31 @@
+name: opengranola-open-source-meeting-copilot
+category: application
+tagline: Open-source macOS meeting copilot with on-device transcription, real-time
+  note s
+description: 'OpenGranola is an open-source meeting copilot for macOS that transcribes
+  calls on-device, searches your markdown notes in real-time, and provides talking
+  points during conversations. It supports multiple LLMs through OpenRouter (Claude,
+  GPT-4o, Gemini, Llama) and remains invisible during screen sharing.
+
+
+  **Flux Impact:** Enhances Planning phase by providing real-time access to captured
+  knowledge during stakeholder conversations, enabling better requirement gathering
+  and context sharing without breaking flow'
+use_cases:
+- Download and configure OpenGranola with brain/ vault as note source
+- Set up OpenRouter with Claude for consistent AI responses
+- Create meeting templates that reference Flux workflows and patterns
+- Test invisibility during screen sharing for client demos
+install:
+  type: manual
+  command: '# See: https://x.com/i/status/2033908937632977199|https://x.com/i/status/2033908937632977199'
+verification:
+  type: manual
+resources:
+- url: https://x.com/i/status/2033908937632977199|https://x.com/i/status/2033908937632977199
+  type: homepage
+tags: []
+added_date: '2026-03-17'
+source: slack-inbox
+source_url: https://x.com/i/status/2033908937632977199|https://x.com/i/status/2033908937632977199
+sdlc_phase: Planning
