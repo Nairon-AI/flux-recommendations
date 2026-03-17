@@ -1,0 +1,29 @@
+name: jam-ai-distribution-platform-for-builder
+category: tool
+tagline: AI-powered marketing automation platform that orchestrates agents to handle
+  cont
+description: 'Jam is an AI distribution platform that automates marketing workflows
+  for builders through orchestrated AI agents. It handles email campaigns, UGC content
+  creation, Reddit community outreach, and content strategy execution automatically.
+
+
+  **Flux Impact:** Enables automated go-to-market execution as part of the development
+  lifecycle, removing marketing friction for technical builders and allowing focus
+  on product development while maintaining user acquisition momentum.'
+use_cases:
+- Evaluate Jam for automated user acquisition workflows
+- Create skill for triggering Jam campaigns from deployment pipelines
+- Add marketing distribution checklist to flux:plan templates
+install:
+  type: manual
+  command: '# See: https://www.spreadjam.com/'
+verification:
+  type: manual
+resources:
+- url: https://www.spreadjam.com/
+  type: homepage
+tags: []
+added_date: '2026-03-17'
+source: slack-inbox
+source_url: https://www.spreadjam.com/
+sdlc_phase: Planning
