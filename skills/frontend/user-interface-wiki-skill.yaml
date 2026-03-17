@@ -1,0 +1,31 @@
+name: user-interface-wiki-skill
+category: skill
+tagline: Comprehensive UI/UX skill with 119 rules across animations, timings, UX laws,
+  ty
+description: 'A distilled skill file containing 119 UI/UX rules across 11 categories
+  including animations, timings, UX laws, typography, and audio. Created by Raphael
+  Salaja, it represents a comprehensive guide for building better user interfaces
+  with AI assistance.
+
+
+  **Flux Impact:** Enhances frontend implementation quality by providing systematic
+  UI/UX guidance during agent-assisted development, complementing existing ui-skills
+  with more comprehensive design principles'
+use_cases:
+- Install the userinterface-wiki skill in development environment
+- Reference during frontend implementation phases in Flux workflows
+- Integrate rules into existing UI skills and frontend agent workflows
+- Create Flux brain vault entries for key UI principles from the 119 rules
+install:
+  type: manual
+  command: '# See: https://x.com/i/status/2033945823973671283|https://x.com/i/status/2033945823973671283'
+verification:
+  type: manual
+resources:
+- url: https://x.com/i/status/2033945823973671283|https://x.com/i/status/2033945823973671283
+  type: homepage
+tags: []
+added_date: '2026-03-17'
+source: slack-inbox
+source_url: https://x.com/i/status/2033945823973671283|https://x.com/i/status/2033945823973671283
+sdlc_phase: Implementation
