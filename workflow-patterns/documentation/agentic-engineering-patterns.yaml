@@ -1,0 +1,31 @@
+name: agentic-engineering-patterns
+category: workflow-pattern
+tagline: Best practices documentation for coding with AI agents
+description: A curated collection of patterns and best practices for working with
+  AI coding agents. Each article is concise (<5 minutes) and focuses on practical
+  approaches for AI-assisted development.
+install:
+  type: manual
+  command: Visit the website to read the documentation
+verification:
+  type: manual
+resources:
+- url: https://t.co/2lJNVUEEuZ
+  type: homepage
+tags:
+- ai-agents
+- best-practices
+- documentation
+- patterns
+added_date: '2026-03-17'
+source: x-discovery
+source_url: https://x.com/nummanali/status/2033500799641207226
+mentions:
+- url: https://x.com/nummanali/status/2033500799641207226
+  author: '@nummanali'
+  text: "Agentic Engineering Patterns from @simonw is awesome \n\nIt’s his ever growing\
+    \ project on documenting the best practices with coding agents \n\nhttps://t.co/2lJNVUEEuZ\n\
+    \nEach article is short and sweet &lt;5mins per read \n\nYou have to read these\
+    \ if you’re a beginner https://t.co/63gNB"
+  date: '2026-03-17'
+  likes: 249

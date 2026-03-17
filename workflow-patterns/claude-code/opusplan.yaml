@@ -1,0 +1,37 @@
+name: opusplan
+category: workflow-pattern
+tagline: Hybrid Claude model that uses Opus for planning, Sonnet for execution
+description: A Claude Code feature that combines the best of both models - Opus for
+  complex reasoning and planning, then automatically switches to Sonnet for code execution.
+  Accessed via /model opusplan command in Claude Code interface.
+install:
+  type: skill
+  command: /model opusplan
+verification:
+  type: manual
+resources: []
+tags:
+- claude
+- ai-coding
+- model-switching
+- planning
+- execution
+added_date: '2026-03-17'
+source: x-discovery
+source_url: https://x.com/dani_avila7/status/2033573729687478649
+mentions:
+- url: https://x.com/dani_avila7/status/2033573729687478649
+  author: '@dani_avila7'
+  text: 'Did you know about the opusplan model in Claude Code?
+
+
+    /model opusplan
+
+
+    It''s a hybrid alias that automatically uses Opus in plan mode for complex reasoning,
+    then switches to Sonnet for execution.
+
+
+    Best of both worlds: Opus thinks, Sonnet builds https://t.co/r7un0X5bVg'
+  date: '2026-03-17'
+  likes: 2651
