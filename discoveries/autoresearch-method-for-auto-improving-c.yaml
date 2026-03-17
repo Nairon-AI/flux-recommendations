@@ -1,0 +1,31 @@
+name: autoresearch-method-for-auto-improving-c
+category: article
+tagline: Andrej Karpathy's autoresearch method applied to automatically improve Claude
+  sk
+description: 'A systematic method for auto-improving Claude skills using Karpathy''s
+  autoresearch approach. The agent iteratively tests skill variations against a checklist,
+  keeping improvements and reverting failures. The author''s landing page skill improved
+  from 56% to 92% pass rate through 4 rounds of autonomous refinement.
+
+
+  **Flux Impact:** Enables autonomous skill optimization in our Agentic SDLC - agents
+  can automatically improve their own capabilities through systematic testing and
+  refinement loops'
+use_cases:
+- Build autoresearch skill for Flux plugin
+- Add skill evaluation framework with yes/no checklists
+- Create optimization dashboard with live progress tracking
+- Integrate findings into flux:meditate for skill evolution
+install:
+  type: manual
+  command: '# See: https://x.com/i/status/2033919415771713715|https://x.com/i/status/2033919415771713715'
+verification:
+  type: manual
+resources:
+- url: https://x.com/i/status/2033919415771713715|https://x.com/i/status/2033919415771713715
+  type: homepage
+tags: []
+added_date: '2026-03-17'
+source: slack-inbox
+source_url: https://x.com/i/status/2033919415771713715|https://x.com/i/status/2033919415771713715
+sdlc_phase: Planning
