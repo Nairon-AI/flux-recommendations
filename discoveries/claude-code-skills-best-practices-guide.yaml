@@ -1,0 +1,35 @@
+name: claude-code-skills-best-practices-guide
+category: article
+tagline: Anthropic's comprehensive guide to building, organizing, and distributing
+  skills
+description: 'Thariq from Anthropic shares lessons learned from building hundreds
+  of skills for Claude Code. The article categorizes skills into 9 types (Library
+  Reference, Product Verification, Data Analysis, Business Process, Code Scaffolding,
+  Quality Review, CI/CD, Runbooks, Infrastructure Ops) and provides detailed implementation
+  guidance including progressive disclosure, gotchas sections, and skill composition
+  patterns.
+
+
+  **Flux Impact:** This directly improves our Agentic SDLC by providing a proven framework
+  for organizing and improving our skill library. The 9 skill categories help identify
+  coverage gaps, while the implementation patterns (gotchas, progressive disclosure,
+  memory) make our skills more reliable and effective for AI agents.'
+use_cases:
+- Audit existing Flux skills and categorize them using the 9 types framework
+- Add dedicated 'Gotchas' sections to all Flux skills based on common failure patterns
+- Implement progressive disclosure in complex skills using file system structure
+- Optimize skill description fields to improve Claude's skill selection accuracy
+- Create skill usage tracking similar to Anthropic's PreToolUse hook pattern
+install:
+  type: manual
+  command: '# See: https://x.com/trq212/status/2033949937936085378'
+verification:
+  type: manual
+resources:
+- url: https://x.com/trq212/status/2033949937936085378
+  type: homepage
+tags: []
+added_date: '2026-03-17'
+source: slack-inbox
+source_url: https://x.com/trq212/status/2033949937936085378
+sdlc_phase: Planning
