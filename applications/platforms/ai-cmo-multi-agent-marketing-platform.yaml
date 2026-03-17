@@ -1,0 +1,31 @@
+name: ai-cmo-multi-agent-marketing-platform
+category: tool
+tagline: Platform that deploys a team of AI agents to automatically handle marketing,
+  tra
+description: 'An AI-powered Chief Marketing Officer platform that automatically analyzes
+  websites and deploys specialized agent teams for marketing tasks. The system appears
+  to handle traffic generation, user acquisition, and comprehensive marketing strategy
+  execution through coordinated AI agents.
+
+
+  **Flux Impact:** This demonstrates advanced multi-agent orchestration that could
+  inspire how Flux deploys specialized development agents for different tasks like
+  security reviews, testing, documentation, and code quality checks.'
+use_cases:
+- Research the agent coordination patterns used in AI CMO platform
+- Explore how marketing agent specialization could inspire development agent roles
+- Investigate the website analysis → agent deployment pipeline for codebase analysis
+  workflows
+install:
+  type: manual
+  command: '# See: https://x.com/askOkara/status/2033562024651968657?s=20'
+verification:
+  type: manual
+resources:
+- url: https://x.com/askOkara/status/2033562024651968657?s=20
+  type: homepage
+tags: []
+added_date: '2026-03-17'
+source: slack-inbox
+source_url: https://x.com/askOkara/status/2033562024651968657?s=20
+sdlc_phase: Planning
