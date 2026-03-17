@@ -1,0 +1,31 @@
+name: openviking-context-database-for-ai-agent
+category: repo
+tagline: 'A context database with file system paradigm for AI agents that manages
+  memory, '
+description: 'OpenViking is an open-source context database specifically designed
+  for AI agents like OpenClaw. It unifies management of context (memory, resources,
+  and skills) through a file system paradigm, enabling hierarchical context delivery
+  and self-evolving capabilities for agent workflows.
+
+
+  **Flux Impact:** Could enhance Flux''s agent orchestration by providing structured
+  context management and memory persistence across agent sessions, improving the effectiveness
+  of our multi-agent workflows'
+use_cases:
+- Research OpenViking's file system context paradigm for agent memory management
+- Evaluate integration with Flux's existing agent orchestration system
+- Test hierarchical context delivery for multi-agent workflows
+- Compare with existing context management approaches in Flux brain vault
+install:
+  type: manual
+  command: '# See: https://github.com/volcengine/OpenViking'
+verification:
+  type: manual
+resources:
+- url: https://github.com/volcengine/OpenViking
+  type: homepage
+tags: []
+added_date: '2026-03-17'
+source: slack-inbox
+source_url: https://github.com/volcengine/OpenViking
+sdlc_phase: Planning
