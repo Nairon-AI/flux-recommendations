@@ -1,0 +1,32 @@
+name: fabro-dark-software-factory-framework
+category: tool
+tagline: 'Open-source Rust-based framework that layers deterministic workflow graphs
+  over '
+description: 'Fabro is a single Rust binary that provides structured workflow orchestration
+  for AI coding agents, moving beyond the basic REPL pattern to deterministic workflow
+  graphs. It includes cloud sandboxes for isolated execution, quality sign-offs for
+  validation gates, multi-model ensembles for reliability, and Git checkpoints for
+  version control integration.
+
+
+  **Flux Impact:** Provides the deterministic workflow execution layer that complements
+  Flux''s planning and reflection capabilities, potentially solving the ''long tasks
+  implode'' problem through structured workflow graphs and checkpoints.'
+use_cases:
+- Test Fabro with existing Flux workflows to evaluate workflow graph capabilities
+- Explore multi-model ensemble features for quality validation patterns
+- Investigate cloud sandbox integration for isolated agent execution
+- Consider Fabro as orchestration layer for Symphony-style parallel agents
+install:
+  type: manual
+  command: '# See: https://x.com/i/status/2033901199603241012|https://x.com/i/status/2033901199603241012'
+verification:
+  type: manual
+resources:
+- url: https://x.com/i/status/2033901199603241012|https://x.com/i/status/2033901199603241012
+  type: homepage
+tags: []
+added_date: '2026-03-18'
+source: slack-inbox
+source_url: https://x.com/i/status/2033901199603241012|https://x.com/i/status/2033901199603241012
+sdlc_phase: Implementation
