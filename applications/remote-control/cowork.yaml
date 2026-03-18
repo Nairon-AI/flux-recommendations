@@ -1,0 +1,37 @@
+name: cowork
+category: application
+tagline: Phone as remote control for Claude running on desktop
+description: Cowork allows you to use your phone as a remote control interface for
+  Claude running on your desktop computer. It uses a walkie talkie-style interaction
+  model to bridge mobile and desktop AI workflows.
+install:
+  type: manual
+  command: unknown - details not provided
+verification:
+  type: manual
+resources:
+- url: unknown
+  type: homepage
+- url: unknown
+  type: github
+tags:
+- claude
+- mobile
+- remote-control
+- desktop
+added_date: '2026-03-18'
+source: x-discovery
+source_url: https://x.com/dani_avila7/status/2034021040007917682
+mentions:
+- url: https://x.com/dani_avila7/status/2034021040007917682
+  author: '@dani_avila7'
+  text: 'Testing Cowork from my phone.
+
+    The walkie talkie analogy is spot on,  your phone becomes a remote control that
+    talks to Claude running on your desktop.
+
+
+    One more to the weekend testing list... stay tuned, post incoming on how it works.
+    https://t.co/t3SNJUYGai'
+  date: '2026-03-18'
+  likes: 480

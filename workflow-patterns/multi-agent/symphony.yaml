@@ -43,3 +43,29 @@ mentions:
     \ to human review (or auto merge of low risk)"
   date: '2026-03-16'
   likes: 486
+- url: https://x.com/ryancarson/status/2034207143453237527
+  author: '@ryancarson'
+  text: "Okay, explored the codebase more, and this is not a replacement for Symphony.\
+    \ \n\nIt lacks the orchestration ability to shepherd issues from to-do to merged.\n\
+    \nI think that final version is something like Open SWE + Symphony."
+  date: '2026-03-18'
+  likes: 6
+- url: https://x.com/ryancarson/status/2034188569258958878
+  author: '@ryancarson'
+  text: 'This is very exciting.
+
+
+    It’s an open source version of Ramp’s Inspect.
+
+
+    Will be digging into this - could be a much more powerful replacement for Symphony'
+  date: '2026-03-18'
+  likes: 31
+- url: https://x.com/ryancarson/status/2033894230247010712
+  author: '@ryancarson'
+  text: "If I could solve the token-hungry problem of Symphony, it would be the perfect\
+    \ Code Factory for my needs. \n\nBut why the hell Anthropic, OpenAI or Google,\
+    \ Meta hasn’t done this yet, I don’t know.\n\nNone of us *want* to build the orchestration\
+    \ platform - we’re just doing it because "
+  date: '2026-03-18'
+  likes: 124

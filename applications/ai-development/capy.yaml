@@ -1,0 +1,37 @@
+name: capy
+category: application
+tagline: AI-powered tool for planning, building, testing and shipping self-healing
+  PRs
+description: Capy appears to be an AI-assisted development platform that automates
+  the entire PR lifecycle from planning to shipping. It focuses on creating 'self-healing'
+  pull requests, suggesting it can automatically fix issues that arise during the
+  development process.
+install:
+  type: manual
+  command: Visit website for setup
+verification:
+  type: manual
+resources:
+- url: https://t.co/KfXrit4twe
+  type: homepage
+tags:
+- ai-development
+- pull-requests
+- automation
+- self-healing
+added_date: '2026-03-18'
+source: x-discovery
+source_url: https://x.com/justinsunyt/status/2033961060655591863
+mentions:
+- url: https://x.com/justinsunyt/status/2033961060655591863
+  author: '@justinsunyt'
+  text: 'Introducing Capy
+
+
+    Plan, build, test, review and ship self-healing PRs from everywhere your team
+    works
+
+
+    https://t.co/KfXrit4twe'
+  date: '2026-03-18'
+  likes: 134

@@ -1,0 +1,36 @@
+name: flashcompact
+category: application
+tagline: Specialized model for compacting AI context at 33k tokens/sec
+description: FlashCompact is a specialized model designed for context compaction in
+  AI workflows, capable of processing 33,000 tokens per second and reducing context
+  from 200k to 50k tokens in approximately 1.5 seconds. This tool is particularly
+  valuable for AI-assisted development where managing large codebases and context
+  windows efficiently is crucial for performance.
+install:
+  type: manual
+  command: Details not provided in tweet
+verification:
+  type: manual
+resources: []
+tags:
+- context-compression
+- performance
+- ai-optimization
+- token-management
+added_date: '2026-03-18'
+source: x-discovery
+source_url: https://x.com/realmcore_/status/2033986606584254830
+mentions:
+- url: https://x.com/realmcore_/status/2033986606584254830
+  author: '@realmcore_'
+  text: 'RT @morphllm: Introducing FlashCompact - the first specialized model for
+    context compaction
+
+
+    33k tokens/sec
+
+    200k → 50k in ~1.5s
+
+    Fast, high…'
+  date: '2026-03-18'
+  likes: 1797

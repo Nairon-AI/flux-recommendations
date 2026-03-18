@@ -127,3 +127,26 @@ mentions:
     You’re awesome! 👏 https://t.co/EyvspH9kIo'
   date: '2026-03-17'
   likes: 19
+- url: https://x.com/dani_avila7/status/2034062575575371990
+  author: '@dani_avila7'
+  text: 'First tests of Cowork Dispatch feature
+
+
+    Here I''m starting a session on my computer, asking it to check the latest PRs
+    in my GitHub repo https://t.co/gRHrcuZwJk'
+  date: '2026-03-18'
+  likes: 44
+- url: https://x.com/ryancarson/status/2033958219891028302
+  author: '@ryancarson'
+  text: 'This is how a code factory should work.
+
+
+    I was waiting at the doc’s office and filed 6 bugs - all from my phone.
+
+
+    1 is already merged, 2nd is merging, 3-6 are getting done in parallel.
+
+
+    Using Symphony + Codex (Elixir, Codex App Server, Linear, GitHub) https://t.co/ZpTEw3GEB8'
+  date: '2026-03-18'
+  likes: 567

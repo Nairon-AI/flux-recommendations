@@ -1,0 +1,31 @@
+name: unsloth
+category: application
+tagline: Tool for training and running AI models locally with ease
+description: Unsloth provides an easy way to train and run AI models locally through
+  their Studio interface. It simplifies the process of local model training, which
+  is becoming increasingly important for AI development workflows and can be integrated
+  with AI-assisted coding tools.
+install:
+  type: manual
+  command: Visit Unsloth Studio
+verification:
+  type: manual
+resources: []
+tags:
+- local-models
+- model-training
+- ai-development
+added_date: '2026-03-18'
+source: x-discovery
+source_url: https://x.com/nummanali/status/2033934477781512291
+mentions:
+- url: https://x.com/nummanali/status/2033934477781512291
+  author: '@nummanali'
+  text: 'Learning to train and run models locally is no longer optional if you want
+    to live in the future
+
+
+    Unsloth have made is very easy, you should take some time this week and fire up
+    the Studio'
+  date: '2026-03-18'
+  likes: 112

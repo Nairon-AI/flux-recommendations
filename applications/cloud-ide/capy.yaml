@@ -1,0 +1,36 @@
+name: capy
+category: application
+tagline: AI agent that plans, builds, tests, and reviews code in the cloud
+description: Capy is a cloud-based AI development agent that handles the full development
+  lifecycle including planning, building, testing, and code review. It offers multiplayer
+  collaboration capabilities on web and mobile platforms, providing an integrated
+  AI-assisted development environment.
+install:
+  type: manual
+  command: Access via web platform
+verification:
+  type: manual
+resources:
+- url: https://capy.ai
+  type: homepage
+tags:
+- ai-agent
+- cloud-ide
+- code-review
+- testing
+- multiplayer
+added_date: '2026-03-18'
+source: x-discovery
+source_url: https://x.com/justinsunyt/status/2033967250634653957
+mentions:
+- url: https://x.com/justinsunyt/status/2033967250634653957
+  author: '@justinsunyt'
+  text: 'RT @capydotai: Introducing Capy
+
+
+    The agent that plans, builds, tests, and reviews your code - all in the cloud
+
+
+    Multiplayer on web, mobile,…'
+  date: '2026-03-18'
+  likes: 438
