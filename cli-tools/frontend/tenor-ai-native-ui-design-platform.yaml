@@ -1,0 +1,33 @@
+name: tenor-ai-native-ui-design-platform
+category: tool
+tagline: 'AI-powered tool for creating precise, reusable UI components with direct
+  export '
+description: 'Tenor is an AI-native design platform that generates production-ready
+  UI components from references or descriptions. Users can drop screenshots or describe
+  components, and Tenor builds interactive, customizable components with precise controls
+  for styling parameters. The platform focuses on individual components rather than
+  full pages or templates.
+
+
+  **Flux Impact:** Directly addresses the ''AI agents have no taste'' problem by providing
+  a systematic way to create high-quality UI components that can be exported to Claude
+  Code. This improves the Implementation phase by giving agents access to pre-designed,
+  tasteful components rather than generating generic UI from scratch.'
+use_cases:
+- Sign up for early access to Tenor platform
+- Create standardized UI component library using Tenor
+- Establish workflow for exporting Tenor components to Claude Code
+- Document component design patterns in brain vault for AI agents
+install:
+  type: manual
+  command: '# See: https://tenor.design/'
+verification:
+  type: manual
+resources:
+- url: https://tenor.design/
+  type: homepage
+tags: []
+added_date: '2026-03-19'
+source: slack-inbox
+source_url: https://tenor.design/
+sdlc_phase: Planning
