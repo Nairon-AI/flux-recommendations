@@ -1,0 +1,32 @@
+name: unslop-anti-pattern-detection-and-preven
+category: repo
+tagline: Open-source tool that automatically detects and prevents AI-generated slop
+  patte
+description: 'UNSLOP is an open-source system that analyzes hundreds of AI-generated
+  outputs to identify common ''slop'' patterns (low-quality, repetitive AI content).
+  It then automatically generates prevention skills to ensure these patterns never
+  appear again in future AI outputs.
+
+
+  **Flux Impact:** Directly addresses the anti-slop quality problem in our Agentic
+  SDLC - provides systematic detection and prevention of AI-generated code quality
+  issues, enhancing our quality-auditor agent and workflow-patterns/review processes'
+use_cases:
+- Star and clone the UNSLOP repository
+- Test UNSLOP on existing AI-generated code in projects
+- Create Flux skill wrapper for UNSLOP pattern detection
+- Integrate UNSLOP checks into quality-auditor agent
+- Add UNSLOP to flux:prime tooling analysis
+install:
+  type: manual
+  command: '# See: https://x.com/mattshumer_/status/2034357815171813546?s=20'
+verification:
+  type: manual
+resources:
+- url: https://x.com/mattshumer_/status/2034357815171813546?s=20
+  type: homepage
+tags: []
+added_date: '2026-03-19'
+source: slack-inbox
+source_url: https://x.com/mattshumer_/status/2034357815171813546?s=20
+sdlc_phase: Code Review
