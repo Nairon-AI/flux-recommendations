@@ -1,0 +1,31 @@
+name: morph-warpgrep-ai-repository-search
+category: tool
+tagline: AI-powered code search tool that enables instant exploration of any GitHub
+  repos
+description: 'Morph''s WarpGrep provides AI-powered search across GitHub repositories,
+  allowing developers to instantly explore codebases without loading full context.
+  It includes Fast Apply for 2x faster code edits and appears to be designed specifically
+  to improve coding agent workflows by preventing context degradation during repository
+  exploration.
+
+
+  **Flux Impact:** Significantly improves our Agentic SDLC by solving the context
+  rot problem during repository exploration, enabling agents to maintain focus while
+  gathering implementation patterns from external codebases'
+use_cases:
+- Test WarpGrep API integration with Flux's github-scout agent
+- Evaluate Fast Apply feature for flux:work implementation speed
+- Create skill wrapper for WarpGrep repository exploration patterns
+install:
+  type: manual
+  command: '# See: https://www.morphllm.com/|https://www.morphllm.com/'
+verification:
+  type: manual
+resources:
+- url: https://www.morphllm.com/|https://www.morphllm.com/
+  type: homepage
+tags: []
+added_date: '2026-03-19'
+source: slack-inbox
+source_url: https://www.morphllm.com/|https://www.morphllm.com/
+sdlc_phase: Planning
