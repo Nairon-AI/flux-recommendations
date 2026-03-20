@@ -1,0 +1,40 @@
+name: open-inspect
+category: application
+tagline: OSS code inspection agent callable from Slack with Modal sandboxes
+description: Open source version of Ramp's Inspect agent that provides code inspection
+  capabilities. It can be called directly from Slack and uses Modal sandboxes for
+  fast execution, making code analysis accessible through chat interfaces.
+install:
+  type: manual
+  command: See GitHub repository for setup instructions
+verification:
+  type: manual
+resources:
+- url: https://t.co/ZmvZeP3tko
+  type: homepage
+tags:
+- code-analysis
+- slack-integration
+- open-source
+- sandboxes
+added_date: '2026-03-20'
+source: x-discovery
+source_url: https://x.com/ryancarson/status/2034674203400491405
+mentions:
+- url: https://x.com/ryancarson/status/2034674203400491405
+  author: '@ryancarson'
+  text: 'Got Open Inspect setup by @_colemurray and it''s showing a lot of promise.
+
+
+    It''s an OSS version of Ramp''s Inspect agent.
+
+
+    Callable from Slack.
+
+
+    So far the @modal sandboxes are fast and fab.
+
+
+    https://t.co/ZmvZeP3tko'
+  date: '2026-03-20'
+  likes: 148

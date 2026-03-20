@@ -1,0 +1,31 @@
+name: dispatch
+category: application
+tagline: Task runner that can launch Claude Code sessions for building projects
+description: Dispatch is a task runner application that integrates with Claude Code,
+  allowing users to ask Claude to build, make, or improve projects directly through
+  the Dispatch interface. This provides a streamlined workflow for AI-assisted development
+  by combining task management with Claude's coding capabilities.
+install:
+  type: manual
+  command: ''
+verification:
+  type: manual
+resources: []
+tags:
+- claude-code
+- task-runner
+- ai-integration
+- development-workflow
+added_date: '2026-03-20'
+source: x-discovery
+source_url: https://x.com/_catwu/status/2034842861372678498
+mentions:
+- url: https://x.com/_catwu/status/2034842861372678498
+  author: '@_catwu'
+  text: 'RT @felixrieseberg: By popular demand, Dispatch can now launch Claude Code
+    sessions. Ask it to build, make, or improve something!
+
+
+    To use i…'
+  date: '2026-03-20'
+  likes: 2390
