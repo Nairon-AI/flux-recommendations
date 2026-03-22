@@ -1,0 +1,32 @@
+name: diffity-github-style-diff-viewer
+category: repo
+tagline: GitHub-style diff viewer for reviewing code changes, specifically designed
+  to wo
+description: 'Diffity provides a GitHub-style diff viewer that enables structured
+  code review outside of the GitHub interface. It''s specifically designed to work
+  with AI coding tools like Claude Code and Cursor, allowing developers to review
+  changes in a familiar format before committing or during implementation phases.
+
+
+  **Flux Impact:** Enhances our Agentic SDLC by providing visual diff context that
+  helps both human reviewers and AI agents understand code changes more effectively.
+  Particularly valuable for the Code Review phase where visual representation of changes
+  improves review quality.'
+use_cases:
+- Test Diffity integration with Flux review workflows
+- Create a Flux skill that automatically opens Diffity for large changesets
+- Add Diffity to recommended tools in Flux setup process
+- Document best practices for using Diffity with Claude Code workflows
+install:
+  type: manual
+  command: '# See: https://github.com/kamranahmedse/diffity'
+verification:
+  type: manual
+resources:
+- url: https://github.com/kamranahmedse/diffity
+  type: homepage
+tags: []
+added_date: '2026-03-22'
+source: slack-inbox
+source_url: https://github.com/kamranahmedse/diffity
+sdlc_phase: Code Review
