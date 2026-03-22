@@ -1,0 +1,31 @@
+name: shadify-generative-ui-with-shadcn-compon
+category: tool
+tagline: Shadify generates UI components from text descriptions using ShadCN, LangChain
+  a
+description: 'Shadify is a generative UI tool that uses LangChain agents to compose
+  ShadCN components on-the-fly from natural language descriptions. It leverages AG-UI
+  and CopilotKit to provide an interactive interface where users can describe desired
+  UI elements and get functional React components that can be exported as code.
+
+
+  **Flux Impact:** Enhances our Agentic SDLC by providing AI agents the ability to
+  generate production-ready UI components from natural language, speeding up frontend
+  implementation phases and reducing the context needed for UI development tasks.'
+use_cases:
+- Test Shadify's component generation quality and ShadCN integration
+- Create flux skill wrapper for shadify UI generation workflow
+- Add to frontend development task templates in flux-plan
+- Document integration patterns with existing UI skills
+install:
+  type: manual
+  command: '# See: https://x.com/ataiiam/status/2035728142095339677?s=20'
+verification:
+  type: manual
+resources:
+- url: https://x.com/ataiiam/status/2035728142095339677?s=20
+  type: homepage
+tags: []
+added_date: '2026-03-22'
+source: slack-inbox
+source_url: https://x.com/ataiiam/status/2035728142095339677?s=20
+sdlc_phase: Implementation
