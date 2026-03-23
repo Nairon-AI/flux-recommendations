@@ -1,0 +1,29 @@
+name: kapso-cli-whatsapp-numbers-for-agents
+category: tool
+tagline: Kapso CLI gives AI agents WhatsApp phone numbers for direct messaging integratio
+description: 'Kapso CLI is a command-line tool that provisions WhatsApp phone numbers
+  for AI agents, enabling them to send and receive messages through WhatsApp. The
+  setup is straightforward with just npm install and kapso setup commands.
+
+
+  **Flux Impact:** Enables direct WhatsApp communication channels for Flux agents,
+  allowing real-time notifications about build status, code reviews, or task completion
+  to developers via their preferred messaging platform'
+use_cases:
+- Test Kapso CLI installation and setup process
+- Explore WhatsApp API capabilities for agent messaging
+- Consider integration patterns for Flux workflow notifications
+- Document agent-to-human communication workflows via WhatsApp
+install:
+  type: manual
+  command: '# See: https://x.com/andresmatte/status/2036061707529834773?s=20'
+verification:
+  type: manual
+resources:
+- url: https://x.com/andresmatte/status/2036061707529834773?s=20
+  type: homepage
+tags: []
+added_date: '2026-03-23'
+source: slack-inbox
+source_url: https://x.com/andresmatte/status/2036061707529834773?s=20
+sdlc_phase: Implementation
