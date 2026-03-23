@@ -1,0 +1,50 @@
+name: naironai-design-engineering-resources
+category: application
+tagline: Design engineering resources to help devs build software with taste
+description: |
+  NaironAI Design is a curated hub of design engineering resources for developers who want
+  to build beautiful UIs fast. It aggregates 60+ component libraries, landing page templates,
+  AI-powered design tools, animation libraries, icon sets, and inspiration galleries — all in
+  one place. Ideal for developers frustrated with AI-generated UI slop or anyone who wants to
+  level up the frontend of their apps without spending days hunting for resources.
+
+  **Flux Impact:** Developers can reference these curated resources (component libraries,
+  animation tools, design inspiration) when building or improving frontend interfaces,
+  dramatically reducing the time to achieve polished, production-quality UI.
+use_cases:
+  - Improving the design quality of AI-generated interfaces
+  - Finding component libraries and UI kits for rapid frontend development
+  - Discovering animation and motion design tools (Rive, AnimeJS, etc.)
+  - Getting design inspiration from curated galleries (Dribbble, Mobbin, etc.)
+  - Finding landing page templates for quick project launches
+  - Bridging the gap between design and engineering with design engineering resources
+install:
+  type: manual
+  command: "# Browse: https://design.naironai.com/"
+verification:
+  type: manual
+  success_indicator: "Visit https://design.naironai.com/ and browse available resources"
+related_tools:
+  - desengs-design-engineering-resource-coll
+resources:
+  - url: https://design.naironai.com/
+    type: homepage
+tags:
+  - design
+  - ui
+  - frontend
+  - component-libraries
+  - design-engineering
+  - animation
+  - templates
+  - inspiration
+added_date: "2026-03-22"
+source: manual
+source_url: https://design.naironai.com/
+ratings:
+  usefulness: 5
+  setup_difficulty: 1
+sdlc_phase: implementation
+pricing:
+  model: free
+  details: "Free curated resource hub"
