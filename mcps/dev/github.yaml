@@ -150,3 +150,26 @@ mentions:
     Using Symphony + Codex (Elixir, Codex App Server, Linear, GitHub) https://t.co/ZpTEw3GEB8'
   date: '2026-03-18'
   likes: 567
+- url: https://x.com/dani_avila7/status/2035787655598801173
+  author: '@dani_avila7'
+  text: 'To get Claude Code job listings, a GitHub Action runs every day at 6AM
+
+
+    Scrapes data from multiple sources and pipes everything into generate_claude_jobs.py
+    https://t.co/vjuY86jmoU'
+  date: '2026-03-23'
+  likes: 24
+- url: https://x.com/dani_avila7/status/2035746012027883818
+  author: '@dani_avila7'
+  text: 'Every Sunday I get a Telegram report on how Claude Code Templates is doing
+
+
+    Looks like the GitHub access token expired…
+
+
+    Opening Claude Code Mobile to fix it and re-run the Telegram report
+
+
+    Programming in 2026 is beautiful 😍 https://t.co/ZCLLeMj2xa'
+  date: '2026-03-23'
+  likes: 53
