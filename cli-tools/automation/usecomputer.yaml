@@ -1,0 +1,31 @@
+name: usecomputer
+category: cli-tool
+tagline: CLI tool written in Zig for AI agents to control computer mouse & keyboard
+description: A command-line interface that enables AI agents to control computer peripherals
+  including mouse and keyboard interactions. Specifically designed to handle challenging
+  automation tasks like accepting macOS permission dialogs, making it useful for AI-assisted
+  workflows that require system-level interactions.
+install:
+  type: manual
+  command: Installation method not specified in tweet
+verification:
+  type: manual
+resources: []
+tags:
+- automation
+- ai-agents
+- system-control
+- zig
+- macos
+added_date: '2026-03-24'
+source: x-discovery
+source_url: https://x.com/__morse/status/2036229008963010729
+mentions:
+- url: https://x.com/__morse/status/2036229008963010729
+  author: '@__morse'
+  text: "introducing usecomputer\n\na cli written in Zig to let any agent control\
+    \ a computer mouse & keyboard\n\nthe hardest part of controlling a remote agent\
+    \ is accepting macOS permission dialogs. \n\nhere is an example of Opus enabling\
+    \ a security setting via useomputer, kimaki & opencode \n\nw"
+  date: '2026-03-24'
+  likes: 604

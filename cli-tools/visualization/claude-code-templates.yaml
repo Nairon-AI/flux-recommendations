@@ -81,3 +81,11 @@ mentions:
     Link: https://t.co/1PAr4XxL96 https://t.co/cudHwNfDsK'
   date: '2026-03-13'
   likes: 16
+- url: https://x.com/dani_avila7/status/2036134966732460531
+  author: '@dani_avila7'
+  text: "When I'm working through a new codebase or docs, I ask an image model to\
+    \ generate a diagram or infographic\n\nso, I tried the new Uni-1 by @LumaLabsAI\
+    \ \n\nI gave it the claude-code-templates repo structure and asked it to map the\
+    \ full agent workflow:\n- CLI install\n- component selecti"
+  date: '2026-03-24'
+  likes: 7

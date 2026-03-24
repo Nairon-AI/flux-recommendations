@@ -1,0 +1,40 @@
+name: claude-code-new-init
+category: workflow-pattern
+tagline: Automated Claude Code setup with codebase scanning and configuration
+description: A new initialization feature for Claude Code that automatically interviews
+  users, scans their codebase, and sets up CLAUDE.md files, skills, and hooks. This
+  streamlines the onboarding process for AI-assisted development with Claude Code
+  by automating the initial configuration steps.
+install:
+  type: manual
+  command: 'Add "CLAUDE_CODE_NEW_INIT": "1" to settings.json'
+verification:
+  type: manual
+resources: []
+tags:
+- claude-code
+- setup
+- automation
+- configuration
+- onboarding
+added_date: '2026-03-24'
+source: x-discovery
+source_url: https://x.com/dani_avila7/status/2036103229327790560
+mentions:
+- url: https://x.com/dani_avila7/status/2036103229327790560
+  author: '@dani_avila7'
+  text: 'The Claude Code team is testing a new /init built from community feedback
+
+
+    If you wanna try it just add this to your settings.json
+
+    "CLAUDE_CODE_NEW_INIT": "1"
+
+
+    It interviews you, scans your codebase, and sets up CLAUDE.md, skills, and  hooks
+    automatically.
+
+
+    I tested it on a my re'
+  date: '2026-03-24'
+  likes: 648

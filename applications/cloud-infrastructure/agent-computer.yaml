@@ -1,0 +1,32 @@
+name: agent-computer
+category: application
+tagline: Cloud computers for AI agents with persistent storage and SSH access
+description: Agent Computer provides cloud-based computing environments specifically
+  designed for AI agents. It offers sub-0.5s startup times, persistent disk storage,
+  shared credentials, and SSH access, making it ideal for AI-assisted development
+  workflows that need reliable cloud infrastructure.
+install:
+  type: manual
+  command: Registration required on platform
+verification:
+  type: manual
+resources: []
+tags:
+- cloud-computing
+- ai-agents
+- infrastructure
+- ssh
+- persistent-storage
+added_date: '2026-03-24'
+source: x-discovery
+source_url: https://x.com/justinsunyt/status/2036139011140428200
+mentions:
+- url: https://x.com/justinsunyt/status/2036139011140428200
+  author: '@justinsunyt'
+  text: 'RT @advaitpaliwal: Introducing Agent Computer
+
+
+    Cloud computers for AI agents in &lt;0.5s with persistent disk, shared credentials,
+    and SSH acc…'
+  date: '2026-03-24'
+  likes: 903

@@ -1,0 +1,35 @@
+name: grill-me-skill
+category: skill
+tagline: MCP skill that asks probing questions to understand your coding needs
+description: A Claude MCP skill that 'grills' you with targeted questions to better
+  understand your requirements before providing solutions. Works for both coding and
+  non-coding tasks, helping Claude give more precise and relevant responses by gathering
+  context upfront.
+install:
+  type: mcp
+  command: Add to Claude MCP configuration
+verification:
+  type: manual
+resources:
+- url: https://github.com/mattpocock/skills
+  type: github
+tags:
+- mcp
+- claude
+- questioning
+- requirements
+- context
+added_date: '2026-03-24'
+source: x-discovery
+source_url: https://x.com/mattpocockuk/status/2036076132924100760
+mentions:
+- url: https://x.com/mattpocockuk/status/2036076132924100760
+  author: '@mattpocockuk'
+  text: 'My ''grill-me'' skill went viral. mattpocock/skills is up to 9K stars. Quote
+    tweets of it are doing numbers.
+
+
+    It''s the most useful skill I''ve written, and I use it even outside of coding:
+    https://t.co/hQXPan9oBT'
+  date: '2026-03-24'
+  likes: 2199

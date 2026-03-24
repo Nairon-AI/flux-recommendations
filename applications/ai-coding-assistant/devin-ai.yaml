@@ -1,0 +1,32 @@
+name: devin-ai
+category: application
+tagline: AI software engineer that handles end-to-end development including testing
+description: DevinAI is an AI-powered software development tool that can handle complete
+  end-to-end workflows including browser testing automation. It appears to integrate
+  testing capabilities that would otherwise require complex setups with tools like
+  Playwright, making it particularly useful for startup development workflows.
+install:
+  type: manual
+  command: Visit DevinAI website for access
+verification:
+  type: manual
+resources: []
+tags:
+- ai-assistant
+- browser-testing
+- automation
+- e2e-testing
+added_date: '2026-03-24'
+source: x-discovery
+source_url: https://x.com/ryancarson/status/2036127739619479989
+mentions:
+- url: https://x.com/ryancarson/status/2036127739619479989
+  author: '@ryancarson'
+  text: 'This is how I’m currently running my startup with @DevinAI + @openclaw
+
+
+    The browser testing in Devin is mind-blowing. I was trying to duct tape and jerry-rig
+    all this stuff together with Playwright + uploading videos to PRs and all sorts
+    of stuff and Devin just does it all e2e. W'
+  date: '2026-03-24'
+  likes: 267
