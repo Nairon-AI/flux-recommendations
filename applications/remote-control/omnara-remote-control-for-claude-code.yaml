@@ -1,0 +1,33 @@
+name: omnara-remote-control-for-claude-code
+category: tool
+tagline: Mobile and web client that lets you control Claude Code and Codex sessions
+  remot
+description: 'Omnara is a YC-backed platform that provides mobile and web clients
+  for controlling Claude Code and Codex agents running on your machine. It offers
+  session migration to cloud when your local machine goes offline, voice control for
+  hands-free coding, and multi-device orchestration with seamless context switching.
+
+
+  **Flux Impact:** Extends Flux''s agentic SDLC by enabling mobile control and monitoring
+  of Claude Code sessions, allowing developers to stay connected to their AI workflows
+  while away from their primary development machine. The voice interface supports
+  natural language task delegation that could complement Flux''s planning and execution
+  commands.'
+use_cases:
+- 'Install Omnara CLI: curl -fsSL omnara.com/install.sh | bash'
+- Download mobile app from App Store/Play Store for remote session control
+- Test voice dictation feature for hands-free task delegation to agents
+- Evaluate cloud session migration for continuous development workflows
+install:
+  type: manual
+  command: '# See: https://www.omnara.com/'
+verification:
+  type: manual
+resources:
+- url: https://www.omnara.com/
+  type: homepage
+tags: []
+added_date: '2026-03-25'
+source: slack-inbox
+source_url: https://www.omnara.com/
+sdlc_phase: Implementation
