@@ -1,0 +1,30 @@
+name: auto-maintainer-markdown-based-repositor
+category: tool
+tagline: AI-powered repository management system that enforces rules defined in Markdown,
+description: 'Auto-maintainer allows repository owners to write their governance rules,
+  coding standards, and workflow policies in human-readable Markdown files. An AI
+  agent then continuously enforces these rules by triaging issues, reviewing pull
+  requests, automatically fixing bugs, merging approved code, and cutting releases
+  according to the defined policies.
+
+
+  **Flux Impact:** Enables fully autonomous repository management where AI agents
+  enforce human-defined policies consistently across all SDLC phases, reducing manual
+  oversight while maintaining quality standards'
+use_cases:
+- Create auto-maintainer skill for Flux that generates markdown rule templates
+- Test integration with existing Flux workflows and Ralph guards
+- Document pattern for AI-enforced repository governance in workflow-patterns/
+install:
+  type: manual
+  command: '# See: https://github.com/yazinsai/auto-maintainer'
+verification:
+  type: manual
+resources:
+- url: https://github.com/yazinsai/auto-maintainer
+  type: homepage
+tags: []
+added_date: '2026-03-25'
+source: slack-inbox
+source_url: https://github.com/yazinsai/auto-maintainer
+sdlc_phase: Code Review
