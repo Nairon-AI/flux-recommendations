@@ -1,0 +1,32 @@
+name: expect-cli-automated-browser-testing
+category: tool
+tagline: Automatically scans code changes and generates browser test plans that run
+  again
+description: 'Expect CLI analyzes unstaged changes or branch diffs, automatically
+  generates test plans, and executes them against live browser instances. It provides
+  a skill for Claude Code integration and can be triggered with a single command to
+  validate frontend changes.
+
+
+  **Flux Impact:** Significantly improves our Agentic SDLC by providing automated
+  browser testing that bridges the gap between code implementation and real-world
+  validation. This addresses a common blind spot where agents write frontend code
+  but can''t verify it works in actual browsers.'
+use_cases:
+- Add expect-cli skill to Flux's recommended testing toolkit
+- Create workflow pattern for integrating Expect into flux-work test phases
+- Document setup in flux:prime testing-scout recommendations
+- Consider adding to ralph-guard pre-commit hooks for frontend changes
+install:
+  type: manual
+  command: '# See: https://www.expect.dev/'
+verification:
+  type: manual
+resources:
+- url: https://www.expect.dev/
+  type: homepage
+tags: []
+added_date: '2026-03-25'
+source: slack-inbox
+source_url: https://www.expect.dev/
+sdlc_phase: Testing
