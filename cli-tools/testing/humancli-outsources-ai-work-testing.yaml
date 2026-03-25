@@ -1,0 +1,31 @@
+name: humancli-outsources-ai-work-testing
+category: tweet
+tagline: HumanCLI enables AI agents to pay real humans for testing, visual QA, and
+  UX fee
+description: 'HumanCLI is a service that allows AI agents to automatically commission
+  real humans to test their work. It provides visual QA, real device testing, and
+  actual UX feedback by connecting AI workflows to human validators who can verify
+  functionality and user experience.
+
+
+  **Flux Impact:** Addresses a critical gap in Agentic SDLC by providing human validation
+  without manual coordination - AI agents can autonomously request human feedback
+  when needed, maintaining development velocity while ensuring quality'
+use_cases:
+- Research HumanCLI API and pricing structure
+- Create a skill for automated human testing requests
+- Add human validation option to flux:work workflow
+- Develop guidelines for when human validation is needed vs. automated testing
+install:
+  type: manual
+  command: '# See: https://x.com/DylanFeltus/status/2036509238458196101?s=20'
+verification:
+  type: manual
+resources:
+- url: https://x.com/DylanFeltus/status/2036509238458196101?s=20
+  type: homepage
+tags: []
+added_date: '2026-03-25'
+source: slack-inbox
+source_url: https://x.com/DylanFeltus/status/2036509238458196101?s=20
+sdlc_phase: Testing
