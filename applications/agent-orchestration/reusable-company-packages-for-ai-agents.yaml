@@ -1,0 +1,30 @@
+name: reusable-company-packages-for-ai-agents
+category: tool
+tagline: Companies.sh provides pre-built organizational structures that AI agents
+  can ins
+description: 'Companies.sh offers pre-built organizational packages for AI agents,
+  allowing them to install complete company structures with specialized roles and
+  workflows. Teams include development shops, security firms, creative agencies, and
+  research labs that agents can assume to work as coordinated units.
+
+
+  **Flux Impact:** Enhances our Agentic SDLC by providing pre-built organizational
+  structures that can coordinate multiple AI agents in specialized roles, potentially
+  improving complex project execution through defined company hierarchies and workflows'
+use_cases:
+- Test installing a development company package in a Flux workflow
+- Create a skill that maps company roles to Flux agent capabilities
+- Experiment with coordinating Flux agents through company organizational structures
+install:
+  type: manual
+  command: '# See: https://companies.sh/'
+verification:
+  type: manual
+resources:
+- url: https://companies.sh/
+  type: homepage
+tags: []
+added_date: '2026-03-25'
+source: slack-inbox
+source_url: https://companies.sh/
+sdlc_phase: Planning
