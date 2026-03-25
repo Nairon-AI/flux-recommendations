@@ -1,0 +1,35 @@
+name: openclaw
+category: application
+tagline: Cloud-based AI agent accessible via email for remote development
+description: Openclaw appears to be an AI agent system that can be deployed remotely
+  and interacted with via email. This allows developers to avoid running local development
+  servers and instead manage their development workflow through cloud-based AI agents,
+  potentially streamlining the development process.
+install:
+  type: manual
+  command: Unknown - requires further research
+verification:
+  type: manual
+resources: []
+tags:
+- cloud-development
+- ai-agent
+- email-interface
+- remote-workflow
+added_date: '2026-03-25'
+source: x-discovery
+source_url: https://x.com/ryancarson/status/2036414972209619270
+mentions:
+- url: https://x.com/ryancarson/status/2036414972209619270
+  author: '@ryancarson'
+  text: 'I haven''t typed `npm run dev` on my local machine for three days now and
+    it''s absolute bliss.
+
+
+    Having my agents 100% in the cloud is a massive unlock.
+
+
+    (One of those agents is openclaw, which is technically on my mbp in my office,
+    but the only way I interact with it is via email/'
+  date: '2026-03-25'
+  likes: 191

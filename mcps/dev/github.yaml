@@ -173,3 +173,13 @@ mentions:
     Programming in 2026 is beautiful 😍 https://t.co/ZCLLeMj2xa'
   date: '2026-03-23'
   likes: 53
+- url: https://x.com/dani_avila7/status/2036544431038271496
+  author: '@dani_avila7'
+  text: 'GitHub is down. My agents are trying to push and have no idea how to handle
+    it
+
+
+    We need a hook that triggers whenever GitHub is down and tells Claude it can relax
+    and go grab a coffee https://t.co/tRcdHg6l9v'
+  date: '2026-03-25'
+  likes: 19

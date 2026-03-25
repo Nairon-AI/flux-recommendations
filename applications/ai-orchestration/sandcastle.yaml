@@ -1,0 +1,42 @@
+name: sandcastle
+category: application
+tagline: Orchestrates locally sandboxed coding agents in TypeScript with Docker
+description: Sandcastle enables running AI coding agents (Claude, Codex, OpenCode)
+  in isolated Docker containers while working offline. Changes made in the sandbox
+  are automatically patched back to the host system, allowing safe experimentation
+  with AI-generated code modifications.
+install:
+  type: manual
+  command: Not yet available - tool in development
+verification:
+  type: manual
+resources: []
+tags:
+- docker
+- sandbox
+- ai-agents
+- typescript
+- offline
+- claude
+- codex
+added_date: '2026-03-25'
+source: x-discovery
+source_url: https://x.com/mattpocockuk/status/2036399142008688976
+mentions:
+- url: https://x.com/mattpocockuk/status/2036399142008688976
+  author: '@mattpocockuk'
+  text: 'Working on a tool that orchestrates locally sandboxed coding agents in TypeScript
+
+
+    - Sandboxed in Docker
+
+    - 100% offline: commits made in the sandbox get patched back to the host
+
+    - Build complex workflows in Typescript
+
+    - Claude, Codex, OpenCode
+
+
+    It''s called Sandcastle'
+  date: '2026-03-25'
+  likes: 412
