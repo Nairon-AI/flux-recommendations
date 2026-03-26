@@ -1,0 +1,31 @@
+name: claude-auto-mode
+category: cli-tool
+tagline: Auto mode for Claude Code CLI with enhanced autonomy and safety balance
+description: An auto mode feature for Claude Code CLI that provides improved user
+  experience by balancing AI autonomy with safety controls. The feature is used daily
+  by development teams and can be activated via command line flag and triggered with
+  Shift + Tab for enhanced AI-assisted coding workflows.
+install:
+  type: manual
+  command: claude --enable-auto-mode
+verification:
+  type: manual
+resources: []
+tags:
+- claude
+- ai-coding
+- automation
+- cli
+- productivity
+added_date: '2026-03-26'
+source: x-discovery
+source_url: https://x.com/_catwu/status/2036852880624541938
+mentions:
+- url: https://x.com/_catwu/status/2036852880624541938
+  author: '@_catwu'
+  text: "Auto mode is a step change improvement in the Claude Code UX, balancing autonomy\
+    \ and safety. Almost everyone on our team uses this as a daily driver. \n\nNow\
+    \ available to Claude for Team users! `claude --enable-auto-mode` to turn on,\
+    \ then Shift + Tab to enter the mode"
+  date: '2026-03-26'
+  likes: 393

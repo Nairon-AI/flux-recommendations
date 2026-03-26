@@ -183,3 +183,25 @@ mentions:
     and go grab a coffee https://t.co/tRcdHg6l9v'
   date: '2026-03-25'
   likes: 19
+- url: https://x.com/dani_avila7/status/2036957253085909240
+  author: '@dani_avila7'
+  text: 'Want to know why GitHub keeps going down constantly?
+
+
+    Here''s a good example... I''m getting PRs like this one
+
+
+    One commit, 3000+ files!
+
+
+    Let''s take care of open source before it''s too late https://t.co/7ztApunMS1'
+  date: '2026-03-26'
+  likes: 10
+- url: https://x.com/dani_avila7/status/2036935520379355149
+  author: '@dani_avila7'
+  text: "Claude Code Desktop is bringing GitHub Issues directly into its environment\n\
+    \nThe more this platform evolves, the closer it gets to GitHub... \n\nConnect\
+    \ your PRs straight to CI for every deploy and you've got Claude shipping different\
+    \ versions of your app ready for QA https://t.co/"
+  date: '2026-03-26'
+  likes: 138

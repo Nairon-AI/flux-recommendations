@@ -40,3 +40,30 @@ mentions:
     It''s called Sandcastle'
   date: '2026-03-25'
   likes: 412
+- url: https://x.com/mattpocockuk/status/2036883710633455628
+  author: '@mattpocockuk'
+  text: 'Sandcastle can now:
+
+
+    - Look at a backlog of issues
+
+    - Spawn N number of Claude''s in sandboxes on different worktrees, each tackling
+    an issue
+
+    - Take all that worktree code and merge it back to a target branch
+
+    - All locally
+
+
+    Just Docker and TypeScript needed https://t.co/Pg7QgZvS4Y'
+  date: '2026-03-26'
+  likes: 154
+- url: https://x.com/mattpocockuk/status/2036785849438699830
+  author: '@mattpocockuk'
+  text: '&gt; manages to get parallel execution working in Sandcastle
+
+    &gt; fires off five Opus''s at once
+
+    &gt; rate limit'
+  date: '2026-03-26'
+  likes: 106
