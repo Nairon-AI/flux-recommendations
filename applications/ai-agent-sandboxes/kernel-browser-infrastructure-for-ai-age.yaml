@@ -1,0 +1,31 @@
+name: kernel-browser-infrastructure-for-ai-age
+category: tool
+tagline: Cloud browser infrastructure optimized for AI agents with <30ms spin-up,
+  anti-bo
+description: 'Kernel provides cloud browser infrastructure specifically designed for
+  AI agents and web automations. It offers sub-30ms browser spin-up times, built-in
+  captcha solving, proxy management, session recording, and authentication management
+  to help agents reliably interact with web applications.
+
+
+  **Flux Impact:** Provides reliable browser infrastructure for AI agents that need
+  web access, reducing the complexity of managing browser sessions, auth, and anti-bot
+  measures in agentic workflows.'
+use_cases:
+- Evaluate Kernel for projects requiring web automation or browser-based testing
+- Consider for AI agents that need to interact with web applications reliably
+- Test integration with existing browser automation workflows
+- Assess cost-benefit vs self-hosted browser solutions
+install:
+  type: manual
+  command: '# See: https://www.kernel.sh/'
+verification:
+  type: manual
+resources:
+- url: https://www.kernel.sh/
+  type: homepage
+tags: []
+added_date: '2026-03-27'
+source: slack-inbox
+source_url: https://www.kernel.sh/
+sdlc_phase: Testing
