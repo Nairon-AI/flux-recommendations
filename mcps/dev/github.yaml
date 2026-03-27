@@ -205,3 +205,16 @@ mentions:
     \ versions of your app ready for QA https://t.co/"
   date: '2026-03-26'
   likes: 138
+- url: https://x.com/dani_avila7/status/2037156702257119721
+  author: '@dani_avila7'
+  text: 'Yes, I do this absolutely all the time
+
+
+    Every new session in Claude Code Desktop opens a new worktree, then you ask for
+    the changes, review them with the diff, and finally ask it to create the PR
+
+
+    And if you set up a Scheduled Task that reviews issues every day, categorizes
+    them,'
+  date: '2026-03-27'
+  likes: 26
