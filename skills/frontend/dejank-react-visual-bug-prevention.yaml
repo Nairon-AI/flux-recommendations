@@ -1,0 +1,32 @@
+name: dejank-react-visual-bug-prevention
+category: skill
+tagline: React skill that catches visual bugs like flicker, layout shift, and flash
+  throu
+description: 'DEJANK is a React-focused skill that detects visual bugs through two
+  modes: static scanning against 18 known anti-patterns (effect-driven state init,
+  derived state in effects, unsized async content, etc.) and runtime investigation
+  that routes visual issues to the appropriate debugging tool. It specifically targets
+  intermediate state leaks that cause flicker and layout shifts.
+
+
+  **Flux Impact:** Enhances our Agentic SDLC by enabling AI agents to catch subtle
+  visual bugs that traditional testing misses - these intermediate state issues are
+  perfect candidates for automated detection during code review phases'
+use_cases:
+- Add DEJANK to Flux's recommended skills for React projects
+- Integrate static scan patterns into quality-auditor sub-agent
+- Create workflow pattern for visual regression prevention in React codebases
+- Test integration with existing Flux review workflows
+install:
+  type: manual
+  command: '# See: https://x.com/garybasin/status/2037607893587898759?s=20'
+verification:
+  type: manual
+resources:
+- url: https://x.com/garybasin/status/2037607893587898759?s=20
+  type: homepage
+tags: []
+added_date: '2026-03-28'
+source: slack-inbox
+source_url: https://x.com/garybasin/status/2037607893587898759?s=20
+sdlc_phase: Code Review
