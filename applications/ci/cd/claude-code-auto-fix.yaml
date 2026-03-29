@@ -1,0 +1,29 @@
+name: claude-code-auto-fix
+category: application
+tagline: Cloud-based auto-fix for CI failures in web/mobile PR sessions
+description: Claude Code auto-fix is a cloud-based service that automatically monitors
+  pull requests and fixes CI failures for web and mobile development sessions. This
+  appears to be a significant automation feature that could save developers time by
+  automatically resolving common build and test issues.
+install:
+  type: manual
+  command: Service-based - likely requires account setup
+verification:
+  type: manual
+resources: []
+tags:
+- claude
+- ci-cd
+- automation
+- pull-requests
+- cloud
+added_date: '2026-03-29'
+source: x-discovery
+source_url: https://x.com/_catwu/status/2038070445921206349
+mentions:
+- url: https://x.com/_catwu/status/2038070445921206349
+  author: '@_catwu'
+  text: 'RT @noahzweben: Thrilled to announce Claude Code auto-fix – in the cloud.
+    Web/Mobile sessions can now automatically follow PRs - fixing CI…'
+  date: '2026-03-29'
+  likes: 6042
