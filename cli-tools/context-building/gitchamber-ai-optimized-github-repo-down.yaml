@@ -1,0 +1,32 @@
+name: gitchamber-ai-optimized-github-repo-down
+category: tool
+tagline: Downloads GitHub repos to node_modules/.gitchamber/ for AI context without
+  pollu
+description: 'gitchamber downloads GitHub repositories locally for AI agent context
+  without interfering with your project. It stores repos in node_modules/.gitchamber/
+  which is automatically ignored by git, build tools, and test runners. Provides an
+  opensrc alternative that doesn''t edit your AGENTS.md file.
+
+
+  **Flux Impact:** Enhances our Agentic SDLC by providing clean context fetching that
+  doesn''t pollute the working directory. Supports better research phases in planning
+  and implementation by allowing agents to examine reference codebases without side
+  effects.'
+use_cases:
+- 'Install gitchamber globally: npm i -g gitchamber'
+- 'Add gitchamber skill to Flux: npx skills add remorses/gitchamber'
+- Use for fetching reference implementations during planning phase
+- Include in context-building patterns for repo-scout and github-scout agents
+install:
+  type: manual
+  command: '# See: https://github.com/remorses/gitchamber'
+verification:
+  type: manual
+resources:
+- url: https://github.com/remorses/gitchamber
+  type: homepage
+tags: []
+added_date: '2026-03-29'
+source: slack-inbox
+source_url: https://github.com/remorses/gitchamber
+sdlc_phase: Planning
