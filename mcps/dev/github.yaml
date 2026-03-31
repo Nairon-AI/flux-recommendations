@@ -218,3 +218,10 @@ mentions:
     them,'
   date: '2026-03-27'
   likes: 26
+- url: https://x.com/_catwu/status/2038723796178526712
+  author: '@_catwu'
+  text: "We now support GitHub Enterprise Server across our product suite, including\
+    \ Claude Code on the web, iOS, Android and Code Review! \n\nTry it out and let\
+    \ us know your feedback"
+  date: '2026-03-31'
+  likes: 78
