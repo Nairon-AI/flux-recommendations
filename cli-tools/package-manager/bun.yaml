@@ -1,0 +1,32 @@
+name: bun
+category: cli-tool
+tagline: Fast JavaScript runtime with secure package management defaults
+description: Bun is a fast all-in-one JavaScript runtime and package manager that
+  blocks postinstall scripts by default, providing built-in protection against supply-chain
+  attacks. This security-first approach makes it valuable for AI-assisted development
+  where automated dependency installation could expose projects to malicious scripts.
+install:
+  type: manual
+  command: curl -fsSL https://bun.sh/install | bash
+verification:
+  type: manual
+resources:
+- url: https://bun.sh
+  type: homepage
+- url: https://github.com/oven-sh/bun
+  type: github
+tags:
+- javascript
+- package-manager
+- security
+- runtime
+added_date: '2026-04-01'
+source: x-discovery
+source_url: https://x.com/EastlondonDev/status/2038925513754816666
+mentions:
+- url: https://x.com/EastlondonDev/status/2038925513754816666
+  author: '@EastlondonDev'
+  text: "RT @bunjavascript: `bun install` blocks postinstall scripts by default. \n\
+    \nThis helps protect from supply-chain attacks, like today’s axios…"
+  date: '2026-04-01'
+  likes: 2938

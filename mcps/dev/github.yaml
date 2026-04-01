@@ -225,3 +225,30 @@ mentions:
     \ us know your feedback"
   date: '2026-03-31'
   likes: 78
+- url: https://x.com/_catwu/status/2039027712288075812
+  author: '@_catwu'
+  text: 'We''ve made setting up https://t.co/wbJhWHsewH with GitHub much easier!
+
+
+    You can now run /web-setup in a local `claude` session to use your local GitHub
+    credentials on the web https://t.co/kyRMP1eBkx'
+  date: '2026-04-01'
+  likes: 934
+- url: https://x.com/EastlondonDev/status/2039115422528671845
+  author: '@EastlondonDev'
+  text: 'Is everything ok @AnthropicAI ?
+
+
+    Is forking your public GitHub repo to file issues in good faith a crime now?
+
+
+    I actually had a PR merged but now my fork has been taken down by a DMCA request
+    https://t.co/JC6WsZvQOR'
+  date: '2026-04-01'
+  likes: 227
+- url: https://x.com/__morse/status/2039282449855795605
+  author: '@__morse'
+  text: I blocked Claude on GitHub. fuck that clanker. I don't want to see him in
+    my repos contributors list
+  date: '2026-04-01'
+  likes: 0

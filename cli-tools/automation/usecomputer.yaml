@@ -43,3 +43,18 @@ mentions:
     https://t.co/cUHFT7QiCi'
   date: '2026-03-27'
   likes: 31
+- url: https://x.com/__morse/status/2039256932200906949
+  author: '@__morse'
+  text: 'usecomputer cli has now C bindings
+
+
+    GitHub release now contain the cli &amp; C library binaries for all platforms
+
+
+    I also publish NAPI modules callable from JS that you can use to create your own
+    harness for computer use
+
+
+    https://t.co/cUHFT7QiCi'
+  date: '2026-04-01'
+  likes: 6

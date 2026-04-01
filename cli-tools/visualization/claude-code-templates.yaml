@@ -89,3 +89,11 @@ mentions:
     \ full agent workflow:\n- CLI install\n- component selecti"
   date: '2026-03-24'
   likes: 7
+- url: https://x.com/dani_avila7/status/2039161761295663135
+  author: '@dani_avila7'
+  text: "Claude Code Supply Chain Guard Skill\n\nUse this skill to audit your code\
+    \ and rule out supply chain issues, something that's been hitting a lot of projects\
+    \ lately\n\nCheck it out here: https://t.co/3NvN6RpD1n\n\nInstall it with: \n\
+    npx claude-code-templates@latest --skill security/supply"
+  date: '2026-04-01'
+  likes: 49
