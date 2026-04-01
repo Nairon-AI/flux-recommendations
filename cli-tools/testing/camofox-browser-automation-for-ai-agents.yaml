@@ -1,0 +1,31 @@
+name: camofox-browser-automation-for-ai-agents
+category: repo
+tagline: Headless browser automation server that helps AI agents visit sites that
+  typical
+description: 'Camofox is a headless browser automation server specifically designed
+  for AI agents to access websites that normally block automated traffic. It provides
+  stealth browsing capabilities to help agents scrape data, test web applications,
+  or interact with sites that have anti-bot measures.
+
+
+  **Flux Impact:** Enables AI agents to access previously unreachable web resources
+  for testing and data collection, reducing manual intervention when working with
+  sites that have strict bot detection'
+use_cases:
+- Evaluate camofox as replacement for standard Playwright/Puppeteer in blocked scenarios
+- Create skill wrapper for common AI agent browser automation patterns
+- Test integration with existing browser-based testing workflows
+- Document setup for development environments where sites block standard automation
+install:
+  type: manual
+  command: '# See: https://github.com/jo-inc/camofox-browser'
+verification:
+  type: manual
+resources:
+- url: https://github.com/jo-inc/camofox-browser
+  type: homepage
+tags: []
+added_date: '2026-04-01'
+source: slack-inbox
+source_url: https://github.com/jo-inc/camofox-browser
+sdlc_phase: Testing
