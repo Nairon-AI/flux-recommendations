@@ -67,3 +67,47 @@ mentions:
     &gt; rate limit'
   date: '2026-03-26'
   likes: 106
+- url: https://x.com/mattpocockuk/status/2039636169915301965
+  author: '@mattpocockuk'
+  text: 'Today''s fun job: building an AI SDK-style API for running different agents
+    in containers.
+
+
+    Soon Codex will be able to review CC''s work, programmatically.
+
+
+    Sandcastle is looking nice. https://t.co/ddo2e1p8vn'
+  date: '2026-04-02'
+  likes: 48
+- url: https://x.com/mattpocockuk/status/2039350619681554434
+  author: '@mattpocockuk'
+  text: 'I built a framework for co-ordinating AFK coding agents.
+
+
+    It''s called Sandcastle.
+
+
+    Watch me use it to pick tasks, parallelize N coding agents, and merge the code
+    - all AFK: https://t.co/V89G3URdLI'
+  date: '2026-04-02'
+  likes: 609
+- url: https://x.com/mattpocockuk/status/2039343457282531549
+  author: '@mattpocockuk'
+  text: 'I couldn''t find a great, simple framework for parallelising sandboxed coding
+    agents.
+
+
+    So, I built one. It''s called sandcastle.
+
+
+    This `run()` function:
+
+
+    - Creates a worktree
+
+    - Runs a sandboxed coding agent (on Docker)
+
+
+    Super powerful, super-simple, 100% local https://t.co/2H7m8u9y'
+  date: '2026-04-02'
+  likes: 354

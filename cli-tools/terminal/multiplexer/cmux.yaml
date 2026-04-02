@@ -1,0 +1,29 @@
+name: cmux
+category: cli-tool
+tagline: Intuitive UI alternative to tmux for terminal session management
+description: cmux appears to be a terminal multiplexer that provides a more user-friendly
+  interface compared to tmux. It allows for easier resizing and moving of terminal
+  panes/windows, making it more accessible for developers who find tmux's interface
+  challenging.
+install:
+  type: manual
+  command: unknown
+verification:
+  type: manual
+resources: []
+tags:
+- terminal
+- multiplexer
+- tmux-alternative
+- ui
+added_date: '2026-04-02'
+source: x-discovery
+source_url: https://x.com/nummanali/status/2039325106892058846
+mentions:
+- url: https://x.com/nummanali/status/2039325106892058846
+  author: '@nummanali'
+  text: "Huuuggggeeee QOL improvement in using Claude Code teams mode! \n\ntmux is\
+    \ tricky to grapple with, cmux has a much more intuitive ui \n\nResize, move etc\
+    \ at will \n\nAwesome work Lawrence!"
+  date: '2026-04-02'
+  likes: 101

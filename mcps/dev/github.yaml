@@ -252,3 +252,13 @@ mentions:
     my repos contributors list
   date: '2026-04-01'
   likes: 0
+- url: https://x.com/mattpocockuk/status/2039288485668913590
+  author: '@mattpocockuk'
+  text: 'Working on a skill for triaging GitHub issues, powered by a simple label-based
+    state machine.
+
+
+    Just invoke /github-triage to start churning through issues and getting them ready
+    for AFK agents'
+  date: '2026-04-02'
+  likes: 61

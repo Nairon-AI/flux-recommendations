@@ -1,0 +1,30 @@
+name: slate
+category: application
+tagline: AI agent with skill-chaining for complex automated behaviors
+description: Slate is an AI agent system that can automatically choose and chain together
+  different skills in sequence to perform complex behaviors. The new skill-chaining
+  feature allows it to intelligently combine multiple capabilities into more sophisticated
+  automated workflows.
+install:
+  type: manual
+  command: See project documentation
+verification:
+  type: manual
+resources: []
+tags:
+- ai-agent
+- skill-chaining
+- automation
+- workflows
+added_date: '2026-04-02'
+source: x-discovery
+source_url: https://x.com/realmcore_/status/2039382122725875789
+mentions:
+- url: https://x.com/realmcore_/status/2039382122725875789
+  author: '@realmcore_'
+  text: "Today\n\nWe're launching Skill-Chaining \n\nSlate is able to choose which\
+    \ skills to use and the order in which it uses them\n\nChaining them together\
+    \ into more complex behaviors\n\nThis is an experimental release, but hope you\
+    \ enjoy! https://t.co/UDeSTAgk4W"
+  date: '2026-04-02'
+  likes: 114
