@@ -1,0 +1,34 @@
+name: neosigma-intelligence-layer-for-producti
+category: tool
+tagline: 'NeoSigma builds intelligence layer infrastructure that closes the feedback
+  loop '
+description: 'NeoSigma is a product-driven research lab building the intelligence
+  layer that helps close the feedback loop between customers, products, and AI systems.
+  They focus on making agents reliable across the long tail of constraints and user
+  behavior through automated evaluations grounded in real usage.
+
+
+  **Flux Impact:** Could significantly enhance Flux''s agentic SDLC by providing automated
+  evaluation systems that learn from production failures and user interactions, creating
+  self-improving feedback loops that compound agent reliability over time.'
+use_cases:
+- Research NeoSigma's waitlist and early access program for Flux integration
+- Explore how their automated evals could enhance Flux's testing and quality assurance
+  phases
+- Consider incorporating their production signal analysis into Flux's reflection and
+  improvement workflows
+- Evaluate their intelligence layer for closing feedback loops in agent development
+  workflows
+install:
+  type: manual
+  command: '# See: https://www.neosigma.ai/'
+verification:
+  type: manual
+resources:
+- url: https://www.neosigma.ai/
+  type: homepage
+tags: []
+added_date: '2026-04-05'
+source: slack-inbox
+source_url: https://www.neosigma.ai/
+sdlc_phase: Testing
