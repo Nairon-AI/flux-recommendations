@@ -97,3 +97,20 @@ mentions:
     npx claude-code-templates@latest --skill security/supply"
   date: '2026-04-01'
   likes: 49
+- url: https://x.com/dani_avila7/status/2040875863013789842
+  author: '@dani_avila7'
+  text: 'More contributor PRs coming into claude-code-templates
+
+
+    I read and review every skill, subagent, hook, and MCP the community submits
+
+    … All of them
+
+
+    I’ve been studying the patterns
+
+
+    Then I check download numbers and it becomes clear which ones actually work with
+    the LLM and which '
+  date: '2026-04-06'
+  likes: 19
