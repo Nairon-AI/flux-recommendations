@@ -1,0 +1,33 @@
+name: devin-ai
+category: application
+tagline: AI agent for automated end-to-end testing and reporting
+description: DevinAI appears to be an AI-powered automation tool that can perform
+  complex end-to-end testing workflows including user signup, onboarding flows, and
+  feature testing. It provides automated reports with video recordings and integrates
+  with Slack for daily monitoring of application health.
+install:
+  type: manual
+  command: ''
+verification:
+  type: manual
+resources: []
+tags:
+- e2e-testing
+- automation
+- ai-agent
+- monitoring
+- slack-integration
+added_date: '2026-04-07'
+source: x-discovery
+source_url: https://x.com/ryancarson/status/2041119517527425058
+mentions:
+- url: https://x.com/ryancarson/status/2041119517527425058
+  author: '@ryancarson'
+  text: 'I use @DevinAI to do a daily e2e automation that signs up my app, goes through
+    onboarding, tests the chat functionality and all of its tools, and then sends
+    me a report every morning. I can even watch the video.
+
+
+    I get this report every morning in Slack when I wake up. It''s reass'
+  date: '2026-04-07'
+  likes: 308
