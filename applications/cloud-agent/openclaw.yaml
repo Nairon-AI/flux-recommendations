@@ -235,3 +235,39 @@ mentions:
     If you’re using openclaw, you’re going to love it!'
   date: '2026-04-07'
   likes: 191
+- url: https://x.com/mattpocockuk/status/2041488254378164348
+  author: '@mattpocockuk'
+  text: "RT @aiDotEngineer: \U0001F3A5\U0001F534 LIVESTREAM ANNOUNCEMENT: Keynotes\
+    \ + @openclaw / Personal Agents track \n\n\U0001F514 Hit the bell on our YT channel\
+    \ \U0001F449 https://t.…"
+  date: '2026-04-08'
+  likes: 73
+- url: https://x.com/ryancarson/status/2041684675849285921
+  author: '@ryancarson'
+  text: 'Want to turn @openclaw into a powerful chief of staff + exec assistant system?
+
+
+    I just shipped Clawchief v3.0.
+
+
+    - @todoist as the task system (thx @rsarver for the idea)
+
+    - moved from gog to gws for Gmail / Calendar / Sheets
+
+    - a bunch of quality-of-life upgrades
+
+
+    If you saw v2, th'
+  date: '2026-04-08'
+  likes: 182
+- url: https://x.com/ryancarson/status/2041552231342944271
+  author: '@ryancarson'
+  text: 'Had to downgrade openclaw back to v2026.4.2
+
+
+    Was having a ton of problems with update_plan tool causing problems.
+
+
+    Will wait for another stable release and try upgrading then.'
+  date: '2026-04-08'
+  likes: 84
