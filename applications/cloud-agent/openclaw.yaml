@@ -271,3 +271,13 @@ mentions:
     Will wait for another stable release and try upgrading then.'
   date: '2026-04-08'
   likes: 84
+- url: https://x.com/pvncher/status/2042028215259017589
+  author: '@pvncher'
+  text: 'One of the really cool things with this release is that @openclaw can spin
+    up an agent with the orchestrate workflow to fully plan and execute a task end
+    to end!
+
+
+    Claw can even monitor and steer the orchestrator over cli'
+  date: '2026-04-09'
+  likes: 15

@@ -1,0 +1,36 @@
+name: prototype-ui-skill
+category: skill
+tagline: AI skill for generating multiple UI design variants with picker component
+description: A custom AI skill that generates multiple radically different UI designs
+  for the same component or interface. Includes a picker component to easily toggle
+  between design variations, enabling rapid UI prototyping and exploration.
+install:
+  type: skill
+  command: Create /prototype-ui skill with multiple design generation instructions
+verification:
+  type: manual
+resources: []
+tags:
+- ui-design
+- prototyping
+- design-variants
+- ai-assisted
+added_date: '2026-04-09'
+source: x-discovery
+source_url: https://x.com/mattpocockuk/status/2042152257664278904
+mentions:
+- url: https://x.com/mattpocockuk/status/2042152257664278904
+  author: '@mattpocockuk'
+  text: 'This is essentially the same as a homebrew workflow I''ve used for a while:
+
+
+    1. Create a /prototype-ui skill
+
+    2. Give it instructions to create multiple radically different designs
+
+    3. Give it a picker component to toggle between them
+
+
+    Bingo'
+  date: '2026-04-09'
+  likes: 223
