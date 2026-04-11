@@ -111,3 +111,19 @@ mentions:
     Super powerful, super-simple, 100% local https://t.co/2H7m8u9y'
   date: '2026-04-02'
   likes: 354
+- url: https://x.com/mattpocockuk/status/2042548410264264973
+  author: '@mattpocockuk'
+  text: 'Thinking about moving Sandcastle off Docker and making the sandbox totally
+    pluggable.
+
+
+    I.e. Sandcastle would become an orchestrator that works with any coding agent
+    in any sandbox - local or remote.
+
+
+    Would love feedback here:
+
+
+    https://t.co/D278nkDpNN'
+  date: '2026-04-11'
+  likes: 159
