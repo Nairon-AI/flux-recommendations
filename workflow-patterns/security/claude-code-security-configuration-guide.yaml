@@ -1,0 +1,31 @@
+name: claude-code-security-configuration-guide
+category: tweet
+tagline: 'A three-level security hardening guide for Claude Code to protect SSH keys,
+  AWS '
+description: 'Tweet provides a three-tier security approach for Claude Code: basic
+  permissions via settings.json, Trail of Bits security config, and full container
+  isolation. Addresses critical vulnerabilities where Claude can access SSH keys,
+  AWS credentials, and .env files by default.
+
+
+  **Flux Impact:** Essential security layer for our Agentic SDLC - prevents credential
+  leakage and unauthorized access when agents work with untrusted repos or malicious
+  instructions'
+use_cases:
+- Add flux:security-config command implementing the three-tier approach
+- Include security hardening checklist in flux:prime scanning
+- Create settings.json template with secure defaults in flux:setup
+- Add security validation to quality-auditor reviews
+install:
+  type: manual
+  command: '# See: https://x.com/i/status/2042704945200402649|https://x.com/i/status/2042704945200402649'
+verification:
+  type: manual
+resources:
+- url: https://x.com/i/status/2042704945200402649|https://x.com/i/status/2042704945200402649
+  type: homepage
+tags: []
+added_date: '2026-04-11'
+source: slack-inbox
+source_url: https://x.com/i/status/2042704945200402649|https://x.com/i/status/2042704945200402649
+sdlc_phase: Planning
