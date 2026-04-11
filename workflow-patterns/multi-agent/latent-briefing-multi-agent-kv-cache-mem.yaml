@@ -1,0 +1,30 @@
+name: latent-briefing-multi-agent-kv-cache-mem
+category: article
+tagline: 'Ramp Labs introduces Latent Briefing, a technique that uses KV cache compaction '
+description: 'Latent Briefing addresses token explosion in multi-agent systems by
+  compacting KV cache representations to share relevant context between orchestrator
+  and worker agents. It uses task-guided attention patterns to identify important
+  context and achieves ~1.7s compaction overhead with 42-57% worker token reduction.
+
+
+  **Flux Impact:** Could dramatically reduce token costs in Flux''s multi-agent workflows
+  by sharing compressed context between orchestrator and scout agents, making complex
+  workflows more economical and faster'
+use_cases:
+- Research AM compaction framework implementation
+- Evaluate Flux scout agent token usage patterns
+- Prototype KV cache sharing between flux-work orchestrator and worker agents
+- Test compaction thresholds for different SDLC phases
+install:
+  type: manual
+  command: '# See: https://x.com/i/status/2042660310851449223|https://x.com/i/status/2042660310851449223'
+verification:
+  type: manual
+resources:
+- url: https://x.com/i/status/2042660310851449223|https://x.com/i/status/2042660310851449223
+  type: homepage
+tags: []
+added_date: '2026-04-11'
+source: slack-inbox
+source_url: https://x.com/i/status/2042660310851449223|https://x.com/i/status/2042660310851449223
+sdlc_phase: Implementation
