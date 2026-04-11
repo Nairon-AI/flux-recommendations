@@ -1,0 +1,32 @@
+name: designmd-design-md-generator-for-ai-agen
+category: tool
+tagline: Extract design tokens and components from any website into AI-readable DESIGN.md
+description: 'DesignMD analyzes any website URL and automatically generates a production-ready
+  DESIGN.md file containing design tokens, typography, component styles, and system
+  documentation. It can also generate design systems from project descriptions, making
+  design context immediately available to AI coding agents.
+
+
+  **Flux Impact:** Enables design-aware AI agents by providing structured design system
+  context that agents can reference during implementation. Bridges the gap between
+  design specs and code generation in our Agentic SDLC.'
+use_cases:
+- Test DesignMD with popular design systems (Material, Tailwind sites) to validate
+  output quality
+- Create flux skill that automatically generates DESIGN.md for new projects with design
+  requirements
+- Add DESIGN.md scanning to docs-scout agent for design system awareness
+- Integrate with frontend-focused flux workflows and UI skills
+install:
+  type: manual
+  command: '# See: https://designmd.me/'
+verification:
+  type: manual
+resources:
+- url: https://designmd.me/
+  type: homepage
+tags: []
+added_date: '2026-04-11'
+source: slack-inbox
+source_url: https://designmd.me/
+sdlc_phase: Planning
