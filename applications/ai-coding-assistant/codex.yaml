@@ -1,0 +1,37 @@
+name: codex
+category: application
+tagline: AI coding assistant with persistent memory and learning capabilities
+description: Codex is an AI-assisted development tool that can maintain memory across
+  coding sessions and learn from past work. Version 0.120 introduces memory extensions
+  that allow developers to set custom rules for how the AI builds memory from previous
+  sessions using project-specific instructions.md files.
+install:
+  type: manual
+  command: Installation method not specified in tweet
+verification:
+  type: manual
+resources: []
+tags:
+- ai-assistant
+- memory
+- persistent-learning
+- coding
+added_date: '2026-04-12'
+source: x-discovery
+source_url: https://x.com/kevinkern/status/2042973688295756098
+mentions:
+- url: https://x.com/kevinkern/status/2042973688295756098
+  author: '@kevinkern'
+  text: 'Codex 0.120 ships memory extensions, so you can decide what it should keep
+    learning from your past sessions.
+
+
+    You can now set rules for how Codex should build memory from past work.
+
+
+    Add your own `instructions.md` in memories_extensions/<project>.
+
+
+    The memory consolidation agent '
+  date: '2026-04-12'
+  likes: 433
