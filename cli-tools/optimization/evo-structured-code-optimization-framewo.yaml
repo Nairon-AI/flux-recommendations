@@ -1,0 +1,31 @@
+name: evo-structured-code-optimization-framewo
+category: repo
+tagline: A CLI and Claude Code workflow for tree-search optimization of code using
+  experi
+description: 'Evo is a structured experiment-driven code optimization framework that
+  provides a CLI and Claude Code workflow for systematically improving code quality
+  through tree-search optimization. It manages experiment state in `.evo/` directory
+  and provides `/discover` and `/optimize` commands for iterative improvement.
+
+
+  **Flux Impact:** Enhances our Agentic SDLC by adding systematic code optimization
+  through structured experiments, moving beyond one-shot implementation to iterative
+  improvement with measurable results'
+use_cases:
+- Install evo CLI and test basic optimization workflow
+- Create Flux skill for evo integration with standard optimization patterns
+- Add evo optimization step to flux-work execution pipeline
+- Document integration pattern for post-implementation optimization
+install:
+  type: manual
+  command: '# See: https://github.com/evo-hq/evo'
+verification:
+  type: manual
+resources:
+- url: https://github.com/evo-hq/evo
+  type: homepage
+tags: []
+added_date: '2026-04-12'
+source: slack-inbox
+source_url: https://github.com/evo-hq/evo
+sdlc_phase: Implementation
