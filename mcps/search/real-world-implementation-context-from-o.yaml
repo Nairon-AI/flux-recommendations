@@ -1,0 +1,31 @@
+name: real-world-implementation-context-from-o
+category: mcp
+tagline: 'GitHits MCP provides AI agents with context from open-source implementations
+  to '
+description: 'GitHits MCP helps AI agents see how APIs, patterns, and edge cases are
+  handled in real open-source code. It provides a reasoning layer that surfaces the
+  strongest implementation patterns automatically, grounded in how systems are actually
+  built rather than synthetic examples.
+
+
+  **Flux Impact:** Reduces the ''search tax'' where agents loop on long-tail problems
+  by providing real-world implementation context. Enables agents to choose battle-tested
+  patterns over plausible but fragile synthetic ones.'
+use_cases:
+- Sign up for GitHits waitlist and install MCP when available
+- Add GitHits to MCP server configuration in Claude Code
+- Update agent workflows to query GitHits when encountering niche integrations
+- Train agents to use GitHits during architectural decision-making
+install:
+  type: manual
+  command: '# See: https://githits.com/'
+verification:
+  type: manual
+resources:
+- url: https://githits.com/
+  type: homepage
+tags: []
+added_date: '2026-04-13'
+source: slack-inbox
+source_url: https://githits.com/
+sdlc_phase: Implementation
