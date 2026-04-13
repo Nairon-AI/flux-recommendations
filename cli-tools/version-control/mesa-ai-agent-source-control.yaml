@@ -1,0 +1,30 @@
+name: mesa-ai-agent-source-control
+category: tool
+tagline: Mesa provides version control and memory persistence specifically designed
+  for A
+description: 'Mesa is a specialized version control system designed for AI agents
+  that automatically persists agent work including code, memory, skills, and other
+  artifacts. It provides versioning and tracking specifically tailored to AI-generated
+  content with visibility into agent contributions across the codebase.
+
+
+  **Flux Impact:** Provides the missing persistence layer for our Agentic SDLC approach
+  - automatic versioning of agent memory, skills, and generated code with audit trails'
+use_cases:
+- Evaluate Mesa CLI for Flux brain vault persistence
+- Test Mesa's agent contribution tracking with Claude Code workflows
+- Document Mesa integration pattern for Flux installations
+- Consider Mesa as recommended persistence layer in Flux setup guide
+install:
+  type: manual
+  command: '# See: https://mesa.dev/'
+verification:
+  type: manual
+resources:
+- url: https://mesa.dev/
+  type: homepage
+tags: []
+added_date: '2026-04-13'
+source: slack-inbox
+source_url: https://mesa.dev/
+sdlc_phase: Implementation
