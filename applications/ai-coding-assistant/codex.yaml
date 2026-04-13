@@ -35,3 +35,22 @@ mentions:
     The memory consolidation agent '
   date: '2026-04-12'
   likes: 433
+- url: https://x.com/kevinkern/status/2043417005605245371
+  author: '@kevinkern'
+  text: "evolving subagents in codex.\n\nto name your subagents use \n\n[agents.explorer]\n\
+    nickname_candidates = [\n  \"pikachu\",\n ...\n]\n\n[agents.worker]\nnickname_candidates\
+    \ = [\n\"arcanine\",\n...\n] https://t.co/v3uzT8czzm"
+  date: '2026-04-13'
+  likes: 33
+- url: https://x.com/kevinkern/status/2043296998564954295
+  author: '@kevinkern'
+  text: 'This codex scratchpad feature looks promising.
+
+
+    i constantly send multiple questions to different parts of my codebase in different
+    terminals or views to get an isolated answer for a specific review or topic.
+
+
+    with this feature, you can just use one view to start multiple chats, '
+  date: '2026-04-13'
+  likes: 146
