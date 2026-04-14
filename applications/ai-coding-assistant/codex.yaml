@@ -54,3 +54,46 @@ mentions:
     with this feature, you can just use one view to start multiple chats, '
   date: '2026-04-13'
   likes: 146
+- url: https://x.com/pvncher/status/2043707115122876703
+  author: '@pvncher'
+  text: 'When you''re optimizing code, the best thing you can do is have your clanker
+    setup a baseline of metrics, and then have a way to run A/B tests through the
+    old and new code, and then just iterate until all metrics are exceeded.
+
+
+    Having codex do this produces wild results'
+  date: '2026-04-14'
+  likes: 35
+- url: https://x.com/nummanali/status/2043834017204641989
+  author: '@nummanali'
+  text: 'Goldmine of real world usage for Codex CLI / App
+
+
+    Principles are applicable across any coding agent'
+  date: '2026-04-14'
+  likes: 21
+- url: https://x.com/kevinkern/status/2043750506670043506
+  author: '@kevinkern'
+  text: 'today i was debugging an electron app and needed the frontend logs in my
+    coding agent.
+
+
+    then i remembered i built browser echo a few months ago
+
+
+    pasted the browser echo readme into codex and it worked out of the box. https://t.co/ntBkJ9fqM9'
+  date: '2026-04-14'
+  likes: 7
+- url: https://x.com/mattpocockuk/status/2043773444416770285
+  author: '@mattpocockuk'
+  text: 'Just shipped Sandcastle 0.4.1.
+
+
+    - OpenCode, Pi, Codex support
+
+    - Podman, Daytona, Vercel support
+
+
+    It''s becoming the simplest way to run any agent, sandboxed anywhere https://t.co/RaAzi4YAAz'
+  date: '2026-04-14'
+  likes: 604

@@ -281,3 +281,16 @@ mentions:
     Claw can even monitor and steer the orchestrator over cli'
   date: '2026-04-09'
   likes: 15
+- url: https://x.com/kevinkern/status/2043701282771222959
+  author: '@kevinkern'
+  text: 'with nvidia build, you can try minimax-m2.7 for free, along with many other
+    models.
+
+
+    It can be a useful option for experimentation or as a fallback in openclaw, pi,
+    ... but free means also you can end up with slow responses due to rate limits.
+
+
+    great find by @AdolfoUsier. full tu'
+  date: '2026-04-14'
+  likes: 16
