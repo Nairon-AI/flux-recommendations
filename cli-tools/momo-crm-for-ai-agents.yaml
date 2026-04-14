@@ -1,0 +1,31 @@
+name: momo-crm-for-ai-agents
+category: tool
+tagline: Momo provides CRM and product analytics specifically designed for AI agents
+  with
+description: 'Momo is a CRM platform specifically designed for AI agents that captures
+  customer interactions, provides product analytics, and automates customer outreach.
+  It builds comprehensive customer profiles and detects patterns like power users
+  and churning users.
+
+
+  **Flux Impact:** Enhances Agentic SDLC by providing AI agents with dedicated customer
+  relationship management capabilities, enabling automated user research, feedback
+  collection, and customer engagement throughout the development lifecycle'
+use_cases:
+- Research Momo OpenClaw plugin integration with existing Flux agent workflows
+- Evaluate Momo for customer discovery automation in flux:scope command
+- Test Momo analytics for identifying user feedback patterns during implementation
+  phases
+install:
+  type: manual
+  command: '# See: https://www.usemomo.com/'
+verification:
+  type: manual
+resources:
+- url: https://www.usemomo.com/
+  type: homepage
+tags: []
+added_date: '2026-04-14'
+source: slack-inbox
+source_url: https://www.usemomo.com/
+sdlc_phase: Planning
