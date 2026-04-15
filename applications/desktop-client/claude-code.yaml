@@ -1,0 +1,33 @@
+name: claude-code
+category: application
+tagline: Desktop app for managing multiple Claude coding sessions with git integration
+description: A desktop application that allows developers to manage multiple Claude
+  Code sessions simultaneously across local and cloud environments. Features include
+  git status visibility, session pinning, and drag-and-drop layout management for
+  viewing multiple sessions at once.
+install:
+  type: manual
+  command: Download from official website
+verification:
+  type: manual
+resources: []
+tags:
+- claude
+- desktop-app
+- session-management
+- git-integration
+- multi-session
+added_date: '2026-04-15'
+source: x-discovery
+source_url: https://x.com/_catwu/status/2044212251717186007
+mentions:
+- url: https://x.com/_catwu/status/2044212251717186007
+  author: '@_catwu'
+  text: 'Over the past few weeks, I’ve become a daily user of Claude Code on desktop.
+
+
+    It’s the best way to kick off and manage multiple CC sessions across local and
+    cloud in one place. You can also see git status, pin active sessions, and drag
+    and drop layout to view multiple sessions at'
+  date: '2026-04-15'
+  likes: 259

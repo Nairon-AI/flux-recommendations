@@ -295,3 +295,35 @@ mentions:
     I’m just giving every agent its own hetzner box and it’s own GitHub identity'
   date: '2026-04-14'
   likes: 2
+- url: https://x.com/dani_avila7/status/2044221052859859310
+  author: '@dani_avila7'
+  text: 'Integrating Claude Code directly with GitHub PRs is something I hope keeps
+    evolving
+
+
+    I definitely feel like in a few more months I won’t even need to open GitHub
+
+
+    It’s already been a while since, through the gh CLI, Claude handles reading the
+    PR, adding and responding to comments'
+  date: '2026-04-15'
+  likes: 17
+- url: https://x.com/dani_avila7/status/2044122724990366124
+  author: '@dani_avila7'
+  text: "Claude Code releases the Routines feature, here are my thoughts\n\nIf I'm\
+    \ not mistaken this was already available under the name \"Scheduled\", I even\
+    \ have some routines running locally already\n\nWhat I see as new: \n1- The name\
+    \ \U0001F605\n2- The ability to run it on Anthropic's cloud instead o"
+  date: '2026-04-15'
+  likes: 41
+- url: https://x.com/dani_avila7/status/2044105813187256534
+  author: '@dani_avila7'
+  text: 'I love this 👏👏👏
+
+
+    Moving my complex GitHub actions into these routines
+
+
+    I think, the best part is they connect with the MCPs I already have set up'
+  date: '2026-04-15'
+  likes: 34

@@ -1,0 +1,28 @@
+name: routines
+category: workflow-pattern
+tagline: Automate Claude Code execution via schedules, GitHub events, and APIs
+description: Routines allows you to automate AI-assisted coding workflows by triggering
+  Claude Code on schedules, from GitHub events, or via API calls. This eliminates
+  manual repetitive tasks and enables continuous AI-powered code operations.
+install:
+  type: manual
+  command: ''
+verification:
+  type: manual
+resources: []
+tags:
+- claude
+- automation
+- github-integration
+- scheduling
+- api
+added_date: '2026-04-15'
+source: x-discovery
+source_url: https://x.com/_catwu/status/2044103103591657941
+mentions:
+- url: https://x.com/_catwu/status/2044103103591657941
+  author: '@_catwu'
+  text: "Automate the manual repetitive parts of your work with Routines! \n\nYou\
+    \ can now kick off Claude Code on a schedule, from GH events, and from other APIs"
+  date: '2026-04-15'
+  likes: 124

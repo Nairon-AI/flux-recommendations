@@ -1,0 +1,31 @@
+name: catalyst
+category: application
+tagline: Developer platform to monitor, train & deploy self-improving AI models
+description: Catalyst is a developer platform specifically designed for teams operating
+  AI systems. It provides infrastructure for monitoring AI model performance, training
+  improvements, and deploying self-improving AI models in production environments.
+install:
+  type: manual
+  command: Visit platform website for signup
+verification:
+  type: manual
+resources: []
+tags:
+- mlops
+- ai-models
+- monitoring
+- deployment
+- training
+added_date: '2026-04-15'
+source: x-discovery
+source_url: https://x.com/realmcore_/status/2044117789078893024
+mentions:
+- url: https://x.com/realmcore_/status/2044117789078893024
+  author: '@realmcore_'
+  text: 'RT @samhogan: Introducing Catalyst: a developer platform to monitor, train
+    &amp; deploy self-improving AI models
+
+
+    built for teams operating AI…'
+  date: '2026-04-15'
+  likes: 186
