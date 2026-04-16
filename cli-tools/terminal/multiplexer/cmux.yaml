@@ -27,3 +27,11 @@ mentions:
     \ at will \n\nAwesome work Lawrence!"
   date: '2026-04-02'
   likes: 101
+- url: https://x.com/nummanali/status/2044371550220980692
+  author: '@nummanali'
+  text: "I tried the new Warp update \n\nIt's nice but too opinionated for me \nLacks\
+    \ workspaces, and tabs in a pane \n\ncmux has is too good:\n\nWorkspace (sidebar\
+    \ entry)\n    └ Pane (split region)\n           └ Surface (tab within pane)\n\
+    \                 └ Panel (terminal or browser content)"
+  date: '2026-04-16'
+  likes: 11
