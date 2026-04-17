@@ -120,3 +120,33 @@ mentions:
   text: codex on ipad confirmed.
   date: '2026-04-15'
   likes: 164
+- url: https://x.com/nummanali/status/2044835085522751705
+  author: '@nummanali'
+  text: "Computer Use was released for the Codex App\n\nIt also works with the Codex\
+    \ CLI! \n\nYou need first enable it via the App for permissions etc and then it’ll\
+    \ be available in the CLI too\n\nKudos to @embirico for pointing out"
+  date: '2026-04-17'
+  likes: 4
+- url: https://x.com/__morse/status/2045064519106297918
+  author: '@__morse'
+  text: 'egaki cli can now generate images with your codex subscription
+
+
+    cheapest way to generate high quality images from your agents. works everywhere:
+    opencode, claude code, etc
+
+
+    npx egaki'
+  date: '2026-04-17'
+  likes: 3
+- url: https://x.com/kevinkern/status/2044815116655337897
+  author: '@kevinkern'
+  text: since opus 4.7 is here, codex can't be too far away https://t.co/XriMmyTGTQ
+  date: '2026-04-17'
+  likes: 19
+- url: https://x.com/kevinkern/status/2044733788182241470
+  author: '@kevinkern'
+  text: There is a cool feature in new codex 0.121 where you can hit Ctrl+R and find
+    old prompts instantly. https://t.co/5PFSUGrZSf
+  date: '2026-04-17'
+  likes: 1
