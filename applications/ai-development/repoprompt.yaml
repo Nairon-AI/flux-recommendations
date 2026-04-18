@@ -1,0 +1,37 @@
+name: repoprompt
+category: application
+tagline: AI-assisted development tool with orchestration workflow capabilities
+description: RepoPrompt is an AI development tool that has been in development for
+  2 years and recently shipped orchestration workflow features. The creator claims
+  it now delivers a 'magical experience' out of the box for AI-assisted software development
+  workflows.
+install:
+  type: manual
+  command: Unknown - requires visiting website
+verification:
+  type: manual
+resources:
+- url: Unknown
+  type: homepage
+- url: Unknown
+  type: github
+tags:
+- ai-development
+- orchestration
+- workflow
+added_date: '2026-04-18'
+source: x-discovery
+source_url: https://x.com/pvncher/status/2045172213876220276
+mentions:
+- url: https://x.com/pvncher/status/2045172213876220276
+  author: '@pvncher'
+  text: 'Been grinding on @RepoPrompt for nearly 2 years now. Full of ups and downs.
+
+
+    I just shipped the orchestration workflow, and it feels like it''s finally come
+    together where out of the box it can deliver a magical experience.
+
+
+    Really proud of where it is now, and I hope you try it!'
+  date: '2026-04-18'
+  likes: 119
