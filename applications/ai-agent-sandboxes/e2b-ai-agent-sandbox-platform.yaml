@@ -1,0 +1,31 @@
+name: e2b-ai-agent-sandbox-platform
+category: tool
+tagline: Cloud sandbox infrastructure specifically designed for AI agents to run code
+  sec
+description: 'E2B provides cloud-based sandbox environments specifically designed
+  for AI agents to execute code safely. It offers isolated containers where agents
+  can run commands, install packages, and interact with files without security risks
+  to the host system.
+
+
+  **Flux Impact:** Enhances our Agentic SDLC by providing secure, isolated execution
+  environments for AI agents during Implementation and Testing phases, reducing security
+  risks while maintaining full agent autonomy'
+use_cases:
+- Research E2B API integration with Claude Code workflows
+- Evaluate E2B sandbox templates for common Flux use cases
+- Compare with existing sandbox solutions (Sandcastle, Agent Computer)
+- Test E2B integration with Flux worker agents
+install:
+  type: manual
+  command: '# See: https://e2b.dev/|https://e2b.dev/'
+verification:
+  type: manual
+resources:
+- url: https://e2b.dev/|https://e2b.dev/
+  type: homepage
+tags: []
+added_date: '2026-04-18'
+source: slack-inbox
+source_url: https://e2b.dev/|https://e2b.dev/
+sdlc_phase: Implementation
