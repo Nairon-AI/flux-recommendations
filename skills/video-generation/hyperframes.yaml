@@ -1,0 +1,42 @@
+name: hyperframes
+category: skill
+tagline: AI-powered video presentation generator using Claude Code integration
+description: A skill package that integrates with Claude Code to generate full video
+  presentations. Users can add it with a simple npm command and create video content
+  through AI-assisted prompting. The tool emphasizes prompt quality as key to output
+  quality.
+install:
+  type: skill
+  command: npx skills add heygen-com/hyperframes
+verification:
+  type: manual
+resources:
+- url: https://github.com/heygen-com/hyperframes
+  type: github
+tags:
+- video-generation
+- claude-code
+- ai-content
+- presentations
+added_date: '2026-04-19'
+source: x-discovery
+source_url: https://x.com/dani_avila7/status/2045696248179568853
+mentions:
+- url: https://x.com/dani_avila7/status/2045696248179568853
+  author: '@dani_avila7'
+  text: 'Just spent some time with Hyperframe + Claude Code. The result was genuinely
+    surprising
+
+
+    Setup is one command:
+
+    npx skills add heygen-com/hyperframes
+
+
+    Before running anything, invest real time in the prompt, that''s where the quality
+    comes from.
+
+
+    My test: a full video presentation '
+  date: '2026-04-19'
+  likes: 147

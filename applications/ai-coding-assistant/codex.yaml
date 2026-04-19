@@ -164,3 +164,11 @@ mentions:
     /codex in claude code https://t.co/eTpFbWONBI'
   date: '2026-04-18'
   likes: 0
+- url: https://x.com/nummanali/status/2045581687057183138
+  author: '@nummanali'
+  text: "Don't forget that you can create a skill with:\n$ skill-creator (codex)\n\
+    /skill-creator (claude code)\n\nI'm working with Rust RataTUI and needed up to\
+    \ date guidance \n\nFanned out 6 sub agents to curate content and then had the\
+    \ main agent make a banger skill\n\nNight and day difference"
+  date: '2026-04-19'
+  likes: 8

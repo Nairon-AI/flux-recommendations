@@ -1,0 +1,27 @@
+name: claude-settings-privacy
+category: workflow-pattern
+tagline: Configure Claude to ignore sensitive .env files during code analysis
+description: A configuration pattern for Claude AI that prevents it from reading environment
+  files containing API keys and secrets. Uses .claude/settings.json to exclude .env
+  files from AI analysis, improving security when using Claude for code assistance.
+install:
+  type: manual
+  command: Create .claude/settings.json with appropriate exclusions
+verification:
+  type: manual
+resources: []
+tags:
+- privacy
+- security
+- claude
+- environment-variables
+added_date: '2026-04-19'
+source: x-discovery
+source_url: https://x.com/dani_avila7/status/2045624292411355153
+mentions:
+- url: https://x.com/dani_avila7/status/2045624292411355153
+  author: '@dani_avila7'
+  text: "If you don't want Claude to read your .env files  \n\nJust add this to your\
+    \ .claude/settings.json https://t.co/d3DZXltwLr"
+  date: '2026-04-19'
+  likes: 1469
