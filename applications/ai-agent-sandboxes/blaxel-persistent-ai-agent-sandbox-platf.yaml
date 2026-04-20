@@ -1,0 +1,32 @@
+name: blaxel-persistent-ai-agent-sandbox-platf
+category: tool
+tagline: 'Persistent sandbox platform that keeps secure environments on standby with
+  25ms '
+description: 'Blaxel provides persistent sandbox environments that suspend to standby
+  rather than destroying state, enabling 25ms resume times with full memory and filesystem
+  preservation. Unlike traditional ephemeral sandboxes, Blaxel environments can persist
+  indefinitely while only charging for active compute time.
+
+
+  **Flux Impact:** Transforms our Agentic SDLC by eliminating cold start delays and
+  context loss between agent sessions. Enables true persistent development environments
+  where agents can maintain long-term project state, dramatically improving workflow
+  continuity and reducing setup overhead.'
+use_cases:
+- Evaluate Blaxel for long-running agent workflows that need state persistence
+- Test 25ms resume performance vs current sandbox solutions
+- Integrate Blaxel sandbox provisioning into Flux agent workflows
+- Create skills for managing persistent development environments
+install:
+  type: manual
+  command: '# See: https://blaxel.ai/'
+verification:
+  type: manual
+resources:
+- url: https://blaxel.ai/
+  type: homepage
+tags: []
+added_date: '2026-04-20'
+source: slack-inbox
+source_url: https://blaxel.ai/
+sdlc_phase: Implementation
