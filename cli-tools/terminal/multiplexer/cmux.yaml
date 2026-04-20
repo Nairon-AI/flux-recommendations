@@ -35,3 +35,11 @@ mentions:
     \                 └ Panel (terminal or browser content)"
   date: '2026-04-16'
   likes: 11
+- url: https://x.com/nummanali/status/2045963036322886141
+  author: '@nummanali'
+  text: "Codex <---> Claude Code comms with cmux \n\nNew way of working is letting\
+    \ Codex and Claude communicate between themselves while I co-ordinate as needed.\
+    \ If you already have cmux installed this is a no-brainer.\n\nSend this prompt:\n\
+    \"Please run \"cmux -h\", identify your surface ID and o"
+  date: '2026-04-20'
+  likes: 147

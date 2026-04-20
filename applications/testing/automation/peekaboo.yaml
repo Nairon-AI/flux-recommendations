@@ -36,3 +36,20 @@ mentions:
     \ the exact same but in a CLI package"
   date: '2026-03-31'
   likes: 18
+- url: https://x.com/kevinkern/status/2045960021171945693
+  author: '@kevinkern'
+  text: 'if you''re enjoying codex''s computer use, there are several open source
+    projects worth exploring too.
+
+
+    - browser-harness
+
+    thin self healing chrome CDP harness built for open-ended browser tasks, where
+    agents patch and extend their own capabilities live.
+
+    https://t.co/tNFekcZyHk
+
+
+    - n'
+  date: '2026-04-20'
+  likes: 447
