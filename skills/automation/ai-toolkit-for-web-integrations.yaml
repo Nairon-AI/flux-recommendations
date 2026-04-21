@@ -1,0 +1,30 @@
+name: ai-toolkit-for-web-integrations
+category: skill
+tagline: Agent skill and CLI that inspects live pages, reverse-engineers network requests
+description: 'Libretto is an AI toolkit that records browser actions and plain-language
+  instructions to generate deterministic automation scripts. It analyzes each site''s
+  security and structure to determine the right integration approach, combining browser
+  automation with direct API requests, and generates TypeScript code that follows
+  existing abstractions.
+
+
+  **Flux Impact:** Significantly enhances our Agentic SDLC by providing deterministic
+  browser automation that generates maintainable TypeScript code, perfect for agents
+  implementing web integrations without introducing runtime nondeterminism'
+use_cases:
+- Add Libretto to Flux skill recommendations
+- Create integration guide for web automation workflows
+- Test with healthcare portal automation use cases
+install:
+  type: manual
+  command: '# See: https://libretto.sh/'
+verification:
+  type: manual
+resources:
+- url: https://libretto.sh/
+  type: homepage
+tags: []
+added_date: '2026-04-21'
+source: slack-inbox
+source_url: https://libretto.sh/
+sdlc_phase: Implementation
