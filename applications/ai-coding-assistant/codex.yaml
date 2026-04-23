@@ -204,3 +204,17 @@ mentions:
     \ are solving the limitations of human cognition \n\nOf course,"
   date: '2026-04-22'
   likes: 5
+- url: https://x.com/nummanali/status/2047025122406498792
+  author: '@nummanali'
+  text: "OpenClawesque Agents are now in Codex \n\nWaiting for it to come to personal\
+    \ accounts, currently only business :("
+  date: '2026-04-23'
+  likes: 10
+- url: https://x.com/kevinkern/status/2047062171063144922
+  author: '@kevinkern'
+  text: "Just shipped a new agentrig release. \n\nagentrig is a plugin layer for AI\
+    \ coding tools, so you can package once and install into Codex, Claude Code, or\
+    \ Cursor from one CLI.\n\n- now aligned with the open plugins model.\n- one command\
+    \ plugin installs into coding agents\n- agentrig cli "
+  date: '2026-04-23'
+  likes: 16
