@@ -1,0 +1,31 @@
+name: fastedit
+category: application
+tagline: Reduce AI edit token costs with fine-tuned merge model
+description: FastEdit is a tool designed to reduce token consumption when making code
+  edits with AI models. It uses a fine-tuned merge model with a TLDR engine to optimize
+  edit operations and reduce usage costs.
+install:
+  type: manual
+  command: See project homepage for installation instructions
+verification:
+  type: manual
+resources:
+- url: https://t.co/xBxpLAGH4Z
+  type: homepage
+tags:
+- token-optimization
+- cost-reduction
+- ai-editing
+- open-source
+added_date: '2026-04-24'
+source: x-discovery
+source_url: https://x.com/parcadei/status/2047299616899531220
+mentions:
+- url: https://x.com/parcadei/status/2047299616899531220
+  author: '@parcadei'
+  text: "you're still paying full token for edits? \n\nmeet FastEdit\n\nthe tool to\
+    \ slash your edit token spend, and free you from usage limit misery\n\nfine tuned\
+    \ merge model with a tldr engine \n\nfree, open source and swaggier than your\
+    \ corpo overlords\n\nhttps://t.co/xBxpLAGH4Z https://t.co/hyZ"
+  date: '2026-04-24'
+  likes: 69

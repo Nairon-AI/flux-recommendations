@@ -144,3 +144,20 @@ mentions:
     This rocks https://t.co/AFBIeuswx2'
   date: '2026-04-22'
   likes: 17
+- url: https://x.com/mattpocockuk/status/2047349861855482072
+  author: '@mattpocockuk'
+  text: 'New flow:
+
+
+    1. /triage command in Slack (#sandcastle)
+
+    2. Creates a discussion thread with agents for each issue in the repo needing
+    triage
+
+    3. Resolve discussions one-by-one until issues are marked ready for the agent
+
+    4. /implement in Slack
+
+    5. Planning agent creates a DAG of all br'
+  date: '2026-04-24'
+  likes: 321

@@ -218,3 +218,18 @@ mentions:
     \ plugin installs into coding agents\n- agentrig cli "
   date: '2026-04-23'
   likes: 16
+- url: https://x.com/nummanali/status/2047591026798313475
+  author: '@nummanali'
+  text: "From November (Opus 4.5 release) up to the April, I recommended folks use\
+    \ Claude for general use, increasingly so given Cowork \n\nMy opinion is now changed\
+    \ - GPT 5.5 and the new Codex app is much more capable for all skill levels\n\n\
+    Simply open the app and speak to it, it will tell "
+  date: '2026-04-24'
+  likes: 7
+- url: https://x.com/kevinkern/status/2047393403785113768
+  author: '@kevinkern'
+  text: "strange. two different machines with codex cli 0.124. on one, I got gpt-5.5,\
+    \ and on the other, it's not here.\n\nmodel cache is cleaned up. \n\n(but its\
+    \ showing up in the codex app) https://t.co/D0hgWnlDpS"
+  date: '2026-04-24'
+  likes: 18
