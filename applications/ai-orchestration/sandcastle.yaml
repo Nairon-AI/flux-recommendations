@@ -161,3 +161,18 @@ mentions:
     5. Planning agent creates a DAG of all br'
   date: '2026-04-24'
   likes: 321
+- url: https://x.com/mattpocockuk/status/2047783938702082114
+  author: '@mattpocockuk'
+  text: 'This week has been pure exploration, trying different ideas for improving
+    my AFK agent setup.
+
+
+    Friday''s approach has been a daemon that sits on your machine.
+
+
+    It schedules agents sandboxed via Sandcastle (my library).
+
+
+    Because it''s always-running, you can operate it at maximum co'
+  date: '2026-04-25'
+  likes: 85

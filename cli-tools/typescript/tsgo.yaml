@@ -33,3 +33,16 @@ mentions:
     Let''s get SHIPPING'
   date: '2026-03-06'
   likes: 145
+- url: https://x.com/mattpocockuk/status/2047947189163335885
+  author: '@mattpocockuk'
+  text: 'One thing I wish harnesses did by default:
+
+
+    When opening a file, FIRST pre-compile the file and extract only the type signatures
+    and comments for that file (with tsgo this would be instant).
+
+
+    Then, if you want to see the implementation, only unwrap the functions you''re
+    interested'
+  date: '2026-04-25'
+  likes: 127

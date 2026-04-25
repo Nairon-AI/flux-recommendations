@@ -1,0 +1,36 @@
+name: claudeculator
+category: application
+tagline: Configuration builder for Claude Code settings.json files
+description: A web-based tool that helps developers build and configure settings.json
+  files for Claude Code. It addresses the challenge of keeping up with Claude Code's
+  rapidly shipping features and creating proper configuration files.
+install:
+  type: manual
+  command: Access via web interface
+verification:
+  type: manual
+resources:
+- url: https://t.co/IDn5TA4B8H
+  type: homepage
+tags:
+- claude-code
+- configuration
+- settings
+- json
+added_date: '2026-04-25'
+source: x-discovery
+source_url: https://x.com/dani_avila7/status/2047869689263509949
+mentions:
+- url: https://x.com/dani_avila7/status/2047869689263509949
+  author: '@dani_avila7'
+  text: 'Introducing Claudeculator... a tool to build and configure a settings.json
+    for Claude Code
+
+
+    Link: https://t.co/IDn5TA4B8H
+
+
+    Claude Code keeps shipping new features and it''s hard to keep up and put together
+    a good config, so... Built this for myself to deal with that, sharing it wi'
+  date: '2026-04-25'
+  likes: 66
