@@ -271,3 +271,26 @@ mentions:
   text: codex-5.5. I think we get another update soon.
   date: '2026-04-25'
   likes: 82
+- url: https://x.com/__morse/status/2048051961199485243
+  author: '@__morse'
+  text: 'I made a cli to generate images with gpt-image-2 from @opencode, @claude_code
+    or any other agentic cli
+
+
+    supports Codex subscription
+
+
+    enjoy!
+
+
+    https://t.co/2k2i2VdZpd https://t.co/CYaz2LJga0'
+  date: '2026-04-26'
+  likes: 5
+- url: https://x.com/ryancarson/status/2048139603220091222
+  author: '@ryancarson'
+  text: "If you want to get real work done - actually ship and build a business with\
+    \ velocity - I don’t understand why you would waste time trying to build your\
+    \ own code factory from scratch. \n\nThis is an about-face from my article where\
+    \ I explained how to build your own code factory. \n\nT"
+  date: '2026-04-26'
+  likes: 214

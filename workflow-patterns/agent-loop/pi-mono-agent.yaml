@@ -1,0 +1,29 @@
+name: pi-mono-agent
+category: workflow-pattern
+tagline: Minimal agent loop implementation for AI development teaching
+description: A minimal, well-implemented agent loop pattern contained in just a few
+  files. Designed for educational purposes to teach AI agent development concepts
+  with clean, readable code that demonstrates best practices.
+install:
+  type: manual
+  command: git clone pi-mono/agent repository
+verification:
+  type: manual
+resources:
+- url: https://github.com/pi-mono/agent
+  type: github
+tags:
+- agent-loop
+- educational
+- minimal
+- teaching
+added_date: '2026-04-26'
+source: x-discovery
+source_url: https://x.com/pvncher/status/2048198964437033219
+mentions:
+- url: https://x.com/pvncher/status/2048198964437033219
+  author: '@pvncher'
+  text: 'RT @0xSero: Pi has implemented the best agent loop that I have read, the
+    pi-mono/agent is only a few files and I use it for teaching the to…'
+  date: '2026-04-26'
+  likes: 1674

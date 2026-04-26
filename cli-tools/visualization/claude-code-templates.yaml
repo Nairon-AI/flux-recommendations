@@ -114,3 +114,21 @@ mentions:
     the LLM and which '
   date: '2026-04-06'
   likes: 19
+- url: https://x.com/dani_avila7/status/2048249455426539571
+  author: '@dani_avila7'
+  text: 'Introducing Claude Code Hook - Context Timeline
+
+
+    (Saving this to try later)
+
+
+    Install with: npx claude-code-templates@latest --hook monitoring/context-timeline
+
+
+    Managing the context window and the subagents running in Claude Code is hard to
+    keep track of
+
+
+    That''s why I built this h'
+  date: '2026-04-26'
+  likes: 162
