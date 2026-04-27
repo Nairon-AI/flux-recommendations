@@ -294,3 +294,19 @@ mentions:
     \ I explained how to build your own code factory. \n\nT"
   date: '2026-04-26'
   likes: 214
+- url: https://x.com/nummanali/status/2048470207572680918
+  author: '@nummanali'
+  text: "The only model that you can trust not reading the code is GPT 5.5/5.4 on\
+    \ High/XHigh \n\nI don’t trust Opus, Gemini or any other model to have written\
+    \ code that works end to end \n\nThe reason, from my experience, is that GPT through\
+    \ previous Codex models has learnt the SDLC way"
+  date: '2026-04-27'
+  likes: 93
+- url: https://x.com/kevinkern/status/2048483624098349510
+  author: '@kevinkern'
+  text: "sunday side quest. building a shopify store. \n\nso i didn't want to go through\
+    \ the whole theme setup, add colors, logos, add products the manually way. \n\n\
+    asked gpt deep research for best latest possibilities including starter templates\
+    \ to quickly setup a shopify store. told me to "
+  date: '2026-04-27'
+  likes: 5
