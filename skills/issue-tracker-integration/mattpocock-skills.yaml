@@ -1,0 +1,42 @@
+name: mattpocock-skills
+category: skill
+tagline: AI skills for issue tracker integration across GitHub, Jira, Linear
+description: A collection of AI skills that enable seamless integration with multiple
+  issue tracking systems including GitHub, Jira, Linear, and local files. Allows AI
+  assistants to interact with and manage issues across different platforms through
+  a unified interface.
+install:
+  type: npm
+  command: npx skills@latest add mattpocock/skills
+verification:
+  type: manual
+resources: []
+tags:
+- ai-skills
+- issue-tracking
+- github
+- jira
+- linear
+- integration
+added_date: '2026-04-29'
+source: x-discovery
+source_url: https://x.com/mattpocockuk/status/2049155323047407869
+mentions:
+- url: https://x.com/mattpocockuk/status/2049155323047407869
+  author: '@mattpocockuk'
+  text: 'Shipped an update to my skills that allows you to use them with any issue
+    tracker (GitHub, Jira, Linear, local files)
+
+
+    1. Run npx skills@latest add mattpocock/skills
+
+
+    2. Run /setup-matt-pocock-skills
+
+
+    3. Choose any issue tracker you like
+
+
+    4. Profit'
+  date: '2026-04-29'
+  likes: 416

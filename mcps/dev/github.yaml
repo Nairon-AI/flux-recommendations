@@ -379,3 +379,16 @@ mentions:
     https://t.co/VJmIncjDm5'
   date: '2026-04-27'
   likes: 346
+- url: https://x.com/dani_avila7/status/2049309123850715305
+  author: '@dani_avila7'
+  text: 'These bugs in big-company prod keep showing up lately, and I have two theories:
+
+
+    1- We’re shipping AI to prod and it’s breaking everything
+
+    2- These bugs always existed and AI is finally finding them
+
+
+    The second one scares me more. Wiz found this one using IDA MCP on closed-source'
+  date: '2026-04-29'
+  likes: 10
