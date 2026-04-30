@@ -1,0 +1,39 @@
+name: grill-with-docs
+category: workflow-pattern
+tagline: AI grilling pattern that uses project docs to align AI understanding
+description: A workflow pattern that enhances AI-assisted development by first defining
+  project-specific jargon and terminology through documentation. This creates context-aware
+  AI interactions that are "magically aligned" with your project's specific language
+  and concepts, improving subsequent AI coding sessions.
+install:
+  type: skill
+  command: workflow pattern - no installation required
+verification:
+  type: manual
+resources: []
+tags:
+- ai-assistant
+- documentation
+- context-awareness
+- workflow
+- ddd
+added_date: '2026-04-30'
+source: x-discovery
+source_url: https://x.com/mattpocockuk/status/2049554929862283341
+mentions:
+- url: https://x.com/mattpocockuk/status/2049554929862283341
+  author: '@mattpocockuk'
+  text: '/grill-with-docs is MAGICAL
+
+
+    It powers up /grill-me by forcing you to define the random jargon your project
+    uses
+
+
+    Then every grilling session afterwards is "magically aligned with the thoughts
+    you have"
+
+
+    Love a bit of DDD'
+  date: '2026-04-30'
+  likes: 841

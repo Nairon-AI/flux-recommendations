@@ -1,0 +1,38 @@
+name: cursor-multitask
+category: application
+tagline: Cursor's agent orchestration feature for parallel AI coding tasks
+description: A new feature in Cursor IDE that allows the main AI agent to split complex
+  coding work into smaller asynchronous subagents. This keeps the main chat context
+  clean while parallel agents handle specific messy tasks independently, improving
+  workflow organization and context management.
+install:
+  type: plugin
+  command: Available in Cursor IDE as /multitask command
+verification:
+  type: manual
+resources:
+- url: https://cursor.sh
+  type: homepage
+tags:
+- cursor
+- ai-agents
+- orchestration
+- parallel-processing
+- context-management
+added_date: '2026-04-30'
+source: x-discovery
+source_url: https://x.com/kevinkern/status/2049581481195090035
+mentions:
+- url: https://x.com/kevinkern/status/2049581481195090035
+  author: '@kevinkern'
+  text: 'cursor shipped /multitask a bit silently, but it’s their new orchestration
+    feature.
+
+
+    instead of one agent doing everything in one long context, the main agent can
+    split work into smaller async subagents.
+
+
+    so the main chat stays clean, while side agents go off and do messy stuff l'
+  date: '2026-04-30'
+  likes: 114
