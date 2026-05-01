@@ -328,3 +328,11 @@ mentions:
   text: openclaw is internet's cancer
   date: '2026-04-29'
   likes: 10
+- url: https://x.com/kevinkern/status/2049981453665178009
+  author: '@kevinkern'
+  text: "some of my bots, like openclaw/hermes, run inside wsl on a windows box. \n\
+    \nwhen i need real browser access, i start a dedicated visible chrome profile\
+    \ on windows desktop with chrome devtools enabled.\n\na small powershell setup\
+    \ creates a local bridge from wsl to that chrome debuggin"
+  date: '2026-05-01'
+  likes: 2
