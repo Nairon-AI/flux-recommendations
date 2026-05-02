@@ -1,0 +1,30 @@
+name: flue
+category: application
+tagline: TypeScript framework for building AI agent applications
+description: Flue is a TypeScript framework specifically designed as an "Agent Harness
+  Framework" for building the next generation of AI agent applications. It provides
+  structure and tooling for developers working on AI-assisted software development
+  projects.
+install:
+  type: npm
+  command: npm install flue
+verification:
+  type: manual
+resources: []
+tags:
+- typescript
+- ai-agents
+- framework
+- development
+added_date: '2026-05-02'
+source: x-discovery
+source_url: https://x.com/nummanali/status/2050311977004646773
+mentions:
+- url: https://x.com/nummanali/status/2050311977004646773
+  author: '@nummanali'
+  text: 'RT @FredKSchott: Introducing Flue — The First Agent Harness Framework
+
+
+    Flue is a TypeScript framework for building the next generation of a…'
+  date: '2026-05-02'
+  likes: 2341

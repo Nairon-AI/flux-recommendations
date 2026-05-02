@@ -325,3 +325,25 @@ mentions:
     \ workflow\n\n3/ Claude + Codex workflow to turn designs "
   date: '2026-04-28'
   likes: 27
+- url: https://x.com/nummanali/status/2050255230915240183
+  author: '@nummanali'
+  text: "I realised why there isn’t a Codex app on mobile \n\nIt’s very likely the\
+    \ full ChatGPT brand will phase out in favour Codex \n\nWhen Codex is being called\
+    \ the everything app, it makes complete sense \n\nSo they’re probably setting\
+    \ up the right infra for the 900m+ user transfer"
+  date: '2026-05-02'
+  likes: 242
+- url: https://x.com/nummanali/status/2050206822485676239
+  author: '@nummanali'
+  text: "GPT 5.5 is beyond my expectations\n\n9h 00m 49s of coherent work on a ML\
+    \ library \n\nEvery night this week I have let it build with constraints through:\n\
+    - AGENTS .md\n- CONTINUITY .md \n- MEMORY .md \n- PLAN .md \n- .agents/skills\n\
+    \nThrough the combination of these, it has been steering i"
+  date: '2026-05-02'
+  likes: 482
+- url: https://x.com/kevinkern/status/2050168828848386205
+  author: '@kevinkern'
+  text: appreciate all the new apps but now i have to switch between codex cli, cursor
+    ide, cursor app, codex app and telegram bots.
+  date: '2026-05-02'
+  likes: 2
